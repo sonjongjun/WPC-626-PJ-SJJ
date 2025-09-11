@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* 피자몰 메인 CSS - main.css */
+
+/* 외부 CSS불러오기 */
+@import url(./reset.css);
+@import url(./core.css);
+/* 12그리드 CSS */
+@import url(./grid_12_flex.css);
+
+/* 공사중표시 */
+body * {
+outline: 2px dotted red;
+}
+
+ /********************************************* 메인 css *********************************************/
+ /********************************************* 1.상단영역 *********************************************/
+ .top-area {
+    height: 118px;
+   
+}
+ /*  2.회전피자메뉴 */
+.r-pizza-menu{
+height: 605px;
+
+}
+ /*  3.로고영역 */
+.logo-area{
+height: 168px;
+
+}
+/*  4. 8조각피자영역 */
+.eight-pizza-part{
+height: 653px;
+
+}
+/*  5. 동영상영역 */
+.movie-part{
+height: 714px;
+
+}
+/*  6. 이벤트/할인영역 */
+.event-part{
+height: 500px;
+
+}
+/* 7.하단영역 */
+.bottom-area{
+height: 249px;
+
+}
