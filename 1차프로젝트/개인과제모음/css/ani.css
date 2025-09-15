@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+.r-pizza img{
+    animation: r-pizza-ani 10s linear alternate infinite;
+}
+@keyframes r-pizza{
+    0%{
+         rotate:x 0deg;
+    }
+    100%{
+        rotate:x 360deg;
+    }
+}
