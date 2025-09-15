@@ -21,26 +21,33 @@ outline: 2px dotted red;
  /*  2.회전피자메뉴 */
 .r-pizza-menu{
 height: 605px;
-background: url(../피자합성.png) no-repeat center/auto 100%;
+position: relative;
+justify-content: center;
+display: flex;
 
 }
  /*  3.로고영역 */
 .logo-area{
 height: 168px;
+display: flex;
+justify-content: center;
+}
+.logo-area ul{
+    display: flex;
+     margin-top: 61px;
 
 }
-.logo-group ul{
-    display: flex;
-    justify-content: center;
-}
-.logo-group img{
+.logo-area img{
     height: 84px;
     width: 84px;
 }
 
+
+
 /*  4. 8조각피자영역 */
 .eight-pizza-part{
 height: 653px;
+overflow: hidden;
 
 }
 /*  5. 동영상영역 */
@@ -48,9 +55,17 @@ height: 653px;
 height: 714px;
 
 }
+
+.movie-part img{
+    height: 364px;
+    width: 1014px;
+
+
+}
 /*  6. 이벤트/할인영역 */
 .event-part{
-height: 500px;
+height: 364px;
+width: 1014px;
 
 }
 /* 7.하단영역 */
