@@ -6,6 +6,7 @@
 @import url(./core.css);
 /* 12그리드 CSS */
 @import url(./grid_12_flex.css);
+@import url(./ani.css);
 
 /* 공사중표시 */
 body * {
