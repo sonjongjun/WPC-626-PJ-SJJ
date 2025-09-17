@@ -12,40 +12,44 @@
 body * {
   outline: 2px dotted red;
 }
-html {
-  max-width: 1220px;
-}
 
 /********************************************* 메인 css *********************************************/
 /********************************************* 1.상단영역 *********************************************/
+#top-area {
+  z-index: 9999;
+  position: relative;
+}
 .top-area {
   position: relative;
   height: 118px;
+  display: flex;
 }
-.top-menu-left ul {
-  position: absolute;
+.gnb-menu,
+.top-menu-right {
+  flex: 1;
+  line-height: 118px;
+}
+.gnb-menu ul {
   left: 0;
   top: 47px;
   display: flex;
   font-size: 1.9rem;
 }
-.top-menu-left li {
+.gnb-menu li {
   margin-left: 33px;
 }
 .p-logo {
-  position: absolute;
   height: 118px;
   left: 44%;
 }
 .top-menu-right ul {
-  position: absolute;
   right: 158px;
   top: 47px;
   font-size: 1.9rem;
   display: flex;
+  justify-content: space-evenly;
 }
 .top-menu-logo {
-  position: absolute;
   right: 0;
   top: 47px;
   display: flex;
@@ -60,24 +64,71 @@ html {
   height: 34px;
   margin-right: 12px;
 }
+
+.sub-menu {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: rgb(130, 130, 130);
+  box-sizing: border-box;
+  /* 서브메뉴를 숨기기 위해 넘치는 자식 숨기기 */
+  overflow: hidden;
+  /* 높이값을 0으로 하면 자식요소가 숨겨짐 
+    -> 단 여기에 위아래 패딩을 줄 경우 숨겨지지 않는다.*/
+  max-height: 0;
+  /* 처음에 최대높이값 세팅필수! 그래야 트랜지션 먹음 */
+
+  /* 트랜지션 */
+  transition: 0.4s ease-out;
+  
+}
+/* 부모 li에 마우스 오버시 .sub-menu 높이값 변경하기 */
+.gnb-menu > ul > li:hover .sub-menu {
+  max-height: 350px;
+  /* 최대 높이값을 컨텐츠 높이값 보다 좀 더 크게 잡으면
+오버시 높이값이 내용만큼만 커지게된다 */
+}
+/* 패딩만 내부에 다른 블록요소 사용!
+ -> 자식요소 숨기기 부모박스엔 패딩을 줄 수 없다!*/
+.padding-box {
+  padding: 1vw;
+}
+/* 타이틀바 */
+.title-bar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 3.6rem;
+}
+/* 서브리스트 ul */
+.sub-list ul {
+ display: flex;
+    flex-wrap: wrap;
+    font-size: 1.9rem;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* 서브리스트 li */
+.sub-list li {
+}
+
 /*******************************************  2.회전피자메뉴 *******************************************/
 .r-pizza-menu {
-    width: 1220px;
-    text-align: center;
-    margin: 0 auto;
-    overflow: hidden;
-    perspective: 150vh;
-    height: 605px;
+  width: 1220px;
+  text-align: center;
+  margin: 0 auto;
+  overflow: hidden;
+  perspective: 150vh;
+  height: 605px;
 }
-.r-pizza-wrap{
-    position: relative;
-    aspect-ratio: 1.4;
-    rotate: x 45deg;
-    
+.r-pizza-wrap {
+  position: relative;
+  aspect-ratio: 1.4;
+  rotate: x 45deg;
 }
 .r-pizza {
   position: absolute;
-  top: 19%;
+  top: 17%;
   translate: 0 -50%;
   rotate: x 50deg;
   height: 605px;
@@ -97,6 +148,20 @@ html {
   top: 10%;
   width: 105px;
   height: 64px;
+}
+.deco3 {
+  position: absolute;
+  left: 0%;
+  top: 5%;
+  width: 105px;
+  height: 150px;
+}
+.deco4 {
+  position: absolute;
+  right: 0;
+  top: 69%;
+  width: 105px;
+  height: 125px;
 }
 /********************************************  3.로고영역 ********************************************/
 .logo-area {
@@ -126,12 +191,11 @@ html {
   width: 1220px;
   overflow: hidden;
 }
-.cheese{
-position: absolute;
-top: 0;
-max-width: 1220px;
-height: 318px;
-
+.cheese {
+  position: absolute;
+  top: 0;
+  max-width: 1220px;
+  height: 318px;
 }
 .e-tit {
   position: absolute;
@@ -143,6 +207,7 @@ height: 318px;
   position: absolute;
   left: 103px;
   bottom: 80px;
+  opacity: 0.5;
 }
 
 .bg-pizza {
@@ -152,27 +217,27 @@ height: 318px;
   right: 0;
   bottom: 0;
 }
-.bg-b1{
-position: absolute;
-width: 246px;
-height: 174px;
-top: 20%;
-right: 18%;
+.bg-b1 {
+  position: absolute;
+  width: 246px;
+  height: 174px;
+  top: 20%;
+  right: 18%;
 }
-.bg-b2{
-position: absolute;
-width: 246px;
-height: 174px;
-top: 34%;
-right: 4%;
+.bg-b2 {
+  position: absolute;
+  width: 246px;
+  height: 174px;
+  top: 34%;
+  right: 4%;
 }
-.bg-sauce{
-    position: absolute;
-    width: 219px;
-    height: 198px;
-    right: -1%;
-top: 42%;
-rotate: 270deg;
+.bg-sauce {
+  position: absolute;
+  width: 219px;
+  height: 198px;
+  right: -1%;
+  top: 42%;
+  rotate: 270deg;
 }
 /********************************************  5. 동영상영역 ********************************************/
 .movie-part {
@@ -181,12 +246,21 @@ rotate: 270deg;
   margin: 0 auto;
   position: relative;
 }
-
+.m-banner-box {
+  position: absolute;
+  top: 5%;
+  left: 8%;
+}
 .m-banner {
   height: 364px;
   width: 1014px;
   position: absolute;
-  top: 5%;
+}
+.m-deco {
+  width: 1014px;
+  height: 78px;
+  position: absolute;
+  bottom: 39%;
   left: 8%;
 }
 /********************************************  6. 이벤트/할인영역 ********************************************/
