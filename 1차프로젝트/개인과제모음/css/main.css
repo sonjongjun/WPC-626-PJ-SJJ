@@ -62,17 +62,28 @@ html {
 }
 /*******************************************  2.회전피자메뉴 *******************************************/
 .r-pizza-menu {
-  width: 1220px;
-  position: relative;
-  text-align: center;
-  height: 605px;
-  margin: 0 auto;
+    width: 1220px;
+    text-align: center;
+    margin: 0 auto;
+    overflow: hidden;
+    perspective: 150vh;
+    height: 605px;
+}
+.r-pizza-wrap{
+    position: relative;
+    aspect-ratio: 1.4;
+    rotate: x 45deg;
+    
 }
 .r-pizza {
   position: absolute;
+  top: 19%;
+  translate: 0 -50%;
+  rotate: x 50deg;
   height: 605px;
   width: 1014px;
   left: 9%;
+  scale: 1 1.6;
 }
 .deco1 {
   position: absolute;

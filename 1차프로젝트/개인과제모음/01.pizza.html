@@ -5,69 +5,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pizza Mall</title>
     <!-- 메인 CSS불러오기 -->
-    <link rel="stylesheet" href="./css/main.css"/>
-     <script src="./js/pizza.js" defer>
-      
-     </script>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/ani.css" />
+    <script src="./js/pizza.js" defer></script>
   </head>
   <body>
     <!-- 1.상단영역 -->
     <div id="top-area">
       <header class="top-area inbox">
-        <img src="./피자몰로고.png" alt="피자몰로고" class="p-logo">
-         <nav class="top-menu-left">
-                <ul>
-                  <li><a href="">메뉴</a></li>
-                  <li><a href="">이벤트</a></li>
-                  <li><a href="">주문하기</a></li>
-                  <li><a href="">About피자헛</a></li>
-                  <li><a href="">피자헛</a></li>
-                </ul>
-              </nav>
-              <nav class="top-menu-right">
-                <ul>
-                  <li><a href="">주문방법/주소를 설정하세요</a></li>
-                </ul>
-              </nav>
-              <nav class="top-menu-logo">
-              <img src="./904.개인과제피자헛/로고/Artboard 1.png" alt="돋보기로고" class="search-logo">
-              <img src="./904.개인과제피자헛/피자헛25.png" alt="카트로고" class="cart-logo">
-              </nav>
+        <img src="./피자몰로고.png" alt="피자몰로고" class="p-logo" />
+        <nav class="top-menu-left">
+          <ul>
+            <li><a href="">메뉴</a></li>
+            <li><a href="">이벤트</a></li>
+            <li><a href="">주문하기</a></li>
+            <li><a href="">About피자헛</a></li>
+            <li><a href="">피자헛</a></li>
+          </ul>
+        </nav>
+        <nav class="top-menu-right">
+          <ul>
+            <li><a href="">주문방법/주소를 설정하세요</a></li>
+          </ul>
+        </nav>
+        <nav class="top-menu-logo">
+          <img
+            src="./904.개인과제피자헛/로고/Artboard 1.png"
+            alt="돋보기로고"
+            class="search-logo"
+          />
+          <img
+            src="./904.개인과제피자헛/피자헛25.png"
+            alt="카트로고"
+            class="cart-logo"
+          />
+        </nav>
       </header>
     </div>
     <!-- 2.회전피자메뉴 -->
     <div class="r-pizza-menu">
-       <img src="./피자합성.png" alt="피자" class="r-pizza">
-       <img src="./905.개인과제피자스톰/sauce_tomato01.png" alt="데코방토" class="deco1">
-       <img src="./905.개인과제피자스톰/sauce_spoon.png" alt="데코스푼" class="deco2">
+      <div class="r-pizza-wrap">
+        <img src="./피자합성.png" alt="피자" class="r-pizza"/>
+      </div>
+      <div class="deco-area">
+        <img
+          src="./905.개인과제피자스톰/sauce_tomato01.png"
+          alt="데코방토"
+          class="deco1"
+        />
+        <img
+          src="./905.개인과제피자스톰/sauce_spoon.png"
+          alt="데코스푼"
+          class="deco2"
+        />
+      </div>
     </div>
     <!-- 3.로고영역 -->
     <div class="logo-area">
-        <ul>
-<li><a href="#"><img src="./로고/demo-pizza-parlor-home-icon-01.png" alt="안뜯은피자"></a></li>
-<li><a href="#"><img src="./로고/안뜯은치킨.png" alt="안뜯은치킨2"></a></li>
-<li><a href="#"><img src="./로고/demo-pizza-parlor-home-icon-05.png" alt="안뜯은콜라"></a></li>
-<li><a href="#"><img src="./로고/파티로고.png" alt="파티로고"></a></li>
-<li><a href="#"><img src="./로고/RSPZ1661_pb.png" alt="하프앤하프"></a></li>
-<li><a href="#"><img src="./로고/샐러드원본.png" alt="샐러드원본"></a></li>
-        </ul>
+      <ul>
+        <li>
+          <a href="#"
+            ><img
+              src="./로고/demo-pizza-parlor-home-icon-01.png"
+              alt="안뜯은피자"
+          /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./로고/안뜯은치킨.png" alt="안뜯은치킨2" /></a>
+        </li>
+        <li>
+          <a href="#"
+            ><img
+              src="./로고/demo-pizza-parlor-home-icon-05.png"
+              alt="안뜯은콜라"
+          /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./로고/파티로고.png" alt="파티로고" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./로고/RSPZ1661_pb.png" alt="하프앤하프" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./로고/샐러드원본.png" alt="샐러드원본" /></a>
+        </li>
+      </ul>
     </div>
     <!-- 4. 8조각피자영역 -->
     <div class="eight-pizza-part">
-        <img src="./8조각피자.png" alt="8조각피자" class="e-pizza">
-        <img src="./905.개인과제피자스톰/mainmenu_deco02.png" alt="치즈" class="cheese">
-        <img src="./905.개인과제피자스톰/mainmenu_title.png" alt="8조각타이틀" class="e-tit">
+      <img src="./8조각피자.png" alt="8조각피자" class="e-pizza" />
+      <img
+        src="./905.개인과제피자스톰/mainmenu_deco02.png"
+        alt="치즈"
+        class="cheese"
+      />
+      <img
+        src="./905.개인과제피자스톰/mainmenu_title.png"
+        alt="8조각타이틀"
+        class="e-tit"
+      />
 
-        <div class="bg-pizza-area">
-            <img src="./905.개인과제피자스톰/pizza_whole_pizza.png" alt="배경피자" class="bg-pizza">
-            <img src="./905.개인과제피자스톰/pizza_topp01_01.png" alt="배경베이컨1" class="bg-b1">
-            <img src="./905.개인과제피자스톰/pizza_topp02_01.png" alt="배경베이컨2" class="bg-b2">
-            <img src="./905.개인과제피자스톰/sauce_object.png" alt="소스통" class="bg-sauce">
-        </div>
+      <div class="bg-pizza-area">
+        <img
+          src="./905.개인과제피자스톰/pizza_whole_pizza.png"
+          alt="배경피자"
+          class="bg-pizza"
+        />
+        <img
+          src="./905.개인과제피자스톰/pizza_topp01_01.png"
+          alt="배경베이컨1"
+          class="bg-b1"
+        />
+        <img
+          src="./905.개인과제피자스톰/pizza_topp02_01.png"
+          alt="배경베이컨2"
+          class="bg-b2"
+        />
+        <img
+          src="./905.개인과제피자스톰/sauce_object.png"
+          alt="소스통"
+          class="bg-sauce"
+        />
+      </div>
     </div>
     <!-- 5. 동영상영역 -->
     <div class="movie-part inbox">
-      <img src="./904.개인과제피자헛/배너/피자헛7.png" alt="동영상배너" class="m-banner">
+      <img
+        src="./904.개인과제피자헛/배너/피자헛7.png"
+        alt="동영상배너"
+        class="m-banner"
+      />
     </div>
     <!-- 6. 이벤트/할인영역 -->
     <div class="event-part inbox"></div>
