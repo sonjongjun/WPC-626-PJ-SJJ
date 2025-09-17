@@ -10,7 +10,7 @@
 
 /* 공사중표시 */
 body * {
-  outline: 2px dotted red;
+  /* outline: 2px dotted red; */
 }
 
 /********************************************* 메인 css *********************************************/
@@ -23,6 +23,7 @@ body * {
   position: relative;
   height: 118px;
   display: flex;
+  outline: 1px solid #000;
 }
 .gnb-menu,
 .top-menu-right {
@@ -34,9 +35,8 @@ body * {
   top: 47px;
   display: flex;
   font-size: 1.9rem;
-}
-.gnb-menu li {
-  margin-left: 33px;
+  flex-wrap: wrap;
+  justify-content: space-around
 }
 .p-logo {
   height: 118px;
@@ -66,10 +66,11 @@ body * {
 }
 
 .sub-menu {
+  outline: 1px solid #000;
   position: absolute;
   left: 0;
   width: 100%;
-  background-color: rgb(130, 130, 130);
+  background-color: rgba(255, 255, 255, 0.781);
   box-sizing: border-box;
   /* 서브메뉴를 숨기기 위해 넘치는 자식 숨기기 */
   overflow: hidden;
@@ -80,7 +81,6 @@ body * {
 
   /* 트랜지션 */
   transition: 0.4s ease-out;
-  
 }
 /* 부모 li에 마우스 오버시 .sub-menu 높이값 변경하기 */
 .gnb-menu > ul > li:hover .sub-menu {
@@ -101,17 +101,12 @@ body * {
 }
 /* 서브리스트 ul */
 .sub-list ul {
- display: flex;
-    flex-wrap: wrap;
-    font-size: 1.9rem;
-    flex-direction: row;
-    justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 2.3rem;
+  flex-direction: row;
+  justify-content: space-around;
 }
-
-/* 서브리스트 li */
-.sub-list li {
-}
-
 /*******************************************  2.회전피자메뉴 *******************************************/
 .r-pizza-menu {
   width: 1220px;
