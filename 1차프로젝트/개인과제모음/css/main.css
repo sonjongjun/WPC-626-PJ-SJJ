@@ -10,134 +10,183 @@
 
 /* 공사중표시 */
 body * {
-outline: 2px dotted red;
+  outline: 2px dotted red;
+}
+html {
+  max-width: 1220px;
 }
 
- /********************************************* 메인 css *********************************************/
- /********************************************* 1.상단영역 *********************************************/
- .top-area {
-     position: relative;
-    height: 118px;
+/********************************************* 메인 css *********************************************/
+/********************************************* 1.상단영역 *********************************************/
+.top-area {
+  position: relative;
+  height: 118px;
 }
-.top-menu-left ul{
-    position: absolute;
-    left: 0;
-    top: 47px;
-    display: flex;
-    font-size: 19px;
+.top-menu-left ul {
+  position: absolute;
+  left: 0;
+  top: 47px;
+  display: flex;
+  font-size: 1.9rem;
 }
-.top-menu-left li{
-    margin-left: 33px;
+.top-menu-left li {
+  margin-left: 33px;
 }
-.p-logo{
-    position: absolute;
-    height: 118px;
-    left: 44%;
+.p-logo {
+  position: absolute;
+  height: 118px;
+  left: 44%;
 }
-.top-menu-right ul{
-    position: absolute;
-    right: 158px;
-    top: 47px;
-    font-size: 19px;
+.top-menu-right ul {
+  position: absolute;
+  right: 158px;
+  top: 47px;
+  font-size: 1.9rem;
+  display: flex;
 }
-.top-menu-logo{
-    position: absolute;
-    right: 0;
-    top: 47px;
-    display: flex;
+.top-menu-logo {
+  position: absolute;
+  right: 0;
+  top: 47px;
+  display: flex;
 }
-.search-logo{
-width: 30px;
-height: 30px;
-margin-right: 28px;
+.search-logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 28px;
 }
-.cart-logo{
-width: 34px;
-height: 34px;
-margin-right: 12px;
-
-
+.cart-logo {
+  width: 34px;
+  height: 34px;
+  margin-right: 12px;
 }
- /*******************************************  2.회전피자메뉴 *******************************************/
- .r-pizza-menu{
-    width: 1220px;
-     position: relative;
-     text-align: center;
-     height: 605px;
-     margin: 0 auto;
-    }
-    .r-pizza{
-        position: absolute;
-        height: 605px;
-        width: 1014px;
-        left: 9%;
+/*******************************************  2.회전피자메뉴 *******************************************/
+.r-pizza-menu {
+  width: 1220px;
+  position: relative;
+  text-align: center;
+  height: 605px;
+  margin: 0 auto;
 }
-.deco1{
-    position: absolute;
-    left: 0%;
-    width: 84px;
-    top: 65%; 
+.r-pizza {
+  position: absolute;
+  height: 605px;
+  width: 1014px;
+  left: 9%;
 }
-
-.deco2{
-    position: absolute;
-    right: 0;
-    top: 10%;
-    width: 105px;
-    height: 64px;
+.deco1 {
+  position: absolute;
+  left: 0%;
+  width: 84px;
+  top: 65%;
 }
- /********************************************  3.로고영역 ********************************************/
-.logo-area{
-position: relative;
-width: 1220px;
-height: 168px;
-display: flex;
-justify-content: center;
-margin: 0 auto;
+.deco2 {
+  position: absolute;
+  right: 0;
+  top: 10%;
+  width: 105px;
+  height: 64px;
 }
-.logo-area ul{
-    position: absolute;
-    display: flex;
-     margin-top: 61px;
-
+/********************************************  3.로고영역 ********************************************/
+.logo-area {
+  position: relative;
+  width: 1220px;
+  height: 168px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
-.logo-area img{
-    height: 84px;
-    width: 84px;
+.logo-area ul {
+  position: absolute;
+  margin-top: 61px;
+  display: flex;
 }
-
-
+.logo-area img {
+  height: 84px;
+  width: 84px;
+  margin-left: 20px;
+}
 
 /********************************************  4. 8조각피자영역 ********************************************/
-.eight-pizza-part{
-height: 653px;
-width: 1220px;
-margin: 0 auto;
+.eight-pizza-part {
+  margin: 0 auto;
+  position: relative;
+  height: 653px;
+  width: 1220px;
+  overflow: hidden;
+}
+.cheese{
+position: absolute;
+top: 0;
+max-width: 1220px;
+height: 318px;
 
+}
+.e-tit {
+  position: absolute;
+  top: -55px;
+  max-width: 1220px;
+}
+
+.e-pizza {
+  position: absolute;
+  left: 103px;
+  bottom: 80px;
+}
+
+.bg-pizza {
+  width: 631px;
+  height: 346px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.bg-b1{
+position: absolute;
+width: 246px;
+height: 174px;
+top: 20%;
+right: 18%;
+}
+.bg-b2{
+position: absolute;
+width: 246px;
+height: 174px;
+top: 34%;
+right: 4%;
+}
+.bg-sauce{
+    position: absolute;
+    width: 219px;
+    height: 198px;
+    right: -1%;
+top: 42%;
+rotate: 270deg;
 }
 /********************************************  5. 동영상영역 ********************************************/
-.movie-part{
-height: 714px;
-width: 1220px;
-margin: 0 auto;
+.movie-part {
+  height: 714px;
+  width: 1220px;
+  margin: 0 auto;
+  position: relative;
 }
 
-.movie-part img{
-    height: 364px;
-
-
+.m-banner {
+  height: 364px;
+  width: 1014px;
+  position: absolute;
+  top: 5%;
+  left: 8%;
 }
 /********************************************  6. 이벤트/할인영역 ********************************************/
-.event-part{
-height: 364px;
-width: 1220px;
-margin: 0 auto;
-
+.event-part {
+  height: 364px;
+  width: 1220px;
+  margin: 0 auto;
 }
 /******************************************** 7.하단영역 ********************************************/
-.bottom-area{
-height: 249px;
-width: 1220px;
-margin: 0 auto;
-
+.bottom-area {
+  height: 249px;
+  width: 1220px;
+  margin: 0 auto;
 }
