@@ -220,17 +220,20 @@ body * {
   position: absolute;
   margin-top: 61px;
   display: flex;
+  
 }
 .logo-area img {
   height: 84px;
   width: 84px;
   margin-left: 20px;
+  
 }
 
 
 /************************************************************* 로고 변환영역 *************************************************************/
 a.pizza-logo{
    display: inline-block;
+
 }
 /* 처음에 두번째 이미지 안보이게하기 */
 .pizza-logo img:last-child {
@@ -334,17 +337,37 @@ a.salad-logo{
   width: 1220px;
   overflow: hidden;
 }
-.cheese {
+.e-pizza-tit
+{
+  top: -50%;
   position: absolute;
+transition: 2s ease-in-out all;
+}
+.cheese {
   top: 0;
   max-width: 1220px;
   height: 318px;
 }
 .e-tit {
-  position: absolute;
-  top: -55px;
+  top: 0;
   max-width: 1220px;
+  position: absolute;
+  left: 0;
 }
+.eight-pizza-part:hover{.e-pizza-tit{
+  translate: 0 95%;
+}
+}
+.eight-pizza-part:hover{.bg-pizza {
+  width: 631px;
+  height: 346px;
+  position: absolute;
+  right: 0%;
+  rotate:0deg;
+  bottom: 0%;}
+}
+
+
 
 .e-pizza {
   position: absolute;
@@ -357,10 +380,12 @@ a.salad-logo{
   width: 631px;
   height: 346px;
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: -50%;
+  bottom: 0%;
+  transition: 2s ease-in-out all;
+  rotate:360deg;
 }
-.bg-b1 {
+/* .bg-b1 {
   position: absolute;
   width: 246px;
   height: 174px;
@@ -381,7 +406,7 @@ a.salad-logo{
   right: -1%;
   top: 42%;
   rotate: 270deg;
-}
+} */
 /********************************************  5. 동영상영역 ********************************************/
 .movie-part {
   height: 714px;
