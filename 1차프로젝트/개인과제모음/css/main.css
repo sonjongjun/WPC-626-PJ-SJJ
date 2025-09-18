@@ -115,7 +115,17 @@ body * {
   overflow: hidden;
   perspective: 150vh;
   height: 605px;
+  opacity: 0; /* 처음에 거의 투명 */
+  transition: opacity 1.2s ease-in-out ; /* 천천히 */
 }
+.r-pizza-menu:hover {
+    opacity: 1; /* 0~1 사이값으로 조정 */
+    /* transition: 3s ease-in-out linear forwards; */
+}
+.r-pizza.visible {
+    opacity: 1; /* 영구적으로 보이게 */
+}
+
 .r-pizza-wrap {
   position: relative;
   aspect-ratio: 1.4;
