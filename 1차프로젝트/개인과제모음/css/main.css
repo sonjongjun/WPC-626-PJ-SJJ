@@ -82,6 +82,23 @@ body * {
   /* 트랜지션 */
   transition: 0.4s ease-out;
 }
+.sub-menu2 {
+  outline: 1px solid #000;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.781);
+  box-sizing: border-box;
+  /* 서브메뉴를 숨기기 위해 넘치는 자식 숨기기 */
+  overflow: hidden;
+  /* 높이값을 0으로 하면 자식요소가 숨겨짐 
+    -> 단 여기에 위아래 패딩을 줄 경우 숨겨지지 않는다.*/
+  max-height: 0;
+  /* 처음에 최대높이값 세팅필수! 그래야 트랜지션 먹음 */
+
+  /* 트랜지션 */
+  transition: 0.4s ease-out;
+}
 /* 부모 li에 마우스 오버시 .sub-menu 높이값 변경하기 */
 .gnb-menu > ul > li:hover .sub-menu {
   max-height: 350px;
@@ -107,6 +124,28 @@ body * {
   flex-direction: row;
   justify-content: space-around;
 }
+/* 서브리스트 li */
+.sub-list li {
+  margin-right: 20px;
+}
+.sub-list2{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.sub-list2 img{
+   width: 318px;
+  height: 120px;
+  margin-right: 30px;
+  margin-top: 30px;
+}
+.gnb-menu > ul > li:hover .sub-menu2 {
+  max-height: 600px;
+  /* 최대 높이값을 컨텐츠 높이값 보다 좀 더 크게 잡으면
+오버시 높이값이 내용만큼만 커지게된다 */
+}
+
 /*******************************************  2.회전피자메뉴 *******************************************/
 .r-pizza-menu {
   width: 1220px;
@@ -188,6 +227,105 @@ body * {
   margin-left: 20px;
 }
 
+
+/************************************************************* 로고 변환영역 *************************************************************/
+a.pizza-logo{
+   display: inline-block;
+}
+/* 처음에 두번째 이미지 안보이게하기 */
+.pizza-logo img:last-child {
+  display: none;
+}
+/* 마우스 오버시 첫번쨰이미지 안보이게하기 */
+.pizza-logo:hover img:first-child {
+  display: none;
+}
+/*마우스 오버시 두번째 이미지 보이게하기 */
+.pizza-logo:hover img:last-child {
+  display: inline;
+}
+
+a.chicken-logo{
+   display: inline-block;
+}
+/* 처음에 두번째 이미지 안보이게하기 */
+.chicken-logo img:last-child {
+  display: none;
+}
+/* 마우스 오버시 첫번쨰이미지 안보이게하기 */
+.chicken-logo:hover img:first-child {
+  display: none;
+}
+/*마우스 오버시 두번째 이미지 보이게하기 */
+.chicken-logo:hover img:last-child {
+  display: inline;
+}
+a.coke-logo{
+   display: inline-block;
+}
+/* 처음에 두번째 이미지 안보이게하기 */
+.coke-logo img:last-child {
+  display: none;
+}
+/* 마우스 오버시 첫번쨰이미지 안보이게하기 */
+.coke-logo:hover img:first-child {
+  display: none;
+}
+/*마우스 오버시 두번째 이미지 보이게하기 */
+.coke-logo:hover img:last-child {
+  display: inline;
+}
+a.party-logo{
+   display: inline-block;
+}
+/* 처음에 두번째 이미지 안보이게하기 */
+.party-logo img:last-child {
+  display: none;
+}
+/* 마우스 오버시 첫번쨰이미지 안보이게하기 */
+.party-logo:hover img:first-child {
+  display: none;
+}
+/*마우스 오버시 두번째 이미지 보이게하기 */
+.party-logo:hover img:last-child {
+  display: inline;
+}
+a.half-logo{
+   display: inline-block;
+}
+/* 처음에 두번째 이미지 안보이게하기 */
+.half-logo img:last-child {
+  display: none;
+}
+/* 마우스 오버시 첫번쨰이미지 안보이게하기 */
+.half-logo:hover img:first-child {
+  display: none;
+}
+/*마우스 오버시 두번째 이미지 보이게하기 */
+.half-logo:hover img:last-child {
+  display: inline;
+}
+a.salad-logo{
+   display: inline-block;
+}
+/* 처음에 두번째 이미지 안보이게하기 */
+.salad-logo img:last-child {
+  display: none;
+}
+/* 마우스 오버시 첫번쨰이미지 안보이게하기 */
+.salad-logo:hover img:first-child {
+  display: none;
+}
+/*마우스 오버시 두번째 이미지 보이게하기 */
+.salad-logo:hover img:last-child {
+  display: inline;
+}
+
+
+
+
+
+/************************************************************* 로고 변환영역 *************************************************************/
 /********************************************  4. 8조각피자영역 ********************************************/
 .eight-pizza-part {
   margin: 0 auto;
