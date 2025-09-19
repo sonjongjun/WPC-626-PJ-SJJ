@@ -11,3 +11,39 @@
         rotate: 360deg;
     }
 }
+.m-deco {
+     animation: smooth-flow 15s linear infinite;
+}
+
+@keyframes smooth-flow {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
+}
+.m-deco2 {
+     animation: smooth-flow 15s linear infinite 5s;
+}
+
+@keyframes smooth-flow {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
+}
+.m-deco3 {
+     animation: smooth-flow 15s linear infinite 10s;
+}
+
+@keyframes smooth-flow {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
+}

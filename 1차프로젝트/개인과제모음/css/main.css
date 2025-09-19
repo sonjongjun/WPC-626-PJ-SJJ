@@ -10,7 +10,7 @@
 
 /* 공사중표시 */
 body * {
-  outline: 2px dotted red;
+  /* outline: 2px dotted red; */
   /* background-color: black; */
 }
 
@@ -440,21 +440,40 @@ a.salad-logo {
   position: relative;
 }
 .m-banner-box {
-  position: absolute;
   top: 5%;
   left: 8%;
+  height: 364px;
+  width: 1014px;
+  position: absolute;
+  overflow: hidden;
 }
 .m-banner {
   height: 364px;
   width: 1014px;
   position: absolute;
+  top: 0%;
+  left: 0%;
 }
 .m-deco {
   width: 1014px;
   height: 78px;
   position: absolute;
-  bottom: 39%;
-  left: 8%;
+  bottom: 0%;
+  left: 100%;
+}
+.m-deco2 {
+  width: 1014px;
+  height: 78px;
+  position: absolute;
+  bottom: 0%;
+  left: 100%;
+}
+.m-deco3 {
+  width: 1014px;
+  height: 78px;
+  position: absolute;
+  bottom: 0%;
+  left: 100%;
 }
 /********************************************  6. 이벤트/할인영역 ********************************************/
 .event-part {
