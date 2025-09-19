@@ -10,7 +10,8 @@
 
 /* 공사중표시 */
 body * {
-  /* outline: 2px dotted red; */
+  outline: 2px dotted red;
+  /* background-color: black; */
 }
 
 /********************************************* 메인 css *********************************************/
@@ -36,7 +37,7 @@ body * {
   display: flex;
   font-size: 1.9rem;
   flex-wrap: wrap;
-  justify-content: space-around
+  justify-content: space-around;
 }
 .p-logo {
   height: 118px;
@@ -128,14 +129,14 @@ body * {
 .sub-list li {
   margin-right: 20px;
 }
-.sub-list2{
+.sub-list2 {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
 }
-.sub-list2 img{
-   width: 318px;
+.sub-list2 img {
+  width: 318px;
   height: 120px;
   margin-right: 30px;
   margin-top: 30px;
@@ -155,14 +156,14 @@ body * {
   perspective: 150vh;
   height: 605px;
   opacity: 0; /* 처음에 거의 투명 */
-  transition: opacity 1.2s ease-in-out ; /* 천천히 */
+  transition: opacity 1.2s ease-in-out; /* 천천히 */
 }
 .r-pizza-menu:hover {
-    opacity: 1; /* 0~1 사이값으로 조정 */
-    /* transition: 3s ease-in-out linear forwards; */
+  opacity: 1; /* 0~1 사이값으로 조정 */
+  /* transition: 3s ease-in-out linear forwards; */
 }
 .r-pizza.visible {
-    opacity: 1; /* 영구적으로 보이게 */
+  opacity: 1; /* 영구적으로 보이게 */
 }
 
 .r-pizza-wrap {
@@ -220,20 +221,16 @@ body * {
   position: absolute;
   margin-top: 61px;
   display: flex;
-  
 }
 .logo-area img {
   height: 84px;
   width: 84px;
   margin-left: 20px;
-  
 }
 
-
 /************************************************************* 로고 변환영역 *************************************************************/
-a.pizza-logo{
-   display: inline-block;
-
+a.pizza-logo {
+  display: inline-block;
 }
 /* 처음에 두번째 이미지 안보이게하기 */
 .pizza-logo img:last-child {
@@ -248,8 +245,8 @@ a.pizza-logo{
   display: inline;
 }
 
-a.chicken-logo{
-   display: inline-block;
+a.chicken-logo {
+  display: inline-block;
 }
 /* 처음에 두번째 이미지 안보이게하기 */
 .chicken-logo img:last-child {
@@ -263,8 +260,8 @@ a.chicken-logo{
 .chicken-logo:hover img:last-child {
   display: inline;
 }
-a.coke-logo{
-   display: inline-block;
+a.coke-logo {
+  display: inline-block;
 }
 /* 처음에 두번째 이미지 안보이게하기 */
 .coke-logo img:last-child {
@@ -278,8 +275,8 @@ a.coke-logo{
 .coke-logo:hover img:last-child {
   display: inline;
 }
-a.party-logo{
-   display: inline-block;
+a.party-logo {
+  display: inline-block;
 }
 /* 처음에 두번째 이미지 안보이게하기 */
 .party-logo img:last-child {
@@ -293,8 +290,8 @@ a.party-logo{
 .party-logo:hover img:last-child {
   display: inline;
 }
-a.half-logo{
-   display: inline-block;
+a.half-logo {
+  display: inline-block;
 }
 /* 처음에 두번째 이미지 안보이게하기 */
 .half-logo img:last-child {
@@ -308,8 +305,8 @@ a.half-logo{
 .half-logo:hover img:last-child {
   display: inline;
 }
-a.salad-logo{
-   display: inline-block;
+a.salad-logo {
+  display: inline-block;
 }
 /* 처음에 두번째 이미지 안보이게하기 */
 .salad-logo img:last-child {
@@ -324,10 +321,6 @@ a.salad-logo{
   display: inline;
 }
 
-
-
-
-
 /************************************************************* 로고 변환영역 *************************************************************/
 /********************************************  4. 8조각피자영역 ********************************************/
 .eight-pizza-part {
@@ -337,11 +330,10 @@ a.salad-logo{
   width: 1220px;
   overflow: hidden;
 }
-.e-pizza-tit
-{
+.e-pizza-tit {
   top: -50%;
   position: absolute;
-transition: 2s ease-in-out all;
+  transition: 2s ease-in-out all;
 }
 .cheese {
   top: 0;
@@ -354,21 +346,51 @@ transition: 2s ease-in-out all;
   position: absolute;
   left: 0;
 }
-.eight-pizza-part:hover{.e-pizza-tit{
-  translate: 0 95%;
+/************************************************ 마우스 오버시 배경 영역 ************************************************/
+.eight-pizza-part:hover {
+  .e-pizza-tit {
+    translate: 0 95%;
+  }
 }
+.eight-pizza-part:hover {
+  .bg-pizza {
+    width: 631px;
+    height: 346px;
+    position: absolute;
+    right: 0%;
+    rotate: 0deg;
+    bottom: 0%;
+  }
 }
-.eight-pizza-part:hover{.bg-pizza {
-  width: 631px;
-  height: 346px;
-  position: absolute;
-  right: 0%;
-  rotate:0deg;
-  bottom: 0%;}
+.eight-pizza-part:hover {
+  .bg-sauce {
+    position: absolute;
+    width: 219px;
+    height: 198px;
+    right: -1%;
+    top: 42%;
+    rotate: 270deg;
+  }
 }
-
-
-
+.eight-pizza-part:hover {
+  .bg-b1 {
+    position: absolute;
+  width: 246px;
+  height: 174px;
+  top: 20%;
+  right: 18%;
+  }
+}
+.eight-pizza-part:hover {
+  .bg-b2{
+    position: absolute;
+  width: 246px;
+  height: 174px;
+  top: 34%;
+  right: 4%;
+  }
+}
+/************************************************ 마우스 오버시 배경 영역 ************************************************/
 .e-pizza {
   position: absolute;
   left: 103px;
@@ -383,30 +405,33 @@ transition: 2s ease-in-out all;
   right: -50%;
   bottom: 0%;
   transition: 2s ease-in-out all;
-  rotate:360deg;
+  rotate: 360deg;
 }
-/* .bg-b1 {
+.bg-b1 {
   position: absolute;
   width: 246px;
   height: 174px;
   top: 20%;
-  right: 18%;
+  right: -27%;
+  transition: .5s ease-in-out all 3.2s;
 }
 .bg-b2 {
   position: absolute;
   width: 246px;
   height: 174px;
   top: 34%;
-  right: 4%;
+  right: -27%;
+  transition: .5s ease-in-out all 3.8s;
 }
 .bg-sauce {
   position: absolute;
   width: 219px;
   height: 198px;
-  right: -1%;
+  right: -20%;
   top: 42%;
   rotate: 270deg;
-} */
+  transition: .5s ease-in-out all 3s;
+}
 /********************************************  5. 동영상영역 ********************************************/
 .movie-part {
   height: 714px;

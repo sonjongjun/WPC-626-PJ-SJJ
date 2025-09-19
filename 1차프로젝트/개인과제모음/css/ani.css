@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 .r-pizza{
-    animation: r-pizza-ani 10s linear infinite;
+    animation: r-pizza-ani 10s linear forwards infinite;
 }
 @keyframes r-pizza-ani{
     0%{
