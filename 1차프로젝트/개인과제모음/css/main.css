@@ -510,10 +510,34 @@ a.salad-logo {
     color: #fff;
 }
 .movie-box{
-  display: flex;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+}
+
+.movie-box img:first-child{
+  position: absolute;
   width: 394px;
   height: 221px;
-  
+  border-radius: 30%;
+  top: 50%;
+}
+.movie-box img:last-child{
+  position: absolute;
+  width: 394px;
+  height: 221px;
+  border-radius: 30px;
+  top: 30%;
+}
+
+.ad-box{
+
+}
+.review-box{
+margin-left: 20px;
+
 }
 /********************************************  6. 이벤트/할인영역 ********************************************/
 .event-part {
