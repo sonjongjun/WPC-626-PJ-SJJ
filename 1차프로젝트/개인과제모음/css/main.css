@@ -8,9 +8,10 @@
 @import url(./grid_12_flex.css);
 @import url(./ani.css);
 
+
 /* 공사중표시 */
 body * {
-  /* outline: 2px dotted red; */
+  outline: 2px dotted red;
   /* background-color: black; */
 }
 
@@ -479,6 +480,40 @@ a.salad-logo {
   position: absolute;
   bottom: 0%;
   left: 100%;
+}
+.arrow-box{
+  position: absolute;
+  top: 0%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.arrow-box i:first-child {
+    top: 40%;
+    right: 0%;
+    position: absolute;
+    font-size: 5vh;
+    color: #fff;
+  }
+
+.arrow-box i:first-child:hover{
+  color: rgb(221, 23, 5);
+}
+.arrow-box i:last-child:hover{
+  color: rgb(221, 23, 5);
+}
+  .arrow-box i:last-child {
+    top: 40%;
+    left: 0%;
+    position: absolute;
+    font-size: 5vh;
+    color: #fff;
+}
+.movie-box{
+  display: flex;
+  width: 394px;
+  height: 221px;
+  
 }
 /********************************************  6. 이벤트/할인영역 ********************************************/
 .event-part {
