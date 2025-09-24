@@ -514,32 +514,34 @@ a.salad-logo {
 }
 .movie-box {
   position: absolute;
-  top: 60%;
+  top: 0%;
   left: 0%;
-  height: 100%;
+  height: 40%;
   width: 100%;
   display: flex;
+  padding-top: 430px;
 
 }
 
-.movie-box img:first-child {
+.ad-box img {
   width: 394px;
   height: 221px;
   border-radius: 30px;
   top: 50%;
+  margin-left: 103px;
 }
-.movie-box img:last-child {
+.review-box{
+  margin-left: 20px;
+}
+.review-box img {
   width: 394px;
   height: 221px;
   border-radius: 30px;
   top: 30%;
 }
 
-.ad-box {
+/* 가상요소 after를 활용해서 ad-box중앙에 이미지 넣기 */
 
-}
-.review-box {
-}
 /********************************************  6. 이벤트/할인영역 ********************************************/
 .event-part {
   height: 364px;
