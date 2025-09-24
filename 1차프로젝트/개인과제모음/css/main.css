@@ -8,7 +8,6 @@
 @import url(./grid_12_flex.css);
 @import url(./ani.css);
 
-
 /* 공사중표시 */
 body * {
   outline: 2px dotted red;
@@ -130,6 +129,7 @@ body * {
 .sub-list li {
   margin-right: 20px;
 }
+
 .sub-list2 {
   display: flex;
   flex-wrap: wrap;
@@ -376,19 +376,19 @@ a.salad-logo {
 .eight-pizza-part:hover {
   .bg-b1 {
     position: absolute;
-  width: 246px;
-  height: 174px;
-  top: 20%;
-  right: 18%;
+    width: 246px;
+    height: 174px;
+    top: 20%;
+    right: 18%;
   }
 }
 .eight-pizza-part:hover {
-  .bg-b2{
+  .bg-b2 {
     position: absolute;
-  width: 246px;
-  height: 174px;
-  top: 34%;
-  right: 4%;
+    width: 246px;
+    height: 174px;
+    top: 34%;
+    right: 4%;
   }
 }
 /************************************************ 마우스 오버시 배경 영역 ************************************************/
@@ -400,8 +400,8 @@ a.salad-logo {
 }
 .e-pizza:hover {
   opacity: 1;
-   transition: 1s ease-in-out all;
-   cursor: pointer;
+  transition: 1s ease-in-out all;
+  cursor: pointer;
 }
 
 .bg-pizza {
@@ -419,7 +419,7 @@ a.salad-logo {
   height: 174px;
   top: 20%;
   right: -27%;
-  transition: .5s ease-in-out all 3.2s;
+  transition: 0.5s ease-in-out all 3.2s;
 }
 .bg-b2 {
   position: absolute;
@@ -427,7 +427,7 @@ a.salad-logo {
   height: 174px;
   top: 34%;
   right: -27%;
-  transition: .5s ease-in-out all 3.8s;
+  transition: 0.5s ease-in-out all 3.8s;
 }
 .bg-sauce {
   position: absolute;
@@ -436,7 +436,7 @@ a.salad-logo {
   right: -20%;
   top: 42%;
   rotate: 270deg;
-  transition: .5s ease-in-out all 3s;
+  transition: 0.5s ease-in-out all 3s;
 }
 /********************************************  5. 동영상영역 ********************************************/
 .movie-part {
@@ -481,63 +481,64 @@ a.salad-logo {
   bottom: 0%;
   left: 100%;
 }
-.arrow-box{
+.arrow-box {
   position: absolute;
   top: 0%;
   left: 0;
   height: 100%;
   width: 100%;
 }
-.arrow-box i:first-child {
-    top: 40%;
-    right: 0%;
-    position: absolute;
-    font-size: 5vh;
-    color: #fff;
-  }
 
-.arrow-box i:first-child:hover{
-  color: rgb(221, 23, 5);
-}
-.arrow-box i:last-child:hover{
-  color: rgb(221, 23, 5);
-}
-  .arrow-box i:last-child {
-    top: 40%;
-    left: 0%;
-    position: absolute;
-    font-size: 5vh;
-    color: #fff;
-}
-.movie-box{
+.arrow-box i:first-child {
+  top: 40%;
+  right: 0%;
   position: absolute;
-  top: 0%;
+  font-size: 5vh;
+  color: #fff;
+}
+
+.arrow-box i:last-child {
+  top: 40%;
+  left: 0%;
+  position: absolute;
+  font-size: 5vh;
+  color: #fff;
+}
+.arrow-box i:first-child:hover {
+  color: rgb(221, 23, 5);
+   cursor: pointer;
+}
+.arrow-box i:last-child:hover {
+  color: rgb(221, 23, 5);
+   cursor: pointer;
+}
+.movie-box {
+  position: absolute;
+  top: 60%;
   left: 0%;
   height: 100%;
   width: 100%;
+  display: flex;
+
 }
 
-.movie-box img:first-child{
-  position: absolute;
+.movie-box img:first-child {
   width: 394px;
   height: 221px;
-  border-radius: 30%;
+  border-radius: 30px;
   top: 50%;
 }
-.movie-box img:last-child{
-  position: absolute;
+.movie-box img:last-child {
   width: 394px;
   height: 221px;
   border-radius: 30px;
   top: 30%;
 }
 
-.ad-box{
+.ad-box {
 
 }
-.review-box{
-margin-left: 20px;
-
+.review-box {
 }
 /********************************************  6. 이벤트/할인영역 ********************************************/
 .event-part {
