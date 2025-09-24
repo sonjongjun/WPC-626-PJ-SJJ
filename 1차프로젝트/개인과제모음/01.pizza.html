@@ -7,7 +7,7 @@
     <!-- 메인 CSS불러오기 -->
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/ani.css" />
-<!-- CDN아이콘 사용 -->
+    <!-- CDN아이콘 사용 -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -16,12 +16,14 @@
     <!-- 미디어 쿼리 -->
     <link rel="stylesheet" href="./css/media.css" />
 
-    <script src="./js/pizza.js" defer></script>
     <link rel="shortcut icon" href="./파비콘/favicon.ico" />
+
     <!-- 제이쿼리 기본 라이브러리 -->
     <script src="./jQuery/jquery-3.7.1.min.js"></script>
     <!-- 제이쿼리 UI는 색상애니, 드래그기능 등 추가모듈 -->
     <script src="./jQuery/jquery-ui.min.js"></script>
+    <!-- js로드 -->
+    <script src="./js/pizza.js" defer></script>
   </head>
   <body>
     <!-- 1.******************************************************************************************상단영역 ******************************************************************************************-->
@@ -269,11 +271,24 @@
     </div>
     <!-- ******************************************************************************************4. 8조각피자영역****************************************************************************************** -->
     <div class="eight-pizza-part">
-      <img
-        src="./피자조각 요소/8조각피자.png"
-        alt="8조각피자"
-        class="e-pizza"
-      />
+      <div class="e-pizza-part">
+        <div class="pizza-tray">
+        <img
+          src="./피자조각 요소/8조각피자.png"
+          alt="8조각피자"
+          class="e-pizza"/>
+          <div class="sliced-pizza">
+        <img src="./피자조각 요소/Layer 10.png" alt="피자조각1" />
+        <img src="./피자조각 요소/Layer 3.png" alt="피자조각2" />
+        <img src="./피자조각 요소/Layer 4.png" alt="피자조각3" />
+        <img src="./피자조각 요소/Layer 11.png" alt="피자조각4" />
+        <img src="./피자조각 요소/Layer 6.png" alt="피자조각5" />
+        <img src="./피자조각 요소/Layer 7.png" alt="피자조각6" />
+        <img src="./피자조각 요소/Layer 8.png" alt="피자조각7" />
+        <img src="./피자조각 요소/Layer 9.png" alt="피자조각8" />
+         </div>
+        </div>
+      </div>
       <div class="e-pizza-tit">
         <img
           src="./905.개인과제피자스톰/mainmenu_deco02.png"
@@ -310,22 +325,89 @@
       </div>
     </div>
     <!--****************************************************************************************** 5. 동영상영역****************************************************************************************** -->
-    <div class="movie-part inbox">
-      <div class="movie-box">
-        <div class="ad-box">
-        <img
-          src="./904.개인과제피자헛/hq720.jpg"
-          calss="ad-box-img"
-          alt="피자헛 공식광고"
-        />
-        </div>
-        <div class="review-box">
+    <div class="movie-part">
+      <div class="review-detail">
         <img
           src="./904.개인과제피자헛/유튜브.jpg"
-          calss="review-box-img"
-          alt="유튜브 리뷰영상"
+          class="review-detail-img"
+          alt="리뷰 디테일"
         />
+        <i class="fa-solid fa-xmark"></i>
+        <section class="review-info">
+          <i class="fa-brands fa-youtube"></i>
+          <img src="./로고/channels4_profile (2).png" alt="유튜브 채널로고" />
+          <p>
+            조회수 11,655회 2024. 12. 6. #피자헛 #pizza #피자<br />
+            #피자헛 #신메뉴#pizza #리뷰 #배달 #피자<br /><br />
+
+            [세상의 모든 피자를 리뷰한다]<br />
+            오늘의 피자는 피자헛 (Pizza Hut) 로 돌아왔습니다.<br />
+            NEW US 오리진 | 치즈딥이 들어간 쏘스페셜~<br />
+            피자 바로 리뷰해봅니다.<br /><br />
+
+            궁금하시죠~~?<br />
+            채널 고정, Subito~<br /><br />
+
+            #이진형셰프 #pizzeriao #pizza #리뷰영상 스크립트
+          </p>
+        </section>
+        <section class="pizza-info">
+          <img
+            src="./905.개인과제피자스톰/hero_GnNtm_2024_09_25_12_10_19.png"
+            class="pizza-img"
+            alt=""
+          />
+          <p>
+            피자스톰의 88페퍼로니는 풍성한 페퍼로니 토핑이 특징인 피자입니다.<br />
+            88개의 페퍼로니가 겹겹이 쌓여 있어 페퍼로니의 맛과 풍미를 가득 느낄
+            수 있습니다.<br />
+            특히, 짭짤한 페퍼로니와 고소한 치즈의 조화가 절묘하다는 평을
+            받습니다.<br /><br />
+
+            “피자스톰 88페퍼로니는 이름 그대로 페퍼로니가 무려 88장!<br />
+            한 입 가득 베어 물면 바삭하게 구워진 페퍼로니와 치즈가 만나 진짜
+            푸짐한 맛을 느낄 수 있습니다.<br />
+            보는 순간 군침 돌고, 먹는 순간 행복해지는 피자—오늘은 88페퍼로니로
+            즐겨보세요.”
+          </p>
+          <div class="info-logo">
+            <a href="" class="delivery-logo">
+              <img src="./로고/ic_delivery_2025.png" alt="배달로고" />
+              <img src="./로고/배달중.png" alt="배달중로고" />
+            </a>
+            <img src="./로고/피자헛25.png" alt="주문로고" />
+          </div>
+        </section>
+      </div>
+      <div class="movie-box">
+        <div class="ad-box">
+          <img
+            src="./904.개인과제피자헛/hq720.jpg"
+            calss="ad-box-img"
+            alt="피자헛 공식광고"
+          />
         </div>
+        <div class="review-box">
+          <a>
+            <img
+              src="./904.개인과제피자헛/유튜브.jpg"
+              calss="review-box-img"
+              alt="유튜브 리뷰영상"
+            />
+          </a>
+        </div>
+        <article class="about-area">
+          <h2>About피자헛</h2>
+          <img
+            src="./904.개인과제피자헛/history_main_bg.jpg"
+            class="about-img"
+            alt="피자헛전경"
+          />
+          <div class="icon">
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </article>
       </div>
       <div class="m-banner-box">
         <img

@@ -10,7 +10,7 @@
 
 /* 공사중표시 */
 body * {
-  outline: 2px dotted red;
+  /* outline: 2px dotted red; */
   /* background-color: black; */
 }
 
@@ -166,7 +166,41 @@ body * {
 .r-pizza.visible {
   opacity: 1; /* 영구적으로 보이게 */
 }
-
+.sliced-pizza {
+  position: absolute;
+}
+.sliced-pizza:nth-child(1) {
+  left: 0;
+  width: 10px;
+}
+.sliced-pizza:nth-child(2) {
+  left: 0;
+  width: 10px;
+}
+.sliced-pizza:nth-child(3) {
+  left: 0;
+  width: 10px;
+}
+.sliced-pizza:nth-child(4) {
+  left: 0;
+  width: 10px;
+}
+.sliced-pizza:nth-child(5) {
+  left: 0;
+  width: 10px;
+}
+.sliced-pizza:nth-child(6) {
+  left: 0;
+  width: 10px;
+}
+.sliced-pizza:nth-child(7) {
+  left: 0;
+  width: 10px;
+}
+.sliced-pizza:nth-child(8) {
+  left: 0;
+  width: 10px;
+}
 .r-pizza-wrap {
   position: relative;
   aspect-ratio: 1.4;
@@ -396,7 +430,7 @@ a.salad-logo {
   position: absolute;
   left: 103px;
   bottom: 80px;
-  opacity: 0.5;
+  opacity: 1;
 }
 .e-pizza:hover {
   opacity: 1;
@@ -444,6 +478,7 @@ a.salad-logo {
   width: 1220px;
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
 }
 .m-banner-box {
   top: 5%;
@@ -493,7 +528,7 @@ a.salad-logo {
   top: 40%;
   right: 0%;
   position: absolute;
-  font-size: 5vh;
+  font-size: 5rem;
   color: #fff;
 }
 
@@ -501,16 +536,16 @@ a.salad-logo {
   top: 40%;
   left: 0%;
   position: absolute;
-  font-size: 5vh;
+  font-size: 5rem;
   color: #fff;
 }
 .arrow-box i:first-child:hover {
   color: rgb(221, 23, 5);
-   cursor: pointer;
+  cursor: pointer;
 }
 .arrow-box i:last-child:hover {
   color: rgb(221, 23, 5);
-   cursor: pointer;
+  cursor: pointer;
 }
 .movie-box {
   position: absolute;
@@ -520,9 +555,39 @@ a.salad-logo {
   width: 100%;
   display: flex;
   padding-top: 430px;
-
 }
-
+.ad-box::after {
+  content: "";
+  position: absolute;
+  top: 75%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background-image: url("../로고/icon_play.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  z-index: 1;
+  opacity: 1;
+}
+.review-box::after {
+  content: "";
+  position: absolute;
+  top: 75%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background-image: url("../로고/icon_play.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  z-index: 1;
+  opacity: 1;
+}
 .ad-box img {
   width: 394px;
   height: 221px;
@@ -530,7 +595,7 @@ a.salad-logo {
   top: 50%;
   margin-left: 103px;
 }
-.review-box{
+.review-box {
   margin-left: 20px;
 }
 .review-box img {
@@ -539,8 +604,154 @@ a.salad-logo {
   border-radius: 30px;
   top: 30%;
 }
+.about-area {
+  border-radius: 25px;
+  width: 214px;
+  height: 265px;
+  margin-left: 6px;
+  background-color: rgba(213, 161, 161, 1);
+}
+.about-area h2 {
+  font-size: 3.2rem;
+  margin: 0 auto;
+  padding-top: 10px;
+  text-align: center;
+}
+.about-img {
+  width: 187px;
+  height: 105px;
+  cursor: pointer;
+  margin-top: 18px;
+  margin-left: 14px;
+  outline: 10px ridge goldenrod;
+  box-sizing: border-box;
+}
 
-/* 가상요소 after를 활용해서 ad-box중앙에 이미지 넣기 */
+.icon {
+  text-align: center;
+  margin-top: 10px;
+}
+.icon > i:first-child {
+  font-size: 7rem;
+  cursor: pointer;
+}
+.icon > i:first-child:hover {
+  color: rgb(221, 23, 5);
+}
+.icon > i:last-child {
+  font-size: 7rem;
+  cursor: pointer;
+}
+.icon > i:last-child:hover {
+  color: rgb(211, 35, 138);
+}
+/*****************************************************************************************/
+/******************************** 재생영역  ***********************************************/
+/*****************************************************************************************/
+.review-detail {
+  position: relative;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 89999;
+  border-radius: 30px;
+  transition: 0.4s ease-out;
+}
+.review-detail-img {
+  width: 618px;
+  height: 348px;
+  border-radius: 30px;
+  margin-left: 38px;
+  margin-top: 17px;
+}
+
+.review-info {
+  width: 608px;
+  height: 333px;
+  background-color: rgba(218, 188, 188, 1);
+  margin-left: 48px;
+  margin-top: 12px;
+  border-radius: 10px;
+}
+.review-info > i {
+  font-size: 7rem;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.review-info > i:hover {
+  color: rgb(221, 23, 5);
+}
+.review-info > p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.pizza-info {
+  position: absolute;
+  width: 525px;
+  height: 600px;
+  background-color: rgba(218, 188, 188, 1);
+  top: 0;
+  right: 0;
+  margin-right: 14px;
+  margin-top: 85px;
+  border-radius: 20px;
+}
+.pizza-img {
+  width: 400px;
+  height: 300px;
+  margin-left: 60px;
+}
+.pizza-info > p {
+  font-size: 1.5rem;
+}
+.info-logo {
+  position: absolute;
+  right: 0;
+}
+
+a.delivery-logo {
+  display: inline-block;
+}
+/* 처음에 두번째 이미지 안보이게하기 */
+.delivery-logo img:last-child {
+  display: none;
+}
+/* 마우스 오버시 첫번쨰이미지 안보이게하기 */
+.delivery-logo:hover img:first-child {
+  display: none;
+}
+/*마우스 오버시 두번째 이미지 보이게하기 */
+.delivery-logo:hover img:last-child {
+  display: inline;
+}
+.fa-xmark {
+  font-size: 8rem;
+  vertical-align: middle;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+}
+.review-detail > i:hover {
+  color: rgb(221, 23, 5);
+}
+.review-detail-img::after {
+  content: "";
+  position: absolute;
+  top: 75%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background-image: url("../로고/icon_play.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  z-index: 1;
+  opacity: 1;
+}
 
 /********************************************  6. 이벤트/할인영역 ********************************************/
 .event-part {
@@ -548,6 +759,7 @@ a.salad-logo {
   width: 1220px;
   margin: 0 auto;
 }
+
 /******************************************** 7.하단영역 ********************************************/
 .bottom-area {
   height: 249px;
