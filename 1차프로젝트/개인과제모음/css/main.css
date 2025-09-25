@@ -10,7 +10,7 @@
 
 /* 공사중표시 */
 body * {
-  outline: 2px dotted red;
+  /* outline: 2px dotted red; */
   /* background-color: black; */
 }
 
