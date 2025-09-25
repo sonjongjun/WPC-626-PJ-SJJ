@@ -38,8 +38,8 @@ html{
     font-size: 10px;
     /* rem단위 계산편의를 위함 */
     margin: 0 auto;
-    scale: 1.5;
-    transform-origin: top center;
+    /* scale: 1.5; */
+    /* transform-origin: top center; */
 }
 body{
     /* 글자체 */

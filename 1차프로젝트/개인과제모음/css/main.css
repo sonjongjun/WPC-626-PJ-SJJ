@@ -10,7 +10,7 @@
 
 /* 공사중표시 */
 body * {
-  /* outline: 2px dotted red; */
+  outline: 2px dotted red;
   /* background-color: black; */
 }
 
@@ -25,6 +25,10 @@ body * {
   height: 118px;
   display: flex;
   outline: 1px solid #000;
+}
+#top-area >a:hover{
+  color:red;
+  
 }
 .gnb-menu,
 .top-menu-right {
@@ -148,6 +152,7 @@ body * {
 오버시 높이값이 내용만큼만 커지게된다 */
 }
 
+
 /*******************************************  2.회전피자메뉴 *******************************************/
 .r-pizza-menu {
   width: 1220px;
@@ -158,6 +163,8 @@ body * {
   height: 605px;
   opacity: 0; /* 처음에 거의 투명 */
   transition: opacity 1.5s ease-in-out; /* 천천히 */
+  /* 영역에 꽉 찬 이미지 */
+  /* background: url(../배경폴더/baegyung.jpg) no-repeat center/100% 100%; */
 }
 .r-pizza-menu.on {
   opacity: 1; /* 0~1 사이값으로 조정 */
@@ -249,18 +256,33 @@ body * {
   width: 1220px;
   height: 168px;
   margin: 0 auto;
-  display: flex;
   justify-content: center;
 }
-.logo-area ul {
+.logo-part{
   position: absolute;
   margin-top: 61px;
   display: flex;
+  left: 25%;
 }
-.logo-area img {
+.logo-part img {
   height: 84px;
   width: 84px;
   margin-left: 20px;
+}
+.logo-font{
+  position: absolute;
+  display: flex;
+  font-size: 1.6rem;
+  color: #fff;
+  top: 0;
+  right: 0;
+
+}
+.logo-font p{
+  margin-left: 20px;
+  background-color: #d22b2b;
+  border-radius: 7px;
+
 }
 
 /************************************************************* 로고 변환영역 *************************************************************/
