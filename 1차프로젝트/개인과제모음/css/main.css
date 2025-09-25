@@ -10,7 +10,7 @@
 
 /* 공사중표시 */
 body * {
-  /* outline: 2px dotted red; */
+  outline: 2px dotted red;
   /* background-color: black; */
 }
 
@@ -559,7 +559,7 @@ a.salad-logo {
 .ad-box::after {
   content: "";
   position: absolute;
-  top: 75%;
+  top: 125%;
   left: 25%;
   transform: translate(-50%, -50%);
   width: 80px;
@@ -575,7 +575,7 @@ a.salad-logo {
 .review-box::after {
   content: "";
   position: absolute;
-  top: 75%;
+  top: 125%;
   left: 60%;
   transform: translate(-50%, -50%);
   width: 80px;
@@ -704,7 +704,7 @@ a.salad-logo {
   margin-left: 60px;
 }
 .pizza-info > p {
-  font-size: 1.5rem;
+  font-size: 1.42rem;
 }
 .info-logo {
   position: absolute;

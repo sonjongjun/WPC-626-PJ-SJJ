@@ -9,7 +9,3 @@ detailon.addEventListener('click', () => {
     document.querySelector('.review-detail').style.top = '0';
 });
 
-let epizza = document.querySelector('.e-pizza');
-epizza.addEventListener('hover', () => {
-    document.
-})
