@@ -258,6 +258,7 @@ body * {
   margin: 0 auto;
   justify-content: center;
 }
+
 .logo-part{
   position: absolute;
   margin-top: 61px;
@@ -269,20 +270,48 @@ body * {
   width: 84px;
   margin-left: 20px;
 }
+/* 기존 .logo-font 스타일 수정 */
 .logo-font{
   position: absolute;
   display: flex;
   font-size: 1.6rem;
   color: #fff;
-  top: 0;
-  right: 0;
-
+  margin-top: 16px;
+  left: 25%;
 }
+
+/* 각 텍스트 li에 초기 상태 설정 */
+.logo-font li {
+  transition: transform 0.5s ease-in-out;
+  /* opacity: 0; */
+  transform: translateY(0); /* 초기 위치 */
+}
+
+/* 텍스트가 올라간 상태 */
+.logo-font li.active {
+  transform: translateY(-50px);
+display: flex;
+  align-items: center; /* 수직 중앙정렬 */
+  justify-content: center; /* 수평 중앙정렬 */
+  width: 104px; /* 이미지 너비 + 마진을 고려한 너비 */
+  height: 104px; /* 이미지와 같은 높이 */
+  opacity: 1;
+}
+
 .logo-font p{
-  margin-left: 20px;
+  margin-left: 17px;
   background-color: #d22b2b;
   border-radius: 7px;
+  padding: 8px 12px;
+  cursor: pointer;
+text-align: center;
+  white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+}
 
+/* 활성화된 텍스트의 스타일 */
+.logo-font li.active p {
+  background-color: #ff3333;
+  box-shadow: 0 4px 8px rgba(210, 43, 43, 0.5);
 }
 
 /************************************************************* 로고 변환영역 *************************************************************/
@@ -618,7 +647,7 @@ a.salad-logo {
   margin-left: 103px;
 }
 .review-box {
-  margin-left: 20px;
+  margin-left: 7px;
 }
 .review-box img {
   width: 394px;
@@ -777,10 +806,20 @@ a.delivery-logo {
 
 /********************************************  6. 이벤트/할인영역 ********************************************/
 .event-part {
+  position: relative;
   height: 364px;
   width: 1220px;
   margin: 0 auto;
 }
+.event-logo{
+  position: absolute;
+  width: 629px;
+  height: 293px;
+  bottom: -30%;
+  right: 0%;
+  translate: -50% -50%;
+}
+
 
 /******************************************** 7.하단영역 ********************************************/
 .bottom-area {
