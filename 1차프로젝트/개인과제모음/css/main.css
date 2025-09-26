@@ -397,45 +397,63 @@ a.salad-logo {
   position: absolute;
   left: 0;
 }
-.sl-piz1{
-  width: 50px;
-  height: 50px;
-  
+.sl-piz1>img{
+ position: absolute;
+    width: 149.5px;
+    height: 172px;
+    bottom: 12.2%;
+    left: 12.5%;
 }
-.sl-piz2{
-  width: 50px;
-  height: 50px;
-  
+.sl-piz2>img{
+  position: absolute;
+    width: 200px;
+    height: 109.9px;
+    bottom: 37.1%;
+    left: 8.7%;
 }
-.sl-piz3{
-  width: 50px;
-  height: 50px;
-  
+.sl-piz3>img{
+  position: absolute;
+    width: 199px;
+    height: 121.8px;
+    bottom: 19.8%;
+    left: 8.5%;
 }
-.sl-piz4{
-  width: 50px;
-  height: 50px;
-  
+.sl-piz4>img{
+ position: absolute;
+    width: 141.3px;
+    height: 157px;
+    bottom: 37.8%;
+    left: 24.5%;
 }
-.sl-piz5{
-  width: 50px;
-  height: 50px;
-  
+.sl-piz5>img{
+  position: absolute;
+    width: 144.1px;
+    height: 171.5px;
+    bottom: 12.3%;
+    left: 24.2%;
 }
-.sl-piz6{
-  width: 50px;
-  height: 50px;
-  
+
+.sl-piz6>img{
+ position: absolute;
+    width: 198px;
+    height: 134.9px;
+    bottom: 17.8%;
+    left: 24.7%;
 }
-.sl-piz7{
-  width: 50px;
-  height: 50px;
-  
+.sl-piz7>img{
+ position: absolute;
+    width: 198px;
+    height: 113px;
+    bottom: 37.2%;
+    left: 24.7%;
 }
-.sl-piz8{
-  width: 50px;
-  height: 50px;
-  
+
+.sl-piz8>img{
+position: absolute;
+    width: 134.3px;
+    height: 158.6px;
+    bottom: 37.3%;
+    left: 13.9%;
 }
 /************************************************ 마우스 오버시 배경 영역 ************************************************/
 .eight-pizza-part:hover {
@@ -822,13 +840,30 @@ a.delivery-logo {
   position: absolute;
   width: 310px; /* 초기 크기 설정 */
   height: 144px; /* 초기 크기 설정 */
-  bottom: 50%;
-  right: 50%;
-  transition: all 0.5s ease-in-out; /* 부드러운 애니메이션 */
-  opacity: 1;
+  top: 0%;
+  left: 0%;
+  margin-left: 83px;
+  margin-top: 12px; 
 }
-
-
+.ev-banner{
+  width: 517px;
+  height: 329px;
+}
+.ev-banner :nth-child(1){
+position: absolute;
+opacity: 0;
+}
+.ev-banner :nth-child(2){
+position: absolute;
+opacity: 0;
+}
+.ev-banner :nth-child(3){
+position: absolute;
+opacity: 0;
+}
+.ev-banner :nth-child(4){
+  position: absolute;
+}
 
 /******************************************** 7.하단영역 ********************************************/
 .bottom-area {
