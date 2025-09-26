@@ -48,22 +48,49 @@
     }
 }
 .ev-banner>img:nth-child(1){
-    animation: ev-4 3s ease-in-out alternate infinite;
+    animation: dissolve-1 16s ease-in-out infinite;
 }
 .ev-banner>img:nth-child(2){
-    animation: ev-4 6s ease-in-out 3s alternate infinite ;
+    animation: dissolve-2 16s ease-in-out infinite;
 }
 .ev-banner>img:nth-child(3){
-    animation: ev-4 9s ease-in-out 6s alternate infinite ;
+    animation: dissolve-3 16s ease-in-out infinite;
 }
 .ev-banner>img:nth-child(4){
-    animation: ev-4 12s ease-in-out 9s alternate infinite ;
+    animation: dissolve-4 16s ease-in-out infinite;
 }
-@keyframes ev-4{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
+
+/* 각 이미지별 디졸브 키프레임 - 순차적으로 나타나고 사라지기 */
+@keyframes dissolve-1 {
+    0% { opacity: 1; }
+    20% { opacity: 1; }
+    25% { opacity: 0; }
+    95% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes dissolve-2 {
+    0% { opacity: 0; }
+    20% { opacity: 0; }
+    25% { opacity: 1; }
+    45% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@keyframes dissolve-3 {
+    0% { opacity: 0; }
+    45% { opacity: 0; }
+    50% { opacity: 1; }
+    70% { opacity: 1; }
+    75% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@keyframes dissolve-4 {
+    0% { opacity: 0; }
+    70% { opacity: 0; }
+    75% { opacity: 1; }
+    95% { opacity: 1; }
+    100% { opacity: 0; }
 }
