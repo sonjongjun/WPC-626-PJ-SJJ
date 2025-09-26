@@ -173,41 +173,6 @@ body * {
 .r-pizza.visible {
   opacity: 1; /* 영구적으로 보이게 */
 }
-.sliced-pizza {
-  position: absolute;
-}
-.sliced-pizza:nth-child(1) {
-  left: 0;
-  width: 10px;
-}
-.sliced-pizza:nth-child(2) {
-  left: 0;
-  width: 10px;
-}
-.sliced-pizza:nth-child(3) {
-  left: 0;
-  width: 10px;
-}
-.sliced-pizza:nth-child(4) {
-  left: 0;
-  width: 10px;
-}
-.sliced-pizza:nth-child(5) {
-  left: 0;
-  width: 10px;
-}
-.sliced-pizza:nth-child(6) {
-  left: 0;
-  width: 10px;
-}
-.sliced-pizza:nth-child(7) {
-  left: 0;
-  width: 10px;
-}
-.sliced-pizza:nth-child(8) {
-  left: 0;
-  width: 10px;
-}
 .r-pizza-wrap {
   position: relative;
   aspect-ratio: 1.4;
@@ -431,6 +396,46 @@ a.salad-logo {
   max-width: 1220px;
   position: absolute;
   left: 0;
+}
+.sl-piz1{
+  width: 50px;
+  height: 50px;
+  
+}
+.sl-piz2{
+  width: 50px;
+  height: 50px;
+  
+}
+.sl-piz3{
+  width: 50px;
+  height: 50px;
+  
+}
+.sl-piz4{
+  width: 50px;
+  height: 50px;
+  
+}
+.sl-piz5{
+  width: 50px;
+  height: 50px;
+  
+}
+.sl-piz6{
+  width: 50px;
+  height: 50px;
+  
+}
+.sl-piz7{
+  width: 50px;
+  height: 50px;
+  
+}
+.sl-piz8{
+  width: 50px;
+  height: 50px;
+  
 }
 /************************************************ 마우스 오버시 배경 영역 ************************************************/
 .eight-pizza-part:hover {
@@ -805,30 +810,24 @@ a.delivery-logo {
 }
 
 /********************************************  6. 이벤트/할인영역 ********************************************/
+/* 6. 이벤트/할인영역 - 수정된 버전 */
 .event-part {
   position: relative;
   height: 364px;
   width: 1220px;
   margin: 0 auto;
 }
-.event-logo{
+
+.event-logo {
   position: absolute;
-  width: 0px;
-  height: 0px;
-  bottom: -30%;
-  right: 0%;
-  translate: -50% -50%;
+  width: 310px; /* 초기 크기 설정 */
+  height: 144px; /* 초기 크기 설정 */
+  bottom: 50%;
+  right: 50%;
+  transition: all 0.5s ease-in-out; /* 부드러운 애니메이션 */
+  opacity: 1;
 }
 
-
-/* .event-logo{
-  position: absolute;
-  width: 629px;
-  height: 293px;
-  bottom: -30%;
-  right: 0%;
-  translate: -50% -50%;
-} */
 
 
 /******************************************** 7.하단영역 ********************************************/
