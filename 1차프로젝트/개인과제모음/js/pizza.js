@@ -8,6 +8,9 @@ detailon.addEventListener('click', () => {
     document.querySelector('.review-detail').style.top = '0';
 });
 
+
+
+
 // 새로 추가할 코드: 이미지 호버 시 텍스트 애니메이션
 document.addEventListener('DOMContentLoaded', function() {
     // 로고 이미지들과 텍스트들 선택
@@ -22,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (logoTexts[index]) {
                 logoTexts[index].classList.add('active');
             }
-        });
+        });/////////마우스들어올때
         
         // 마우스 아웃 시
         link.addEventListener('mouseleave', () => {

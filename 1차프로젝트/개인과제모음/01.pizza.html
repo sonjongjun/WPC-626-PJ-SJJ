@@ -462,8 +462,23 @@
       <img src="./905.개인과제피자스톰/event_title.png"
        class="event-logo"
        alt="이벤트로고">
+
+  <script>
+    const eventPart = document.querySelector('.event-part');
+    const eventLogo = document.querySelector('.event-logo');
+
+    $('eventPart').mouseenter( ()=>{
+      $('.eventLogo').css('width', '623px');
+      $('.eventLogo').css('height', '293px');
+    });
+  </script>
     </div>
   </body>
+
+
+
+
+
   <!-- ******************************************************************************************7.하단영역****************************************************************************************** -->
   <div id="bottom-area">
     <footer class="bottom-area inbox"></footer>

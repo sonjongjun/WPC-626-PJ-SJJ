@@ -813,12 +813,22 @@ a.delivery-logo {
 }
 .event-logo{
   position: absolute;
+  width: 0px;
+  height: 0px;
+  bottom: -30%;
+  right: 0%;
+  translate: -50% -50%;
+}
+
+
+/* .event-logo{
+  position: absolute;
   width: 629px;
   height: 293px;
   bottom: -30%;
   right: 0%;
   translate: -50% -50%;
-}
+} */
 
 
 /******************************************** 7.하단영역 ********************************************/
