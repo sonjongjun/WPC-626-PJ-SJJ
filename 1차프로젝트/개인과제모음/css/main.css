@@ -876,6 +876,118 @@ a.delivery-logo {
   opacity: 1;
 }
 
+.banner-box1{
+  position: absolute;
+  width: 307px;
+  height: 143px;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  margin-right: 206px;
+  margin-top: 10px;
+}
+
+/* 배너 이미지들 - 모두 같은 위치에 겹치게 배치 */
+.banner-box1 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover center; /* 이미지 비율 유지하면서 컨테이너 채우기 */
+  opacity: 0; /* 기본적으로 모두 숨김 */
+}
+
+/* 첫 번째 이미지만 처음에 보이게 */
+.banner-box1 img:nth-child(1) {
+  opacity: 1;
+}
+/* 배너박스222222222222222222222222 */
+.banner-box2{
+  position: absolute;
+  width: 307px;
+  height: 143px;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  margin-right: 206px;
+  margin-top: 179px;
+}
+
+/* 배너 이미지들 - 모두 같은 위치에 겹치게 배치 */
+.banner-box2 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover center; /* 이미지 비율 유지하면서 컨테이너 채우기 */
+  opacity: 0; /* 기본적으로 모두 숨김 */
+}
+
+/* 첫 번째 이미지만 처음에 보이게 */
+.banner-box2 img:nth-child(1) {
+  opacity: 1;
+}
+/* 배너박스33333333333333333333333333333333 */
+.banner-box3{
+  position: absolute;
+  width: 307px;
+  height: 143px;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  margin-right: 206px;
+  margin-top: 348px;
+}
+
+/* 배너 이미지들 - 모두 같은 위치에 겹치게 배치 */
+.banner-box3 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover center; /* 이미지 비율 유지하면서 컨테이너 채우기 */
+  opacity: 0; /* 기본적으로 모두 숨김 */
+}
+
+/* 첫 번째 이미지만 처음에 보이게 */
+.banner-box3 img:nth-child(1) {
+  opacity: 1;
+}
+.ud-arrow{
+  font-size: 3rem;
+  position: absolute;
+ top: 43px;
+    right: 161px;
+}
+i.fa-arrow-up{
+  display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+i.fa-arrow-down{
+  margin-top: 25px;
+}
+.ud-arrow>i:hover{
+  color: rgba(255, 0, 0, 0.679);
+  cursor: pointer;
+
+}
+.eve-logo-box{
+  position: absolute;
+  right: 10%;
+  top: 30%;
+  display: flex;
+   max-width: 90px;
+   flex-direction:column;
+   
+}
+.eve-logo-box>img{
+ max-width: 90px;
+  max-height: 90px;
+}
 /******************************************** 7.하단영역 ********************************************/
 .bottom-area {
   height: 249px;

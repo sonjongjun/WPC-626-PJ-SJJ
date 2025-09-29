@@ -94,3 +94,44 @@
     95% { opacity: 1; }
     100% { opacity: 0; }
 }
+/* 배너박스 1 */
+.banner-box1>img:nth-child(1){
+    animation: dissolve-1 16s ease-in-out infinite;
+}
+.banner-box1>img:nth-child(2){
+    animation: dissolve-2 16s ease-in-out infinite;
+}
+.banner-box1>img:nth-child(3){
+    animation: dissolve-3 16s ease-in-out infinite;
+}
+.banner-box1>img:nth-child(4){
+    animation: dissolve-4 16s ease-in-out infinite;
+}
+
+/* 배너박스2 */
+.banner-box2>img:nth-child(1){
+    animation: dissolve-1 16s ease-in-out infinite;
+}
+.banner-box2>img:nth-child(2){
+    animation: dissolve-2 16s ease-in-out infinite;
+}
+.banner-box2>img:nth-child(3){
+    animation: dissolve-3 16s ease-in-out infinite;
+}
+.banner-box2>img:nth-child(4){
+    animation: dissolve-4 16s ease-in-out infinite;
+}
+
+/* 배너박스3 */
+.banner-box3>img:nth-child(1){
+    animation: dissolve-1 16s ease-in-out infinite;
+}
+.banner-box3>img:nth-child(2){
+    animation: dissolve-2 16s ease-in-out infinite;
+}
+.banner-box3>img:nth-child(3){
+    animation: dissolve-3 16s ease-in-out infinite;
+}
+.banner-box3>img:nth-child(4){
+    animation: dissolve-4 16s ease-in-out infinite;
+}
