@@ -13,6 +13,8 @@ scroll-behavior: smooth;
 /* 공사중표시 */
 body * {
   /* outline: 2px dotted red; */
+  -webkit-user-drag: none;
+  user-select: none;
   /* background-color: black; */
 }
 
@@ -387,6 +389,7 @@ a.salad-logo {
   top: -50%;
   position: absolute;
   transition: 2s ease-in-out all;
+  z-index: -1;
 }
 .cheese {
   top: 0;
@@ -399,64 +402,105 @@ a.salad-logo {
   position: absolute;
   left: 0;
 }
-.sl-piz1>img{
- position: absolute;
-    width: 149.5px;
-    height: 172px;
-    bottom: 12.2%;
-    left: 12.5%;
-}
-.sl-piz2>img{
-  position: absolute;
-    width: 200px;
-    height: 109.9px;
-    bottom: 37.1%;
-    left: 8.7%;
-}
-.sl-piz3>img{
-  position: absolute;
-    width: 199px;
-    height: 121.8px;
-    bottom: 19.8%;
-    left: 8.5%;
-}
-.sl-piz4>img{
- position: absolute;
-    width: 141.3px;
-    height: 157px;
-    bottom: 37.8%;
-    left: 24.5%;
-}
-.sl-piz5>img{
+
+/* 피자조각 공통요소 */
+.pizza-slice>img{
   position: absolute;
     width: 144.1px;
-    height: 171.5px;
-    bottom: 12.3%;
-    left: 24.2%;
+    height: 155.5px;
+    clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
 }
-
+.sl-piz1>img{
+  transform-origin: top left;
+    position: absolute;
+    width: 134.1px;
+    height: 158px;
+    bottom: 12.3%;
+    left: 24.8%;
+    clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
+    rotate: 51deg;
+}
+.sl-piz2>img{
+  transform-origin: top left;
+    position: absolute;
+    width: 134.1px;
+    height: 158px;
+    bottom: 12.3%;
+    left: 24.8%;
+    clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
+    rotate: 139deg;
+}
+.sl-piz3>img{
+  transform-origin: top left;
+    position: absolute;
+    width: 134.1px;
+    height: 158px;
+    bottom: 12.3%;
+    left: 24.8%;
+    clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
+    rotate: 99deg;
+}
+.sl-piz4>img{
+  transform-origin: top left;
+    position: absolute;
+    width: 150.1px;
+    height: 175px;
+    bottom: 10.2%;
+    left: 24.8%;
+    clip-path: polygon(0% 106%, 0% 0%, 100% 77%, 88% 68%, 54% 96%, 25% 100%);
+    transform: skew(8deg, -19deg);
+    rotate: 242deg;
+    opacity: 0;
+}
+.sl-piz5>img{
+  transform-origin: top left;
+    position: absolute;
+    width: 151.1px;
+    height: 168px;
+    bottom: 12.6%;
+    left: 24.3%;
+    clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
+    rotate: 1deg;
+    opacity: 0;
+    
+}
 .sl-piz6>img{
- position: absolute;
-    width: 198px;
-    height: 134.9px;
-    bottom: 17.8%;
-    left: 24.7%;
+ transform-origin: top left;
+    position: absolute;
+    width: 114.1px;
+    height: 159px;
+    bottom: 13.3%;
+    left: 24.3%;
+    clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
+    rotate: 312deg;
+    scale: 1.2;
+    opacity: 0;
+
 }
 .sl-piz7>img{
- position: absolute;
-    width: 198px;
-    height: 113px;
-    bottom: 37.2%;
-    left: 24.7%;
+ transform-origin: top left;
+    position: absolute;
+    width: 139px;
+    height: 189px;
+    bottom: 8.8%;
+    left: 24.8%;
+    clip-path: polygon(0% 0%, 6% 0%, 106% 40%, 85% 80%, 47% 100%, 18% 100%);
+    rotate: 280deg;
+    transform: skew(2deg, 354deg);
+    opacity: 0;
+}
+.sl-piz8>img{
+ transform-origin: top left;
+    position: absolute;
+    width: 134.1px;
+    height: 158px;
+    bottom: 12.3%;
+    left: 24.8%;
+    clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
+    rotate: 179deg;
+    opacity: 0;
 }
 
-.sl-piz8>img{
-position: absolute;
-    width: 134.3px;
-    height: 158.6px;
-    bottom: 37.3%;
-    left: 13.9%;
-}
 /************************************************ 마우스 오버시 배경 영역 ************************************************/
 .eight-pizza-part:hover {
   .e-pizza-tit {
@@ -508,10 +552,10 @@ position: absolute;
   bottom: 80px;
   opacity: 1;
 }
+
 .e-pizza:hover {
   opacity: 1;
   transition: 1s ease-in-out all;
-  cursor: pointer;
 }
 
 .bg-pizza {
@@ -990,9 +1034,86 @@ i.fa-arrow-down{
  max-width: 90px;
   max-height: 90px;
 }
+
+a.cou-logo {
+  display: inline-block;
+}
+/* 처음에 두번째 이미지 안보이게하기 */
+.cou-logo img:last-child {
+  display: none;
+}
+/* 마우스 오버시 첫번쨰이미지 안보이게하기 */
+.cou-logo:hover img:first-child {
+  display: none;
+}
+/*마우스 오버시 두번째 이미지 보이게하기 */
+.cou-logo:hover img:last-child {
+  display: inline;
+}
+
+
+a.stamp-logo {
+  display: inline-block;
+}
+/* 처음에 두번째 이미지 안보이게하기 */
+.stamp-logo img:last-child {
+  display: none;
+}
+/* 마우스 오버시 첫번쨰이미지 안보이게하기 */
+.stamp-logo:hover img:first-child {
+  display: none;
+}
+/*마우스 오버시 두번째 이미지 보이게하기 */
+.stamp-logo:hover img:last-child {
+  display: inline;
+}
+
+
+a.pocket-logo {
+  display: inline-block;
+}
+/* 처음에 두번째 이미지 안보이게하기 */
+.pocket-logo img:last-child {
+  display: none;
+}
+/* 마우스 오버시 첫번쨰이미지 안보이게하기 */
+.pocket-logo:hover img:first-child {
+  display: none;
+}
+/*마우스 오버시 두번째 이미지 보이게하기 */
+.pocket-logo:hover img:last-child {
+  display: inline;
+}
+
+a.mile-logo {
+  display: inline-block;
+}
+/* 처음에 두번째 이미지 안보이게하기 */
+.mile-logo img:last-child {
+  display: none;
+}
+/* 마우스 오버시 첫번쨰이미지 안보이게하기 */
+.mile-logo:hover img:first-child {
+  display: none;
+}
+/*마우스 오버시 두번째 이미지 보이게하기 */
+.mile-logo:hover img:last-child {
+  display: inline;
+}
+
+
+
+
 /******************************************** 7.하단영역 ********************************************/
-.bottom-area {
+#bottom-area {
   height: 249px;
-  width: 1220px;
   margin: 0 auto;
+  background-color: rgba(200, 181, 181, 1)
+}
+.bottom-list1{
+display: flex;
+}
+
+.bottom-list2{
+display: flex;
 }

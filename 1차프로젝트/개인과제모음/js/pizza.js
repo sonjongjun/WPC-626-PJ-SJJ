@@ -36,3 +36,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// .sl-piz8>img에 마우스 오버시
