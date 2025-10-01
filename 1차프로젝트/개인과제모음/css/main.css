@@ -7,8 +7,8 @@
 /* 12그리드 CSS */
 @import url(./grid_12_flex.css);
 @import url(./ani.css);
-html{
-scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 /* 공사중표시 */
 body * {
@@ -30,9 +30,8 @@ body * {
   display: flex;
   outline: 1px solid #000;
 }
-#top-area >a:hover{
-  color:red;
-  
+#top-area > a:hover {
+  color: red;
 }
 .gnb-menu,
 .top-menu-right {
@@ -156,7 +155,6 @@ body * {
 오버시 높이값이 내용만큼만 커지게된다 */
 }
 
-
 /*******************************************  2.회전피자메뉴 *******************************************/
 .r-pizza-menu {
   width: 1220px;
@@ -184,7 +182,7 @@ body * {
 }
 .r-pizza {
   position: absolute;
-  top: 17%;
+  top: 14%;
   translate: 0 -50%;
   rotate: x 50deg;
   height: 605px;
@@ -228,11 +226,13 @@ body * {
   justify-content: center;
 }
 
-.logo-part{
+.logo-part {
   position: absolute;
   margin-top: 61px;
   display: flex;
-  left: 25%;
+  left: 20%;
+  width: 56%;
+  justify-content: space-around;
 }
 .logo-part img {
   height: 84px;
@@ -240,13 +240,14 @@ body * {
   margin-left: 20px;
 }
 /* 기존 .logo-font 스타일 수정 */
-.logo-font{
+.logo-font {
   position: absolute;
   display: flex;
   font-size: 1.6rem;
   color: #fff;
   margin-top: 16px;
-  left: 25%;
+  left: 20%;
+  width: 56%;
 }
 
 /* 각 텍스트 li에 초기 상태 설정 */
@@ -254,26 +255,26 @@ body * {
   transition: transform 0.5s ease-in-out;
   /* opacity: 0; */
   transform: translateY(0); /* 초기 위치 */
+  width: 115px;
 }
 
 /* 텍스트가 올라간 상태 */
 .logo-font li.active {
-  transform: translateY(-50px);
-display: flex;
+  transform: translateY(-30px);
+  display: flex;
   align-items: center; /* 수직 중앙정렬 */
   justify-content: center; /* 수평 중앙정렬 */
-  width: 104px; /* 이미지 너비 + 마진을 고려한 너비 */
-  height: 104px; /* 이미지와 같은 높이 */
+  /* 이미지 너비 + 마진을 고려한 너비 */
   opacity: 1;
 }
 
-.logo-font p{
+.logo-font p {
   margin-left: 17px;
   background-color: #d22b2b;
   border-radius: 7px;
   padding: 8px 12px;
   cursor: pointer;
-text-align: center;
+  text-align: center;
   white-space: nowrap; /* 텍스트 줄바꿈 방지 */
 }
 
@@ -404,101 +405,134 @@ a.salad-logo {
 }
 
 /* 피자조각 공통요소 */
-.pizza-slice>img{
+.pizza-slice > img {
   position: absolute;
-    width: 144.1px;
-    height: 155.5px;
-    clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
+  width: 144.1px;
+  height: 155.5px;
+  clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
 }
-.sl-piz1>img{
-  transform-origin: top left;
-    position: absolute;
-    width: 134.1px;
-    height: 158px;
-    bottom: 12.3%;
-    left: 24.8%;
-    clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
-    rotate: 51deg;
-}
-.sl-piz2>img{
-  transform-origin: top left;
-    position: absolute;
-    width: 134.1px;
-    height: 158px;
-    bottom: 12.3%;
-    left: 24.8%;
-    clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
-    rotate: 139deg;
-}
-.sl-piz3>img{
-  transform-origin: top left;
-    position: absolute;
-    width: 134.1px;
-    height: 158px;
-    bottom: 12.3%;
-    left: 24.8%;
-    clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
-    rotate: 99deg;
-}
-.sl-piz4>img{
-  transform-origin: top left;
-    position: absolute;
-    width: 150.1px;
-    height: 175px;
-    bottom: 10.2%;
-    left: 24.8%;
-    clip-path: polygon(0% 106%, 0% 0%, 100% 77%, 88% 68%, 54% 96%, 25% 100%);
-    transform: skew(8deg, -19deg);
-    rotate: 242deg;
-    opacity: 0;
-}
-.sl-piz5>img{
-  transform-origin: top left;
-    position: absolute;
-    width: 151.1px;
-    height: 168px;
-    bottom: 12.6%;
-    left: 24.3%;
-    clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
-    rotate: 1deg;
-    opacity: 0;
-    
-}
-.sl-piz6>img{
- transform-origin: top left;
-    position: absolute;
-    width: 114.1px;
-    height: 159px;
-    bottom: 13.3%;
-    left: 24.3%;
-    clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
-    rotate: 312deg;
-    scale: 1.2;
-    opacity: 0;
 
+.sl-piz1 > img {
+  transform-origin: top left;
+  position: absolute;
+  width: 158.1px;
+  height: 191px;
+  bottom: 9%;
+  left: 24.8%;
+  clip-path: polygon(0% 100%, 0% 0%, 100% 85%, 73% 98%, 43% 104%, 25% 100%);
+  rotate: 53deg;
+  transform: skew(0deg, 347deg);
+  opacity: 0;
 }
-.sl-piz7>img{
- transform-origin: top left;
-    position: absolute;
-    width: 139px;
-    height: 189px;
-    bottom: 8.8%;
-    left: 24.8%;
-    clip-path: polygon(0% 0%, 6% 0%, 106% 40%, 85% 80%, 47% 100%, 18% 100%);
-    rotate: 280deg;
-    transform: skew(2deg, 354deg);
-    opacity: 0;
+.sl-piz1 > img:hover {
+  opacity: 1;
 }
-.sl-piz8>img{
- transform-origin: top left;
-    position: absolute;
-    width: 134.1px;
-    height: 158px;
-    bottom: 12.3%;
-    left: 24.8%;
-    clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
-    rotate: 179deg;
-    opacity: 0;
+.sl-piz2 > img {
+  scale: 1.1;
+  transform-origin: top left;
+  position: absolute;
+  width: 163.1px;
+  height: 157px;
+  bottom: 14.4%;
+  left: 24.8%;
+  clip-path: polygon(0% 100%, 1% 0%, 64% 67%, 82% 86%, 55% 98%, 25% 104%);
+  rotate: 130deg;
+  opacity: 0;
+}
+.sl-piz2 > img:hover {
+  opacity: 1;
+}
+.sl-piz3 > img {
+  scale: 1.02;
+  transform-origin: top left;
+  position: absolute;
+  width: 110.1px;
+  height: 199px;
+  bottom: 7.3%;
+  left: 24.8%;
+  clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
+  rotate: 80deg;
+  transform: skew(350deg, 3deg);
+  opacity: 0;
+}
+.sl-piz3 > img:hover {
+  opacity: 1;
+}
+
+.sl-piz4 > img {
+  transform-origin: top left;
+  position: absolute;
+  width: 150.1px;
+  height: 175px;
+  bottom: 10.2%;
+  left: 24.8%;
+  clip-path: polygon(0% 106%, 0% 0%, 100% 77%, 88% 68%, 54% 96%, 25% 100%);
+  transform: skew(8deg, -19deg);
+  rotate: 242deg;
+  opacity: 0;
+}
+.sl-piz4 > img:hover {
+  opacity: 1;
+}
+
+.sl-piz5 > img {
+  transform-origin: top left;
+  position: absolute;
+  width: 151.1px;
+  height: 168px;
+  bottom: 12.6%;
+  left: 24.3%;
+  clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
+  rotate: 1deg;
+  opacity: 0;
+}
+.sl-piz5 > img:hover {
+  opacity: 1;
+}
+.sl-piz6 > img {
+  transform-origin: top left;
+  position: absolute;
+  width: 114.1px;
+  height: 159px;
+  bottom: 13.3%;
+  left: 24.3%;
+  clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
+  rotate: 312deg;
+  scale: 1.2;
+  opacity: 0;
+}
+.sl-piz6 > img:hover {
+  opacity: 1;
+}
+
+.sl-piz7 > img {
+  transform-origin: top left;
+  position: absolute;
+  width: 139px;
+  height: 189px;
+  bottom: 8.8%;
+  left: 24.8%;
+  clip-path: polygon(0% 0%, 6% 0%, 106% 40%, 85% 80%, 47% 100%, 18% 100%);
+  rotate: 280deg;
+  transform: skew(2deg, 354deg);
+  opacity: 0;
+}
+.sl-piz7 > img:hover {
+  opacity: 1;
+}
+.sl-piz8 > img {
+  transform-origin: top left;
+  position: absolute;
+  width: 134.1px;
+  height: 158px;
+  bottom: 12.3%;
+  left: 24.8%;
+  clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
+  rotate: 179deg;
+  opacity: 0;
+}
+.sl-piz8 > img:hover {
+  opacity: 1;
 }
 
 /************************************************ 마우스 오버시 배경 영역 ************************************************/
@@ -562,7 +596,7 @@ a.salad-logo {
   width: 631px;
   height: 346px;
   position: absolute;
-  right: -50%;
+  right: -55%;
   bottom: 0%;
   transition: 2s ease-in-out all;
   rotate: 360deg;
@@ -770,7 +804,7 @@ a.salad-logo {
 /*****************************************************************************************/
 .review-detail {
   position: relative;
-  top: -100%;
+  top: -102%;
   left: 0;
   width: 100%;
   height: 100%;
@@ -779,21 +813,29 @@ a.salad-logo {
   border-radius: 30px;
   transition: 0.4s ease-out;
 }
-.review-detail-img {
-  width: 618px;
-  height: 348px;
-  border-radius: 30px;
-  margin-left: 38px;
-  margin-top: 17px;
+
+.fa-xmark {
+  top: 0;
+}
+.play-box{
+  left: 2.5%;
+    top: 2.5%;
+    position: absolute; 
+    margin-left: 38px;
+    margin-top: 17px;
+    scale: 1.08;
 }
 
+
+
 .review-info {
-  width: 608px;
-  height: 333px;
-  background-color: rgba(218, 188, 188, 1);
-  margin-left: 48px;
-  margin-top: 12px;
-  border-radius: 10px;
+ position: absolute;
+    width: 608px;
+    height: 333px;
+    background-color: rgba(218, 188, 188, 1);
+    margin-left: 45px;
+    margin-top: 374px;
+    border-radius: 10px;
 }
 .review-info > i {
   font-size: 7rem;
@@ -856,22 +898,7 @@ a.delivery-logo {
 .review-detail > i:hover {
   color: rgb(221, 23, 5);
 }
-.review-detail-img::after {
-  content: "";
-  position: absolute;
-  top: 75%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-  width: 80px;
-  height: 80px;
-  background-image: url("../로고/icon_play.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-  z-index: 1;
-  opacity: 1;
-}
+
 
 /********************************************  6. 이벤트/할인영역 ********************************************/
 /* 6. 이벤트/할인영역 - 수정된 버전 */
@@ -922,7 +949,7 @@ a.delivery-logo {
   opacity: 1;
 }
 
-.banner-box1{
+.banner-box1 {
   position: absolute;
   width: 307px;
   height: 143px;
@@ -949,7 +976,7 @@ a.delivery-logo {
   opacity: 1;
 }
 /* 배너박스222222222222222222222222 */
-.banner-box2{
+.banner-box2 {
   position: absolute;
   width: 307px;
   height: 143px;
@@ -976,7 +1003,7 @@ a.delivery-logo {
   opacity: 1;
 }
 /* 배너박스33333333333333333333333333333333 */
-.banner-box3{
+.banner-box3 {
   position: absolute;
   width: 307px;
   height: 143px;
@@ -1002,44 +1029,47 @@ a.delivery-logo {
 .banner-box3 img:nth-child(1) {
   opacity: 1;
 }
-.ud-arrow{
+.ud-arrow {
   font-size: 3rem;
   position: absolute;
- top: 43px;
-    right: 161px;
+  top: 8px;
+  right: 161px;
 }
-i.fa-arrow-up{
+i.fa-arrow-up {
   display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
-i.fa-arrow-down{
+i.fa-arrow-down {
   margin-top: 25px;
 }
-.ud-arrow>i:hover{
+.ud-arrow > i:hover {
   color: rgba(255, 0, 0, 0.679);
   cursor: pointer;
-
 }
-.eve-logo-box{
+.eve-logo-box {
   position: absolute;
-  right: 10%;
-  top: 30%;
+  right: 9%;
+  top: 25%;
   display: flex;
-   max-width: 90px;
-   flex-direction:column;
-   
+  max-width: 90px;
+  flex-direction: column;
 }
-.eve-logo-box>img{
- max-width: 90px;
+.eve-logo-box > img {
+  max-width: 90px;
   max-height: 90px;
+}
+.eve-logo-box p {
+  display: none;
+  font-size: 1vw;
 }
 
 a.cou-logo {
   display: inline-block;
+  text-align: center;
 }
 /* 처음에 두번째 이미지 안보이게하기 */
-.cou-logo img:last-child {
+.cou-logo img:nth-child(2) {
   display: none;
 }
 /* 마우스 오버시 첫번쨰이미지 안보이게하기 */
@@ -1047,16 +1077,26 @@ a.cou-logo {
   display: none;
 }
 /*마우스 오버시 두번째 이미지 보이게하기 */
-.cou-logo:hover img:last-child {
+.cou-logo:hover img:nth-child(2) {
   display: inline;
 }
-
+.cou-logo:hover p {
+  display: flex;
+  text-align: center;
+  color: #000000;
+  border-radius: 3px;
+  position: absolute;
+  top: 20%;
+  right: 36%;
+  flex-direction: row;
+}
 
 a.stamp-logo {
   display: inline-block;
+  text-align: center;
 }
 /* 처음에 두번째 이미지 안보이게하기 */
-.stamp-logo img:last-child {
+.stamp-logo img:nth-child(2) {
   display: none;
 }
 /* 마우스 오버시 첫번쨰이미지 안보이게하기 */
@@ -1064,16 +1104,26 @@ a.stamp-logo {
   display: none;
 }
 /*마우스 오버시 두번째 이미지 보이게하기 */
-.stamp-logo:hover img:last-child {
+.stamp-logo:hover img:nth-child(2) {
   display: inline;
 }
-
+.stamp-logo:hover p {
+  display: flex;
+  text-align: center;
+  color: #000000;
+  border-radius: 3px;
+  position: absolute;
+  top: 46%;
+  right: 25%;
+  flex-direction: row;
+}
 
 a.pocket-logo {
   display: inline-block;
+  text-align: center;
 }
 /* 처음에 두번째 이미지 안보이게하기 */
-.pocket-logo img:last-child {
+.pocket-logo img:nth-child(2) {
   display: none;
 }
 /* 마우스 오버시 첫번쨰이미지 안보이게하기 */
@@ -1081,15 +1131,25 @@ a.pocket-logo {
   display: none;
 }
 /*마우스 오버시 두번째 이미지 보이게하기 */
-.pocket-logo:hover img:last-child {
+.pocket-logo:hover img:nth-child(2) {
   display: inline;
 }
-
+.pocket-logo:hover p {
+  display: flex;
+  text-align: center;
+  color: #000000;
+  border-radius: 3px;
+  position: absolute;
+  top: 70%;
+  right: 13%;
+  flex-direction: row;
+}
 a.mile-logo {
   display: inline-block;
+  text-align: center;
 }
 /* 처음에 두번째 이미지 안보이게하기 */
-.mile-logo img:last-child {
+.mile-logo img:nth-child(2) {
   display: none;
 }
 /* 마우스 오버시 첫번쨰이미지 안보이게하기 */
@@ -1097,23 +1157,39 @@ a.mile-logo {
   display: none;
 }
 /*마우스 오버시 두번째 이미지 보이게하기 */
-.mile-logo:hover img:last-child {
+.mile-logo:hover img:nth-child(2) {
   display: inline;
 }
-
-
-
+.mile-logo:hover p {
+  display: flex;
+  text-align: center;
+  color: #000000;
+  border-radius: 3px;
+  top: 80%;
+  right: 3%;
+  flex-direction: row;
+  width: 6vw;
+}
 
 /******************************************** 7.하단영역 ********************************************/
 #bottom-area {
   height: 249px;
   margin: 0 auto;
-  background-color: rgba(200, 181, 181, 1)
+  background-color: rgba(200, 181, 181, 1);
+  position: relative;
 }
-.bottom-list1{
-display: flex;
+.bottom-list1 {
+  display: flex;
+  font-size: 2rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.bottom-list2{
-display: flex;
+.bottom-list2 {
+  display: flex;
+  text-align: left;
+  font-size: 2rem;
+  position: absolute;
+  right: 13%;
 }
