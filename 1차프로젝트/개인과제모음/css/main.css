@@ -403,6 +403,9 @@ a.salad-logo {
   position: absolute;
   left: 0;
 }
+.sl-part>a{
+  z-index: 2;
+}
 
 /* 피자조각 공통요소 */
 .pizza-slice > img {
@@ -585,12 +588,6 @@ a.salad-logo {
   position: absolute;
   left: 103px;
   bottom: 80px;
-  opacity: 1;
-}
-
-.e-pizza:hover {
-  opacity: 1;
-  transition: 1s ease-in-out all;
 }
 
 .bg-pizza {
@@ -601,6 +598,7 @@ a.salad-logo {
   bottom: 0%;
   transition: 2s ease-in-out all;
   rotate: 360deg;
+  z-index: -1;
 }
 .bg-b1 {
   position: absolute;
@@ -609,6 +607,7 @@ a.salad-logo {
   top: 20%;
   right: -27%;
   transition: 0.5s ease-in-out all 3.2s;
+  z-index: -1;
 }
 .bg-b2 {
   position: absolute;
@@ -617,6 +616,7 @@ a.salad-logo {
   top: 34%;
   right: -27%;
   transition: 0.5s ease-in-out all 3.8s;
+  z-index: -1;
 }
 .bg-sauce {
   position: absolute;
@@ -626,17 +626,29 @@ a.salad-logo {
   top: 42%;
   rotate: 270deg;
   transition: 0.5s ease-in-out all 3s;
+  z-index: -1;
 }
 /**********8조각 피자 개별영역-서브창- ***********/
 .sl-piz-info{
-  /* position: fixed; */
   top: 0%;
   left: 0%;
-  translate: 100% 0%;
+  translate: 33% 0%;
   width: 100vw;
   height: 65vh;
-  background-color: #ea7777;
+  background-color: #ea7777d1;
   z-index: 1;
+  border-radius: 20px;
+}
+.piz-info-group{
+    width: 47%;
+    height: 98%;
+}
+.piz-info-group>img{
+ position: absolute;
+    top: 3%;
+    left: 5%;
+    width: 36%;
+    height: 50%;
 }
 
 /********************************************  5. 동영상영역 ********************************************/
