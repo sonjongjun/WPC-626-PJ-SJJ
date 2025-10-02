@@ -539,6 +539,7 @@ a.salad-logo {
 .eight-pizza-part:hover {
   .e-pizza-tit {
     translate: 0 95%;
+    z-index: -1;
   }
 }
 .eight-pizza-part:hover {
@@ -626,6 +627,18 @@ a.salad-logo {
   rotate: 270deg;
   transition: 0.5s ease-in-out all 3s;
 }
+/**********8조각 피자 개별영역-서브창- ***********/
+.sl-piz-info{
+  /* position: fixed; */
+  top: 0%;
+  left: 0%;
+  translate: 100% 0%;
+  width: 100vw;
+  height: 65vh;
+  background-color: #ea7777;
+  z-index: 1;
+}
+
 /********************************************  5. 동영상영역 ********************************************/
 .movie-part {
   height: 714px;
