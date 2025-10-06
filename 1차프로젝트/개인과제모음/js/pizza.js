@@ -38,3 +38,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // .sl-piz8>img에 마우스 오버시
+
+
+
+
+//sl-piz-info>i 클릭시 sl-piz-info가 translateX(100%)로 이동
+let
