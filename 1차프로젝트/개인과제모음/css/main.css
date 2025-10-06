@@ -403,7 +403,7 @@ a.salad-logo {
   position: absolute;
   left: 0;
 }
-.sl-part>a{
+.sl-part > a {
   z-index: 2;
 }
 
@@ -629,26 +629,53 @@ a.salad-logo {
   z-index: -1;
 }
 /**********8조각 피자 개별영역-서브창- ***********/
-.sl-piz-info{
+.sl-piz-info {
+  position: absolute;
   top: 0%;
   left: 0%;
-  translate: 33% 0%;
-  width: 100vw;
-  height: 65vh;
+  translate: 41% 0%;
+  width: 100%;
+  height: 100%;
   background-color: #ea7777d1;
   z-index: 1;
   border-radius: 20px;
 }
-.piz-info-group{
-    width: 47%;
-    height: 98%;
+.sl-piz-info > i {
+  position: absolute;
+  top: 0%;
+  right: 41%;
 }
-.piz-info-group>img{
- position: absolute;
-    top: 3%;
-    left: 5%;
-    width: 36%;
-    height: 50%;
+.piz-info-group {
+  width: 47%;
+  height: 98%;
+}
+.piz-info-group > img {
+  position: absolute;
+  top: 3%;
+  left: 12%;
+  width: 36%;
+  height: 50%;
+}
+.info-box {
+  position: absolute;
+  top: 54%;
+  left: 0%;
+  width: 59%;
+  height: 46%;
+  background-color: #ea7777d1;
+  border: 1px solid #000000;
+  z-index: 1;
+  border-radius: 20px;
+}
+.info-box> h2{
+  font-size: 4rem;
+  text-align: center;
+}
+.info-box > p {
+  position: absolute;
+  left: 0;
+  bottom: 16%;
+  font-size: 2.1rem;
 }
 
 /********************************************  5. 동영상영역 ********************************************/
@@ -842,25 +869,23 @@ a.salad-logo {
 .fa-xmark {
   top: 0;
 }
-.play-box{
+.play-box {
   left: 2.5%;
-    top: 2.5%;
-    position: absolute; 
-    margin-left: 38px;
-    margin-top: 17px;
-    scale: 1.08;
+  top: 2.5%;
+  position: absolute;
+  margin-left: 38px;
+  margin-top: 17px;
+  scale: 1.08;
 }
 
-
-
 .review-info {
- position: absolute;
-    width: 608px;
-    height: 333px;
-    background-color: rgba(218, 188, 188, 1);
-    margin-left: 45px;
-    margin-top: 374px;
-    border-radius: 10px;
+  position: absolute;
+  width: 608px;
+  height: 333px;
+  background-color: rgba(218, 188, 188, 1);
+  margin-left: 45px;
+  margin-top: 374px;
+  border-radius: 10px;
 }
 .review-info > i {
   font-size: 7rem;
@@ -923,7 +948,6 @@ a.delivery-logo {
 .review-detail > i:hover {
   color: rgb(221, 23, 5);
 }
-
 
 /********************************************  6. 이벤트/할인영역 ********************************************/
 /* 6. 이벤트/할인영역 - 수정된 버전 */
