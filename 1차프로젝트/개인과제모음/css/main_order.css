@@ -1550,3 +1550,17 @@ a.mile-logo {
     left: 20%;
 }
 
+/* 서브페이지  */
+.pizza-list{
+   display: grid;
+        /* 박스중앙위치 및 최대크기설정 */
+        max-width: 1220px;
+        margin: 0 auto;
+        outline: 2px dashed lightcoral;
+         grid-template-columns: repeat(4, 1fr);
+         grid-column-gap: 10px;
+         grid-row-gap: 10px;
+position: absolute;
+    top: 10%;
+
+}
