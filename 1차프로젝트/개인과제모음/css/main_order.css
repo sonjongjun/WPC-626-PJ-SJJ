@@ -389,7 +389,7 @@ a.salad-logo {
 .e-pizza-tit {
   top: 0%;
   position: absolute;
-
+  z-index: 1;
 }
 .cheese {
   top: 0;
@@ -1559,7 +1559,7 @@ a.mile-logo {
   grid-template-columns: repeat(4, 1fr);
   /* grid-column-gap: 10px; */
   /* grid-row-gap: 10px; */
-  margin-top: 23%;
+  margin-top: 25%;
 }
 .pizza-list > div {
   cursor: pointer;
@@ -1579,11 +1579,191 @@ a.mile-logo {
 .pizza-list > div:hover img:nth-child(2) {
   opacity: 1;
 }
-.pizza-list > div>aside {
+.pizza-list > div > aside {
   text-align: center;
   margin-top: 5px;
   font-size: 1.4rem;
   background-color: rgb(209, 95, 84);
   border-radius: 20px;
   min-width: 80px;
+}
+
+.pizza-list > div:hover aside {
+  background-color: rgb(255, 50, 50);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.pizza-list > div > aside {
+  transition: all 0.3s ease;
+}
+
+.pizza-list > div:hover aside h2 {
+  color: #ffffff;
+  font-weight: bold;
+  transform: translateY(-2px);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.pizza-list > div > aside h2 {
+  transition: all 0.3s ease;
+}
+
+/**************************************** 피자 배달영역 ****************************************/
+.d-area {
+  position: relative;
+  height: 914px;
+  width: 1220px;
+  margin: 0 auto;
+}
+.d-img-area > img:hover {
+  cursor: pointer;
+}
+.d-img-area > h2 {
+  font-size: 3.5rem;
+  margin-top: 50px;
+  margin-left: 101px;
+  /* background-color: #8a3232;
+  width: 185px;
+  border-radius: 10px;
+  outline: 3px solid #000000;
+  box-sizing: border-box; */
+}
+.d-area > ul {
+  display: flex;
+  max-width: 450px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: -18px;
+}
+.d-area > ul > li {
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.8rem;
+  background-color: rgb(209, 95, 84);
+  border-radius: 10px;
+  outline: 3px solid #000000;
+  box-sizing: border-box;
+}
+.d-area > ul > li:hover {
+  background-color: rgb(255, 50, 50);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.order-btn {
+  position: absolute;
+  background-color: rgba(217, 217, 217, 1);
+  border-radius: 10px;
+  /* margin-left: 100px;
+  margin-top: 230px; */
+  width: 400px;
+  left: 0%;
+  bottom: 15%;
+}
+.order-btn > h2 {
+  font-size: 3.5rem;
+  text-align: center;
+}
+.order-btn > ul {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.order-btn:hover {
+  background-color: rgb(255, 50, 50);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  transition: all 0.5s ease;
+}
+.order-btn > ul > li {
+  cursor: pointer;
+  margin: 0 auto;
+  width: 300px;
+  border-radius: 10px;
+}
+.order-btn > ul > li:first-child:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: #721111;
+  transition: all 0.3s ease;
+}
+.order-btn > ul > li:last-child:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: #721111;
+  transition: all 0.3s ease;
+}
+.size-area {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  left: 0%;
+  bottom: 38%;
+  border-radius: 10px;
+  width: 400px;
+}
+.size-area > button {
+  cursor: pointer;
+  font-size: 2.5rem;
+  background-color: rgba(217, 217, 217, 1);
+  border-radius: 10px;
+  outline: 3px solid #000000;
+  box-sizing: border-box;
+  width: 120px;
+  height: 60px;
+  font-weight: bold;
+}
+.size-area > button:hover {
+  background-color: rgb(255, 50, 50);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  transition: all 0.5s ease;
+}
+.edge-area {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  width: 600px;
+  height: 300px;
+  background-color: rgba(220, 204, 204, 1);
+  font-size: 2rem;
+  border-radius: 10px;
+  outline: 2px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 3px 3px 10px #856666;
+}
+.check-btn{
+ position: absolute;
+    right: 16%;
+    cursor: pointer;
+    font-size: 2.5rem;
+    background-color: rgba(217, 217, 217, 1);
+    border-radius: 50px;
+    outline: 3px solid #000000;
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    margin-top: 42px;
+}
+.black-btn{
+ position: absolute;
+    right: 17.2%;
+    cursor: pointer;
+    font-size: 2.5rem;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50px;
+    box-sizing: border-box;
+    width: 15px;
+    height: 15px;
+    margin-top: 49px;
+    opacity: 0;
 }
