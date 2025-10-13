@@ -382,7 +382,7 @@ a.salad-logo {
 .eight-pizza-part {
   margin: 0 auto;
   position: relative;
-  height: 1195px;
+  height: 1355px;
   width: 1220px;
   overflow: hidden;
 }
@@ -1557,10 +1557,33 @@ a.mile-logo {
   max-width: 1220px;
   margin: 0 auto;
   grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+  /* grid-column-gap: 10px; */
+  /* grid-row-gap: 10px; */
   margin-top: 23%;
 }
 .pizza-list > div {
   cursor: pointer;
+}
+/* pizza-list안의 이미지들이 겹쳐지게하기 */
+.pizza-list > div {
+  position: relative;
+}
+.pizza-list > div img:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  border-radius: 10px;
+}
+.pizza-list > div:hover img:nth-child(2) {
+  opacity: 1;
+}
+.pizza-list > div>aside {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 1.4rem;
+  background-color: rgb(209, 95, 84);
+  border-radius: 20px;
+  min-width: 80px;
 }
