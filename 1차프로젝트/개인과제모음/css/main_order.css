@@ -382,15 +382,14 @@ a.salad-logo {
 .eight-pizza-part {
   margin: 0 auto;
   position: relative;
-  height: 653px;
+  height: 1195px;
   width: 1220px;
   overflow: hidden;
 }
 .e-pizza-tit {
-  top: -50%;
+  top: 0%;
   position: absolute;
-  transition: 2s ease-in-out all;
-  z-index: -1;
+
 }
 .cheese {
   top: 0;
@@ -539,12 +538,7 @@ a.salad-logo {
 }
 
 /************************************************ 마우스 오버시 배경 영역 ************************************************/
-.eight-pizza-part:hover {
-  .e-pizza-tit {
-    translate: 0 95%;
-    z-index: -1;
-  }
-}
+
 .eight-pizza-part:hover {
   .bg-pizza {
     width: 631px;
@@ -581,6 +575,12 @@ a.salad-logo {
     height: 174px;
     top: 34%;
     right: 4%;
+  }
+}
+.eight-pizza-part:hover {
+  .cheese {
+    height: 369px;
+    transition: 2s all ease-in-out;
   }
 }
 /************************************************ 마우스 오버시 배경 영역 ************************************************/
@@ -1350,7 +1350,7 @@ a.delivery-logo {
   top: 0;
   overflow: hidden;
   margin-right: 206px;
-  margin-top: 179px;  
+  margin-top: 179px;
   cursor: pointer;
 }
 
@@ -1545,22 +1545,22 @@ a.mile-logo {
   right: 19%;
 }
 .bottom-logo {
- position: absolute;
-    top: 19%;
-    left: 20%;
+  position: absolute;
+  top: 19%;
+  left: 20%;
 }
 
-/* 서브페이지  */
-.pizza-list{
-   display: grid;
-        /* 박스중앙위치 및 최대크기설정 */
-        max-width: 1220px;
-        margin: 0 auto;
-        outline: 2px dashed lightcoral;
-         grid-template-columns: repeat(4, 1fr);
-         grid-column-gap: 10px;
-         grid-row-gap: 10px;
-position: absolute;
-    top: 10%;
-
+/**********************************************서브페이지**********************************************/
+.pizza-list {
+  display: grid;
+  /* 박스중앙위치 및 최대크기설정 */
+  max-width: 1220px;
+  margin: 0 auto;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  margin-top: 23%;
+}
+.pizza-list > div {
+  cursor: pointer;
 }
