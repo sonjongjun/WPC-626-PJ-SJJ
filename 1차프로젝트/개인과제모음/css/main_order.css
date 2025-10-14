@@ -1741,9 +1741,9 @@ a.mile-logo {
   box-sizing: border-box;
   box-shadow: 3px 3px 10px #856666;
 }
-.check-btn{
- position: absolute;
-    right: 16%;
+.check-btn {
+    position: relative; /* absolute에서 relative로 변경 */
+    right: 0; /* 이 부분 삭제 가능 */
     cursor: pointer;
     font-size: 2.5rem;
     background-color: rgba(217, 217, 217, 1);
@@ -1753,16 +1753,19 @@ a.mile-logo {
     width: 30px;
     height: 30px;
     margin-top: 42px;
+    display: flex; /* 추가 */
+    align-items: center; /* 추가 */
+    justify-content: center; /* 추가 */
 }
-.black-btn1{
- position: absolute;
-    right: 17.2%;
+.black-btn {
+    /* position: absolute 삭제 */
+    /* right, margin-top 삭제 */
     cursor: pointer;
     background-color: rgb(0, 0, 0);
     border-radius: 50px;
+    box-sizing: border-box;
     width: 15px;
     height: 15px;
-    margin-top: 49px;
     opacity: 0;
-    z-index: 1;
+    transition: opacity 0.3s ease; /* 부드러운 효과 추가 */
 }

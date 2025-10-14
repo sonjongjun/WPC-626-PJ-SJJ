@@ -214,12 +214,9 @@ xicon8.addEventListener('click', () => {
     });
 
 
-    //.black-btn 클릭시 .black-btn의 opacity를 1로 변경
-    let blackbtn = document.querySelector('.black-btn1');
-    blackbtn.addEventListener('click', () => {
-        document.querySelector('.black-btn1').style.opacity = '1';
-    });//click이벤트
-    // check-btn 클릭시 black-btn의 opacity를 토글 (라디오 버튼처럼 하나만 선택)
+   // pizza.js 파일의 마지막 부분에 추가할 코드
+
+// check-btn 클릭시 black-btn의 opacity를 토글 (라디오 버튼처럼 하나만 선택)
 document.addEventListener('DOMContentLoaded', function() {
     const checkBtns = document.querySelectorAll('.check-btn');
     
@@ -229,12 +226,12 @@ document.addEventListener('DOMContentLoaded', function() {
             e.stopPropagation();
             
             // 모든 black-btn의 opacity를 0으로 초기화
-            document.querySelectorAll('.black-btn1').forEach(black => {
+            document.querySelectorAll('.black-btn').forEach(black => {
                 black.style.opacity = '0';
             });
             
             // 클릭된 버튼 내부의 black-btn만 opacity 1로 설정
-            const blackBtn = this.querySelector('.black-btn1');
+            const blackBtn = this.querySelector('.black-btn');
             if (blackBtn) {
                 blackBtn.style.opacity = '1';
             }
