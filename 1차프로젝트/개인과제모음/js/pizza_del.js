@@ -1,4 +1,3 @@
-
 // check-btn 클릭시 black-btn의 opacity를 토글
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOMContentLoaded 실행됨');
@@ -15,16 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
             
             console.log('버튼 클릭됨, 버튼 내용:', this.innerHTML);
             
-            // 모든 black-btn의 opacity를 0으로
-            const allBlackBtns = document.querySelectorAll
-            ('.black-btn1, .black-btn2, .black-btn3, .black-btn4, .black-btn5');
-            
-            console.log('찾은 black-btn 개수:', allBlackBtns.length);
-            
-            allBlackBtns.forEach(black => {
-                black.style.opacity = '0';
-            });
-            
             // 클릭된 버튼의 자식 중 black-btn 찾기
             const blackBtn1 = this.querySelector('.black-btn1');
             const blackBtn2 = this.querySelector('.black-btn2');
@@ -34,19 +23,38 @@ document.addEventListener('DOMContentLoaded', function() {
             
             console.log('black-btn1 찾음:', blackBtn1);
             console.log('black-btn2 찾음:', blackBtn2);
+            console.log('black-btn3 찾음:', blackBtn3);
+            console.log('black-btn4 찾음:', blackBtn4);
+            console.log('black-btn5 찾음:', blackBtn5);
             
-            const blackBtn = blackBtn1 || blackBtn2;
-            // blackBtn3,4,5 번은 다중선택이 가능하게 만들기
-            const blackBtn2nd = blackBtn1 || blackBtn2 || blackBtn3 || blackBtn4 || blackBtn5;
-
-            if (blackBtn2nd) {
-                blackBtn.style.opacity = '1';
+            // black-btn1, 2는 단일 선택 (라디오 버튼처럼)
+            if (blackBtn1 || blackBtn2) {
+                // 1, 2번 그룹의 모든 버튼을 0으로
+                document.querySelectorAll('.black-btn1, .black-btn2').forEach(black => {
+                    black.style.opacity = '0';
+                });
+                
+                // 클릭된 버튼만 1로
+                const clickedBtn = blackBtn1 || blackBtn2;
+                if (clickedBtn) {
+                    clickedBtn.style.opacity = '1';
+                    console.log('opacity 변경됨 (단일선택), 현재 opacity:', clickedBtn.style.opacity);
+                }
+            }
             
-            if (blackBtn) {
-                blackBtn.style.opacity = '1';
-                console.log('opacity 변경됨, 현재 opacity:', blackBtn.style.opacity);
-            } else {
-                console.log('black-btn을 찾을 수 없음!');
+            // black-btn3, 4, 5는 다중 선택 (체크박스처럼)
+            if (blackBtn3 || blackBtn4 || blackBtn5) {
+                const clickedBtn = blackBtn3 || blackBtn4 || blackBtn5;
+                if (clickedBtn) {
+                    // 현재 상태를 토글
+                    if (clickedBtn.style.opacity === '1') {
+                        clickedBtn.style.opacity = '0';
+                        console.log('opacity 변경됨 (다중선택 OFF), 현재 opacity:', clickedBtn.style.opacity);
+                    } else {
+                        clickedBtn.style.opacity = '1';
+                        console.log('opacity 변경됨 (다중선택 ON), 현재 opacity:', clickedBtn.style.opacity);
+                    }
+                }
             }
         });
     });
