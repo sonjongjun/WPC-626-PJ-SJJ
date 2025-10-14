@@ -1618,6 +1618,8 @@ a.mile-logo {
 }
 .d-img-area > img:hover {
   cursor: pointer;
+  scale: 1.1;
+  transition: all 0.3s ease-in-out;
 }
 .d-img-area > h2 {
   font-size: 3.5rem;

@@ -40,6 +40,7 @@ html{
     margin: 0 auto;
     /* scale: 1.5; */
     /* transform-origin: top center; */
+    /* max-width: 1800px; */
 }
 body{
     /* 글자체 */
