@@ -1741,31 +1741,54 @@ a.mile-logo {
   box-sizing: border-box;
   box-shadow: 3px 3px 10px #856666;
 }
+.topping-area{
+  position: absolute;
+  bottom: 8%;
+  right: 0%;
+  width: 600px;
+  height: 450px;
+  background-color: rgba(220, 204, 204, 1);
+  font-size: 2rem;
+  border-radius: 10px;
+  outline: 2px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 3px 3px 10px #856666;
+}
 .check-btn {
-    position: relative; /* absolute에서 relative로 변경 */
-    right: 0; /* 이 부분 삭제 가능 */
+    position: absolute;
+    right: 20px; /* 우측에 배치 */
     cursor: pointer;
-    font-size: 2.5rem;
     background-color: rgba(217, 217, 217, 1);
     border-radius: 50px;
     outline: 3px solid #000000;
     box-sizing: border-box;
     width: 30px;
     height: 30px;
-    margin-top: 42px;
-    display: flex; /* 추가 */
-    align-items: center; /* 추가 */
-    justify-content: center; /* 추가 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none; /* 기본 버튼 테두리 제거 */
 }
-.black-btn {
-    /* position: absolute 삭제 */
-    /* right, margin-top 삭제 */
-    cursor: pointer;
+.black-btn1,
+.black-btn2 {
+    display: block; /* span이므로 block으로 */
     background-color: rgb(0, 0, 0);
     border-radius: 50px;
     box-sizing: border-box;
     width: 15px;
     height: 15px;
     opacity: 0;
-    transition: opacity 0.3s ease; /* 부드러운 효과 추가 */
+    transition: opacity 0.3s ease;
+}
+.edge-area ul li {
+    position: relative; /* 추가 */
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.edge-area ul li img {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
 }
