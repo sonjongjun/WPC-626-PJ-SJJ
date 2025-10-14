@@ -213,50 +213,31 @@ xicon8.addEventListener('click', () => {
       },
     });
 
-// // check-btn 클릭시 black-btn의 opacity 토글
-// document.addEventListener('DOMContentLoaded', function() {
-//     const checkBtns = document.querySelectorAll('.check-btn');
+
+    //.black-btn 클릭시 .black-btn의 opacity를 1로 변경
+    let blackbtn = document.querySelector('.black-btn1');
+    blackbtn.addEventListener('click', () => {
+        document.querySelector('.black-btn1').style.opacity = '1';
+    });//click이벤트
+    // check-btn 클릭시 black-btn의 opacity를 토글 (라디오 버튼처럼 하나만 선택)
+document.addEventListener('DOMContentLoaded', function() {
+    const checkBtns = document.querySelectorAll('.check-btn');
     
-//     checkBtns.forEach(btn => {
-//         btn.addEventListener('click', function() {
-//             const blackBtn = this.querySelector('.black-btn');
-//             // 현재 opacity가 1이 아니면 1로, 1이면 0으로
-//             blackBtn.style.opacity = blackBtn.style.opacity === '1' ? '0' : '1';
-//         });
-//     });
-// // });
-// // 체크박스처럼 하나만 선택되게
-// document.addEventListener('DOMContentLoaded', function() {
-//     const checkBtns = document.querySelectorAll('.check-btn');
-    
-//     checkBtns.forEach(btn => {
-//         btn.addEventListener('click', function() {
-//             // 모든 black-btn의 opacity를 0으로
-//             document.querySelectorAll('.black-btn').forEach(black => {
-//                 black.style.opacity = '0';
-//             });
+    checkBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            // 이벤트 버블링 방지
+            e.stopPropagation();
             
-//             // 클릭된 버튼의 black-btn만 opacity 1로
-//             const blackBtn = this.querySelector('.black-btn');
-//             blackBtn.style.opacity = '1';
-//         });
-//     });
-// });
-// // check-btn 클릭시 black-btn의 opacity를 1로 변경
-// document.addEventListener('DOMContentLoaded', function() {
-//     const checkBtns = document.querySelectorAll('.check-btn');
-    
-//     checkBtns.forEach(btn => {
-//         btn.addEventListener('click', function() {
-//             // 현재 클릭된 버튼 내부의 black-btn 찾기
-//             const blackBtn = this.querySelector('.black-btn');
+            // 모든 black-btn의 opacity를 0으로 초기화
+            document.querySelectorAll('.black-btn1').forEach(black => {
+                black.style.opacity = '0';
+            });
             
-//             // opacity 토글 (0이면 1로, 1이면 0으로)
-//             if (blackBtn.style.opacity === '1') {
-//                 blackBtn.style.opacity = '0';
-//             } else {
-//                 blackBtn.style.opacity = '1';
-//             }
-//         });
-//     });
-// });
+            // 클릭된 버튼 내부의 black-btn만 opacity 1로 설정
+            const blackBtn = this.querySelector('.black-btn1');
+            if (blackBtn) {
+                blackBtn.style.opacity = '1';
+            }
+        });
+    });
+});
