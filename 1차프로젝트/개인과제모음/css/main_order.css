@@ -1325,7 +1325,6 @@ a.delivery-logo {
   margin-top: 10px;
   cursor: pointer;
 }
-
 /* 배너 이미지들 - 모두 같은 위치에 겹치게 배치 */
 .banner-box1 img {
   position: absolute;
@@ -1533,7 +1532,7 @@ a.mile-logo {
   font-size: 2rem;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .bottom-list2 {
@@ -1623,12 +1622,20 @@ a.mile-logo {
 .d-img-area > h2 {
   font-size: 3.5rem;
   margin-top: 50px;
-  margin-left: 101px;
+text-align: center;
   /* background-color: #8a3232;
   width: 185px;
   border-radius: 10px;
   outline: 3px solid #000000;
   box-sizing: border-box; */
+}
+div.d-img-area {
+  background-color: rgba(220, 204, 204, 1);
+  border-radius: 10px;
+  outline: 3px solid #000000;
+  box-sizing: border-box;
+  width: 380px;
+  height: auto;
 }
 .d-area > ul {
   display: flex;
@@ -1638,7 +1645,8 @@ a.mile-logo {
   align-content: space-around;
   justify-content: space-around;
   align-items: center;
-  margin-left: -18px;
+  margin-left: -30px;
+  margin-top: 10px;
 }
 .d-area > ul > li {
   cursor: pointer;
@@ -1741,7 +1749,7 @@ a.mile-logo {
   box-sizing: border-box;
   box-shadow: 3px 3px 10px #856666;
 }
-.topping-area{
+.topping-area {
   position: absolute;
   bottom: 8%;
   right: 0%;
@@ -1753,21 +1761,22 @@ a.mile-logo {
   outline: 2px solid #000000;
   box-sizing: border-box;
   box-shadow: 3px 3px 10px #856666;
+  overflow-y: scroll;
 }
 .check-btn {
-    position: absolute;
-    right: 20px; /* 우측에 배치 */
-    cursor: pointer;
-    background-color: rgba(217, 217, 217, 1);
-    border-radius: 50px;
-    outline: 3px solid #000000;
-    box-sizing: border-box;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none; /* 기본 버튼 테두리 제거 */
+  position: absolute;
+  right: 20px; /* 우측에 배치 */
+  cursor: pointer;
+  background-color: rgba(217, 217, 217, 1);
+  border-radius: 50px;
+  outline: 3px solid #000000;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none; /* 기본 버튼 테두리 제거 */
 }
 /* black-btn 스타일 */
 .black-btn1,
@@ -1775,54 +1784,54 @@ a.mile-logo {
 .black-btn3,
 .black-btn4,
 .black-btn5 {
-    display: block;
-    background-color: rgb(0, 0, 0);
-    border-radius: 50px;
-    box-sizing: border-box;
-    width: 15px;
-    height: 15px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  display: block;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50px;
+  box-sizing: border-box;
+  width: 15px;
+  height: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 .edge-area ul li {
-    position: relative; /* 추가 */
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    margin-bottom: 10px;
+  position: relative; /* 추가 */
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 .edge-area ul li img {
-    width: 80px;
-    height: 80px;
-    margin-right: 15px;
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
 }
 .topping-area ul li {
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    margin-bottom: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
 .topping-area ul li img {
-    width: 80px;
-    height: 80px;
-    margin-right: 15px;
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
 }
 /* 체크버튼 위치 조정 */
 .edge-area .check-btn,
 .topping-area .check-btn {
-    position: absolute;
-    right: 20px;
-    cursor: pointer;
-    background-color: rgba(217, 217, 217, 1);
-    border-radius: 50px;
-    outline: 3px solid #000000;
-    box-sizing: border-box;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+  background-color: rgba(217, 217, 217, 1);
+  border-radius: 50px;
+  outline: 3px solid #000000;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
 }

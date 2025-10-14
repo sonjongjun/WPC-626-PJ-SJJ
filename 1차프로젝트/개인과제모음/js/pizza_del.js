@@ -27,18 +27,25 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('black-btn4 찾음:', blackBtn4);
             console.log('black-btn5 찾음:', blackBtn5);
             
-            // black-btn1, 2는 단일 선택 (라디오 버튼처럼)
+            // black-btn1, 2는 단일 선택 (라디오 버튼처럼 - 토글 가능)
             if (blackBtn1 || blackBtn2) {
-                // 1, 2번 그룹의 모든 버튼을 0으로
+                const clickedBtn = blackBtn1 || blackBtn2;
+                
+                // 현재 클릭한 버튼이 이미 선택되어 있는지 확인
+                const isAlreadySelected = clickedBtn.style.opacity === '1';
+                
+                // 모든 1, 2번 그룹의 버튼을 0으로
                 document.querySelectorAll('.black-btn1, .black-btn2').forEach(black => {
                     black.style.opacity = '0';
                 });
                 
-                // 클릭된 버튼만 1로
-                const clickedBtn = blackBtn1 || blackBtn2;
-                if (clickedBtn) {
+                // 이미 선택되어 있던 버튼을 다시 클릭한 경우 0으로 유지 (토글 OFF)
+                // 선택되지 않았던 버튼을 클릭한 경우 1로 설정 (토글 ON)
+                if (!isAlreadySelected && clickedBtn) {
                     clickedBtn.style.opacity = '1';
-                    console.log('opacity 변경됨 (단일선택), 현재 opacity:', clickedBtn.style.opacity);
+                    console.log('opacity 변경됨 (단일선택 ON), 현재 opacity:', clickedBtn.style.opacity);
+                } else {
+                    console.log('opacity 변경됨 (단일선택 OFF), 현재 opacity: 0');
                 }
             }
             
@@ -59,3 +66,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+

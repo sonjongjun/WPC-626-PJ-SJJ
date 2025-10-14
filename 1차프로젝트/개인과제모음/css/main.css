@@ -656,6 +656,14 @@ a.salad-logo {
   width: 36%;
   height: 50%;
 }
+img.more-button {
+    width: 9%;
+    height: 16%;
+    top: 18%;
+    left: 26%;
+    opacity: 0;
+    position: absolute;
+}
 .info-box1 {
   position: absolute;
   top: 54%;
@@ -704,6 +712,14 @@ a.salad-logo {
   left: 12%;
   width: 36%;
   height: 50%;
+}
+img.more-button {
+    width: 9%;
+    height: 16%;
+    top: 18%;
+    left: 26%;
+    opacity: 0;
+     position: absolute;
 }
 .info-box2 {
   position: absolute;
@@ -754,6 +770,14 @@ a.salad-logo {
   width: 36%;
   height: 50%;
 }
+img.more-button {
+    width: 9%;
+    height: 16%;
+    top: 18%;
+    left: 26%;
+    opacity: 0;
+     position: absolute;
+}
 .info-box3 {
   position: absolute;
   top: 54%;
@@ -802,6 +826,18 @@ a.salad-logo {
   left: 12%;
   width: 36%;
   height: 50%;
+}
+img.more-button {
+    width: 9%;
+    height: 16%;
+    top: 18%;
+    left: 26%;
+    opacity: 0;
+     position: absolute;
+}
+.more-button:hover {
+  cursor: pointer;
+  opacity: .7;
 }
 .info-box4 {
   position: absolute;
@@ -852,6 +888,14 @@ a.salad-logo {
   width: 36%;
   height: 50%;
 }
+img.more-button {
+    width: 9%;
+    height: 16%;
+    top: 18%;
+    left: 26%;
+    opacity: 0;
+     position: absolute;
+}
 .info-box5 {
   position: absolute;
   top: 54%;
@@ -900,6 +944,14 @@ a.salad-logo {
   left: 12%;
   width: 36%;
   height: 50%;
+}
+img.more-button {
+    width: 9%;
+    height: 16%;
+    top: 18%;
+    left: 26%;
+    opacity: 0;
+     position: absolute;
 }
 .info-box6 {
   position: absolute;
@@ -950,6 +1002,14 @@ a.salad-logo {
   width: 36%;
   height: 50%;
 }
+img.more-button {
+    width: 9%;
+    height: 16%;
+    top: 18%;
+    left: 26%;
+    opacity: 0;
+     position: absolute;
+}
 .info-box7 {
   position: absolute;
   top: 54%;
@@ -998,6 +1058,14 @@ a.salad-logo {
   left: 12%;
   width: 36%;
   height: 50%;
+}
+img.more-button {
+    width: 9%;
+    height: 16%;
+    top: 18%;
+    left: 26%;
+    opacity: 0;
+     position: absolute;
 }
 .info-box8 {
   position: absolute;
@@ -1109,12 +1177,19 @@ a.salad-logo {
   z-index: 1;
   opacity: 1;
 }
+
 .ad-box img {
   width: 394px;
   height: 221px;
   border-radius: 30px;
   top: 50%;
   margin-left: 103px;
+  box-shadow: 3px 3px 10px #856666;
+}
+.ad-box img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
 }
 .review-box {
   margin-left: 7px;
@@ -1124,6 +1199,12 @@ a.salad-logo {
   height: 221px;
   border-radius: 30px;
   top: 30%;
+    box-shadow: 3px 3px 10px #856666;
+}
+.review-box img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
 }
 .about-area {
   border-radius: 25px;
@@ -1148,23 +1229,21 @@ a.salad-logo {
   box-sizing: border-box;
 }
 
-.icon {
+.icon > a > i {
   text-align: center;
   margin-top: 10px;
+  margin-left: 12px;
 }
-.icon > i:first-child {
+.icon > a > i:first-child {
   font-size: 7rem;
   cursor: pointer;
 }
-.icon > i:first-child:hover {
+.icon > a > i:nth-child(1):hover {
   color: rgb(221, 23, 5);
 }
-.icon > i:last-child {
+.icon > a > i:last-child {
   font-size: 7rem;
   cursor: pointer;
-}
-.icon > i:last-child:hover {
-  color: rgb(211, 35, 138);
 }
 /*****************************************************************************************/
 /******************************** 재생영역  ***********************************************/
@@ -1294,7 +1373,7 @@ a.delivery-logo {
   border-radius: 20px;
   margin-top: 95px;
   margin-left: 84px;
-  outline: orchid 1px solid;
+  outline: rgb(218, 116, 112) 3px solid;
   cursor: pointer;
 }
 
@@ -1324,6 +1403,8 @@ a.delivery-logo {
   margin-right: 206px;
   margin-top: 10px;
   cursor: pointer;
+  border-radius: 30px;
+  outline: rgb(218, 116, 112) 3px solid;
 }
 
 /* 배너 이미지들 - 모두 같은 위치에 겹치게 배치 */
@@ -1352,6 +1433,8 @@ a.delivery-logo {
   margin-right: 206px;
   margin-top: 179px;  
   cursor: pointer;
+  border-radius: 30px;
+   outline: rgb(218, 116, 112) 3px solid;
 }
 
 /* 배너 이미지들 - 모두 같은 위치에 겹치게 배치 */
@@ -1380,6 +1463,8 @@ a.delivery-logo {
   margin-right: 206px;
   margin-top: 348px;
   cursor: pointer;
+  border-radius: 30px;
+   outline: rgb(218, 116, 112) 3px solid;
 }
 
 /* 배너 이미지들 - 모두 같은 위치에 겹치게 배치 */
@@ -1533,7 +1618,7 @@ a.mile-logo {
   font-size: 2rem;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .bottom-list2 {
