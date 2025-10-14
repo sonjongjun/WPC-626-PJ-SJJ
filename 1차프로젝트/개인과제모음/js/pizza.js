@@ -218,7 +218,7 @@ xicon8.addEventListener('click', () => {
 
 // check-btn 클릭시 black-btn의 opacity를 토글 (라디오 버튼처럼 하나만 선택)
 document.addEventListener('DOMContentLoaded', function() {
-    const checkBtns = document.querySelectorAll('.check-btn');
+    const checkBtns = document.querySelectorAll('.check-btn1');
     
     checkBtns.forEach(btn => {
         btn.addEventListener('click', function(e) {
@@ -226,12 +226,12 @@ document.addEventListener('DOMContentLoaded', function() {
             e.stopPropagation();
             
             // 모든 black-btn의 opacity를 0으로 초기화
-            document.querySelectorAll('.black-btn').forEach(black => {
+            document.querySelectorAll('.black-btn1').forEach(black => {
                 black.style.opacity = '0';
             });
             
             // 클릭된 버튼 내부의 black-btn만 opacity 1로 설정
-            const blackBtn = this.querySelector('.black-btn');
+            const blackBtn = this.querySelector('.black-btn1');
             if (blackBtn) {
                 blackBtn.style.opacity = '1';
             }
