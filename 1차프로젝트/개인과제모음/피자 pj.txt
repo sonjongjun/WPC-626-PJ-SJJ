@@ -7,3 +7,4 @@ brightness 활용하기!
 flex shirnk
 flex-basis 활용하기!
 
+sl-pizza조각들 미디어쿼리 설정하기
