@@ -1,15 +1,13 @@
 @charset "utf-8";
 /* 피자몰 반응형 미디어쿼리 - media.css */
 
-
 /***************************** 1440px ~ 1920px (일반 데스크톱) *****************************/
 @media screen and (max-width: 1920px) {
-    html {
-        font-size: 10px;
-    }
-}
+  html {
+    font-size: 10px;
+  }
 
-.r-pizza {
+  .r-pizza {
     position: absolute;
     top: 18%;
     translate: 0 -50%;
@@ -18,444 +16,607 @@
     width: 67%;
     left: 18%;
     scale: 1.1 1.6;
+  }
+  .bottom-logo {
+    position: absolute;
+    top: 19%;
+    left: 7%;
 }
+
+}
+
 /******************************** 1440px ~ 1920px (일반 데스크톱)종료 ********************************/
 
 /********************************* 1220px ~ 1440px (작은 데스크톱) *********************************/
 @media screen and (max-width: 1440px) {
-    html {
-        font-size: 9px;
-    }
-    
-    .inbox,
-    .r-pizza-menu,
-    .logo-area,
-    .eight-pizza-part,
-    .movie-part,
-    .event-part {
-        max-width: 95%;
-        width: 95%;
-    }
-}
+  html {
+    font-size: 9px;
+  }
+
+  .inbox,
+  .r-pizza-menu,
+  .logo-area,
+  .eight-pizza-part,
+  .movie-part,
+  .event-part {
+    max-width: 95%;
+    width: 95%;
+  }
+
 .r-pizza {
-    position: absolute;
-    top: 14%;
-    translate: 0 -50%;
-    rotate: x 50deg;
-    height: 65%;
-    width: 81%;
-    left: 9%;
-    scale: 1 1.7;
+  position: absolute;
+  top: 14%;
+  translate: 0 -50%;
+  rotate: x 50deg;
+  height: 65%;
+  width: 81%;
+  left: 9%;
+  scale: 1 1.7;
+}
+.logo-font {
+  position: absolute;
+  display: flex;
+  font-size: 1.6rem;
+  color: #fff;
+  margin-top: 16px;
+  left: 20.2%;
+  width: 56%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.e-tit {
+  top: 0;
+  max-width: 1220px;
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+.eight-pizza-part:hover {
+  .e-pizza-tit {
+    width: 100%;
+    height: 53%;
+    translate: 0 95%;
+    z-index: -1;
+  }
+}
+.sl-piz4 > img {
+  transform-origin: top left;
+  position: absolute;
+  width: 142.1px;
+  height: 175px;
+  bottom: 10.2%;
+  left: 26.2%;
+  clip-path: polygon(0% 106%, 0% 0%, 100% 77%, 88% 68%, 54% 96%, 25% 100%);
+  transform: skew(8deg, -19deg);
+  rotate: 242deg;
+  opacity: 0;
+}
+.sl-piz7 > img {
+  transform-origin: top left;
+  position: absolute;
+  width: 139px;
+  height: 189px;
+  bottom: 8.8%;
+  left: 26.8%;
+  clip-path: polygon(0% 0%, 6% 0%, 106% 40%, 85% 80%, 47% 100%, 18% 100%);
+  rotate: 280deg;
+  transform: skew(2deg, 354deg);
+  opacity: 0;
+}
+.sl-piz6 > img {
+  transform-origin: top left;
+  position: absolute;
+  width: 114.1px;
+  height: 159px;
+  bottom: 13.3%;
+  left: 26%;
+  clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
+  rotate: 312deg;
+  scale: 1.2;
+  opacity: 0;
+}
+.sl-piz5 > img {
+  transform-origin: top left;
+  position: absolute;
+  width: 151.1px;
+  height: 162px;
+  bottom: 12.5%;
+  left: 26%;
+  clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
+  rotate: 1deg;
+  opacity: 0;
+}
+.sl-piz1 > img {
+  transform-origin: top left;
+  position: absolute;
+  width: 158.1px;
+  height: 187px;
+  bottom: 9.6%;
+  left: 26.2%;
+  clip-path: polygon(0% 100%, 0% 0%, 100% 85%, 73% 98%, 43% 104%, 25% 100%);
+  rotate: 53deg;
+  transform: skew(0deg, 347deg);
+  opacity: 0;
+}
+.sl-piz3 > img {
+  scale: 0.92;
+  transform-origin: top left;
+  position: absolute;
+  width: 141.1px;
+  height: 202px;
+  bottom: 7.3%;
+  left: 25.5%;
+  clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
+  rotate: 80deg;
+  transform: skew(350deg, 3deg);
+  opacity: 0;
+}
+.sl-piz2 > img {
+  scale: 1.1;
+  transform-origin: top left;
+  position: absolute;
+  width: 163.1px;
+  height: 157px;
+  bottom: 14.4%;
+  left: 26.5%;
+  clip-path: polygon(0% 100%, 1% 0%, 64% 67%, 82% 86%, 55% 98%, 25% 104%);
+  rotate: 130deg;
+  opacity: 0;
+}
+.sl-piz8 > img {
+  transform-origin: top left;
+  position: absolute;
+  width: 134.1px;
+  height: 158px;
+  bottom: 12.3%;
+  left: 26.3%;
+  clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
+  rotate: 179deg;
+  opacity: 0;
+}
+.icon > a > i {
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 18px;
+}
+
+.review-box::after {
+  content: "";
+  position: absolute;
+  top: 125%;
+  left: 62%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background-image: url(../로고/icon_play.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  z-index: 1;
+  opacity: 1;
+}
+.bottom-logo {
+  position: absolute;
+  top: 19%;
+  left: 2%;
+}
 }
 /********************************* 1220px ~ 1440px (작은 데스크톱)종료 *********************************/
 
-
-                        /************************** 데스크탑 끝!!!!!!!! **************************/
-                        /************************** 데스크탑 끝!!!!!!!! **************************/
-                        /************************** 데스크탑 끝!!!!!!!! **************************/
-
-
+/************************** 데스크탑 끝!!!!!!!! **************************/
+/************************** 데스크탑 끝!!!!!!!! **************************/
+/************************** 데스크탑 끝!!!!!!!! **************************/
 
 /**************************** 1024px ~ 1220px (태블릿 가로) ****************************/
 @media screen and (max-width: 1220px) {
-    html {
-        font-size: 8px;
-    }
-    
-    .inbox,
-    .r-pizza-menu,
-    .logo-area,
-    .eight-pizza-part,
-    .movie-part,
-    .event-part {
-        max-width: 90%;
-        width: 90%;
-    }
-    
-    /* 상단 영역 */
-    .gnb-menu ul {
-        font-size: 1.6rem;
-    }
+  html {
+    font-size: 8px;
+  }
 
-    
-    /* 8조각 피자 영역 */
-    .e-pizza {
-        left: 50px;
-    }
-    
-    /* 이벤트 영역 */
-    .ev-banner {
-        width: 450px;
-        height: 280px;
-    }
-    
-    .banner-box1,
-    .banner-box2,
-    .banner-box3 {
-        width: 250px;
-        height: 120px;
-    }
-    .r-pizza {
-        position: absolute;
-        top: 24%;
-        translate: 0 -48%;
-        rotate: x 50deg;
-        height: 65%;
-        width: 61%;
-        left: 19%;
-        scale: 1.4 1.7;
-    }
+  .inbox,
+  .r-pizza-menu,
+  .logo-area,
+  .eight-pizza-part,
+  .movie-part,
+  .event-part {
+    max-width: 90%;
+    width: 90%;
+  }
+
+  /* 상단 영역 */
+  .gnb-menu ul {
+    font-size: 1.6rem;
+  }
+
+  /* 8조각 피자 영역 */
+  .e-pizza {
+    left: 50px;
+  }
+
+  /* 이벤트 영역 */
+  .ev-banner {
+    width: 450px;
+    height: 280px;
+  }
+
+  .banner-box1,
+  .banner-box2,
+  .banner-box3 {
+    width: 250px;
+    height: 120px;
+  }
+  .r-pizza {
+    position: absolute;
+    top: 24%;
+    translate: 0 -48%;
+    rotate: x 50deg;
+    height: 65%;
+    width: 61%;
+    left: 19%;
+    scale: 1.4 1.7;
+  }
 }
 /**************************** 1024px ~ 1220px (태블릿 가로)종료 ****************************/
 
-
 /***************************** 768px ~ 1024px (태블릿 세로) *****************************/
 @media screen and (max-width: 1024px) {
-    html {
-        font-size: 7px;
-    }
-    
-    .inbox,
-    .r-pizza-menu,
-    .logo-area,
-    .eight-pizza-part,
-    .movie-part,
-    .event-part {
-        max-width: 95%;
-        width: 95%;
-    }
-    
-    /* 상단 영역 */
-    .top-area {
-        flex-direction: column;
-        height: auto;
-        padding: 10px 0;
-    }
-    
-    .gnb-menu ul {
-        justify-content: center;
-        gap: 10px;
-    }
-    
-    .p-logo {
-        height: 80px;
-        margin: 10px 0;
-    }
-    
-    /* 회전 피자 */
-    .r-pizza-menu {
-        height: 400px;
-    }
-    
-    .r-pizza {
-        width: 80%;
-        height: auto;
-        left: 10%;
-    }
-    
-    /* 로고 영역 */
-    .logo-part img {
-        width: 60px;
-        height: 60px;
-    }
-    
-    /* 8조각 피자 */
-    .eight-pizza-part {
-        height: 500px;
-    }
-    
-    .e-pizza {
-        width: 60%;
-        left: 20%;
-    }
-    
-    /* 동영상 영역 */
-    .movie-box {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .ad-box img,
-    .review-box img {
-        width: 300px;
-        height: auto;
-        margin: 10px 0;
-    }
-    
-    /* 이벤트 영역 */
-    .event-part {
-        height: auto;
-        padding-bottom: 50px;
-    }
-    
-    .ev-banner {
-        width: 100%;
-        max-width: 400px;
-        height: 250px;
-        margin-left: 0;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    
-    .banner-box1,
-    .banner-box2,
-    .banner-box3 {
-        display: none;
-    }
-    
-    .eve-logo-box {
-        flex-direction: row;
-        right: auto;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 300px;
-        max-width: 100%;
-        gap: 20px;
-    }
+  html {
+    font-size: 7px;
+  }
+
+  .inbox,
+  .r-pizza-menu,
+  .logo-area,
+  .eight-pizza-part,
+  .movie-part,
+  .event-part {
+    max-width: 95%;
+    width: 95%;
+  }
+
+  /* 상단 영역 */
+  .top-area {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .gnb-menu ul {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .p-logo {
+    height: 80px;
+    margin: 10px 0;
+  }
+
+  /* 회전 피자 */
+  .r-pizza-menu {
+    height: 400px;
+  }
+
+  .r-pizza {
+    width: 80%;
+    height: auto;
+    left: 10%;
+  }
+
+  /* 로고 영역 */
+  .logo-part img {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* 8조각 피자 */
+  .eight-pizza-part {
+    height: 500px;
+  }
+
+  .e-pizza {
+    width: 60%;
+    left: 20%;
+  }
+
+  /* 동영상 영역 */
+  .movie-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ad-box img,
+  .review-box img {
+    width: 300px;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  /* 이벤트 영역 */
+  .event-part {
+    height: auto;
+    padding-bottom: 50px;
+  }
+
+  .ev-banner {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    margin-left: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .banner-box1,
+  .banner-box2,
+  .banner-box3 {
+    display: none;
+  }
+
+  .eve-logo-box {
+    flex-direction: row;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 300px;
+    max-width: 100%;
+    gap: 20px;
+  }
 }
 /***************************** 768px ~ 1024px (태블릿 세로)종료 *****************************/
 
 /***************************** 480px ~ 768px (모바일 가로) *****************************/
 @media screen and (max-width: 768px) {
-    html {
-        font-size: 6px;
-    }
-    
-    .inbox,
-    .r-pizza-menu,
-    .logo-area,
-    .eight-pizza-part,
-    .movie-part,
-    .event-part {
-        max-width: 100%;
-        width: 100%;
-        padding: 0 10px;
-    }
-    
-    /* 상단 영역 */
-    .gnb-menu ul {
-        flex-direction: column;
-        gap: 5px;
-    }
-    
-    .gnb-menu ul li {
-        font-size: 2rem;
-    }
-    
-    /* 회전 피자 */
-    .r-pizza-menu {
-        height: 300px;
-    }
-    
-    /* 로고 영역 */
-    .logo-part {
-        flex-wrap: wrap;
-        width: 100%;
-        left: 0;
-        justify-content: space-around;
-    }
-    
-    .logo-part img {
-        width: 50px;
-        height: 50px;
-        margin: 5px;
-    }
-    
-    .logo-font {
-        flex-wrap: wrap;
-        width: 100%;
-        left: 0;
-        justify-content: space-around;
-    }
-    
-    .logo-font li {
-        width: auto;
-        margin: 5px;
-    }
-    
-    /* 8조각 피자 */
-    .eight-pizza-part {
-        height: 400px;
-    }
-    
-    .pizza-slice img {
-        width: 80%;
-        height: auto;
-    }
-    
-    /* 피자 정보창 */
-    .sl-piz-info1,
-    .sl-piz-info2,
-    .sl-piz-info3,
-    .sl-piz-info4,
-    .sl-piz-info5,
-    .sl-piz-info6,
-    .sl-piz-info7,
-    .sl-piz-info8 {
-        width: 100%;
-        height: auto;
-        padding: 20px;
-    }
-    
-    .piz-info-group1,
-    .piz-info-group2,
-    .piz-info-group3,
-    .piz-info-group4,
-    .piz-info-group5,
-    .piz-info-group6,
-    .piz-info-group7,
-    .piz-info-group8 {
-        width: 100%;
-    }
-    
-    .info-box1, .info-box2, .info-box3, .info-box4,
-    .info-box5, .info-box6, .info-box7, .info-box8 {
-        width: 100%;
-        position: relative;
-        top: auto;
-        margin-top: 20px;
-    }
-    
-    /* 동영상 영역 */
-    .movie-part {
-        height: auto;
-    }
-    
-    .m-banner-box {
-        width: 100%;
-        left: 0;
-        height: auto;
-    }
-    
-    .play-box iframe {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 16/9;
-    }
-    
-    .ad-box img,
-    .review-box img {
-        width: 100%;
-        max-width: 250px;
-    }
-    
-    /* 이벤트 영역 */
-    .ev-banner {
-        width: 90%;
-        height: 200px;
-        margin-top: 50px;
-    }
-    
-    .event-logo {
-        width: 200px;
-        height: auto;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-left: 0;
-    }
-    
-    /* 하단 영역 */
-    .bottom-list1 {
-        flex-direction: column;
-        text-align: center;
-        font-size: 1.6rem;
-    }
-    
-    .bottom-list2 {
-        position: relative;
-        right: auto;
-        text-align: center;
-        margin-top: 20px;
-    }
-    
-    .bottom-logo {
-        left: 50%;
-        transform: translateX(-50%);
-        width: 150px;
-    }
+  html {
+    font-size: 6px;
+  }
+
+  .inbox,
+  .r-pizza-menu,
+  .logo-area,
+  .eight-pizza-part,
+  .movie-part,
+  .event-part {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  /* 상단 영역 */
+  .gnb-menu ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .gnb-menu ul li {
+    font-size: 2rem;
+  }
+
+  /* 회전 피자 */
+  .r-pizza-menu {
+    height: 300px;
+  }
+
+  /* 로고 영역 */
+  .logo-part {
+    flex-wrap: wrap;
+    width: 100%;
+    left: 0;
+    justify-content: space-around;
+  }
+
+  .logo-part img {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+  }
+
+  .logo-font {
+    flex-wrap: wrap;
+    width: 100%;
+    left: 0;
+    justify-content: space-around;
+  }
+
+  .logo-font li {
+    width: auto;
+    margin: 5px;
+  }
+
+  /* 8조각 피자 */
+  .eight-pizza-part {
+    height: 400px;
+  }
+
+  .pizza-slice img {
+    width: 80%;
+    height: auto;
+  }
+
+  /* 피자 정보창 */
+  .sl-piz-info1,
+  .sl-piz-info2,
+  .sl-piz-info3,
+  .sl-piz-info4,
+  .sl-piz-info5,
+  .sl-piz-info6,
+  .sl-piz-info7,
+  .sl-piz-info8 {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .piz-info-group1,
+  .piz-info-group2,
+  .piz-info-group3,
+  .piz-info-group4,
+  .piz-info-group5,
+  .piz-info-group6,
+  .piz-info-group7,
+  .piz-info-group8 {
+    width: 100%;
+  }
+
+  .info-box1,
+  .info-box2,
+  .info-box3,
+  .info-box4,
+  .info-box5,
+  .info-box6,
+  .info-box7,
+  .info-box8 {
+    width: 100%;
+    position: relative;
+    top: auto;
+    margin-top: 20px;
+  }
+
+  /* 동영상 영역 */
+  .movie-part {
+    height: auto;
+  }
+
+  .m-banner-box {
+    width: 100%;
+    left: 0;
+    height: auto;
+  }
+
+  .play-box iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
+
+  .ad-box img,
+  .review-box img {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  /* 이벤트 영역 */
+  .ev-banner {
+    width: 90%;
+    height: 200px;
+    margin-top: 50px;
+  }
+
+  .event-logo {
+    width: 200px;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
+  }
+
+  /* 하단 영역 */
+  .bottom-list1 {
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+
+  .bottom-list2 {
+    position: relative;
+    right: auto;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .bottom-logo {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+  }
 }
 /***************************** 480px ~ 768px (모바일 가로)종료 *****************************/
 
 /***************************** 320px ~ 480px (모바일 세로) ****************************/
 @media screen and (max-width: 480px) {
-    html {
-        font-size: 5px;
-    }
-    
-    /* 상단 영역 */
-    .top-area {
-        height: auto;
-        padding: 5px;
-    }
-    
-    .p-logo {
-        height: 60px;
-    }
-    
-    .gnb-menu ul li {
-        font-size: 2.2rem;
-    }
-    
-    /* 회전 피자 */
-    .r-pizza-menu {
-        height: 200px;
-    }
-    
-    /* 로고 영역 */
-    .logo-part img {
-        width: 40px;
-        height: 40px;
-    }
-    
-    /* 8조각 피자 */
-    .eight-pizza-part {
-        height: 300px;
-    }
-    
-    /* 동영상 */
-    .ad-box img,
-    .review-box img {
-        width: 100%;
-        max-width: 200px;
-    }
-    
-    /* 이벤트 */
-    .ev-banner {
-        height: 150px;
-    }
-    
-    .eve-logo-box {
-        top: 200px;
-        flex-wrap: wrap;
-    }
-    
-    .eve-logo-box img {
-        width: 60px;
-        height: 60px;
-    }
+  html {
+    font-size: 5px;
+  }
+
+  /* 상단 영역 */
+  .top-area {
+    height: auto;
+    padding: 5px;
+  }
+
+  .p-logo {
+    height: 60px;
+  }
+
+  .gnb-menu ul li {
+    font-size: 2.2rem;
+  }
+
+  /* 회전 피자 */
+  .r-pizza-menu {
+    height: 200px;
+  }
+
+  /* 로고 영역 */
+  .logo-part img {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* 8조각 피자 */
+  .eight-pizza-part {
+    height: 300px;
+  }
+
+  /* 동영상 */
+  .ad-box img,
+  .review-box img {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  /* 이벤트 */
+  .ev-banner {
+    height: 150px;
+  }
+
+  .eve-logo-box {
+    top: 200px;
+    flex-wrap: wrap;
+  }
+
+  .eve-logo-box img {
+    width: 60px;
+    height: 60px;
+  }
 }
 /***************************** 320px ~ 480px (모바일 세로) ****************************/
 
 /***************************** 공통 이미지 비율 유지 *****************************/
 @media screen and (max-width: 1220px) {
-    img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-    }
-    
-    /* 특정 이미지들은 최대 크기 제한 */
-    .e-pizza,
-    .r-pizza,
-    .bg-pizza {
-        max-width: 100%;
-        height: auto;
-    }
-    
-    /* 데코 이미지 숨기기 (작은 화면) */
-    .deco1, .deco2, .deco3, .deco4,
-    .bg-b1, .bg-b2, .bg-sauce {
-        display: none;
-    }
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* 특정 이미지들은 최대 크기 제한 */
+  .e-pizza,
+  .r-pizza,
+  .bg-pizza {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* 데코 이미지 숨기기 (작은 화면) */
+  .deco1,
+  .deco2,
+  .deco3,
+  .deco4,
+  .bg-b1,
+  .bg-b2,
+  .bg-sauce {
+    display: none;
+  }
 }
 /***************************** 공통 이미지 비율 유지종료 *****************************/
