@@ -21,15 +21,18 @@
     position: absolute;
     top: 19%;
     left: 7%;
-}
-.e-pizza {
+  }
+  .e-pizza {
     position: absolute;
     left: 8.6%;
     bottom: 12%;
-}
+  }
 }
 
 /******************************** 1440px ~ 1920px (일반 데스크톱)종료 ********************************/
+
+
+
 
 /********************************* 1220px ~ 1440px (작은 데스크톱) *********************************/
 @media screen and (max-width: 1440px) {
@@ -40,60 +43,63 @@
   .inbox,
   .r-pizza-menu,
   .logo-area,
-  .eight-pizza-part,
   .movie-part,
   .event-part {
     max-width: 95%;
     width: 95%;
   }
-
-.r-pizza {
-  position: absolute;
-  top: 14%;
-  translate: 0 -50%;
-  rotate: x 50deg;
-  height: 65%;
-  width: 81%;
-  left: 9%;
-  scale: 1 1.7;
-}
-.logo-font {
-  position: absolute;
-  display: flex;
-  font-size: 1.6rem;
-  color: #fff;
-  margin-top: 16px;
-  left: 20.2%;
-  width: 56%;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.e-tit {
-  top: 0;
-  max-width: 1220px;
-  position: absolute;
-  left: 0;
-  width: 100%;
-}
-.eight-pizza-part:hover {
-  .e-pizza-tit {
-    width: 100%;
-    height: 53%;
-    translate: 0 95%;
-    z-index: -1;
+  .eight-pizza-part {
+    max-width: 98.5%;
+    width: 98.5%;
   }
-}
-.icon > a > i {
-  text-align: center;
-  margin-top: 10px;
-  margin-left: 18px;
-}
-.bottom-logo {
-  position: absolute;
-  top: 19%;
-  left: 2%;
-}
-.pizza-info {
+
+  .r-pizza {
+    position: absolute;
+    top: 14%;
+    translate: 0 -50%;
+    rotate: x 50deg;
+    height: 65%;
+    width: 81%;
+    left: 9%;
+    scale: 1 1.7;
+  }
+  .logo-font {
+    position: absolute;
+    display: flex;
+    font-size: 1.6rem;
+    color: #fff;
+    margin-top: 16px;
+    left: 20.2%;
+    width: 56%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .e-tit {
+    top: 0;
+    max-width: 1220px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+  }
+  .eight-pizza-part:hover {
+    .e-pizza-tit {
+      width: 100%;
+      height: 53%;
+      translate: 0 95%;
+      z-index: -1;
+    }
+  }
+  .icon > a > i {
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 18px;
+  }
+  .bottom-logo {
+    position: absolute;
+    top: 19%;
+    left: 2%;
+  }
+  .pizza-info {
     position: absolute;
     width: 450px;
     height: 600px;
@@ -103,18 +109,17 @@
     margin-right: 14px;
     margin-top: 85px;
     border-radius: 20px;
-}
-.pizza-img {
+  }
+  .pizza-img {
     width: 400px;
     height: 300px;
     margin-left: 30px;
-}
-    .e-pizza {
-        position: absolute;
-        left: 9.8%;
-        bottom: 12.3%;
+  }
+  .e-pizza {
+        left: 10.7%;
+        bottom: 12%;
     }
-.sl-piz5 > img {
+  .sl-piz5 > img {
     transform-origin: top left;
     position: absolute;
     width: 11.28%;
@@ -124,8 +129,8 @@
     clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
     rotate: 1deg;
     opacity: 0;
-}
-.sl-piz3 > img {
+  }
+  .sl-piz3 > img {
     scale: 1.06;
     transform-origin: top left;
     position: absolute;
@@ -137,38 +142,59 @@
     rotate: 80deg;
     transform: skew(350deg, 3deg);
     opacity: 0;
-}
-.sl-piz1 > img {
+  }
+  .sl-piz1 > img {
     transform-origin: top left;
     position: absolute;
-    width: 11.75%;
+    width: 12.95%;
     height: 28.34%;
-    bottom: 9.9%;
-    left: 24.9%;
+    bottom: 9.8%;
+    left: 25.1%;
     clip-path: polygon(0% 100%, 0% 0%, 100% 85%, 73% 98%, 43% 104%, 25% 100%);
     rotate: 53deg;
     transform: skew(0deg, 347deg);
     opacity: 0;
+  }
 }
 .sl-piz4 > img {
-    transform-origin: top left;
-    position: absolute;
-    width: 10.4%;
-    height: 26.3%;
-    bottom: 10.9%;
-    left: 24.8%;
-    clip-path: polygon(0% 106%, 0% 0%, 100% 77%, 88% 68%, 54% 96%, 25% 100%);
-    transform: skew(8deg, -19deg);
-    rotate: 242deg;
-    opacity: 0;
+  transform-origin: top left;
+  position: absolute;
+  width: 10.4%;
+  height: 26.3%;
+  bottom: 10.9%;
+  left: 24.8%;
+  clip-path: polygon(0% 106%, 0% 0%, 100% 77%, 88% 68%, 54% 96%, 25% 100%);
+  transform: skew(8deg, -19deg);
+  rotate: 242deg;
+  opacity: 0;
 }
 
-}
 /********************************* 1220px ~ 1440px (작은 데스크톱)종료 *********************************/
 
+@media screen and (max-width: 1370px) {
+  .e-pizza {
+        left: 10.3%;
+        bottom: 12%;
+    }
+}
+@media screen and (max-width: 1330px) {
+ .e-pizza {
+        left: 9.2%;
+        bottom: 12%;
+    }
+  
+}
+@media screen and (max-width: 1260px) {
+      .e-pizza {
+        left: 8.7%;
+        bottom: 12%;
+    }
+
+}
 /************************** 데스크탑 끝!!!!!!!! **************************/
 /************************** 데스크탑 끝!!!!!!!! **************************/
 /************************** 데스크탑 끝!!!!!!!! **************************/
+
 
 /**************************** 1024px ~ 1220px (태블릿 가로) ****************************/
 @media screen and (max-width: 1220px) {
@@ -194,6 +220,8 @@
   /* 8조각 피자 영역 */
   .e-pizza {
     position: absolute;
+    left: 8.8%;
+    bottom: 12%;
     /* left: 50px; */
   }
 

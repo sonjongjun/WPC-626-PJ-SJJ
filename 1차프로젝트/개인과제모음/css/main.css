@@ -430,16 +430,16 @@ a.salad-logo {
   opacity: 1;
 }
 .sl-piz2 > img {
-  scale: 1.1;
-  transform-origin: top left;
-  position: absolute;
-  width: 13.57%;
-  height: 24.35%;
-  bottom: 14.6%;
-  left: 25.4%;
-  clip-path: polygon(0% 100%, 1% 0%, 64% 67%, 82% 86%, 55% 98%, 25% 104%);
-  rotate: 130deg;
-  opacity: 0;
+    scale: 1.1;
+    transform-origin: top left;
+    position: absolute;
+    width: 12.57%;
+    height: 23.35%;
+    bottom: 14.6%;
+    left: 24.8%;
+    clip-path: polygon(0% 100%, 1% 0%, 64% 67%, 82% 86%, 55% 98%, 25% 104%);
+    rotate: 135deg;
+    opacity: 0;
 }
 .sl-piz2 > img:hover {
   opacity: 1;
