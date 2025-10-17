@@ -154,6 +154,40 @@ body * {
 오버시 높이값이 내용만큼만 커지게된다 */
 }
 
+/* 모바일용 버튼 그룹박스 */
+.btn-group{
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  right: 3vw;
+  /* 플렉스 */
+  /* display: flex; */
+  display: none;
+  gap: 20px;
+}
+/* 버튼 디자인 */
+.btn-group button{
+  background-color: transparent;
+  border: none;
+  /* 아이콘설정(글자와 같음) */
+  font-size: 3rem;
+  cursor: pointer;
+  color: #222;
+}
+/* 햄버거 버튼 셋팅 : 처음에 두번째 i태그인 x버튼 안보임 */
+.btn-ham i:nth-child(2){
+  display: none;
+}
+
+/* 상단영역 최상위 부모인  #top-area에 클래스 on을 주면
+  x버튼보이기/햄버거숨기기 */
+  #top-area.on .btn-ham i:nth-child(2){
+  display: block;
+}
+#top-area.on .btn-ham i:nth-child(1){
+  display: none;
+}
+
 /*******************************************  2.회전피자메뉴 *******************************************/
 .r-pizza-menu {
   width: 1220px;

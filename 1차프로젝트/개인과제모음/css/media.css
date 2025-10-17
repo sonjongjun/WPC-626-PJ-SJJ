@@ -31,9 +31,6 @@
 
 /******************************** 1440px ~ 1920px (일반 데스크톱)종료 ********************************/
 
-
-
-
 /********************************* 1220px ~ 1440px (작은 데스크톱) *********************************/
 @media screen and (max-width: 1440px) {
   html {
@@ -116,9 +113,9 @@
     margin-left: 30px;
   }
   .e-pizza {
-        left: 10.7%;
-        bottom: 12%;
-    }
+    left: 10.7%;
+    bottom: 12%;
+  }
   .sl-piz5 > img {
     transform-origin: top left;
     position: absolute;
@@ -173,28 +170,25 @@
 
 @media screen and (max-width: 1370px) {
   .e-pizza {
-        left: 10.3%;
-        bottom: 12%;
-    }
+    left: 10.3%;
+    bottom: 12%;
+  }
 }
 @media screen and (max-width: 1330px) {
- .e-pizza {
-        left: 9.2%;
-        bottom: 12%;
-    }
-  
+  .e-pizza {
+    left: 9.2%;
+    bottom: 12%;
+  }
 }
 @media screen and (max-width: 1260px) {
-      .e-pizza {
-        left: 8.7%;
-        bottom: 12%;
-    }
-
+  .e-pizza {
+    left: 8.7%;
+    bottom: 12%;
+  }
 }
 /************************** 데스크탑 끝!!!!!!!! **************************/
 /************************** 데스크탑 끝!!!!!!!! **************************/
 /************************** 데스크탑 끝!!!!!!!! **************************/
-
 
 /**************************** 1024px ~ 1220px (태블릿 가로) ****************************/
 @media screen and (max-width: 1220px) {
@@ -256,6 +250,29 @@
     font-size: 7px;
   }
 
+  /* 모바일용 버튼 그룹박스 보이기 */
+  .btn-group {
+    display: flex;
+  }
+
+  .r-pizza-menu,
+  .eight-pizza-part,
+  .review-detail,
+  .ad-box,
+  .review-box,
+  .about-area,
+  .event-part {
+    display: none;
+  }
+
+  .m-banner-box {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+
   .inbox,
   .r-pizza-menu,
   .logo-area,
@@ -266,16 +283,45 @@
     width: 95%;
   }
 
+  .movie-box {
+    position: relative;
+    margin-top: 0;
+    height: auto;
+  }
+  .movie-part {
+    height: auto;
+  }
+
+  #bottom-area {
+    margin-top: 25vh;
+    padding: 2vh 0 5vh;
+    height: auto;
+  }
+  .bottom-logo {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 30vw;
+  }
+
+  .bottom-list2 {
+    top: 32%;
+    right: 6vw;
+  }
   /* 상단 영역 */
-  .top-area {
+  /* .top-area {
     flex-direction: column;
     height: auto;
     padding: 10px 0;
-  }
+  } */
 
-  .gnb-menu ul {
+  /* .gnb-menu ul {
     justify-content: center;
     gap: 10px;
+  } */
+  .gnb-menu,
+  .top-menu-right {
+    display: none;
   }
 
   .p-logo {
