@@ -624,8 +624,8 @@ a.salad-logo {
 }
 
 .bg-pizza {
-  width: 631px;
-  height: 346px;
+  width: 54%;
+  height: auto;
   position: absolute;
   right: -55%;
   bottom: 0%;
