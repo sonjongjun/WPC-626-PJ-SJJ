@@ -267,7 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (topArea.classList.contains('on')) {
         // 메뉴 열기
-        mWindow.style.transform = 'translateX(0%)';
+        mWindow.style.transform = 'translateX(-2.6%)';
       } else {
         // 메뉴 닫기
         mWindow.style.transform = 'translateX(100%)';
@@ -275,3 +275,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+

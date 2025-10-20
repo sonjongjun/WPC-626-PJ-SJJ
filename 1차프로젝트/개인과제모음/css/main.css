@@ -1695,21 +1695,20 @@ a.mile-logo {
 /***************************************************** 모바일 영역*****************************************************/
 .m-right-menu {
   position: fixed;
-  right: 2.4%;
-    width: 95.2%;
+  right: 0%;
+  width: 100%;
   height: 64vh;
   background: #fff;
   transform: translateX(105%);
   transition: transform 0.4s ease-in-out;
   z-index: 999;
   font-size: 5rem;
-    line-height: 19rem;
-border: 2px solid #000000;
-
+  line-height: 19rem;
+  border: 2px solid #000000;
 }
 
 /* on 상태일 때 메뉴 열림 */
 #top-area.on + .m-right-menu {
-  transform: translateX(0);
-
+  transform: translateX(0%);
 }
+
