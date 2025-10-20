@@ -57,7 +57,7 @@ body * {
   display: flex;
   justify-content: space-evenly;
 }
-.p-box{
+.p-box {
   position: absolute;
   width: auto;
   height: auto;
@@ -190,6 +190,19 @@ body * {
 }
 #top-area.on .btn-ham i:nth-child(1) {
   display: none;
+}
+/* 햄버거 버튼 초기 상태: X 버튼 숨김 */
+.btn-ham i:nth-child(2) {
+  display: none;
+}
+
+/* on 클래스가 추가되면 햄버거 숨기고 X 버튼 보이기 */
+#top-area.on .btn-ham i:nth-child(1) {
+  display: none;
+}
+
+#top-area.on .btn-ham i:nth-child(2) {
+  display: block;
 }
 
 /*******************************************  2.회전피자메뉴 *******************************************/
@@ -1382,7 +1395,6 @@ a.delivery-logo {
   font-size: 8rem;
   vertical-align: middle;
   cursor: pointer;
-  position: absolute;
   right: 0;
 }
 .review-detail > i:hover {
@@ -1681,3 +1693,23 @@ a.mile-logo {
   left: 20%;
 }
 /***************************************************** 모바일 영역*****************************************************/
+.m-right-menu {
+  position: fixed;
+  right: 2.4%;
+    width: 95.2%;
+  height: 64vh;
+  background: #fff;
+  transform: translateX(105%);
+  transition: transform 0.4s ease-in-out;
+  z-index: 999;
+  font-size: 5rem;
+    line-height: 19rem;
+border: 2px solid #000000;
+
+}
+
+/* on 상태일 때 메뉴 열림 */
+#top-area.on + .m-right-menu {
+  transform: translateX(0);
+
+}
