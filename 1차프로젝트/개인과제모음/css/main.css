@@ -57,6 +57,11 @@ body * {
   display: flex;
   justify-content: space-evenly;
 }
+.p-box{
+  position: absolute;
+  width: auto;
+  height: auto;
+}
 .top-menu-logo {
   right: 0;
   top: 47px;
@@ -155,7 +160,7 @@ body * {
 }
 
 /* 모바일용 버튼 그룹박스 */
-.btn-group{
+.btn-group {
   position: absolute;
   top: 50%;
   translate: 0 -50%;
@@ -166,25 +171,24 @@ body * {
   gap: 20px;
 }
 /* 버튼 디자인 */
-.btn-group button{
+.btn-group button {
   background-color: transparent;
   border: none;
-  /* 아이콘설정(글자와 같음) */
-  font-size: 3rem;
+  font-size: 8rem;
   cursor: pointer;
   color: #222;
 }
 /* 햄버거 버튼 셋팅 : 처음에 두번째 i태그인 x버튼 안보임 */
-.btn-ham i:nth-child(2){
+.btn-ham i:nth-child(2) {
   display: none;
 }
 
 /* 상단영역 최상위 부모인  #top-area에 클래스 on을 주면
   x버튼보이기/햄버거숨기기 */
-  #top-area.on .btn-ham i:nth-child(2){
+#top-area.on .btn-ham i:nth-child(2) {
   display: block;
 }
-#top-area.on .btn-ham i:nth-child(1){
+#top-area.on .btn-ham i:nth-child(1) {
   display: none;
 }
 
@@ -464,32 +468,32 @@ a.salad-logo {
   opacity: 1;
 }
 .sl-piz2 > img {
-    scale: 1.1;
-    transform-origin: top left;
-    position: absolute;
-    width: 12.57%;
-    height: 23.35%;
-    bottom: 14.6%;
-    left: 24.8%;
-    clip-path: polygon(0% 100%, 1% 0%, 64% 67%, 82% 86%, 55% 98%, 25% 104%);
-    rotate: 135deg;
-    opacity: 0;
+  scale: 1.1;
+  transform-origin: top left;
+  position: absolute;
+  width: 12.57%;
+  height: 23.35%;
+  bottom: 14.6%;
+  left: 24.8%;
+  clip-path: polygon(0% 100%, 1% 0%, 64% 67%, 82% 86%, 55% 98%, 25% 104%);
+  rotate: 135deg;
+  opacity: 0;
 }
 .sl-piz2 > img:hover {
   opacity: 1;
 }
 .sl-piz3 > img {
-    scale: 1.12;
-    transform-origin: top left;
-    position: absolute;
-    width: 8.27%;
-    height: 27.83%;
-    bottom: 9.8%;
-    left: 25.1%;
-    clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
-    rotate: 80deg;
-    transform: skew(350deg, 3deg);
-    opacity: 0;
+  scale: 1.12;
+  transform-origin: top left;
+  position: absolute;
+  width: 8.27%;
+  height: 27.83%;
+  bottom: 9.8%;
+  left: 25.1%;
+  clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
+  rotate: 80deg;
+  transform: skew(350deg, 3deg);
+  opacity: 0;
 }
 .sl-piz3 > img:hover {
   opacity: 1;
@@ -619,7 +623,7 @@ a.salad-logo {
 /************************************************ 마우스 오버시 배경 영역 ************************************************/
 .e-pizza {
   position: absolute;
- left: 8.8%;
+  left: 8.8%;
   bottom: 12%;
 }
 
@@ -1676,3 +1680,4 @@ a.mile-logo {
   top: 19%;
   left: 20%;
 }
+/***************************************************** 모바일 영역*****************************************************/

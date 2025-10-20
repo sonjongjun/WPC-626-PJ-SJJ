@@ -213,6 +213,17 @@ xicon8.addEventListener('click', () => {
       },
     });
 
+      var swiper2 = new Swiper(".mySwiper2", {
+      slidesPerView: 2,
+      grid: {
+        rows: 2,
+      },
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
 
  // check-btn 클릭시 black-btn의 opacity를 토글
 document.addEventListener('DOMContentLoaded', function() {
@@ -240,3 +251,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+//btn-ham 그룹안에 있는 fa-bars 클릭시 fa-xmark로 바꾸기
+const btnHam = document.querySelector('.btn-ham');
+const gnbxicon = document.querySelector('.fa-xmark');
+btnHam.addEventListener('click', () => {
+    btnHam.style.opacity = '0';
+    gnbxicon.style.opacity = '1';
+});

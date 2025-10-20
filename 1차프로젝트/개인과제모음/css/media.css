@@ -214,9 +214,8 @@
   /* 8조각 피자 영역 */
   .e-pizza {
     position: absolute;
-    left: 8.8%;
+    left: 7%;
     bottom: 12%;
-    /* left: 50px; */
   }
 
   /* 이벤트 영역 */
@@ -241,26 +240,157 @@
     left: 19%;
     scale: 1.4 1.7;
   }
+  .sl-piz5 > img {
+    transform-origin: top left;
+    position: absolute;
+    width: 13.78%;
+    height: 25.81%;
+    bottom: 12.5%;
+    left: 24.8%;
+    clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
+    rotate: 1deg;
+    opacity: 0;
+  }
+  .sl-piz6 > img {
+    transform-origin: top left;
+    position: absolute;
+    width: 10.75%;
+    height: 25.15%;
+    bottom: 12.3%;
+    left: 24.3%;
+    clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
+    rotate: 312deg;
+    scale: 1.2;
+    opacity: 0;
+  }
+  .sl-piz4 > img {
+    transform-origin: top left;
+    position: absolute;
+    width: 12.8%;
+    height: 26.3%;
+    bottom: 10.9%;
+    left: 25.3%;
+    clip-path: polygon(0% 106%, 0% 0%, 100% 77%, 88% 68%, 54% 96%, 25% 100%);
+    transform: skew(8deg, -19deg);
+    rotate: 242deg;
+    opacity: 0;
+  }
+  .sl-piz3 > img {
+    scale: 1.06;
+    transform-origin: top left;
+    position: absolute;
+    width: 10.67%;
+    height: 28.03%;
+    bottom: 10%;
+    left: 24.8%;
+    clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
+    rotate: 80deg;
+    transform: skew(350deg, 3deg);
+    opacity: 0;
+  }
+  .sl-piz7 > img {
+    transform-origin: top left;
+    position: absolute;
+    width: 13%;
+    height: 30.1%;
+    bottom: 7.7%;
+    left: 26.2%;
+    clip-path: polygon(0% 0%, 6% 0%, 106% 40%, 85% 80%, 47% 100%, 18% 100%);
+    rotate: 280deg;
+    transform: skew(1deg, 348deg);
+    opacity: 0;
+  }
+  .sl-piz2 > img {
+    scale: 1.1;
+    transform-origin: top left;
+    position: absolute;
+    width: 14.97%;
+    height: 23.35%;
+    bottom: 14.6%;
+    left: 24.8%;
+    clip-path: polygon(0% 100%, 1% 0%, 64% 67%, 82% 86%, 55% 98%, 25% 104%);
+    rotate: 135deg;
+    opacity: 0;
+}
+    .sl-piz1 > img {
+        transform-origin: top left;
+        position: absolute;
+        width: 14.95%;
+        height: 28.44%;
+        bottom: 9.8%;
+        left: 26%;
+        clip-path: polygon(0% 100%, 0% 0%, 100% 85%, 73% 98%, 43% 104%, 25% 100%);
+        rotate: 53deg;
+        transform: skew(0deg, 347deg);
+        opacity: 0;
+    }
 }
 /**************************** 1024px ~ 1220px (태블릿 가로)종료 ****************************/
 
-
-@media screen and (max-width: 1200px) {
-  .e-pizza{
-  position: absolute;
-  left: 7.8%;
-  bottom: 12%;
-}
-}
-
-
-@media screen and (max-width: 1110px) {
-  .e-pizza{
+@media screen and (max-width: 1150px) {
+  .e-pizza {
     position: absolute;
-    left: 7.8%;
+    left: 5%;
     bottom: 12%;
   }
 }
+
+
+@media screen and (max-width: 1100px) {
+    .e-pizza {
+        position: absolute;
+        left: 4%;
+        bottom: 12%;
+    }
+    .sl-piz4 > img {
+        transform-origin: top left;
+        position: absolute;
+        width: 14.7%;
+        height: 26.3%;
+        bottom: 10.9%;
+        left: 25.3%;
+        clip-path: polygon(0% 106%, 0% 0%, 100% 77%, 88% 68%, 54% 96%, 25% 100%);
+        transform: skew(8deg, -19deg);
+        rotate: 242deg;
+        opacity: 0;
+    }
+        .sl-piz7 > img {
+        transform-origin: top left;
+        position: absolute;
+        width: 14.7%;
+        height: 30.1%;
+        bottom: 7.7%;
+        left: 26.2%;
+        clip-path: polygon(0% 0%, 6% 0%, 106% 40%, 85% 80%, 47% 100%, 18% 100%);
+        rotate: 280deg;
+        transform: skew(1deg, 348deg);
+        opacity: 0;
+    }
+        .sl-piz6 > img {
+        transform-origin: top left;
+        position: absolute;
+        width: 12.55%;
+        height: 25.15%;
+        bottom: 12.3%;
+        left: 24.3%;
+        clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
+        rotate: 312deg;
+        scale: 1.2;
+        opacity: 0;
+    }
+        .sl-piz5 > img {
+        transform-origin: top left;
+        position: absolute;
+        width: 15.48%;
+        height: 25.81%;
+        bottom: 12.5%;
+        left: 24.8%;
+        clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
+        rotate: 1deg;
+        opacity: 0;
+    }
+  }
+
 
 /***************************** 768px ~ 1024px (태블릿 세로) *****************************/
 @media screen and (max-width: 1024px) {
@@ -279,7 +409,8 @@
   .ad-box,
   .review-box,
   .about-area,
-  .event-part {
+  .event-part,
+  .logo-area {
     display: none;
   }
 
@@ -308,6 +439,9 @@
   }
   .movie-part {
     height: auto;
+    margin-top: 5%;
+    border-radius: 10px;
+    
   }
 
   #bottom-area {
@@ -342,10 +476,6 @@
     display: none;
   }
 
-  .p-logo {
-    height: 80px;
-    margin: 10px 0;
-  }
 
   /* 회전 피자 */
   .r-pizza-menu {
@@ -416,6 +546,9 @@
     top: 300px;
     max-width: 100%;
     gap: 20px;
+  }
+   #top-area.on .menu-box {
+    left: 0%;
   }
 }
 /***************************** 768px ~ 1024px (태블릿 세로)종료 *****************************/
