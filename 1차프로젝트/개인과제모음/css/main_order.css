@@ -388,14 +388,13 @@ a.salad-logo {
 }
 .e-pizza-tit {
   top: 0%;
-  position: relative;
+  position:relative;
   z-index: 1;
 }
-.cheese {
-  top: 0;
-  max-width: 1220px;
-  height: 318px;
-  position: absolute;
+  .cheese {
+    width: 100%;
+    max-width: 1220px;
+    height: 318px;
 }
 .e-tit {
   top: 0;
@@ -1559,7 +1558,6 @@ a.mile-logo {
   grid-template-columns: repeat(4, 1fr);
   /* grid-column-gap: 10px; */
   /* grid-row-gap: 10px; */
-  margin-top: 25%;
 }
 .pizza-list > div {
   cursor: pointer;

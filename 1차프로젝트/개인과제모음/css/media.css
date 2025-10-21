@@ -41,10 +41,6 @@
     max-width: 95%;
     width: 95%;
   }
-  .eight-pizza-part {
-    max-width: 98.5%;
-    width: 98.5%;
-  }
 
   .r-pizza {
     position: absolute;
@@ -102,6 +98,7 @@
     height: 300px;
     margin-left: 30px;
   }
+  
   .e-pizza {
     left: 10.7%;
     bottom: 12%;
@@ -195,6 +192,7 @@
     max-width: 95%;
     width: 95%;
   }
+  .e-pizza-tit {
 
   /* 상단 영역 */
   .gnb-menu ul {
