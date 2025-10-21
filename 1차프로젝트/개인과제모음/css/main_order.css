@@ -388,17 +388,18 @@ a.salad-logo {
 }
 .e-pizza-tit {
   top: 0%;
-  position: absolute;
+  position: relative;
   z-index: 1;
 }
 .cheese {
   top: 0;
   max-width: 1220px;
   height: 318px;
+  position: absolute;
 }
 .e-tit {
   top: 0;
-  max-width: 1220px;
+    max-width: 1220px;
   position: absolute;
   left: 0;
 }

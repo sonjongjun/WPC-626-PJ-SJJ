@@ -14,17 +14,6 @@ const pizzaInfo = [
     "두둥! 바이킹쉬림프",
     "보스 포테이토",
 ];
-// .m-piz-area안의 p요소를 읽어서 map방식으로 배열로 만들기
-const mPizzaList = document.querySelector('.m-piz-area');
-
-mPizzaList.innerHTML = pizzaInfo.map((v)=>`
-    <p>${v}</p>
-`).join('');
-console.log(mPizzaList.innerHTML);
-
-
-
-
 
 
 const pizzaList = document.querySelector('.pizza-list');
