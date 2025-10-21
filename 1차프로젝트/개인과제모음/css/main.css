@@ -155,7 +155,6 @@ body * {
 오버시 높이값이 내용만큼만 커지게된다 */
 }
 
-
 /* 모바일용 버튼 그룹박스 */
 .btn-group {
   position: absolute;
@@ -1233,9 +1232,9 @@ img.more-button {
 }
 .ad-box img {
   width: 80%;
-    height: 78%;
-    border-radius: 30px;
-    margin-left: 95px;
+  height: 78%;
+  border-radius: 30px;
+  margin-left: 95px;
   border-radius: 30px;
   box-shadow: 3px 3px 10px #856666;
   display: block; /* 이미지를 블록으로 만들어 정확한 위치 계산 */
@@ -1251,8 +1250,8 @@ img.more-button {
   position: relative;
 }
 .review-box img {
- width: 100%;
-    height: 78%;
+  width: 100%;
+  height: 78%;
   border-radius: 30px;
   box-shadow: 3px 3px 10px #856666;
   display: block;
@@ -1278,7 +1277,7 @@ img.more-button {
 }
 .about-img {
   width: 85%;
-    height: 40%;
+  height: 40%;
   cursor: pointer;
   margin-top: 18px;
   margin-left: 14px;
@@ -1371,9 +1370,9 @@ img.more-button {
   font-size: 1.42rem;
 }
 info-logo {
-    bottom: 0%;
-    right: 0px;
-    position: absolute;
+  bottom: 0%;
+  right: 0px;
+  position: absolute;
 }
 
 a.delivery-logo {
@@ -1401,7 +1400,7 @@ a.delivery-logo {
 .review-detail > i:hover {
   color: rgb(221, 23, 5);
 }
-i.fa-brands.fa-youtube{
+i.fa-brands.fa-youtube {
   position: static;
 }
 
@@ -1714,4 +1713,85 @@ a.mile-logo {
 /* on 상태일 때 메뉴 열림 */
 #top-area.on + .m-right-menu {
   transform: translateX(0%);
+}
+
+.m-piz-area .swiper-wrapper {
+  width: 100%;
+  height: 72vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.m-piz-area .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background-color: #e16b6b96;
+  height: calc((100% - 30px) / 2) !important;
+  border-radius: 20px;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.m-piz-area .swiper-slide img {
+  width: 70%;
+  height: 120%;
+  object-fit: cover;
+}
+.m-piz-area {
+  position: relative;
+  margin-top: 8%;
+}
+.m-piz-area .swiper-wrapper li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.m-piz-area p {
+  font-size: 2vw;
+  font-weight: bold;
+  margin-bottom: 2vh;
+  background-color: #c99595;
+  border-radius: 10px;
+}
+
+.m-btn-menu {
+  font-size: 7vh;
+  position: absolute;
+  bottom: -26%;
+  left: 28%;
+  background-color: #e16b6b96;
+  width: auto;
+  height: auto;
+  border-radius: 20px;
+}
+.m-serch-area ul {
+  margin-top: 28%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+.m-serch-area p {
+  font-size: 2vw;
+  width: 52%;
+  height: auto;
+  border-radius: 20px;
+  font-weight: bold;
+  background-color: #3a373796;
+  text-align: center;
+  margin-left: 25%;
+  margin-top: 10%;
+}
+h2.m-btn-menu:hover {
+  cursor: pointer;
+  transform: scaleX(1.2) scaleY(1.4);
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+.mobile-zone {
+  display: none;
 }

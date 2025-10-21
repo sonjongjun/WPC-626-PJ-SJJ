@@ -213,10 +213,13 @@ xicon8.addEventListener('click', () => {
       },
     });
 
-      var swiper2 = new Swiper(".mySwiper2", {
+
+
+      var swiper2 = new Swiper(".m-piz-area", {
       slidesPerView: 2,
       grid: {
         rows: 2,
+        
       },
       spaceBetween: 30,
       pagination: {
@@ -224,6 +227,7 @@ xicon8.addEventListener('click', () => {
         clickable: true,
       },
     });
+    console.log(swiper2);
 
  // check-btn 클릭시 black-btn의 opacity를 토글
 document.addEventListener('DOMContentLoaded', function() {
@@ -275,4 +279,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
 
