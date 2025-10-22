@@ -41,3 +41,57 @@ bigImg.alt = pizzaInfo[pm];
     <img src="./피자리스트/피자1누끼.png" alt="핫 스파이시 페퍼로니">
 </div>
 */
+
+// 햄버거 버튼 클릭 시 모바일 메뉴 열기/닫기
+document.addEventListener('DOMContentLoaded', () => {
+  const btnHam = document.querySelector('.btn-ham');
+  const topArea = document.getElementById('top-area');
+  const mWindow = document.querySelector('.m-right-menu');
+
+  if (btnHam && topArea && mWindow) {
+    // 초기 상태: 메뉴 닫힘
+    mWindow.style.transform = 'translateX(100%)';
+    mWindow.style.transition = 'transform 0.4s ease-in-out';
+    mWindow.style.marginTop =  '11.6vh';
+
+    btnHam.addEventListener('click', () => {
+      topArea.classList.toggle('on');
+
+      if (topArea.classList.contains('on')) {
+        // 메뉴 열기
+        mWindow.style.transform = 'translateX(-0%)';
+      } else {
+        // 메뉴 닫기
+        mWindow.style.transform = 'translateX(100%)';
+      }
+    });
+  }
+});
+// 화면의 넓이가 1024px 이하인 경우 size-area안의 글자 L사이즈를 L사이즈 <br><br> 30,900원으로 바꾸기 1024px 이상이면 'L사이즈'로 바꾸기
+window.addEventListener('resize', () => {
+  if (window.innerWidth < 1024) {
+    const sizeArea = document.querySelector('.size-area button');
+    sizeArea.innerHTML = 'L사이즈 <br><br> 30,900원';
+    sizeArea.style.fontSize = '4.5rem';
+  }
+  else {
+    const sizeArea = document.querySelector('.size-area button');
+    sizeArea.innerHTML = 'L사이즈';
+    sizeArea.style.fontSize = '2rem';
+  }
+});//resize//////////
+
+
+// 화면의 넓이가 1024px 이하인 경우 size-area안의 글자 M사이즈를 M사이즈 <br><br> 24,900원으로 바꾸기
+window.addEventListener('resize', () => {
+  if (window.innerWidth < 1024) {
+    const sizeArea = document.querySelector('.size-area button:nth-child(2)');
+    sizeArea.innerHTML = 'M사이즈 <br><br> 24,900원';
+    sizeArea.style.fontSize = '4.5rem';
+  }
+  else {
+    const sizeArea = document.querySelector('.size-area button:nth-child(2)');
+    sizeArea.innerHTML = 'M사이즈';
+    sizeArea.style.fontSize = '2rem';
+  }
+});//resize//////////
