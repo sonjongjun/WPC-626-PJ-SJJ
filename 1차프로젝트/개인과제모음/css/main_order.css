@@ -269,13 +269,13 @@ body * {
 }
 
 .logo-font p {
-  margin-left: 17px;
-  background-color: #d22b2b;
-  border-radius: 7px;
-  padding: 8px 12px;
-  cursor: pointer;
-  text-align: center;
-  white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+ margin-left: 17px;
+    background-color: #d22b2b;
+    border-radius: 7px;
+    padding: 8px 0px;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
 }
 
 /* 활성화된 텍스트의 스타일 */
@@ -1837,4 +1837,89 @@ div.d-img-area {
   align-items: center;
   justify-content: center;
   border: none;
+}
+/* 모바일영역 */
+
+/* 모바일용 버튼 그룹박스 */
+.btn-group {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  right: 3vw;
+  /* 플렉스 */
+  /* display: flex; */
+  display: none;
+  gap: 20px;
+}
+/* 버튼 디자인 */
+.btn-group button {
+  background-color: transparent;
+  border: none;
+  font-size: 8rem;
+  cursor: pointer;
+  color: #222;
+}
+/* 햄버거 버튼 셋팅 : 처음에 두번째 i태그인 x버튼 안보임 */
+.btn-ham i:nth-child(2) {
+  display: none;
+}
+
+/* 상단영역 최상위 부모인  #top-area에 클래스 on을 주면
+  x버튼보이기/햄버거숨기기 */
+#top-area.on .btn-ham i:nth-child(2) {
+  display: block;
+}
+#top-area.on .btn-ham i:nth-child(1) {
+  display: none;
+}
+/* 햄버거 버튼 초기 상태: X 버튼 숨김 */
+.btn-ham i:nth-child(2) {
+  display: none;
+}
+
+/* on 클래스가 추가되면 햄버거 숨기고 X 버튼 보이기 */
+#top-area.on .btn-ham i:nth-child(1) {
+  display: none;
+}
+
+#top-area.on .btn-ham i:nth-child(2) {
+  display: block;
+}
+
+/* 메뉴 */
+.m-right-menu {
+  position: fixed;
+  /* right: 0%; */
+  width: 100vh;
+  height: 100vh;
+  background: #000000;
+  transform: translateX(105%);
+  transition: transform 0.4s ease-in-out;
+  z-index: 999;
+  font-size: 5rem;
+  line-height: 17vh;
+  top: 0%;
+  z-index: 100000;
+  color: #fff;
+  display: none;
+}
+.m-right-menu a {
+  text-decoration: none;
+  color: #fff;
+}
+.m-right-menu ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+}
+.m-right-menu h2:hover{
+  color:#c99595;
+  cursor: pointer;
+}
+
+/* on 상태일 때 메뉴 열림 */
+#top-area.on + .m-right-menu {
+  transform: translateX(0%);
 }
