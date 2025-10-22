@@ -1776,13 +1776,15 @@ a.mile-logo {
   margin-bottom: 2vh;
   background-color: #c99595;
   border-radius: 10px;
+  /* margin-top: 5%; */
 }
 
 .m-btn-menu {
   font-size: 7vh;
   position: absolute;
   bottom: -26%;
-  left: 28%;
+  left: 50%;
+  translate: translateX(-50%);
   background-color: #e16b6b96;
   width: auto;
   height: auto;

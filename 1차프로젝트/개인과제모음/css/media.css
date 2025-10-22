@@ -779,6 +779,11 @@
     transform: translateX(-50%);
     width: 150px;
   }
+    .m-piz-area .swiper-slide img{
+    width: 70%;
+    height: 49%;
+    object-fit: cover;
+}
 }
 /***************************** 480px ~ 768px (모바일 가로)종료 *****************************/
 
@@ -844,6 +849,11 @@
   .m-deco3 {
     height: 40px;
   }
+      .m-piz-area .swiper-slide img {
+        width: 70%;
+        height: 39%;
+        object-fit: cover;
+    }
 }
 /***************************** 320px ~ 480px (모바일 세로) ****************************/
 
