@@ -1178,6 +1178,12 @@ img.more-button {
   position: absolute;
   top: 0;
 }
+div .swiper-button-prev{
+  color: #fff;
+}
+div .swiper-button-next{
+  color: #fff;
+}
 .m-banner {
   height: 364px;
   width: 1014px;
@@ -1302,7 +1308,7 @@ img.more-button {
   height: 40%;
   cursor: pointer;
   margin-top: 18px;
-  margin-left: 14px;
+  margin-left: 22.4px;
   outline: 10px ridge goldenrod;
   box-sizing: border-box;
 }
@@ -1313,14 +1319,14 @@ img.more-button {
   margin-left: 10%;
 }
 .icon > a > i:first-child {
-  font-size: 6rem;
+  font-size: 9rem;
   cursor: pointer;
 }
 .icon > a > i:nth-child(1):hover {
   color: rgb(221, 23, 5);
 }
 .icon > a > i:last-child {
-  font-size: 6rem;
+  font-size: 9rem;
   cursor: pointer;
 }
 /*****************************************************************************************/
@@ -1709,7 +1715,7 @@ a.mile-logo {
 
 .footer-end {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 2vh;
 }
 
@@ -1738,6 +1744,9 @@ a.mile-logo {
   z-index: 100000;
   color: #fff;
   display: none;
+}
+.m-piz-area .swiper-pagination-bullet-active {
+  background-color: red;
 }
 .m-right-menu a {
   text-decoration: none;
