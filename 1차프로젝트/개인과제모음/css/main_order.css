@@ -28,7 +28,7 @@ body * {
   position: relative;
   height: 118px;
   display: flex;
-  outline: 1px solid #000;
+  /* outline: 1px solid #000; */
 }
 #top-area > a:hover {
   color: red;
@@ -1952,6 +1952,14 @@ div.d-img-area {
 .m-right-menu a {
   text-decoration: none;
   color: #fff;
+}
+.m-right-menu ul {
+  padding-top: 5vh;
+}
+.m-right-menu h2 {
+  font-size: 6vw;
+  padding-left: 10vw;
+  line-height: 15vh;
 }
 .m-right-menu ul {
   display: flex;

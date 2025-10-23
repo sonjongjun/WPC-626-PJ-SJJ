@@ -281,4 +281,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-
+/// 피자조각 정보 링크 클릭시 상세페이지로 이동하기 ////
+const $pizInfo = $('.piz-info a');
+// console.log('개수:', $pizInfo.length);
+$pizInfo.on('click', function(e) {
+  e.preventDefault();
+  // 순번체크
+  let seq = $(this).prev('img').attr('alt').substr(2);
+  console.log('순번:',seq);
+  location.href = '04.pizza_delivery-1.html?no='+seq;
+}); ///// click ////////////////

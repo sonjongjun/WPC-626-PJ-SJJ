@@ -51,7 +51,7 @@
     left: 9%;
     scale: 1 1.7;
   }
-  .logo-font {
+  /* .logo-font {
     position: absolute;
     display: flex;
     font-size: 1.6rem;
@@ -61,7 +61,7 @@
     width: 56%;
     flex-direction: row;
     justify-content: space-between;
-  }
+  } */
   .e-tit {
     top: 0;
     max-width: 1220px;
@@ -333,17 +333,14 @@
     margin-left: 20px;
   }
   .ad-box img {
-    width: 80%;
-    height: 78%;
     border-radius: 30px;
-    margin-left: 70px;
     border-radius: 30px;
     box-shadow: 3px 3px 10px #856666;
     display: block;
   }
-  .m-banner-box.swiper-initialized.swiper-horizontal.swiper-backface-hidden {
+  /* .m-banner-box.swiper-initialized.swiper-horizontal.swiper-backface-hidden {
     width: 92%;
-  }
+  } */
 }
 
 /**************************** 1024px ~ 1220px (태블릿 가로)종료 ****************************/
@@ -491,7 +488,9 @@
     height: auto;
     margin-top: 5%;
     border-radius: 10px;
+    gap: 0;
   }
+
 
   #bottom-area {
     margin-top: 4.6vh;
@@ -806,7 +805,7 @@
     transform: translateX(-50%) scale(1.05);
   }
   .m-serch-area {
-    margin-top: 30%;
+    margin-top: 25%;
     width: 95%;
     padding: 0 15px;
   }
