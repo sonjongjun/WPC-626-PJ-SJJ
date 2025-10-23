@@ -1670,34 +1670,37 @@ div.d-img-area {
   border-radius: 10px;
   outline: 1px solid #000000;
   box-sizing: border-box;
-  max-width: 380px;
-  width: 100%;
-  max-height: 436px;
-  height: 100%;
-  position: relative;
+  position: absolute;
   margin-left: 2%;
+  aspect-ratio: 1 / 1;
+  margin-right: 50%;
 }
-.d-img-area> ul {
+.d-area > ul {
+  left: 0%;
+  position: absolute;
   display: flex;
-  max-width: 450px;
+  max-width: 35.1%;
   flex-direction: row;
   flex-wrap: wrap;
   align-content: space-around;
   justify-content: space-around;
   align-items: center;
-  margin-left: -5px;
-  margin-top: 30px;
+  margin-left: 0.2%;
+  /* margin-top: 18px; */
+  width: 106%;
+  top: 54.8%;
 }
-.d-img-area> ul > li {
+.d-area > ul > li {
   cursor: pointer;
   text-align: center;
   font-size: 1.8rem;
-  background-color: rgb(209, 95, 84);
+  background-color: rgb(182 136 131);
   border-radius: 10px;
   outline: 1px solid #000000;
   box-sizing: border-box;
+  padding: 1%;
 }
-.d-img-area> ul > li:hover {
+.d-area > ul > li:hover {
   background-color: rgb(255, 50, 50);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   color: #fff;
@@ -1710,8 +1713,8 @@ div.d-img-area {
   /* margin-left: 100px;
   margin-top: 230px; */
   width: 400px;
-  left: 0%;
-  bottom: -80%;
+  left: 2%;
+  bottom: 14%;
 }
 .order-btn > h2 {
   font-size: 3.5rem;
@@ -1754,23 +1757,23 @@ div.d-img-area {
   justify-content: space-around;
   align-items: center;
   position: absolute;
-  left: 0%;
-  bottom: -30%;
+  left: 2%;
+  bottom: 33%;
   border-radius: 10px;
   width: 400px;
   position: absolute;
 }
 .size-area > button {
-    border: none;
-    cursor: pointer;
-    font-size: 2.5rem;
-    background-color: rgba(217, 217, 217, 1);
-    border-radius: 10px;
-    outline: 1px solid #000000;
-    box-sizing: border-box;
-    width: 120px;
-    height: 60px;
-    font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: 2.5rem;
+  background-color: rgba(217, 217, 217, 1);
+  border-radius: 10px;
+  outline: 1px solid #000000;
+  box-sizing: border-box;
+  width: 120px;
+  height: 60px;
+  font-weight: bold;
 }
 .size-area > button:hover {
   background-color: rgb(255, 50, 50);
@@ -1779,36 +1782,35 @@ div.d-img-area {
   transition: all 0.5s ease;
 }
 .edge-area {
-    position: absolute;
-    top: 0%;
-    right: 0%;
-    width: 43.4%;
-    height: 30%;
-    background-color: rgba(220, 204, 204, 1);
-    font-size: 2rem;
-    border-radius: 10px;
-    outline: 1px solid #000000;
-    box-sizing: border-box;
-    box-shadow: 3px 3px 10px #856666;
-    margin-right: 2%;
-    margin-left: 10%;
-
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  width: 43.4%;
+  height: 30%;
+  background-color: rgba(220, 204, 204, 1);
+  font-size: 2rem;
+  border-radius: 10px;
+  outline: 1px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 3px 3px 10px #856666;
+  margin-right: 2%;
+  margin-left: 10%;
 }
 .topping-area {
- position: absolute;
-    bottom: 22%;
-    right: 0%;
-    width: 43.4%;
-    height: 41%;
-    background-color: rgba(220, 204, 204, 1);
-    font-size: 2rem;
-    border-radius: 10px;
-    outline: 1px solid #000000;
-    box-sizing: border-box;
-    box-shadow: 3px 3px 10px #856666;
-    overflow-y: scroll;
-    margin-right: 2%;
-    margin-left: 10%;
+  position: absolute;
+  bottom: 22%;
+  right: 0%;
+  width: 43.4%;
+  height: 41%;
+  background-color: rgba(220, 204, 204, 1);
+  font-size: 2rem;
+  border-radius: 10px;
+  outline: 1px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 3px 3px 10px #856666;
+  overflow-y: scroll;
+  margin-right: 2%;
+  margin-left: 10%;
 }
 .check-btn {
   position: absolute;

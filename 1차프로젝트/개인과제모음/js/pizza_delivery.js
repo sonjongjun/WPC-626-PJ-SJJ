@@ -72,12 +72,10 @@ window.addEventListener('resize', () => {
   if (window.innerWidth < 1024) {
     const sizeArea = document.querySelector('.size-area button');
     sizeArea.innerHTML = 'L사이즈 <br><br> 30,900원';
-    sizeArea.style.fontSize = '4.5rem';
   }
   else {
     const sizeArea = document.querySelector('.size-area button');
     sizeArea.innerHTML = 'L사이즈';
-    sizeArea.style.fontSize = '2rem';
   }
 });//resize//////////
 
@@ -87,11 +85,9 @@ window.addEventListener('resize', () => {
   if (window.innerWidth < 1024) {
     const sizeArea = document.querySelector('.size-area button:nth-child(2)');
     sizeArea.innerHTML = 'M사이즈 <br><br> 24,900원';
-    sizeArea.style.fontSize = '4.5rem';
   }
   else {
     const sizeArea = document.querySelector('.size-area button:nth-child(2)');
     sizeArea.innerHTML = 'M사이즈';
-    sizeArea.style.fontSize = '2rem';
   }
 });//resize//////////
