@@ -1192,7 +1192,7 @@ div .swiper-button-next{
   left: 0%;
 }
 .m-deco {
-  width: 1014px;
+  width: 1114px;
   height: 78px;
   position: absolute;
   bottom: 0%;
@@ -1200,7 +1200,7 @@ div .swiper-button-next{
   z-index: 1;
 }
 .m-deco2 {
-  width: 1014px;
+  width: 1114px;
   height: 78px;
   position: absolute;
   bottom: 0%;
@@ -1208,7 +1208,7 @@ div .swiper-button-next{
   z-index: 1;
 }
 .m-deco3 {
-  width: 1014px;
+  width: 1114px;
   height: 78px;
   position: absolute;
   bottom: 0%;
@@ -1293,7 +1293,7 @@ div .swiper-button-next{
 }
 .about-area {
   border-radius: 25px;
-  width: 61%;
+  width: 51%;
   height: auto;
   background-color: rgba(213, 161, 161, 1);
 }
@@ -1319,15 +1319,18 @@ div .swiper-button-next{
   margin-left: 10%;
 }
 .icon > a > i:first-child {
-  font-size: 9rem;
+  font-size: 8rem;
   cursor: pointer;
 }
 .icon > a > i:nth-child(1):hover {
   color: rgb(221, 23, 5);
 }
 .icon > a > i:last-child {
-  font-size: 9rem;
+  font-size: 8rem;
   cursor: pointer;
+}
+.about-area > .icon{
+  text-align: center;
 }
 /*****************************************************************************************/
 /******************************** 재생영역  ***********************************************/
@@ -1430,6 +1433,11 @@ a.delivery-logo {
 }
 i.fa-brands.fa-youtube {
   position: static;
+}
+.info-logo{
+position: absolute;
+right: 0%;
+bottom: 2%;
 }
 
 /********************************************  6. 이벤트/할인영역 ********************************************/
@@ -1715,7 +1723,7 @@ a.mile-logo {
 
 .footer-end {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 2vh;
 }
 

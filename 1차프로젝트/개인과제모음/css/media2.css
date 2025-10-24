@@ -129,6 +129,10 @@
     width: 70%;
     max-width: 600px;
   }
+    .bottom-logo {
+    width: 33%;
+    height: 78%;
+  }
 }
 
 /***************************** 768px ~ 1024px (태블릿 세로) *****************************/
@@ -205,9 +209,9 @@
     width: 95%;
   }
 
-  #bottom-area {
-    margin-top: 90%;
-    padding: 4vh 0vh;
+ #bottom-area {
+   margin-top: 83.6vh;
+    padding: 5.3vh 0vh;
     height: auto;
   }
   .bottom-logo {
@@ -216,7 +220,6 @@
     left: 0%;
     width: 30vw;
   }
-
   .bottom-list2 {
     top: 32%;
     right: 6vw;
@@ -487,7 +490,7 @@
     position: absolute;
   }
   #bottom-area {
-    margin-top: 170%;
+    margin-top: 154%;
     padding: 5.3vh 0vh;
     height: auto;
   }
@@ -502,10 +505,6 @@
   .top-area {
     height: auto;
     padding: 5px;
-  }
-
-  .p-logo {
-    height: 60px;
   }
 
   .gnb-menu ul li {
@@ -573,8 +572,14 @@
     text-overflow: ellipsis;
   }
 }
+@media screen and (max-width: 480px) {
+  #bottom-area {
+    margin-top: 157%;
+    padding: 5.3vh 0vh;
+    height: auto;
+  }
+}
 /***************************** 320px ~ 480px (모바일 세로) ****************************/
-
 /***************************** 공통 이미지 비율 유지 *****************************/
 @media screen and (max-width: 1220px) {
   img {
