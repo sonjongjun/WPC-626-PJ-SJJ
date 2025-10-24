@@ -91,3 +91,20 @@ window.addEventListener('resize', () => {
     sizeArea.innerHTML = 'M사이즈';
   }
 });//resize//////////
+
+// button.order-btn 의 ul > li:last-child 클릭시 h2 텍스트를 "총 1개 26,200원 담기"로 바꾸기!
+
+const orderBtn = document.querySelector('.order-btn ul > li:last-child');
+const orderPrice = orderBtn.querySelector('h2');
+orderBtn.addEventListener('click', () => {
+  orderPrice.innerHTML = '총 1개 26,200원 담기';
+  console.log(orderPrice);
+});
+
+// button.order-btn 의 ul > li:first-child 클릭시 h2 텍스트를 "총 1개 38,200원 담기"로 바꾸기!
+
+const orderBtn2 = document.querySelector('.order-btn ul > li:first-child');
+const orderPrice2 = orderBtn2.querySelector('h2');
+orderBtn.addEventListener('click', () => {
+  orderPrice2.innerHTML = '총 1개 38,200원 담기';
+});
