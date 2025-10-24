@@ -1792,7 +1792,7 @@ a.mile-logo {
   margin-right: auto;
 }
 .m-piz-area .swiper-wrapper:hover {
-  cursor: grab;
+  cursor: pointer;
 }
 
 .m-piz-area .swiper-slide {
