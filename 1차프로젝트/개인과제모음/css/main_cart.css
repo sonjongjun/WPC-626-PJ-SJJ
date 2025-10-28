@@ -1802,22 +1802,51 @@ div.d-img-area {
   box-shadow: 3px 3px 10px #856666;
   margin-right: 2%;
   margin-left: 10%;
+    overflow-y: scroll;
 }
 .topping-area {
-  position: absolute;
-  bottom: 47%;
-  right: 0%;
-  width: 96.4%;
-  height: 54%;
-  background-color: rgba(220, 204, 204, 1);
-  font-size: 2rem;
-  border-radius: 10px;
-  outline: 1px solid #000000;
-  box-sizing: border-box;
-  box-shadow: 3px 3px 10px #856666;
-  overflow-y: scroll;
-  margin-right: 2%;
-  margin-left: 10%;
+    position: absolute;
+    bottom: 40%;
+    right: 0%;
+    width: 43.4%;
+    height: 29%;
+    background-color: rgba(220, 204, 204, 1);
+    font-size: 2rem;
+    border-radius: 10px;
+    outline: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 10px #856666;
+    overflow-y: scroll;
+    margin-right: 2%;
+    margin-left: 10%;
+}
+.side-area {
+    position: absolute;
+    bottom: 20%;
+    right: 0%;
+    width: 43.4%;
+    height: 18%;
+    background-color: rgba(220, 204, 204, 1);
+    font-size: 2rem;
+    border-radius: 10px;
+    outline: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 10px #856666;
+    overflow-y: scroll;
+    margin-right: 2%;
+    margin-left: 10%;
+}
+.side-area ul li {
+  position: relative; /* 추가 */
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.side-area ul li img {
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
 }
 .check-btn {
   position: absolute;
