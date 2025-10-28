@@ -26,30 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-// 화면의 넓이가 1024px 이하인 경우 size-area안의 글자 L사이즈를 L사이즈 <br><br> 30,900원으로 바꾸기 1024px 이상이면 'L사이즈'로 바꾸기
-window.addEventListener('resize', () => {
-  if (window.innerWidth < 1024) {
-    const sizeArea = document.querySelector('.size-area button');
-    sizeArea.innerHTML = 'L사이즈 <br><br> 30,900원';
-  }
-  else {
-    const sizeArea = document.querySelector('.size-area button');
-    sizeArea.innerHTML = 'L사이즈';
-  }
-});//resize//////////
 
-
-// 화면의 넓이가 1024px 이하인 경우 size-area안의 글자 M사이즈를 M사이즈 <br><br> 24,900원으로 바꾸기
-window.addEventListener('resize', () => {
-  if (window.innerWidth < 1024) {
-    const sizeArea = document.querySelector('.size-area button:nth-child(2)');
-    sizeArea.innerHTML = 'M사이즈 <br><br> 24,900원';
-  }
-  else {
-    const sizeArea = document.querySelector('.size-area button:nth-child(2)');
-    sizeArea.innerHTML = 'M사이즈';
-  }
-});//resize//////////
 
 // button.order-btn 의 ul > li:last-child 클릭시 h2 텍스트를 "총 1개 26,200원 담기"로 바꾸기!
 const orderBtn = document.querySelector('.order-btn');
@@ -97,3 +74,5 @@ if (dImgArea && tit && bigImg) {
 } else {
     console.error('필요한 HTML 요소를 찾을 수 없습니다.');
 }
+
+

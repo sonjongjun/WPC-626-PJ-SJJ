@@ -1560,7 +1560,7 @@ a.mile-logo {
   margin: 0 auto;
   background-color: rgba(200, 181, 181, 1);
   position: relative;
-  padding: 1.5vh 0;
+  padding: 5.5vh 0;
   display: flex;
   flex-direction: column;
 }
@@ -1987,11 +1987,12 @@ div.d-img-area {
   transform: translateX(0%);
 }
 /* 이벤트 페이지!!!!!!!!!!!!!!!!!!!!!!!!!! */
-.event-banner{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2vh;
-  margin-bottom: 2vh;
-  padding-left: 8vw;
-      margin-top: 2vh;  
+.event-banner {
+    display: grid
+;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vh;
+    margin-bottom: 17vh;
+    padding-left: 8vw;
+    margin-top: 6vh;
 }

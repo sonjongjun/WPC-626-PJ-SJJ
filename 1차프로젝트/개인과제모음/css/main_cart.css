@@ -1722,6 +1722,7 @@ div.d-img-area {
     width: 96%;
     left: 2%;
     bottom: 2%;
+     cursor: pointer;
 }
 .order-btn > h2 {
   font-size: 3.5rem;
