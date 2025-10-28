@@ -1,6 +1,4 @@
-https://www.keithcakes.com.au/cakes-and-pies.php
 
-https://www.godiva.kr/display/category/861
 
 https://www.nudake.com/kr/
 
@@ -11,8 +9,12 @@ https://www.nudake.com/kr/
 
 
 
-누데이크 사이트를 혹은8번 형식으로 제작해볼것!
+
 
 그림 클릭시 jquery parent를 활용하여 뒷배경을 그림에 맞는 뒷 배경으로 변환하는 기능을 사용해볼것!
 
 
+
+JS실험실 6번 참조
+
+CSS학습 LOTTE.html참조

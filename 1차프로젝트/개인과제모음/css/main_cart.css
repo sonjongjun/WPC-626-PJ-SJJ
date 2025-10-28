@@ -1,0 +1,1986 @@
+@charset "utf-8";
+/* 피자몰 메인 CSS - main.css */
+
+/* 외부 CSS불러오기 */
+@import url(./reset.css);
+@import url(./core.css);
+/* 12그리드 CSS */
+@import url(./grid_12_flex.css);
+@import url(./ani.css);
+html {
+  scroll-behavior: smooth;
+}
+/* 공사중표시 */
+body * {
+  /* outline: 2px dotted red; */
+  -webkit-user-drag: none;
+  user-select: none;
+  /* background-color: black; */
+}
+
+/********************************************* 메인 css *********************************************/
+/********************************************* 1.상단영역 *********************************************/
+#top-area {
+  z-index: 9999;
+  position: relative;
+}
+.top-area {
+  position: relative;
+  height: 118px;
+  display: flex;
+  /* outline: 1px solid #000; */
+}
+#top-area > a:hover {
+  color: red;
+}
+.gnb-menu,
+.top-menu-right {
+  flex: 1;
+  line-height: 118px;
+}
+.gnb-menu ul {
+  left: 0;
+  top: 47px;
+  display: flex;
+  font-size: 1.9rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.p-logo {
+  height: 118px;
+  padding: 15px;
+}
+.top-menu-right ul {
+  right: 158px;
+  top: 47px;
+  font-size: 1.9rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+.top-menu-logo {
+  right: 0;
+  top: 47px;
+  display: flex;
+}
+.search-logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 28px;
+}
+.cart-logo {
+  width: 34px;
+  height: 34px;
+  margin-right: 12px;
+}
+
+.sub-menu {
+  outline: 1px solid #000;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.781);
+  box-sizing: border-box;
+  /* 서브메뉴를 숨기기 위해 넘치는 자식 숨기기 */
+  overflow: hidden;
+  /* 높이값을 0으로 하면 자식요소가 숨겨짐 
+    -> 단 여기에 위아래 패딩을 줄 경우 숨겨지지 않는다.*/
+  max-height: 0;
+  /* 처음에 최대높이값 세팅필수! 그래야 트랜지션 먹음 */
+
+  /* 트랜지션 */
+  transition: 0.4s ease-out;
+}
+.sub-menu2 {
+  outline: 1px solid #000;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.781);
+  box-sizing: border-box;
+  /* 서브메뉴를 숨기기 위해 넘치는 자식 숨기기 */
+  overflow: hidden;
+  /* 높이값을 0으로 하면 자식요소가 숨겨짐 
+    -> 단 여기에 위아래 패딩을 줄 경우 숨겨지지 않는다.*/
+  max-height: 0;
+  /* 처음에 최대높이값 세팅필수! 그래야 트랜지션 먹음 */
+
+  /* 트랜지션 */
+  transition: 0.4s ease-out;
+}
+/* 부모 li에 마우스 오버시 .sub-menu 높이값 변경하기 */
+.gnb-menu > ul > li:hover .sub-menu {
+  max-height: 350px;
+  /* 최대 높이값을 컨텐츠 높이값 보다 좀 더 크게 잡으면
+오버시 높이값이 내용만큼만 커지게된다 */
+}
+/* 패딩만 내부에 다른 블록요소 사용!
+ -> 자식요소 숨기기 부모박스엔 패딩을 줄 수 없다!*/
+.padding-box {
+  padding: 1vw;
+}
+/* 타이틀바 */
+.title-bar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 3.6rem;
+}
+/* 서브리스트 ul */
+.sub-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 2.3rem;
+  flex-direction: row;
+  justify-content: space-around;
+}
+/* 서브리스트 li */
+.sub-list li {
+  margin-right: 20px;
+}
+
+.sub-list2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.sub-list2 img {
+  width: 318px;
+  height: 120px;
+  margin-right: 30px;
+  margin-top: 30px;
+}
+.gnb-menu > ul > li:hover .sub-menu2 {
+  max-height: 600px;
+  /* 최대 높이값을 컨텐츠 높이값 보다 좀 더 크게 잡으면
+오버시 높이값이 내용만큼만 커지게된다 */
+}
+
+/*******************************************  2.회전피자메뉴 *******************************************/
+.r-pizza-menu {
+  width: 1220px;
+  text-align: center;
+  margin: 0 auto;
+  overflow: hidden;
+  perspective: 150vh;
+  height: 605px;
+  opacity: 0; /* 처음에 거의 투명 */
+  transition: opacity 1.5s ease-in-out; /* 천천히 */
+  /* 영역에 꽉 찬 이미지 */
+  /* background: url(../배경폴더/baegyung.jpg) no-repeat center/100% 100%; */
+}
+.r-pizza-menu.on {
+  opacity: 1; /* 0~1 사이값으로 조정 */
+  /* transition: 3s ease-in-out linear forwards; */
+}
+.r-pizza.visible {
+  opacity: 1; /* 영구적으로 보이게 */
+}
+.r-pizza-wrap {
+  position: relative;
+  aspect-ratio: 1.4;
+  rotate: x 45deg;
+}
+.r-pizza {
+  position: absolute;
+  top: 14%;
+  translate: 0 -50%;
+  rotate: x 50deg;
+  height: 605px;
+  width: 1014px;
+  left: 9%;
+  scale: 1 1.6;
+}
+.deco1 {
+  position: absolute;
+  left: 0%;
+  width: 84px;
+  top: 65%;
+}
+.deco2 {
+  position: absolute;
+  right: 0;
+  top: 10%;
+  width: 105px;
+  height: 64px;
+}
+.deco3 {
+  position: absolute;
+  left: 0%;
+  top: 5%;
+  width: 105px;
+  height: 150px;
+}
+.deco4 {
+  position: absolute;
+  right: 0;
+  top: 69%;
+  width: 105px;
+  height: 125px;
+}
+/********************************************  3.로고영역 ********************************************/
+.logo-area {
+  position: relative;
+  width: 1220px;
+  height: 168px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+/* .logo-part {
+  position: absolute;
+  margin-top: 61px;
+  display: flex;
+  left: 20%;
+  width: 56%;
+  justify-content: space-around;
+} */
+
+.logo-part {
+  position: absolute;
+  margin-top: 61px;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 56%;
+  max-width: 700px;
+  justify-content: space-around;
+}
+
+.logo-part img {
+  height: 84px;
+  width: 84px;
+  margin-left: 20px;
+}
+/* 기존 .logo-font 스타일 수정 */
+/* .logo-font {
+  position: absolute;
+  display: flex;
+  font-size: 1.6rem;
+  color: #fff;
+  margin-top: 16px;
+  left: 20%;
+  width: 56%;
+} */
+.logo-font {
+  position: absolute;
+  display: flex;
+  font-size: 1.6rem;
+  color: #fff;
+  margin-top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 56%;
+  max-width: 700px;
+  justify-content: space-around;
+}
+
+/* 각 텍스트 li에 초기 상태 설정
+.logo-font li {
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(0);
+  width: 115px;
+} */
+.logo-font li > p > a {
+  color: #fff;
+}
+
+.logo-font li {
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(0);
+  width: auto;
+  min-width: 90px;
+  text-align: center;
+}
+
+/* 텍스트가 올라간 상태 */
+.logo-font li.active {
+  transform: translateY(-30px);
+  display: flex;
+  align-items: center; /* 수직 중앙정렬 */
+  justify-content: center; /* 수평 중앙정렬 */
+  /* 이미지 너비 + 마진을 고려한 너비 */
+  opacity: 1;
+}
+
+.logo-font p {
+  margin-left: 17px;
+  background-color: #d22b2b;
+  border-radius: 7px;
+  padding: 8px 0px;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* 활성화된 텍스트의 스타일 */
+.logo-font li.active p {
+  background-color: #ff3333;
+  box-shadow: 0 4px 8px rgba(210, 43, 43, 0.5);
+}
+
+/************************************************************* 로고 변환영역 *************************************************************/
+a.pizza-logo {
+  display: inline-block;
+}
+/* 처음에 두번째 이미지 안보이게하기 */
+.pizza-logo img:last-child {
+  display: none;
+}
+/* 마우스 오버시 첫번쨰이미지 안보이게하기 */
+.pizza-logo:hover img:first-child {
+  display: none;
+}
+/*마우스 오버시 두번째 이미지 보이게하기 */
+.pizza-logo:hover img:last-child {
+  display: inline;
+}
+
+a.chicken-logo {
+  display: inline-block;
+}
+/* 처음에 두번째 이미지 안보이게하기 */
+.chicken-logo img:last-child {
+  display: none;
+}
+/* 마우스 오버시 첫번쨰이미지 안보이게하기 */
+.chicken-logo:hover img:first-child {
+  display: none;
+}
+/*마우스 오버시 두번째 이미지 보이게하기 */
+.chicken-logo:hover img:last-child {
+  display: inline;
+}
+a.coke-logo {
+  display: inline-block;
+}
+/* 처음에 두번째 이미지 안보이게하기 */
+.coke-logo img:last-child {
+  display: none;
+}
+/* 마우스 오버시 첫번쨰이미지 안보이게하기 */
+.coke-logo:hover img:first-child {
+  display: none;
+}
+/*마우스 오버시 두번째 이미지 보이게하기 */
+.coke-logo:hover img:last-child {
+  display: inline;
+}
+a.party-logo {
+  display: inline-block;
+}
+/* 처음에 두번째 이미지 안보이게하기 */
+.party-logo img:last-child {
+  display: none;
+}
+/* 마우스 오버시 첫번쨰이미지 안보이게하기 */
+.party-logo:hover img:first-child {
+  display: none;
+}
+/*마우스 오버시 두번째 이미지 보이게하기 */
+.party-logo:hover img:last-child {
+  display: inline;
+}
+a.half-logo {
+  display: inline-block;
+}
+/* 처음에 두번째 이미지 안보이게하기 */
+.half-logo img:last-child {
+  display: none;
+}
+/* 마우스 오버시 첫번쨰이미지 안보이게하기 */
+.half-logo:hover img:first-child {
+  display: none;
+}
+/*마우스 오버시 두번째 이미지 보이게하기 */
+.half-logo:hover img:last-child {
+  display: inline;
+}
+a.salad-logo {
+  display: inline-block;
+}
+/* 처음에 두번째 이미지 안보이게하기 */
+.salad-logo img:last-child {
+  display: none;
+}
+/* 마우스 오버시 첫번쨰이미지 안보이게하기 */
+.salad-logo:hover img:first-child {
+  display: none;
+}
+/*마우스 오버시 두번째 이미지 보이게하기 */
+.salad-logo:hover img:last-child {
+  display: inline;
+}
+
+/************************************************************* 로고 변환영역 *************************************************************/
+/********************************************  4. 8조각피자영역 ********************************************/
+.eight-pizza-part {
+  margin: 0 auto;
+  position: relative;
+  height: 1355px;
+  width: 1220px;
+  overflow: hidden;
+}
+.e-pizza-tit {
+  top: 0%;
+  position: relative;
+  z-index: 1;
+}
+.cheese {
+  width: 100%;
+  max-width: 1220px;
+  height: 318px;
+}
+.e-tit {
+  top: 0;
+  max-width: 1220px;
+  position: absolute;
+  left: 0;
+}
+.sl-part > a {
+  z-index: 2;
+}
+
+/* 피자조각 공통요소 */
+.pizza-slice > img {
+  position: absolute;
+  width: 144.1px;
+  height: 155.5px;
+  clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
+}
+
+.sl-piz1 > img {
+  transform-origin: top left;
+  position: absolute;
+  width: 158.1px;
+  height: 191px;
+  bottom: 9%;
+  left: 24.8%;
+  clip-path: polygon(0% 100%, 0% 0%, 100% 85%, 73% 98%, 43% 104%, 25% 100%);
+  rotate: 53deg;
+  transform: skew(0deg, 347deg);
+  opacity: 0;
+}
+.sl-piz1 > img:hover {
+  opacity: 1;
+}
+.sl-piz2 > img {
+  scale: 1.1;
+  transform-origin: top left;
+  position: absolute;
+  width: 163.1px;
+  height: 157px;
+  bottom: 14.4%;
+  left: 24.8%;
+  clip-path: polygon(0% 100%, 1% 0%, 64% 67%, 82% 86%, 55% 98%, 25% 104%);
+  rotate: 130deg;
+  opacity: 0;
+}
+.sl-piz2 > img:hover {
+  opacity: 1;
+}
+.sl-piz3 > img {
+  scale: 1.02;
+  transform-origin: top left;
+  position: absolute;
+  width: 110.1px;
+  height: 199px;
+  bottom: 7.3%;
+  left: 24.8%;
+  clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
+  rotate: 80deg;
+  transform: skew(350deg, 3deg);
+  opacity: 0;
+}
+.sl-piz3 > img:hover {
+  opacity: 1;
+}
+
+.sl-piz4 > img {
+  transform-origin: top left;
+  position: absolute;
+  width: 150.1px;
+  height: 175px;
+  bottom: 10.2%;
+  left: 24.8%;
+  clip-path: polygon(0% 106%, 0% 0%, 100% 77%, 88% 68%, 54% 96%, 25% 100%);
+  transform: skew(8deg, -19deg);
+  rotate: 242deg;
+  opacity: 0;
+}
+.sl-piz4 > img:hover {
+  opacity: 1;
+}
+
+.sl-piz5 > img {
+  transform-origin: top left;
+  position: absolute;
+  width: 151.1px;
+  height: 168px;
+  bottom: 12.6%;
+  left: 24.3%;
+  clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
+  rotate: 1deg;
+  opacity: 0;
+}
+.sl-piz5 > img:hover {
+  opacity: 1;
+}
+.sl-piz6 > img {
+  transform-origin: top left;
+  position: absolute;
+  width: 114.1px;
+  height: 159px;
+  bottom: 13.3%;
+  left: 24.3%;
+  clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
+  rotate: 312deg;
+  scale: 1.2;
+  opacity: 0;
+}
+.sl-piz6 > img:hover {
+  opacity: 1;
+}
+
+.sl-piz7 > img {
+  transform-origin: top left;
+  position: absolute;
+  width: 139px;
+  height: 189px;
+  bottom: 8.8%;
+  left: 24.8%;
+  clip-path: polygon(0% 0%, 6% 0%, 106% 40%, 85% 80%, 47% 100%, 18% 100%);
+  rotate: 280deg;
+  transform: skew(2deg, 354deg);
+  opacity: 0;
+}
+.sl-piz7 > img:hover {
+  opacity: 1;
+}
+.sl-piz8 > img {
+  transform-origin: top left;
+  position: absolute;
+  width: 134.1px;
+  height: 158px;
+  bottom: 12.3%;
+  left: 24.8%;
+  clip-path: polygon(0% 100%, 0% 0%, 100% 76%, 82% 86%, 55% 98%, 25% 100%);
+  rotate: 179deg;
+  opacity: 0;
+}
+.sl-piz8 > img:hover {
+  opacity: 1;
+}
+
+/************************************************ 마우스 오버시 배경 영역 ************************************************/
+
+.eight-pizza-part:hover {
+  .bg-pizza {
+    width: 631px;
+    height: 346px;
+    position: absolute;
+    right: 0%;
+    rotate: 0deg;
+    bottom: 0%;
+  }
+}
+.eight-pizza-part:hover {
+  .bg-sauce {
+    position: absolute;
+    width: 219px;
+    height: 198px;
+    right: -1%;
+    top: 42%;
+    rotate: 270deg;
+  }
+}
+.eight-pizza-part:hover {
+  .bg-b1 {
+    position: absolute;
+    width: 246px;
+    height: 174px;
+    top: 20%;
+    right: 18%;
+  }
+}
+.eight-pizza-part:hover {
+  .bg-b2 {
+    position: absolute;
+    width: 246px;
+    height: 174px;
+    top: 34%;
+    right: 4%;
+  }
+}
+.eight-pizza-part:hover {
+  .cheese {
+    height: 369px;
+    transition: 2s all ease-in-out;
+  }
+}
+/************************************************ 마우스 오버시 배경 영역 ************************************************/
+.e-pizza {
+  position: absolute;
+  left: 103px;
+  bottom: 80px;
+}
+
+.bg-pizza {
+  width: 631px;
+  height: 346px;
+  position: absolute;
+  right: -55%;
+  bottom: 0%;
+  transition: 2s ease-in-out all;
+  rotate: 360deg;
+  z-index: -1;
+}
+.bg-b1 {
+  position: absolute;
+  width: 246px;
+  height: 174px;
+  top: 20%;
+  right: -27%;
+  transition: 0.5s ease-in-out all 3.2s;
+  z-index: -1;
+}
+.bg-b2 {
+  position: absolute;
+  width: 246px;
+  height: 174px;
+  top: 34%;
+  right: -27%;
+  transition: 0.5s ease-in-out all 3.8s;
+  z-index: -1;
+}
+.bg-sauce {
+  position: absolute;
+  width: 219px;
+  height: 198px;
+  right: -20%;
+  top: 42%;
+  rotate: 270deg;
+  transition: 0.5s ease-in-out all 3s;
+  z-index: -1;
+}
+/**********8조각 피자 개별영역-서브창- ***********/
+.sl-piz-info1 {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  translate: 100% 0%;
+  width: 100%;
+  height: 100%;
+  background-color: #ea7777d1;
+  z-index: 1;
+  border-radius: 20px;
+}
+.sl-piz-info1 > i {
+  position: absolute;
+  top: 0%;
+  right: 41%;
+}
+.piz-info-group1 {
+  width: 47%;
+  height: 98%;
+}
+.piz-info-group1 > img {
+  position: absolute;
+  top: 3%;
+  left: 12%;
+  width: 36%;
+  height: 50%;
+}
+.info-box1 {
+  position: absolute;
+  top: 54%;
+  left: 0%;
+  width: 59%;
+  height: 46%;
+  background-color: #ea7777d1;
+  border: 1px solid #000000;
+  z-index: 1;
+  border-radius: 20px;
+}
+.info-box1 > h2 {
+  font-size: 4rem;
+  text-align: center;
+}
+.info-box1 > p {
+  position: absolute;
+  left: 0;
+  bottom: 16%;
+  font-size: 2.1rem;
+}
+/**********8조각 피자 개별영역-서브창- ***********/
+.sl-piz-info2 {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  translate: 100% 0%;
+  width: 100%;
+  height: 100%;
+  background-color: #ea7777d1;
+  z-index: 1;
+  border-radius: 20px;
+}
+.sl-piz-info2 > i {
+  position: absolute;
+  top: 0%;
+  right: 41%;
+}
+.piz-info-group2 {
+  width: 47%;
+  height: 98%;
+}
+.piz-info-group2 > img {
+  position: absolute;
+  top: 3%;
+  left: 12%;
+  width: 36%;
+  height: 50%;
+}
+.info-box2 {
+  position: absolute;
+  top: 54%;
+  left: 0%;
+  width: 59%;
+  height: 46%;
+  background-color: #ea7777d1;
+  border: 1px solid #000000;
+  z-index: 1;
+  border-radius: 20px;
+}
+.info-box2 > h2 {
+  font-size: 4rem;
+  text-align: center;
+}
+.info-box2 > p {
+  position: absolute;
+  left: 0;
+  bottom: 16%;
+  font-size: 2.1rem;
+}
+/**********8조각 피자 개별영역-서브창- ***********/
+.sl-piz-info3 {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  translate: 100% 0%;
+  width: 100%;
+  height: 100%;
+  background-color: #ea7777d1;
+  z-index: 1;
+  border-radius: 20px;
+}
+.sl-piz-info3 > i {
+  position: absolute;
+  top: 0%;
+  right: 41%;
+}
+.piz-info-group3 {
+  width: 47%;
+  height: 98%;
+}
+.piz-info-group3 > img {
+  position: absolute;
+  top: 3%;
+  left: 12%;
+  width: 36%;
+  height: 50%;
+}
+.info-box3 {
+  position: absolute;
+  top: 54%;
+  left: 0%;
+  width: 59%;
+  height: 46%;
+  background-color: #ea7777d1;
+  border: 1px solid #000000;
+  z-index: 1;
+  border-radius: 20px;
+}
+.info-box3 > h2 {
+  font-size: 4rem;
+  text-align: center;
+}
+.info-box3 > p {
+  position: absolute;
+  left: 0;
+  bottom: 16%;
+  font-size: 2.1rem;
+}
+/**********8조각 피자 개별영역-서브창- ***********/
+.sl-piz-info4 {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  translate: 100% 0%;
+  width: 100%;
+  height: 100%;
+  background-color: #ea7777d1;
+  z-index: 1;
+  border-radius: 20px;
+}
+.sl-piz-info4 > i {
+  position: absolute;
+  top: 0%;
+  right: 41%;
+}
+.piz-info-group4 {
+  width: 47%;
+  height: 98%;
+}
+.piz-info-group4 > img {
+  position: absolute;
+  top: 3%;
+  left: 12%;
+  width: 36%;
+  height: 50%;
+}
+.info-box4 {
+  position: absolute;
+  top: 54%;
+  left: 0%;
+  width: 59%;
+  height: 46%;
+  background-color: #ea7777d1;
+  border: 1px solid #000000;
+  z-index: 1;
+  border-radius: 20px;
+}
+.info-box4 > h2 {
+  font-size: 4rem;
+  text-align: center;
+}
+.info-box4 > p {
+  position: absolute;
+  left: 0;
+  bottom: 16%;
+  font-size: 2.1rem;
+}
+/**********8조각 피자 개별영역-서브창- ***********/
+.sl-piz-info5 {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  translate: 100% 0%;
+  width: 100%;
+  height: 100%;
+  background-color: #ea7777d1;
+  z-index: 1;
+  border-radius: 20px;
+}
+.sl-piz-info5 > i {
+  position: absolute;
+  top: 0%;
+  right: 41%;
+}
+.piz-info-group5 {
+  width: 47%;
+  height: 98%;
+}
+.piz-info-group5 > img {
+  position: absolute;
+  top: 3%;
+  left: 12%;
+  width: 36%;
+  height: 50%;
+}
+.info-box5 {
+  position: absolute;
+  top: 54%;
+  left: 0%;
+  width: 59%;
+  height: 46%;
+  background-color: #ea7777d1;
+  border: 1px solid #000000;
+  z-index: 1;
+  border-radius: 20px;
+}
+.info-box5 > h2 {
+  font-size: 4rem;
+  text-align: center;
+}
+.info-box5 > p {
+  position: absolute;
+  left: 0;
+  bottom: 16%;
+  font-size: 2.1rem;
+}
+/**********8조각 피자 개별영역-서브창- ***********/
+.sl-piz-info6 {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  translate: 100% 0%;
+  width: 100%;
+  height: 100%;
+  background-color: #ea7777d1;
+  z-index: 1;
+  border-radius: 20px;
+}
+.sl-piz-info6 > i {
+  position: absolute;
+  top: 0%;
+  right: 41%;
+}
+.piz-info-group6 {
+  width: 47%;
+  height: 98%;
+}
+.piz-info-group6 > img {
+  position: absolute;
+  top: 3%;
+  left: 12%;
+  width: 36%;
+  height: 50%;
+}
+.info-box6 {
+  position: absolute;
+  top: 54%;
+  left: 0%;
+  width: 59%;
+  height: 46%;
+  background-color: #ea7777d1;
+  border: 1px solid #000000;
+  z-index: 1;
+  border-radius: 20px;
+}
+.info-box6 > h2 {
+  font-size: 4rem;
+  text-align: center;
+}
+.info-box6 > p {
+  position: absolute;
+  left: 0;
+  bottom: 16%;
+  font-size: 2.1rem;
+}
+/**********8조각 피자 개별영역-서브창- ***********/
+.sl-piz-info7 {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  translate: 100% 0%;
+  width: 100%;
+  height: 100%;
+  background-color: #ea7777d1;
+  z-index: 1;
+  border-radius: 20px;
+}
+.sl-piz-info7 > i {
+  position: absolute;
+  top: 0%;
+  right: 41%;
+}
+.piz-info-group7 {
+  width: 47%;
+  height: 98%;
+}
+.piz-info-group7 > img {
+  position: absolute;
+  top: 3%;
+  left: 12%;
+  width: 36%;
+  height: 50%;
+}
+.info-box7 {
+  position: absolute;
+  top: 54%;
+  left: 0%;
+  width: 59%;
+  height: 46%;
+  background-color: #ea7777d1;
+  border: 1px solid #000000;
+  z-index: 1;
+  border-radius: 20px;
+}
+.info-box7 > h2 {
+  font-size: 4rem;
+  text-align: center;
+}
+.info-box7 > p {
+  position: absolute;
+  left: 0;
+  bottom: 16%;
+  font-size: 2.1rem;
+}
+/**********8조각 피자 개별영역-서브창- ***********/
+.sl-piz-info8 {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  translate: 100% 0%;
+  width: 100%;
+  height: 100%;
+  background-color: #ea7777d1;
+  z-index: 1;
+  border-radius: 20px;
+}
+.sl-piz-info8 > i {
+  position: absolute;
+  top: 0%;
+  right: 41%;
+}
+.piz-info-group8 {
+  width: 47%;
+  height: 98%;
+}
+.piz-info-group8 > img {
+  position: absolute;
+  top: 3%;
+  left: 12%;
+  width: 36%;
+  height: 50%;
+}
+.info-box8 {
+  position: absolute;
+  top: 54%;
+  left: 0%;
+  width: 59%;
+  height: 46%;
+  background-color: #ea7777d1;
+  border: 1px solid #000000;
+  z-index: 1;
+  border-radius: 20px;
+}
+.info-box8 > h2 {
+  font-size: 4rem;
+  text-align: center;
+}
+.info-box8 > p {
+  position: absolute;
+  left: 0;
+  bottom: 16%;
+  font-size: 2.1rem;
+}
+
+/********************************************  5. 동영상영역 ********************************************/
+.movie-part {
+  height: 714px;
+  width: 1220px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.m-banner-box {
+  top: 5%;
+  left: 8%;
+  height: 364px;
+  width: 1014px;
+  position: absolute;
+  overflow: hidden;
+}
+.m-banner {
+  height: 364px;
+  width: 1014px;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+.m-deco {
+  width: 1014px;
+  height: 78px;
+  position: absolute;
+  bottom: 0%;
+  left: 100%;
+  z-index: 1;
+}
+.m-deco2 {
+  width: 1014px;
+  height: 78px;
+  position: absolute;
+  bottom: 0%;
+  left: 100%;
+  z-index: 1;
+}
+.m-deco3 {
+  width: 1014px;
+  height: 78px;
+  position: absolute;
+  bottom: 0%;
+  left: 100%;
+  z-index: 1;
+}
+.movie-box {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 40%;
+  width: 100%;
+  display: flex;
+  padding-top: 430px;
+}
+.ad-box::after {
+  content: "";
+  position: absolute;
+  top: 125%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background-image: url("../로고/icon_play.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  z-index: 1;
+  opacity: 1;
+}
+.review-box::after {
+  content: "";
+  position: absolute;
+  top: 125%;
+  left: 58%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background-image: url("../로고/icon_play.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  z-index: 1;
+  opacity: 1;
+}
+.ad-box img {
+  width: 394px;
+  height: 221px;
+  border-radius: 30px;
+  top: 50%;
+  margin-left: 103px;
+}
+.review-box {
+  margin-left: 7px;
+}
+.review-box img {
+  width: 394px;
+  height: 221px;
+  border-radius: 30px;
+  top: 30%;
+}
+.about-area {
+  border-radius: 25px;
+  width: 214px;
+  height: 265px;
+  margin-left: 6px;
+  background-color: rgba(213, 161, 161, 1);
+}
+.about-area h2 {
+  font-size: 3.2rem;
+  margin: 0 auto;
+  padding-top: 10px;
+  text-align: center;
+}
+.about-img {
+  width: 187px;
+  height: 105px;
+  cursor: pointer;
+  margin-top: 18px;
+  margin-left: 14px;
+  outline: 10px ridge goldenrod;
+  box-sizing: border-box;
+}
+
+.icon {
+  text-align: center;
+  margin-top: 10px;
+}
+.icon > i:first-child {
+  font-size: 7rem;
+  cursor: pointer;
+}
+.icon > i:first-child:hover {
+  color: rgb(221, 23, 5);
+}
+.icon > i:last-child {
+  font-size: 7rem;
+  cursor: pointer;
+}
+.icon > i:last-child:hover {
+  color: rgb(211, 35, 138);
+}
+/*****************************************************************************************/
+/******************************** 재생영역  ***********************************************/
+/*****************************************************************************************/
+.review-detail {
+  position: relative;
+  top: -102%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 89999;
+  border-radius: 30px;
+  transition: 0.4s ease-out;
+}
+
+.fa-xmark {
+  top: 0;
+}
+.play-box {
+  left: 2.5%;
+  top: 2.5%;
+  position: absolute;
+  margin-left: 38px;
+  margin-top: 17px;
+  scale: 1.08;
+}
+
+.review-info {
+  position: absolute;
+  width: 608px;
+  height: 333px;
+  background-color: rgba(218, 188, 188, 1);
+  margin-left: 45px;
+  margin-top: 374px;
+  border-radius: 10px;
+}
+.review-info > i {
+  font-size: 7rem;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.review-info > i:hover {
+  color: rgb(221, 23, 5);
+}
+.review-info > p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.pizza-info {
+  position: absolute;
+  width: 525px;
+  height: 600px;
+  background-color: rgba(218, 188, 188, 1);
+  top: 0;
+  right: 0;
+  margin-right: 14px;
+  margin-top: 85px;
+  border-radius: 20px;
+}
+.pizza-img {
+  width: 400px;
+  height: 300px;
+  margin-left: 60px;
+}
+.pizza-info > p {
+  font-size: 1.42rem;
+}
+.info-logo {
+  position: absolute;
+  right: 0;
+}
+
+a.delivery-logo {
+  display: inline-block;
+}
+/* 처음에 두번째 이미지 안보이게하기 */
+.delivery-logo img:last-child {
+  display: none;
+}
+/* 마우스 오버시 첫번쨰이미지 안보이게하기 */
+.delivery-logo:hover img:first-child {
+  display: none;
+}
+/*마우스 오버시 두번째 이미지 보이게하기 */
+.delivery-logo:hover img:last-child {
+  display: inline;
+}
+.fa-xmark {
+  font-size: 8rem;
+  vertical-align: middle;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+}
+.review-detail > i:hover {
+  color: rgb(221, 23, 5);
+}
+
+/********************************************  6. 이벤트/할인영역 ********************************************/
+/* 6. 이벤트/할인영역 - 수정된 버전 */
+.event-part {
+  position: relative;
+  height: 500px;
+  width: 1220px;
+  margin: 0 auto;
+}
+
+.event-logo {
+  position: absolute;
+  width: 310px;
+  height: 144px;
+  top: 0%;
+  left: 0%;
+  margin-left: 83px;
+  z-index: -1; /* 로고가 배너 위에 나타나도록 */
+}
+
+/* 이벤트 배너 컨테이너 */
+.ev-banner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 517px;
+  height: 329px;
+  overflow: hidden; /* 넘치는 부분 숨기기 */
+  border-radius: 20px;
+  margin-top: 95px;
+  margin-left: 84px;
+  outline: orchid 1px solid;
+  cursor: pointer;
+}
+
+/* 배너 이미지들 - 모두 같은 위치에 겹치게 배치 */
+.ev-banner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지 비율 유지하면서 컨테이너 채우기 */
+  opacity: 0; /* 기본적으로 모두 숨김 */
+}
+
+/* 첫 번째 이미지만 처음에 보이게 */
+.ev-banner img:nth-child(1) {
+  opacity: 1;
+}
+
+.banner-box1 {
+  position: absolute;
+  width: 307px;
+  height: 143px;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  margin-right: 206px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+/* 배너 이미지들 - 모두 같은 위치에 겹치게 배치 */
+.banner-box1 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover center; /* 이미지 비율 유지하면서 컨테이너 채우기 */
+  opacity: 0; /* 기본적으로 모두 숨김 */
+}
+
+/* 첫 번째 이미지만 처음에 보이게 */
+.banner-box1 img:nth-child(1) {
+  opacity: 1;
+}
+/* 배너박스222222222222222222222222 */
+.banner-box2 {
+  position: absolute;
+  width: 307px;
+  height: 143px;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  margin-right: 206px;
+  margin-top: 179px;
+  cursor: pointer;
+}
+
+/* 배너 이미지들 - 모두 같은 위치에 겹치게 배치 */
+.banner-box2 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover center; /* 이미지 비율 유지하면서 컨테이너 채우기 */
+  opacity: 0; /* 기본적으로 모두 숨김 */
+}
+
+/* 첫 번째 이미지만 처음에 보이게 */
+.banner-box2 img:nth-child(1) {
+  opacity: 1;
+}
+/* 배너박스33333333333333333333333333333333 */
+.banner-box3 {
+  position: absolute;
+  width: 307px;
+  height: 143px;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  margin-right: 206px;
+  margin-top: 348px;
+  cursor: pointer;
+}
+
+/* 배너 이미지들 - 모두 같은 위치에 겹치게 배치 */
+.banner-box3 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover center; /* 이미지 비율 유지하면서 컨테이너 채우기 */
+  opacity: 0; /* 기본적으로 모두 숨김 */
+}
+
+/* 첫 번째 이미지만 처음에 보이게 */
+.banner-box3 img:nth-child(1) {
+  opacity: 1;
+}
+.eve-logo-box {
+  position: absolute;
+  right: 9%;
+  top: 21%;
+  display: flex;
+  max-width: 90px;
+  flex-direction: column;
+}
+.eve-logo-box > img {
+  max-width: 90px;
+  max-height: 90px;
+}
+.eve-logo-box p {
+  display: none;
+  font-size: 1.6rem;
+}
+
+a.cou-logo {
+  display: inline-block;
+  text-align: center;
+}
+/* 처음에 두번째 이미지 안보이게하기 */
+.cou-logo img:nth-child(2) {
+  display: none;
+}
+/* 마우스 오버시 첫번쨰이미지 안보이게하기 */
+.cou-logo:hover img:first-child {
+  display: none;
+}
+/*마우스 오버시 두번째 이미지 보이게하기 */
+.cou-logo:hover img:nth-child(2) {
+  display: inline;
+}
+.cou-logo:hover p {
+  display: flex;
+  text-align: center;
+  color: #000000;
+  border-radius: 3px;
+  position: absolute;
+  top: 20%;
+  right: 36%;
+  flex-direction: row;
+}
+
+a.stamp-logo {
+  display: inline-block;
+  text-align: center;
+}
+/* 처음에 두번째 이미지 안보이게하기 */
+.stamp-logo img:nth-child(2) {
+  display: none;
+}
+/* 마우스 오버시 첫번쨰이미지 안보이게하기 */
+.stamp-logo:hover img:first-child {
+  display: none;
+}
+/*마우스 오버시 두번째 이미지 보이게하기 */
+.stamp-logo:hover img:nth-child(2) {
+  display: inline;
+}
+.stamp-logo:hover p {
+  display: flex;
+  text-align: center;
+  color: #000000;
+  border-radius: 3px;
+  position: absolute;
+  top: 46%;
+  right: 25%;
+  flex-direction: row;
+}
+
+a.pocket-logo {
+  display: inline-block;
+  text-align: center;
+}
+/* 처음에 두번째 이미지 안보이게하기 */
+.pocket-logo img:nth-child(2) {
+  display: none;
+}
+/* 마우스 오버시 첫번쨰이미지 안보이게하기 */
+.pocket-logo:hover img:first-child {
+  display: none;
+}
+/*마우스 오버시 두번째 이미지 보이게하기 */
+.pocket-logo:hover img:nth-child(2) {
+  display: inline;
+}
+.pocket-logo:hover p {
+  display: flex;
+  text-align: center;
+  color: #000000;
+  border-radius: 3px;
+  position: absolute;
+  top: 70%;
+  right: 13%;
+  flex-direction: row;
+}
+a.mile-logo {
+  display: inline-block;
+  text-align: center;
+}
+/* 처음에 두번째 이미지 안보이게하기 */
+.mile-logo img:nth-child(2) {
+  display: none;
+}
+/* 마우스 오버시 첫번쨰이미지 안보이게하기 */
+.mile-logo:hover img:first-child {
+  display: none;
+}
+/*마우스 오버시 두번째 이미지 보이게하기 */
+.mile-logo:hover img:nth-child(2) {
+  display: inline;
+}
+.mile-logo:hover p {
+  display: flex;
+  text-align: center;
+  color: #000000;
+  border-radius: 3px;
+  top: 80%;
+  right: 3%;
+  flex-direction: row;
+  width: 7vw;
+}
+
+/******************************************** 7.하단영역 ********************************************/
+#bottom-area {
+  /* height: 249px; */
+  margin: 0 auto;
+  background-color: rgba(200, 181, 181, 1);
+  position: relative;
+  padding: 1.5vh 0;
+  display: flex;
+  flex-direction: column;
+}
+.bottom-list1 {
+  display: flex;
+  font-size: 2rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.footer-end {
+  display: flex;
+  justify-content: space-between;
+  padding: 2vh;
+}
+
+.bottom-list2 {
+  top: 17%;
+  display: flex;
+  text-align: left;
+  font-size: 1.4rem;
+}
+.bottom-logo {
+  position: static !important;
+}
+/**********************************************서브페이지**********************************************/
+.pizza-list {
+  display: grid;
+  max-width: 1220px;
+  margin: 0 auto;
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-column-gap: 10px; */
+  /* grid-row-gap: 10px; */
+  position: relative;
+  top: -104%;
+  height: 1px;
+}
+.pizza-list > div {
+  cursor: pointer;
+}
+/* pizza-list안의 이미지들이 겹쳐지게하기 */
+.pizza-list > div {
+  position: relative;
+  height: 10%;
+}
+.pizza-list > div img:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  border-radius: 10px;
+}
+.pizza-list > div:hover img:nth-child(2) {
+  opacity: 1;
+}
+.pizza-list > div > aside {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 1.4rem;
+  background-color: rgb(209, 95, 84);
+  border-radius: 20px;
+  min-width: 80px;
+}
+
+.pizza-list > div:hover aside {
+  background-color: rgb(255, 50, 50);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.pizza-list > div > aside {
+  transition: all 0.3s ease;
+}
+
+.pizza-list > div:hover aside h2 {
+  color: #ffffff;
+  font-weight: bold;
+  transform: translateY(-2px);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.pizza-list > div > aside h2 {
+  transition: all 0.3s ease;
+}
+
+/**************************************** 피자 배달영역 ****************************************/
+.d-area {
+  position: relative;
+  max-height: 914px;
+  max-width: 1220px;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+}
+.d-img-area > img:hover {
+  cursor: pointer;
+  scale: 1.1;
+  transition: all 0.3s ease-in-out;
+}
+.d-img-area > h2 {
+  font-size: 3.5rem;
+  margin-top: 50px;
+  text-align: center;
+  /* background-color: #8a3232;
+  width: 185px;
+  border-radius: 10px;
+  outline: 3px solid #000000;
+  box-sizing: border-box; */
+}
+div.d-img-area {
+  background-color: rgba(220, 204, 204, 1);
+  border-radius: 10px;
+  outline: 1px solid #000000;
+  box-sizing: border-box;
+  position: absolute;
+  margin-left: 2%;
+  aspect-ratio: 1 / 1;
+  margin-right: 50%;
+}
+.d-area > ul {
+  left: 0%;
+  position: absolute;
+  display: flex;
+  max-width: 35.1%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 0.2%;
+  /* margin-top: 18px; */
+  width: 106%;
+  top: 54.8%;
+}
+.d-area > ul > li {
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.8rem;
+  background-color: rgb(182 136 131);
+  border-radius: 10px;
+  outline: 1px solid #000000;
+  box-sizing: border-box;
+  padding: 1%;
+}
+.d-area > ul > li:hover {
+  background-color: rgb(255, 50, 50);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.order-btn {
+    position: absolute;
+    background-color: rgba(217, 217, 217, 1);
+    border-radius: 10px;
+    width: 96%;
+    left: 2%;
+    bottom: 2%;
+}
+.order-btn > h2 {
+  font-size: 3.5rem;
+  text-align: center;
+}
+.order-btn > ul {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.order-btn:hover {
+  background-color: rgb(255, 50, 50);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  transition: all 0.5s ease;
+}
+.order-btn > ul > li {
+  cursor: pointer;
+  margin: 0 auto;
+  width: 300px;
+  border-radius: 10px;
+}
+.order-btn > ul > li:first-child:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: #721111;
+  transition: all 0.3s ease;
+}
+.order-btn > ul > li:last-child:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: #721111;
+  transition: all 0.3s ease;
+}
+.size-area {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  left: 2%;
+  bottom: 33%;
+  border-radius: 10px;
+  width: 400px;
+  position: absolute;
+}
+.size-area > button {
+  border: none;
+  cursor: pointer;
+  font-size: 2.5rem;
+  background-color: rgba(217, 217, 217, 1);
+  border-radius: 10px;
+  outline: 1px solid #000000;
+  box-sizing: border-box;
+  width: 120px;
+  height: 60px;
+  font-weight: bold;
+}
+.size-area > button:hover {
+  background-color: rgb(255, 50, 50);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  transition: all 0.5s ease;
+}
+.edge-area {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  width: 43.4%;
+  height: 30%;
+  background-color: rgba(220, 204, 204, 1);
+  font-size: 2rem;
+  border-radius: 10px;
+  outline: 1px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 3px 3px 10px #856666;
+  margin-right: 2%;
+  margin-left: 10%;
+}
+.topping-area {
+  position: absolute;
+  bottom: 47%;
+  right: 0%;
+  width: 96.4%;
+  height: 54%;
+  background-color: rgba(220, 204, 204, 1);
+  font-size: 2rem;
+  border-radius: 10px;
+  outline: 1px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 3px 3px 10px #856666;
+  overflow-y: scroll;
+  margin-right: 2%;
+  margin-left: 10%;
+}
+.check-btn {
+  position: absolute;
+  right: 20px; /* 우측에 배치 */
+  cursor: pointer;
+  background-color: rgba(217, 217, 217, 1);
+  border-radius: 50px;
+  outline: 3px solid #000000;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none; /* 기본 버튼 테두리 제거 */
+}
+/* black-btn 스타일 */
+.black-btn1,
+.black-btn2,
+.black-btn3,
+.black-btn4,
+.black-btn5 {
+  display: block;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50px;
+  box-sizing: border-box;
+  width: 15px;
+  height: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.edge-area ul li {
+  position: relative; /* 추가 */
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.edge-area ul li img {
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
+}
+.topping-area ul li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.topping-area ul li img {
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
+}
+/* 체크버튼 위치 조정 */
+.edge-area .check-btn,
+.topping-area .check-btn {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+  background-color: rgba(217, 217, 217, 1);
+  border-radius: 50px;
+  outline: 3px solid #000000;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+/* 모바일영역 */
+
+/* 모바일용 버튼 그룹박스 */
+.btn-group {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  right: 3vw;
+  /* 플렉스 */
+  /* display: flex; */
+  display: none;
+  gap: 20px;
+}
+/* 버튼 디자인 */
+.btn-group button {
+  background-color: transparent;
+  border: none;
+  font-size: 8rem;
+  cursor: pointer;
+  color: #222;
+}
+/* 햄버거 버튼 셋팅 : 처음에 두번째 i태그인 x버튼 안보임 */
+.btn-ham i:nth-child(2) {
+  display: none;
+}
+
+/* 상단영역 최상위 부모인  #top-area에 클래스 on을 주면
+  x버튼보이기/햄버거숨기기 */
+#top-area.on .btn-ham i:nth-child(2) {
+  display: block;
+}
+#top-area.on .btn-ham i:nth-child(1) {
+  display: none;
+}
+/* 햄버거 버튼 초기 상태: X 버튼 숨김 */
+.btn-ham i:nth-child(2) {
+  display: none;
+}
+
+/* on 클래스가 추가되면 햄버거 숨기고 X 버튼 보이기 */
+#top-area.on .btn-ham i:nth-child(1) {
+  display: none;
+}
+
+#top-area.on .btn-ham i:nth-child(2) {
+  display: block;
+}
+
+/* 메뉴 */
+.m-right-menu {
+  position: fixed;
+  /* right: 0%; */
+  width: 100vh;
+  height: 100vh;
+  background: #000000;
+  transform: translateX(105%);
+  transition: transform 0.4s ease-in-out;
+  z-index: 999;
+  font-size: 5rem;
+  line-height: 17vh;
+  top: 0%;
+  z-index: 100000;
+  color: #fff;
+  display: none;
+}
+.m-right-menu a {
+  text-decoration: none;
+  color: #fff;
+}
+.m-right-menu ul {
+  padding-top: 5vh;
+}
+.m-right-menu h2 {
+  font-size: 6vw;
+  padding-left: 10vw;
+  line-height: 15vh;
+}
+.m-right-menu ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+}
+.m-right-menu h2:hover {
+  color: #c99595;
+  cursor: pointer;
+}
+
+/* on 상태일 때 메뉴 열림 */
+#top-area.on + .m-right-menu {
+  transform: translateX(0%);
+}
