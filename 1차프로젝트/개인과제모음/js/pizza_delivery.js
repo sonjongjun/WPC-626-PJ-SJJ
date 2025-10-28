@@ -92,6 +92,8 @@ window.addEventListener('resize', () => {
   }
 });//resize//////////
 
+
+
 // button.order-btn 의 ul > li:last-child 클릭시 h2 텍스트를 "총 1개 26,200원 담기"로 바꾸기!
 const orderBtn = document.querySelector('.order-btn');
 const orderBtnLast = document.querySelector('.order-btn ul > li:last-child');
