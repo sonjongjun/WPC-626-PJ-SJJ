@@ -1,6 +1,6 @@
 /* 상단메뉴 css */
 .top-menu {
-    position: relative;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,6 +10,11 @@
     background-color: #f5f2f2;
     z-index: 999;
     border-bottom: 3px solid #000000;
+    opacity: .5;
+}
+.top-menu:hover{
+    opacity: 1;
+    transition: .5s ease-in-out all;
 }
 .top-menu > ul {
     display: flex;
@@ -32,18 +37,22 @@
     border: none;
 }
 .top-menu > ul :hover {
-    border-bottom: 2px solid #000000;
+    /* border-bottom: 1px solid #000000; */
     font-weight: bold;
 }
 .store-box{
     position: relative;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 90vh;
-    background-color: #f5f2f2;
-    border-bottom: 3px solid #000000;
+    width: 100vw;
+    height: 100vh;
 }
 .store{
+    position: absolute;
     display: flex;
+}
+h2{
+    font-size: 5vw;
+    padding-top: 9vh;
+    margin-left: 2vw;
 }
