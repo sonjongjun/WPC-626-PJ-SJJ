@@ -32,7 +32,15 @@ $(window).scroll(function () {
 
 //ul.store 밑에 해당되는 li클릭시 형제요소인.store-box1-inbox의 z-index 3으로 transition 2s ease-in-out all로 바꾸기
 $(".store > li").click(function () {
-    $(".store-box1-inbox").css("z-index", "3");
-    console.log("나 된다");
-    
+  const box = $(".store-box1-inbox");
+
+  // 이미 active면 다시 숨기고, 아니면 나타나게 (toggle 형식)
+  if (box.hasClass("active")) {
+    box.removeClass("active");
+  } else {
+    box.addClass("active");
+  }
+
+  console.log("나 된다");
 });
+
