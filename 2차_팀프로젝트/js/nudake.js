@@ -23,6 +23,7 @@ $(".pdct-box > ul > li, .colab-box > ul > li, .store-box > ul > li").hover(funct
     $(this).children("p").css("opacity", "0");
 });//hover
 
+
 // html전체에서 부드럽고 일정한 속도로 움직이게 설정하기
 $(window).scroll(function () {
     if ($(window).scrollTop() > 0) {
@@ -30,17 +31,20 @@ $(window).scroll(function () {
     }
 })
 
-//ul.store 밑에 해당되는 li클릭시 형제요소인.store-box1-inbox의 z-index 3으로 transition 2s ease-in-out all로 바꾸기
-$(".store > li").click(function () {
+
+
+//ul.store 밑에 해당되는 첫번째 li클릭시 형제요소인.store-box1-inbox의 z-index 3으로 transition 2s ease-in-out all로 바꾸기
+
+$(".store > li:first-child").click(function () {
   const box = $(".store-box1-inbox");
 
-  // 이미 active면 다시 숨기고, 아니면 나타나게 (toggle 형식)
-  if (box.hasClass("active")) {
-    box.removeClass("active");
-  } else {
-    box.addClass("active");
-  }
-
+  // 나타나게 (왼쪽에서 오른쪽으로 슬라이드)
+  box.addClass("active");
   console.log("나 된다");
-});
 
+  // 마우스가 박스 영역을 벗어나면 z-index를 다시 낮춤
+  box.on("mouseleave", function () {
+    box.removeClass("active");
+    // 필요하다면 console.log("마우스 아웃"); 추가 가능
+  });
+});
