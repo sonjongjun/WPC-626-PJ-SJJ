@@ -34,7 +34,6 @@ $(window).scroll(function () {
 
 
 //ul.store 밑에 해당되는 첫번째 li클릭시 형제요소인.store-box1-inbox의 z-index 3으로 transition 2s ease-in-out all로 바꾸기
-
 $(".store > li:first-child").click(function () {
   const box = $(".store-box1-inbox");
 
@@ -47,4 +46,65 @@ $(".store > li:first-child").click(function () {
     box.removeClass("active");
     // 필요하다면 console.log("마우스 아웃"); 추가 가능
   });
-});
+});//click
+
+// 도산 매장영역
+$(".store > li:nth-child(2)").click(function () {
+  const box = $(".store-box2-inbox");
+
+  // 나타나게 (왼쪽에서 오른쪽으로 슬라이드)
+  box.addClass("active");
+  console.log("나 된다");
+
+  // 마우스가 박스 영역을 벗어나면 z-index를 다시 낮춤
+  box.on("mouseleave", function () {
+    box.removeClass("active");
+    // 필요하다면 console.log("마우스 아웃"); 추가 가능
+  });
+});//click
+
+
+// 상하이 매장영역
+$(".store > li:nth-child(3)").click(function () {
+  const box = $(".store-box3-inbox");
+
+  // 나타나게 (왼쪽에서 오른쪽으로 슬라이드)
+  box.addClass("active");
+  console.log("나 된다");
+
+  // 마우스가 박스 영역을 벗어나면 z-index를 다시 낮춤
+  box.on("mouseleave", function () {
+    box.removeClass("active");
+    // 필요하다면 console.log("마우스 아웃"); 추가 가능
+  });
+});//click
+
+
+
+$(".colab > li:first-child",).click(function () {
+  const box = $(".colab-box1-inbox");
+
+  // 나타나게 (왼쪽에서 오른쪽으로 슬라이드)
+  box.addClass("active");
+  console.log("나 된다");
+
+  // 마우스가 박스 영역을 벗어나면 z-index를 다시 낮춤
+  box.on("mouseleave", function () {
+    box.removeClass("active");
+    // 필요하다면 console.log("마우스 아웃"); 추가 가능
+  });
+});//click
+
+$(".colab > li:nth-child(2)",).click(function () {
+  const box = $(".colab-box2-inbox");
+
+  // 나타나게 (왼쪽에서 오른쪽으로 슬라이드)
+  box.addClass("active");
+  console.log("나 된다");
+
+  // 마우스가 박스 영역을 벗어나면 z-index를 다시 낮춤
+  box.on("mouseleave", function () {
+    box.removeClass("active");
+    // 필요하다면 console.log("마우스 아웃"); 추가 가능
+  });
+});//click

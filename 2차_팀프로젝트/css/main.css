@@ -120,8 +120,8 @@ h2 {
   align-items: center;
   height: 100vh;
 }
-.store-box1-inbox{
- position: absolute;
+.store-box1-inbox {
+  position: absolute;
   display: flex;
   width: 100%;
   height: 100%;
@@ -167,7 +167,7 @@ h2 {
   opacity: 0;
 }
 .store-box1 > ul > li:first-child {
-  background: url(../01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/teahouse_store_pc_6.webp)
+  background: url(../01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/teahouse_store_pc_5.webp)
     no-repeat center/cover;
 }
 .store-box1 > ul > li:nth-child(2) {
@@ -175,7 +175,7 @@ h2 {
     no-repeat center/cover;
 }
 .store-box1 > ul > li:nth-child(3) {
-  background: url(../01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/teahouse_store_pc_5.webp)
+  background: url(../01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/teahouse_store_pc_6.webp)
     no-repeat center/cover;
 }
 .store-box1 > ul > li:nth-child(4) {
@@ -188,10 +188,164 @@ h2 {
 }
 
 /*********************************** 성수 속박스 영역 종료 ***********************************/
+/**************************** 도산 속박스 영역 ****************************/
+.store-box2 {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  top: -100%;
+}
+.store-box2-inbox {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+/* 효과영역 */
+.store-box2-inbox {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1); /* 부드럽고 탄성 있는 느낌 */
+  z-index: 1;
+}
 
+.store-box2-inbox.active {
+  opacity: 1;
+  transform: translateX(0); /* 제자리로 이동 */
+  z-index: 3;
+}
+.store-box2 > ul > li {
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+.store-box2 > ul > li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* 앱솔루트 사방채우기 */
+  background-color: #000;
+  opacity: 0.3;
 
+  /* 트랜지션: 속시이지 */
+  transition: all 0.4s ease-out;
+}
+.store-box2 > ul > li:hover {
+  flex: 2.4;
+}
+.store-box2 > ul > li:hover::before {
+  opacity: 0;
+}
+.store-box2 > ul > li:first-child {
+  background: url(../01.자료수집/01.메인상단지점이미지/02.누데이크도산이미지/nudake_dosan_pc_3.webp)
+    no-repeat center/cover;
+}
+.store-box2 > ul > li:nth-child(2) {
+  background: url(../01.자료수집/01.메인상단지점이미지/02.누데이크도산이미지/nudake_dosan_pc_2.webp)
+    no-repeat center/cover;
+}
+.store-box2 > ul > li:nth-child(3) {
+  background: url(../01.자료수집/01.메인상단지점이미지/02.누데이크도산이미지/nudake_dosan_pc_6.webp)
+    no-repeat center/cover;
+}
+.store-box2 > ul > li:nth-child(4) {
+  background: url(../01.자료수집/01.메인상단지점이미지/02.누데이크도산이미지/nudake_dosan_pc_1.webp)
+    no-repeat center/cover;
+}
+.store-box2 > ul > li:nth-child(5) {
+  background: url(../01.자료수집/01.메인상단지점이미지/02.누데이크도산이미지/nudake_dosan_pc_4.webp)
+    no-repeat center/cover;
+}
 
+/*********************************** 도산 속박스 영역 종료 ***********************************/
+
+/**************************** 상하이 속박스 영역 ****************************/
+.store-box3 {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  top: -200%;
+}
+.store-box3-inbox {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+/* 효과영역 */
+.store-box3-inbox {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1); /* 부드럽고 탄성 있는 느낌 */
+  z-index: 1;
+}
+
+.store-box3-inbox.active {
+  opacity: 1;
+  transform: translateX(0); /* 제자리로 이동 */
+  z-index: 3;
+}
+.store-box3 > ul > li {
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+.store-box3 > ul > li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* 앱솔루트 사방채우기 */
+  background-color: #000;
+  opacity: 0.3;
+
+  /* 트랜지션: 속시이지 */
+  transition: all 0.4s ease-out;
+}
+.store-box3 > ul > li:hover {
+  flex: 2.4;
+}
+.store-box3 > ul > li:hover::before {
+  opacity: 0;
+}
+.store-box3 > ul > li:first-child {
+  background: url(../01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/nudake_shanghai_pc_6.webp)
+    no-repeat center/cover;
+}
+.store-box3 > ul > li:nth-child(2) {
+  background: url(../01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/nudake_shanghai_pc_5.webp)
+    no-repeat center/cover;
+}
+.store-box3 > ul > li:nth-child(3) {
+  background: url(../01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/nudake_shanghai_pc_1.webp)
+    no-repeat center/cover;
+}
+.store-box3 > ul > li:nth-child(4) {
+  background: url(../01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/nudake_shanghai_pc_8.webp)
+    no-repeat center/cover;
+}
+.store-box3 > ul > li:nth-child(5) {
+  background: url(../01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/nudake_shanghai_pc_3.webp)
+    no-repeat center/cover;
+}
+
+/*********************************** 상하이 속박스 영역 종료 ***********************************/
+
+/* ********************************************************************************** */
 /********************************* 메인 지점영역 종료 *********************************/
+/* ********************************************************************************** */
+
 /********************************* 메인 콜라보영역 *********************************/
 .colab-box {
   position: relative;
@@ -210,6 +364,7 @@ h2 {
   flex: 1;
   cursor: pointer;
   transition: all 0.4s ease-out;
+  z-index: 2;
 }
 .colab-box > ul > li::before {
   content: "";
@@ -273,8 +428,396 @@ h2 {
 .colab-box > ul > li:nth-child(5) > p {
   translate: 19% 180%;
 }
-/* 콜라보영역 종료 */
-/* 품목영역시작! */
+
+/* 메인 콜라보 영역 종료!! */
+/* *************************** 콜라보 속박스 영역 1 ***************************/
+.colab-box1 {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  top: 0%;
+}
+.colab-box1-inbox {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+/* 효과영역 */
+.colab-box1-inbox {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1); /* 부드럽고 탄성 있는 느낌 */
+  z-index: 1;
+}
+
+.colab-box1-inbox.active {
+  opacity: 1;
+  transform: translateX(0); /* 제자리로 이동 */
+  z-index: 3;
+}
+.colab-box1 > ul > li {
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+.colab-box1 > ul > li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* 앱솔루트 사방채우기 */
+  background-color: #000;
+  opacity: 0.3;
+
+  /* 트랜지션: 속시이지 */
+  transition: all 0.4s ease-out;
+}
+.colab-box1 > ul > li:hover {
+  flex: 2.4;
+}
+.colab-box1 > ul > li:hover::before {
+  opacity: 0;
+}
+.colab-box1 > ul > li:first-child {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_3.webp)
+    no-repeat center/cover;
+}
+.colab-box1 > ul > li:nth-child(2) {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_4.webp)
+    no-repeat center/cover;
+}
+.colab-box1 > ul > li:nth-child(3) {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_6.webp)
+    no-repeat center/cover;
+}
+.colab-box1 > ul > li:nth-child(4) {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_8.webp)
+    no-repeat center/cover;
+}
+.colab-box1 > ul > li:nth-child(5) {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_6.webp)
+    no-repeat center/cover;
+}
+*/
+
+/*********************************** 콜라보 속박스1 영역 종료 ***********************************/
+/* *************************** 콜라보 속박스 영역 2 ***************************/
+.colab-box2{
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  top: -100%;
+}
+.colab-box2-inbox {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+/* 효과영역 */
+.colab-box2-inbox {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1); /* 부드럽고 탄성 있는 느낌 */
+  z-index: 1;
+}
+
+.colab-box2-inbox.active {
+  opacity: 1;
+  transform: translateX(0); /* 제자리로 이동 */
+  z-index: 3;
+}
+.colab-box2 > ul > li {
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+.colab-box2 > ul > li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* 앱솔루트 사방채우기 */
+  background-color: #000;
+  opacity: 0.3;
+
+  /* 트랜지션: 속시이지 */
+  transition: all 0.4s ease-out;
+}
+.colab-box2 > ul > li:hover {
+  flex: 2.4;
+}
+.colab-box2 > ul > li:hover::before {
+  opacity: 0;
+}
+.colab-box2 > ul > li:first-child {
+  background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/animal_glamourshot_6.webp)
+    no-repeat center/cover;
+}
+.colab-box2 > ul > li:nth-child(2) {
+  background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/animal_glamourshot_4.webp)
+    no-repeat center/cover;
+}
+.colab-box2 > ul > li:nth-child(3) {
+  background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/animal_glamourshot_2.webp)
+    no-repeat center/cover;
+}
+.colab-box2 > ul > li:nth-child(4) {
+  background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/animal_glamourshot_5.webp)
+    no-repeat center/cover;
+}
+.colab-box2 > ul > li:nth-child(5) {
+  background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/animal_glamourshot_3.webp)
+    no-repeat center/cover;
+}
+*/
+
+/*********************************** 콜라보 속박스 영역 종료 ***********************************/
+/* *************************** 콜라보 속박스 영역 1 ***************************/
+.colab-box1 {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  top: 0%;
+}
+.colab-box1-inbox {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+/* 효과영역 */
+.colab-box1-inbox {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1); /* 부드럽고 탄성 있는 느낌 */
+  z-index: 1;
+}
+
+.colab-box1-inbox.active {
+  opacity: 1;
+  transform: translateX(0); /* 제자리로 이동 */
+  z-index: 3;
+}
+.colab-box1 > ul > li {
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+.colab-box1 > ul > li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* 앱솔루트 사방채우기 */
+  background-color: #000;
+  opacity: 0.3;
+
+  /* 트랜지션: 속시이지 */
+  transition: all 0.4s ease-out;
+}
+.colab-box1 > ul > li:hover {
+  flex: 2.4;
+}
+.colab-box1 > ul > li:hover::before {
+  opacity: 0;
+}
+.colab-box1 > ul > li:first-child {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_3.webp)
+    no-repeat center/cover;
+}
+.colab-box1 > ul > li:nth-child(2) {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_4.webp)
+    no-repeat center/cover;
+}
+.colab-box1 > ul > li:nth-child(3) {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_6.webp)
+    no-repeat center/cover;
+}
+.colab-box1 > ul > li:nth-child(4) {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_8.webp)
+    no-repeat center/cover;
+}
+.colab-box1 > ul > li:nth-child(5) {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_6.webp)
+    no-repeat center/cover;
+}
+*/
+
+/*********************************** 콜라보 속박스 영역 종료 ***********************************/
+/* *************************** 콜라보 속박스 영역 1 ***************************/
+.colab-box1 {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  top: 0%;
+}
+.colab-box1-inbox {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+/* 효과영역 */
+.colab-box1-inbox {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1); /* 부드럽고 탄성 있는 느낌 */
+  z-index: 1;
+}
+
+.colab-box1-inbox.active {
+  opacity: 1;
+  transform: translateX(0); /* 제자리로 이동 */
+  z-index: 3;
+}
+.colab-box1 > ul > li {
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+.colab-box1 > ul > li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* 앱솔루트 사방채우기 */
+  background-color: #000;
+  opacity: 0.3;
+
+  /* 트랜지션: 속시이지 */
+  transition: all 0.4s ease-out;
+}
+.colab-box1 > ul > li:hover {
+  flex: 2.4;
+}
+.colab-box1 > ul > li:hover::before {
+  opacity: 0;
+}
+.colab-box1 > ul > li:first-child {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_3.webp)
+    no-repeat center/cover;
+}
+.colab-box1 > ul > li:nth-child(2) {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_4.webp)
+    no-repeat center/cover;
+}
+.colab-box1 > ul > li:nth-child(3) {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_6.webp)
+    no-repeat center/cover;
+}
+.colab-box1 > ul > li:nth-child(4) {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_8.webp)
+    no-repeat center/cover;
+}
+.colab-box1 > ul > li:nth-child(5) {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_6.webp)
+    no-repeat center/cover;
+}
+*/
+
+/*********************************** 콜라보 속박스 영역 종료 ***********************************/
+/* *************************** 콜라보 속박스 영역 1 ***************************/
+.colab-box1 {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  top: 0%;
+}
+.colab-box1-inbox {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+/* 효과영역 */
+.colab-box1-inbox {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1); /* 부드럽고 탄성 있는 느낌 */
+  z-index: 1;
+}
+
+.colab-box1-inbox.active {
+  opacity: 1;
+  transform: translateX(0); /* 제자리로 이동 */
+  z-index: 3;
+}
+.colab-box1 > ul > li {
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+.colab-box1 > ul > li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* 앱솔루트 사방채우기 */
+  background-color: #000;
+  opacity: 0.3;
+
+  /* 트랜지션: 속시이지 */
+  transition: all 0.4s ease-out;
+}
+.colab-box1 > ul > li:hover {
+  flex: 2.4;
+}
+.colab-box1 > ul > li:hover::before {
+  opacity: 0;
+}
+.colab-box1 > ul > li:first-child {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_3.webp)
+    no-repeat center/cover;
+}
+.colab-box1 > ul > li:nth-child(2) {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_4.webp)
+    no-repeat center/cover;
+}
+.colab-box1 > ul > li:nth-child(3) {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_6.webp)
+    no-repeat center/cover;
+}
+.colab-box1 > ul > li:nth-child(4) {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_8.webp)
+    no-repeat center/cover;
+}
+.colab-box1 > ul > li:nth-child(5) {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_6.webp)
+    no-repeat center/cover;
+}
+*/
+
+/*********************************** 콜라보 속박스 영역 종료 ***********************************/
+/******************************* 콜라보영역 종료 *******************************/
+
+/******************************* 품목영역시작! *******************************/
 .pdct-box {
   position: relative;
   justify-content: center;
