@@ -50,6 +50,8 @@
 .store{
     position: absolute;
     display: flex;
+    width: 100vw;
+    height: 100vh;
 }
 h2{
     font-size: 5vw;
