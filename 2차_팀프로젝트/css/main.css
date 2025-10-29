@@ -12,6 +12,11 @@
   border-bottom: 3px solid #000000;
   opacity: 0.5;
 }
+h2 {
+  font-size: 4.5vw;
+  padding-top: 9vh;
+  margin-left: 1vw;
+}
 .top-menu:hover {
   opacity: 1;
   transition: 0.5s ease-in-out all;
@@ -40,6 +45,7 @@
   /* border-bottom: 1px solid #000000; */
   font-weight: bold;
 }
+/* 메인 지점영역 */
 .store-box {
   position: relative;
   justify-content: center;
@@ -52,13 +58,13 @@
   width: 100%;
   height: 100%;
 }
-.store > ul > li {
+.store-box > ul > li {
   position: relative;
   flex: 1;
   cursor: pointer;
   transition: all 0.4s ease-out;
 }
-.store > ul > li::before {
+.store-box > ul > li::before {
   content: "";
   display: block;
   position: absolute;
@@ -73,23 +79,188 @@
   /* 트랜지션: 속시이지 */
   transition: all 0.4s ease-out;
 }
-.store>ul>li:hover{
-     flex: 1.4;
+.store-box > ul > li:hover {
+  flex: 1.4;
 }
-.store>ul>li:hover::before{
-     opacity: 0;
+.store-box > ul > li:hover::before {
+  opacity: 0;
 }
-.store > ul > li:first-child{
-    background: url(../);
+.store-box > ul > li:first-child {
+  background: url(../01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/teahouse_store_pc_1.webp)
+    no-repeat center/cover;
 }
-.store > ul > li:nth-child(2){
-    background: url(../);
+.store-box > ul > li:nth-child(2) {
+  background: url(../01.자료수집/01.메인상단지점이미지/02.누데이크도산이미지/nudake_dosan_pc_6.webp)
+    no-repeat center/cover;
 }
-.store > ul > li:nth-child(3){
-    background: url(../);
+.store-box > ul > li:nth-child(3) {
+  background: url(../01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/nudake_shanghai_pc_3.webp)
+    no-repeat center/cover;
 }
-h2 {
+.store-box > ul > li > p {
   font-size: 5vw;
-  padding-top: 9vh;
-  margin-left: 2vw;
+  color: #ffffff;
+  translate: 17% 150%;
+  opacity: 0.5;
+}
+.store-box > ul > li:nth-child(2) > p {
+    translate: 22% 150%;
+}
+.store-box > ul > li:nth-child(3) > p {
+    translate: 17% 150%;
+}
+.store-box1,
+.store-box2,
+.store-box3 {
+  position: relative;
+}
+/********************************* 메인 지점영역 종료 *********************************/
+/********************************* 메인 콜라보영역 *********************************/
+.colab-box {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.colab {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.colab-box > ul > li {
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+.colab-box > ul > li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* 앱솔루트 사방채우기 */
+  background-color: #000;
+  opacity: 0.5;
+
+  /* 트랜지션: 속시이지 */
+  transition: all 0.4s ease-out;
+}
+.colab-box > ul > li:hover {
+  flex: 1.4;
+}
+.colab-box > ul > li:hover::before {
+  opacity: 0;
+}
+.colab-box > ul > li:first-child {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_2.webp)
+    no-repeat center/cover;
+}
+.colab-box > ul > li:nth-child(2) {
+  background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/animal_glamourshot_4.webp)
+    no-repeat center/cover;
+}
+.colab-box > ul > li:nth-child(3) {
+  background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/jennie_popup_3_pc.webp)
+    no-repeat center/cover;
+}
+.colab-box > ul > li:nth-child(4) {
+  background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/birth_store_3.webp)
+    no-repeat center/cover;
+}
+.colab-box > ul > li:nth-child(5) {
+  background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/picnic_contest_3.webp)
+    no-repeat center/cover;
+}
+.colab-box > ul > li > p {
+  font-size: 4vw;
+  color: #7b1e1e;
+  translate: 17% 150%;
+  opacity: 0.5;
+}
+.colab-box > ul > li:first-child > p {
+  translate: 18% 200%;
+}
+.colab-box > ul > li:nth-child(2) > p {
+  translate: 17% 120%;
+}
+.colab-box > ul > li:nth-child(3) > p {
+  translate: 20% 455%;
+}
+.colab-box > ul > li:nth-child(4) > p {
+  translate: 23% 190%;
+}
+.colab-box > ul > li:nth-child(5) > p {
+  translate: 19% 180%;
+}
+/* 콜라보영역 종료 */
+/* 품목영역시작! */
+.pdct-box {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.pdct {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.pdct-box > ul > li {
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+.pdct-box > ul > li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* 앱솔루트 사방채우기 */
+  background-color: #000;
+  opacity: 0.5;
+
+  /* 트랜지션: 속시이지 */
+  transition: all 0.4s ease-out;
+}
+.pdct-box > ul > li:hover {
+  flex: 1.4;
+}
+.pdct-box > ul > li:hover::before {
+  opacity: 0;
+}
+.pdct-box > ul > li:first-child {
+  background: url(../01.자료수집/03.하단메뉴영역/01.케이크메뉴/29.webp)
+    no-repeat center/cover;
+}
+.pdct-box > ul > li:nth-child(2) {
+  background: url(../01.자료수집/03.하단메뉴영역/02.음료메뉴/10.webp) no-repeat
+    center/cover;
+}
+.pdct-box > ul > li:nth-child(3) {
+  background: url(../01.자료수집/03.하단메뉴영역/03.굿즈메뉴/nujeans_13.webp)
+    no-repeat center/cover;
+}
+.pdct-box > ul > li > p {
+  font-size: 5vw;
+  color: #ffd000;
+  translate: 17% 150%;
+  opacity: 0.5;
+}
+.pdct-box > ul > li:nth-child(1) > p {
+  translate: 11% 337%;
+}
+.pdct-box > ul > li:nth-child(2) > p {
+  translate: 9% 337%;
+}
+.pdct-box > ul > li:nth-child(3) > p {
+  translate: 26% 337%;
 }
