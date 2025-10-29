@@ -1,60 +1,95 @@
 /* 상단메뉴 css */
 .top-menu {
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 10vh;
-    box-sizing: border-box;
-    background-color: #f5f2f2;
-    z-index: 999;
-    border-bottom: 3px solid #000000;
-    opacity: .5;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  box-sizing: border-box;
+  background-color: #f5f2f2;
+  z-index: 999;
+  border-bottom: 3px solid #000000;
+  opacity: 0.5;
 }
-.top-menu:hover{
-    opacity: 1;
-    transition: .5s ease-in-out all;
+.top-menu:hover {
+  opacity: 1;
+  transition: 0.5s ease-in-out all;
 }
 .top-menu > ul {
-    display: flex;
-    flex-direction: row;
-    width: 50%;
-    height: 100%;
-    justify-content: space-between;
-    line-height: 10vh;
-    font-size: 1vw;
-    gap: 2vw;
-}   
-.top-menu > ul > li {
-    cursor: pointer;
-    height: 70%;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  height: 100%;
+  justify-content: space-between;
+  line-height: 10vh;
+  font-size: 1vw;
+  gap: 2vw;
 }
-.top-menu > ul > :first-child{
-    font-size: 1.5vw;
-    font-weight: bold;
-    margin-left: 1vw;
-    border: none;
+.top-menu > ul > li {
+  cursor: pointer;
+  height: 70%;
+}
+.top-menu > ul > :first-child {
+  font-size: 1.5vw;
+  font-weight: bold;
+  margin-left: 1vw;
+  border: none;
 }
 .top-menu > ul :hover {
-    /* border-bottom: 1px solid #000000; */
-    font-weight: bold;
+  /* border-bottom: 1px solid #000000; */
+  font-weight: bold;
 }
-.store-box{
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+.store-box {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-.store{
-    position: absolute;
-    display: flex;
-    width: 100vw;
-    height: 100vh;
+.store {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
 }
-h2{
-    font-size: 5vw;
-    padding-top: 9vh;
-    margin-left: 2vw;
+.store > ul > li {
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+.store > ul > li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* 앱솔루트 사방채우기 */
+  background-color: #000;
+  opacity: 0.5;
+
+  /* 트랜지션: 속시이지 */
+  transition: all 0.4s ease-out;
+}
+.store>ul>li:hover{
+     flex: 1.4;
+}
+.store>ul>li:hover::before{
+     opacity: 0;
+}
+.store > ul > li:first-child{
+    background: url(../);
+}
+.store > ul > li:nth-child(2){
+    background: url(../);
+}
+.store > ul > li:nth-child(3){
+    background: url(../);
+}
+h2 {
+  font-size: 5vw;
+  padding-top: 9vh;
+  margin-left: 2vw;
 }
