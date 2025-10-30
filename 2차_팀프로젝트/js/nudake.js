@@ -48,7 +48,7 @@ $(".store > li:first-child").click(function () {
   });
 });//click
 
-// 도산 매장영역
+// 도산 매장영역///////////////////////////////////////////////
 $(".store > li:nth-child(2)").click(function () {
   const box = $(".store-box2-inbox");
 
@@ -64,7 +64,7 @@ $(".store > li:nth-child(2)").click(function () {
 });//click
 
 
-// 상하이 매장영역
+// 상하이 매장영역//////////////////////////////////////////////
 $(".store > li:nth-child(3)").click(function () {
   const box = $(".store-box3-inbox");
 
@@ -80,7 +80,7 @@ $(".store > li:nth-child(3)").click(function () {
 });//click
 
 
-
+/////////////콜라보 영역1//////////////////////////////
 $(".colab > li:first-child",).click(function () {
   const box = $(".colab-box1-inbox");
 
@@ -94,7 +94,7 @@ $(".colab > li:first-child",).click(function () {
     // 필요하다면 console.log("마우스 아웃"); 추가 가능
   });
 });//click
-
+/////////////콜라보 영역2//////////////////////////////
 $(".colab > li:nth-child(2)",).click(function () {
   const box = $(".colab-box2-inbox");
 
