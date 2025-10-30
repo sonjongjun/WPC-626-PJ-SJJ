@@ -154,3 +154,52 @@ $(".colab > li:nth-child(5)",).click(function () {
     // 필요하다면 console.log("마우스 아웃"); 추가 가능
   });
 });//click
+
+
+
+/////////////품목 영역1//////////////////////////////
+$(".pdct > li:first-child",).click(function () {
+  const box = $(".pdct-box1-inbox");
+
+  // 나타나게 (왼쪽에서 오른쪽으로 슬라이드)
+  box.addClass("active");
+  console.log("나 된다");
+
+  // 마우스가 박스 영역을 벗어나면 z-index를 다시 낮춤
+  box.on("mouseleave", function () {
+    box.removeClass("active");
+    // 필요하다면 console.log("마우스 아웃"); 추가 가능
+  });
+});//click
+
+
+/////////////품목 영역2//////////////////////////////
+$(".pdct > li:nth-child(2)",).click(function () {
+  const box = $(".pdct-box2-inbox");
+
+  // 나타나게 (왼쪽에서 오른쪽으로 슬라이드)
+  box.addClass("active");
+  console.log("나 된다");
+
+  // 마우스가 박스 영역을 벗어나면 z-index를 다시 낮춤
+  box.on("mouseleave", function () {
+    box.removeClass("active");
+    // 필요하다면 console.log("마우스 아웃"); 추가 가능
+  });
+});//click
+
+
+/////////////품목 영역3//////////////////////////////
+$(".pdct > li:nth-child(3)",).click(function () {
+  const box = $(".pdct-box3-inbox");
+
+  // 나타나게 (왼쪽에서 오른쪽으로 슬라이드)
+  box.addClass("active");
+  console.log("나 된다");
+
+  // 마우스가 박스 영역을 벗어나면 z-index를 다시 낮춤
+  box.on("mouseleave", function () {
+    box.removeClass("active");
+    // 필요하다면 console.log("마우스 아웃"); 추가 가능
+  });
+});//click
