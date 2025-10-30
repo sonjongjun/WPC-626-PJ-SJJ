@@ -14,9 +14,9 @@
 }
 .store-btn {
   position: absolute;
-  left: 26.5%;
+  left: 25%;
   transform: translateX(-50%);
-  top: 17vh;
+  top: -10%;
   font-size: .8vw;
   transition: all 0.3s;
   cursor: pointer;
