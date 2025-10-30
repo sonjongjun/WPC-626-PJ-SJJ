@@ -18,3 +18,15 @@ https://www.nudake.com/kr/
 JS실험실 6번 참조
 
 CSS학습 LOTTE.html참조
+
+
+
+영상넣기 링크
+
+
+화산케이크
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pn6Ius4dLV0?si=r6RezG-MaC0rlcBn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+염소
+<iframe width="560" height="315" src="https://www.youtube.com/embed/W_FvsqaXfVA?si=KjRzQj0P4d_s6vXa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+바닷가
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GikeqghmzAo?si=8GJYK968vXWEZ2I-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

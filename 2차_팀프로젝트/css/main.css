@@ -52,6 +52,8 @@ h2 {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  border-bottom: 13px solid #000;
+  border-top: 13px solid #000;
 }
 .store {
   position: absolute;
@@ -341,6 +343,8 @@ h2 {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  border-bottom: 13px solid #000;
+  border-top: 13px solid #000;
 }
 .colab {
   position: absolute;
@@ -471,7 +475,7 @@ h2 {
   opacity: 0;
 }
 .colab-box1 > ul > li:first-child {
-  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_3.webp)
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_2.webp)
     no-repeat center/cover;
 }
 .colab-box1 > ul > li:nth-child(2) {
@@ -479,7 +483,7 @@ h2 {
     no-repeat center/cover;
 }
 .colab-box1 > ul > li:nth-child(3) {
-  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_6.webp)
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_5.webp)
     no-repeat center/cover;
 }
 .colab-box1 > ul > li:nth-child(4) {
@@ -490,7 +494,6 @@ h2 {
   background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_6.webp)
     no-repeat center/cover;
 }
-*/
 
 /*********************************** 콜라보 속박스1 영역 종료 ***********************************/
 /* *************************** 콜라보 속박스 영역 2 ***************************/
@@ -563,16 +566,15 @@ h2 {
   background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/animal_glamourshot_3.webp)
     no-repeat center/cover;
 }
-*/
 
 /*********************************** 콜라보 속박스 영역 종료 ***********************************/
-/* *************************** 콜라보 속박스 영역 1 ***************************/
+/* *************************** 콜라보 속박스 영역 3 ***************************/
 .colab-box3 {
   position: relative;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  top: 0%;
+  top: -200%;
 }
 .colab-box3-inbox {
   position: absolute;
@@ -618,35 +620,34 @@ h2 {
   opacity: 0;
 }
 .colab-box3 > ul > li:first-child {
-  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_3.webp)
+  background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/jennie_contents_4.png)
     no-repeat center/cover;
 }
 .colab-box3 > ul > li:nth-child(2) {
-  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_4.webp)
+  background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/jennie_popup_2_pc.webp)
     no-repeat center/cover;
 }
 .colab-box3 > ul > li:nth-child(3) {
-  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_6.webp)
+  background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/jennie_popup_3_pc.webp)
     no-repeat center/cover;
 }
 .colab-box3 > ul > li:nth-child(4) {
-  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_8.webp)
+  background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/jennie_space_3_pc.webp)
     no-repeat center/cover;
 }
 .colab-box3 > ul > li:nth-child(5) {
-  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_6.webp)
+  background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/jennie_space_6_pc.webp)
     no-repeat center/cover;
 }
-*/
 
 /*********************************** 콜라보 속박스 영역 종료 ***********************************/
-/* *************************** 콜라보 속박스 영역 1 ***************************/
+/* *************************** 콜라보 속박스 영역 4 ***************************/
 .colab-box4 {
   position: relative;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  top: 0%;
+  top: -300%;
 }
 .colab-box4-inbox {
   position: absolute;
@@ -691,35 +692,34 @@ h2 {
   opacity: 0;
 }
 .colab-box4 > ul > li:first-child {
-  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_3.webp)
+  background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/birth_store_1.webp)
     no-repeat center/cover;
 }
 .colab-box4 > ul > li:nth-child(2) {
-  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_4.webp)
+  background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/birth_store_2.webp)
     no-repeat center/cover;
 }
 .colab-box4 > ul > li:nth-child(3) {
-  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_6.webp)
+  background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/birth_store_6.webp)
     no-repeat center/cover;
 }
 .colab-box4 > ul > li:nth-child(4) {
-  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_8.webp)
+  background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/birth_store_3.webp)
     no-repeat center/cover;
 }
 .colab-box4 > ul > li:nth-child(5) {
-  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_6.webp)
+  background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/birth_store_4.webp)
     no-repeat center/cover;
 }
-*/
 
 /*********************************** 콜라보 속박스 영역 종료 ***********************************/
-/* *************************** 콜라보 속박스 영역 1 ***************************/
+/* *************************** 콜라보 속박스 영역 5 ***************************/
 .colab-box5 {
   position: relative;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  top: 0%;
+  top: -400%;
 }
 .colab-box5-inbox {
   position: absolute;
@@ -764,26 +764,25 @@ h2 {
   opacity: 0;
 }
 .colab-box5 > ul > li:first-child {
-  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_3.webp)
+  background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/picnic_contest_1.webp)
     no-repeat center/cover;
 }
 .colab-box5 > ul > li:nth-child(2) {
-  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_4.webp)
+  background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/picnic_contest_2.webp)
     no-repeat center/cover;
 }
 .colab-box5 > ul > li:nth-child(3) {
-  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_6.webp)
+  background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/picnic_main_pc.webp)
     no-repeat center/cover;
 }
 .colab-box5 > ul > li:nth-child(4) {
-  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_8.webp)
+  background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/picnic_contest_4.webp)
     no-repeat center/cover;
 }
 .colab-box5 > ul > li:nth-child(5) {
-  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/teahouse_project_space_6.webp)
+  background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/picnic_contest_3.webp)
     no-repeat center/cover;
 }
-*/
 
 /*********************************** 콜라보 속박스 영역 종료 ***********************************/
 /******************************* 콜라보영역 종료 *******************************/
@@ -794,6 +793,8 @@ h2 {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  border-bottom: 13px solid #000;
+  border-top: 13px solid #000;
 }
 .pdct {
   position: absolute;
@@ -837,8 +838,8 @@ h2 {
     center/cover;
 }
 .pdct-box > ul > li:nth-child(3) {
-  background: url(../01.자료수집/03.하단메뉴영역/03.굿즈메뉴/nujeans_13.webp)
-    no-repeat center/cover;
+  background: url(../01.자료수집/03.하단메뉴영역/03.굿즈메뉴/11.webp) no-repeat
+    center/cover;
 }
 .pdct-box > ul > li > p {
   font-size: 5vw;
@@ -860,6 +861,7 @@ h2 {
 .bottom-area {
   font-size: 1vw;
   padding-top: 1vh;
+  padding-bottom: 1vh;
   border-top: 3px solid #000000;
 }
 .bt-1 {
