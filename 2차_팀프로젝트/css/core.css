@@ -31,4 +31,17 @@ html{
   margin: 0 auto;
   overflow-x: hidden;
 }
-
+h2 {
+  font-size: 4.5vw;
+  padding-top: 9vh;
+  margin-left: 1vw;
+}
+button{
+  cursor: pointer;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-bottom: 1vh;
+  font-family: "Hahmlet", serif;
+  font-weight: 500;
+  background: #ffffff;
+}

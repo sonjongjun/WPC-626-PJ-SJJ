@@ -12,11 +12,7 @@
   border-bottom: 3px solid #000000;
   opacity: 0.5;
 }
-h2 {
-  font-size: 4.5vw;
-  padding-top: 9vh;
-  margin-left: 1vw;
-}
+
 .top-menu:hover {
   opacity: 1;
   transition: 0.5s ease-in-out all;
@@ -1053,23 +1049,23 @@ h2 {
   opacity: 0;
 }
 .pdct-box3 > ul > li:first-child {
-  background: url(../01.자료수집/03.하단메뉴영역/01.케이크메뉴/29.webp)
+  background: url(../01.자료수집/03.하단메뉴영역/03.굿즈메뉴/nujeans_10.webp)
     no-repeat center/cover;
 }
 .pdct-box3 > ul > li:nth-child(2) {
-  background: url(../01.자료수집/03.하단메뉴영역/01.케이크메뉴/25.webp)
+  background: url(../01.자료수집/03.하단메뉴영역/03.굿즈메뉴/nujeans_11.webp)
     no-repeat center/cover;
 }
 .pdct-box3 > ul > li:nth-child(3) {
-  background: url(../01.자료수집/03.하단메뉴영역/01.케이크메뉴/35@1.5x.webp)
+  background: url(../01.자료수집/03.하단메뉴영역/03.굿즈메뉴/nujeans_13.webp)
     no-repeat center/cover;
 }
 .pdct-box3 > ul > li:nth-child(4) {
-  background: url(../01.자료수집/03.하단메뉴영역/01.케이크메뉴/23.webp)
+  background: url(../01.자료수집/03.하단메뉴영역/03.굿즈메뉴/21.webp)
     no-repeat center/cover;
 }
 .pdct-box3 > ul > li:nth-child(5) {
-  background: url(../01.자료수집/03.하단메뉴영역/01.케이크메뉴/70.webp)
+  background: url(../01.자료수집/03.하단메뉴영역/03.굿즈메뉴/11.webp)
     no-repeat center/cover;
 }
 
