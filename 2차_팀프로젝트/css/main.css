@@ -1256,7 +1256,7 @@
 .info1 {
   display: flex;
   font-size: 2vw;
-  width: 50%;
+  width: 40%;
   justify-content: space-around;
   align-items: center;
 }
@@ -1266,4 +1266,55 @@
   font-size: 1vw;
   width: 50%;
   align-items: center;
+}
+.map-btn{
+  position: absolute;
+  font-size: 1.5vw;
+  font-weight: bold;
+  border-radius: 8px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  right: 11%;
+}
+/****************************************************************/
+/************************ 디테일 페이지 종료!!! ******************/
+/****************************************************************/
+
+
+/****************************************************************/
+/************************ 지점 페이지 시작!!! ******************/
+/****************************************************************/
+.d-store-area{
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border-bottom: 13px solid #000;
+  border-top: 13px solid #000;
+}
+.d-store-area-inbox{
+  position: absolute;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+}
+.d-store-area > ul > li {
+  position: relative;
+  flex: 1;
+}
+.d-store-area > ul > li:first-child {
+  background: url(../01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/teahouse_store_pc_4.webp)
+    no-repeat center/cover;
+    width: 100vw;
+    height: 100vh;
+}
+.d-store-area > ul > li:nth-child(2) {
+  background: url(../01.자료수집/01.메인상단지점이미지/02.누데이크도산이미지/nudake_dosan_pc_5.webp)
+    no-repeat center/cover;
+}
+.d-store-area > ul > li:nth-child(3) {
+  background: url(../01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/nudake_shanghai_pc_7.webp)
+    no-repeat center/cover;
 }
