@@ -18,7 +18,7 @@ $(window).scroll(function () {
 // li에 hover 되는 동안만
 // 하위에 해당되는 각 p요소들만 opacity 0.5로 1초걸리게 하고 바꾸기!
 $(".pdct-box > ul > li, .colab-box > ul > li, .store-box > ul > li").hover(function () {
-    $(this).children("p").css("opacity", "0");
+    $(this).children("p").css("opacity", "0.5");
 }, function () {
     $(this).children("p").css("opacity", "0");
 });//hover
