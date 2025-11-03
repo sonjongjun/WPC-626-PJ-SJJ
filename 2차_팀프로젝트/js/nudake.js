@@ -6,18 +6,25 @@ $(window).scroll(function () {
     }
 })//scroll/////////////
 
-// html의 최상단에서 스크롤을 위로하면 .header.top-menu가 display block로 1초걸리게 하고 바꾸기
+// 스크롤 이벤트 통합 처리
 $(window).scroll(function () {
-    if ($(window).scrollTop() == 0) {
+    const scrollTop = $(window).scrollTop();
+    const windowHeight = $(window).height();
+    const documentHeight = $(document).height();
+    
+    // 최상단 (0px)
+    if (scrollTop === 0) {
         $(".top-menu").css("display", "block");
     }
-})//scroll/////////////
-// html의 최하단에서 스크롤을 아래로하면 .header.top-menu가 display block로 1초걸리게 하고 바꾸기
-$(window).scroll(function () {
-    if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+    // 최하단 (여유값 10px 추가로 더 잘 감지)
+    else if (scrollTop + windowHeight >= documentHeight - 10) {
         $(".top-menu").css("display", "block");
     }
-})//scroll/////////////
+    // 중간 영역
+    else {
+        $(".top-menu").css("display", "none");
+    }
+});//scroll/////////////
 
 
 // .pdct-box > ul > li, .colab-box > ul > li, .store-box > ul > li:hover시
