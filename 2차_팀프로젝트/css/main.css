@@ -1154,7 +1154,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  border-bottom: 4px solid #aa76ce8c;
+  border-bottom: 4px solid #58237d8c;
 }
 .img-area1 > ul {
   position: absolute;
@@ -1177,7 +1177,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  border-bottom: 3px solid #aa76ce8c;
+  border-bottom: 3px solid #58237d8c;
 }
 .img-area2 > ul {
   position: absolute;
@@ -1200,7 +1200,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  border-bottom: 3px solid #aa76ce8c;
+  border-bottom: 3px solid #58237d8c;
 }
 .img-area3 > ul {
   position: absolute;
@@ -1228,7 +1228,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  border-bottom: 3px solid #aa76ce8c;
+
 }
 .img-area4 > ul {
   position: absolute;
@@ -1263,7 +1263,7 @@
 /* 속박스2 */
 .info2 {
   display: flex;
-  font-size: 2vw;
+  font-size: 1vw;
   width: 50%;
   align-items: center;
 }

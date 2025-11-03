@@ -12,6 +12,12 @@ $(window).scroll(function () {
         $(".top-menu").css("display", "block");
     }
 })//scroll/////////////
+// html의 최하단에서 스크롤을 아래로하면 .header.top-menu가 display block로 1초걸리게 하고 바꾸기
+$(window).scroll(function () {
+    if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+        $(".top-menu").css("display", "block");
+    }
+})//scroll/////////////
 
 
 // .pdct-box > ul > li, .colab-box > ul > li, .store-box > ul > li:hover시
