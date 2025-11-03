@@ -12,17 +12,17 @@
   border-bottom: 3px solid #000000;
   opacity: 0.5;
 }
+
 .store-btn {
   position: absolute;
-  left: 25%;
+  left: 50%;
   transform: translateX(-50%);
-  top: -10%;
-  font-size: .8vw;
+  top: -5%;
+  font-size: 1vw;
   transition: all 0.3s;
   cursor: pointer;
   border-radius: 8px;
 }
-
 .store-btn:hover {
   background-color: #000;
   color: #fff;
