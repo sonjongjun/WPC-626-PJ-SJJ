@@ -1302,19 +1302,22 @@
 }
 .d-store-area > ul > li {
   position: relative;
-  flex: 1;
+  width: 100%;
+  height: 100vh;
+  flex: 1; 
 }
 .d-store-area > ul > li:first-child {
   background: url(../01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/teahouse_store_pc_4.webp)
     no-repeat center/cover;
-    width: 100vw;
-    height: 100vh;
+    aspect-ratio: 2/1;
 }
 .d-store-area > ul > li:nth-child(2) {
-  background: url(../01.자료수집/01.메인상단지점이미지/02.누데이크도산이미지/nudake_dosan_pc_5.webp)
+  background: url(../01.자료수집/01.메인상단지점이미지/02.누데이크도산이미지/nudake_dosan_pc_4.webp)
     no-repeat center/cover;
+        aspect-ratio: 2/1;
 }
 .d-store-area > ul > li:nth-child(3) {
-  background: url(../01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/nudake_shanghai_pc_7.webp)
+  background: url(../01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/nudake_shanghai_pc_1.webp)
     no-repeat center/cover;
+    aspect-ratio: 2/1;
 }
