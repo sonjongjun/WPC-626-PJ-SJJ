@@ -36,3 +36,7 @@ h2 {
   padding-top: 9vh;
   margin-left: 1vw;
 }
+button {
+  cursor: pointer;
+  font: 1vw "Hahmlet", serif;
+}
