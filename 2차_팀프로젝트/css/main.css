@@ -655,7 +655,7 @@
   opacity: 0;
 }
 .colab-box3 > ul > li:first-child {
-  background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/jennie_contents_4.png)
+  background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/jennie_popup_1_pc.webp)
     no-repeat center/cover;
 }
 .colab-box3 > ul > li:nth-child(2) {
@@ -1308,14 +1308,37 @@
   background: url(../01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/teahouse_store_pc_4.webp)
     no-repeat center/cover;
   aspect-ratio: 2/1;
+  border-bottom: 2vh solid #ffffff;
 }
 .d-store-area > ul > li:nth-child(2) {
   background: url(../01.자료수집/01.메인상단지점이미지/02.누데이크도산이미지/nudake_dosan_pc_4.webp)
     no-repeat center/cover;
   aspect-ratio: 2/1;
+  border-bottom: 2vh solid #ffffff;
 }
 .d-store-area > ul > li:nth-child(3) {
   background: url(../01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/nudake_shanghai_pc_1.webp)
     no-repeat center/cover;
   aspect-ratio: 2/1;
+}
+.d-store-area-inbox p{
+  position: absolute;
+  font-size: 4vw;
+  color: #ffffff91;
+   bottom: 13%;
+  translate: -50%;
+  left: 50%;
+}
+.d-store-area-inbox button{
+  position: absolute;
+  font-size: 2vw;
+  padding: 1vh 2vw;
+  border-radius: 8px;
+  background-color: #ffffff49;
+  border: none;
+  cursor: pointer;
+  bottom: 5%;
+  translate: -50%;
+  left: 50%;
+  color: #fff;
 }
