@@ -25,7 +25,6 @@ $(window).scroll(function () {
         $(".top-menu").css("display", "none");
     }
 });//scroll/////////////
-
 $(".top-menu > ul > li:first-child").click(function() {
   // NUDAKE 로고 클릭 시 최상단으로
   isScrolling = true;
