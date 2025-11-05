@@ -1400,6 +1400,7 @@
   height: 100vh;
   border-bottom: 13px solid #000;
   border-top: 13px solid #000;
+  overflow: hidden;
 }
 /* 속박스 ul */
 .cb-inbox {
@@ -1413,31 +1414,33 @@
 .cb-inbox li {
   position: relative;
   flex: 1;
+  will-change: transform;
+  transition: none;
 }
 .cb-inbox li:nth-child(1) {
   background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/티하우스13.webp)
     center/cover no-repeat;
-  translate: 0% 100%;
+  transform: translateY(100%);
 }
 .cb-inbox li:nth-child(2) {
   background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물5.webp)
     center/cover no-repeat;
-  translate: 0% 200%;
+  transform: translateY(200%);
 }
 .cb-inbox li:nth-child(3) {
   background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/제니28.webp)
     center/cover no-repeat;
-  translate: 0% 300%;
+  transform: translateY(300%);
 }
 .cb-inbox li:nth-child(4) {
   background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/생일10.webp)
     center/cover no-repeat;
-  translate: 0% 400%;
+  transform: translateY(400%);
 }
 .cb-inbox li:nth-child(5) {
   background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉5.webp)
     center/cover no-repeat;
-  translate: 0% 500%;
+  transform: translateY(500%);
 }
 /* 공통 아티클  */
 .cb-arti {
@@ -1447,7 +1450,7 @@
   text-align: center;
   cursor: pointer;
   padding: 1vh;
-  transition: translate 0.5s ease;
+  transition: transform 0.5s ease;
 }
 .cb-arti h2 {
   font-size: 1.2vw;
@@ -1462,25 +1465,33 @@
 .arti-1 {
   background-color: rgba(137, 43, 226, 0.555);
   color: #ffffff;
-  translate: 0% 90%;
+  transform: translateY(90%);
 }
 .arti-2 {
   background-color: rgba(255, 255, 255, 0.686);
   color: #04758c;
-  translate: 0% 86%;
+  transform: translateY(86%);
 }
 .arti-3 {
   background-color: rgba(255, 0, 0, 0.768);
   color: #000000;
-  translate: 0% 90%;
+  transform: translateY(90%);
 }
 .arti-4 {
   background-color: rgba(0, 0, 0, 0.812);
   color: #ffffff;
-  translate: 0% 87.3%;
+  transform: translateY(87.3%);
 }
 .arti-5 {
   background-color: rgba(113, 225, 131, 0.642);
   color: #ffffff;
-  translate: 0% 88.5%;
+  transform: translateY(88.5%);
+}
+/****************************************************************/
+html.colab-locked,
+body.colab-locked {
+    /* overflow: hidden !important; */
+    height: 100vh;
+    position: fixed;
+    width: 100%;
 }

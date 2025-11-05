@@ -302,6 +302,134 @@ $(".cb-arti").click(function () {
     $(this).css("translate", "0% 0%");
   }
   console.log("arti 클릭됨");
+});//click//////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////////
+// 콜라보 섹션 - 초부드러운 애니메이션
+let isColabLocked = false;
+let colabProgress = 0;
+let colabTargetProgress = 0; // 목표 진행도
+let colabLockPosition = 0;
+let colabCompleted = false;
+const COLAB_ANIMATION_SPEED = 0.012;
+const SMOOTH_FACTOR = 0.15; // 부드러움 정도 (0.1 ~ 0.3)
+
+// easing 함수
+function easeOutQuart(t) {
+    return 1 - Math.pow(1 - t, 4);
+}
+
+// 스크롤 잠금/해제
+function lockColabScroll(position) {
+    isColabLocked = true;
+    colabLockPosition = position;
+    $('html, body').css({
+        'overflow': 'hidden',
+        'position': 'fixed',
+        'height': '100vh',
+        'width': '100%',
+        'top': -position + 'px'
+    });
+}
+
+function unlockColabScroll() {
+    const scrollY = Math.abs(parseInt($('body').css('top') || '0'));
+    $('html, body').css({
+        'overflow': '',
+        'position': '',
+        'height': '',
+        'width': '',
+        'top': ''
+    });
+    window.scrollTo(0, scrollY);
+    isColabLocked = false;
+}
+
+// 부드러운 애니메이션 루프
+function smoothColabAnimation() {
+    if (isColabLocked && !colabCompleted) {
+        // 선형 보간으로 부드럽게
+        colabProgress += (colabTargetProgress - colabProgress) * SMOOTH_FACTOR;
+        
+        updateColabAnimation(colabProgress);
+        
+        // 완료 체크
+        if (colabProgress >= 0.98) {
+            colabCompleted = true;
+            setTimeout(() => unlockColabScroll(), 200);
+        }
+        
+        requestAnimationFrame(smoothColabAnimation);
+    }
+}
+
+// 휠 이벤트
+$(window).on('wheel', function(e) {
+    if (isColabLocked && !colabCompleted) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        // 목표 진행도만 업데이트
+        const delta = e.originalEvent.deltaY;
+        colabTargetProgress += (delta > 0 ? COLAB_ANIMATION_SPEED : -COLAB_ANIMATION_SPEED);
+        colabTargetProgress = Math.max(0, Math.min(1, colabTargetProgress));
+        
+        return false;
+    }
 });
 
+// 스크롤 이벤트
+$(window).on('scroll', function() {
+    if (isColabLocked && !colabCompleted) {
+        const currentScrollY = Math.abs(parseInt($('body').css('top') || '0'));
+        if (currentScrollY !== colabLockPosition) {
+            $('body').css('top', -colabLockPosition + 'px');
+        }
+        return;
+    }
+    
+    const scrollTop = $(window).scrollTop();
+    const cbBoxOffset = $(".cb-box").offset();
+    
+    if (cbBoxOffset) {
+        const cbBoxTop = cbBoxOffset.top;
+        
+        if (scrollTop >= cbBoxTop - 100 && !isColabLocked && !colabCompleted) {
+            colabProgress = 0;
+            colabTargetProgress = 0;
+            lockColabScroll(scrollTop);
+            smoothColabAnimation(); // 애니메이션 루프 시작
+        }
+        
+        if (scrollTop < cbBoxTop - 300 && colabCompleted) {
+            colabCompleted = false;
+            colabProgress = 0;
+            colabTargetProgress = 0;
+            updateColabAnimation(0);
+        }
+    }
+});
 
+// 애니메이션 업데이트
+function updateColabAnimation(progress) {
+    $(".cb-inbox li").each(function(index) {
+        const itemDelay = index * 0.12;
+        const itemDuration = 0.35;
+        
+        let itemProgress = (progress - itemDelay) / itemDuration;
+        itemProgress = Math.max(0, Math.min(1, itemProgress));
+        itemProgress = easeOutQuart(itemProgress);
+        
+        const initialValue = (index + 1) * 100;
+        const currentValue = initialValue * (1 - itemProgress);
+        
+        this.style.transform = `translateY(${currentValue}%)`;
+    });
+}
+
+// 초기화
+$(document).ready(function() {
+    updateColabAnimation(0);
+});
