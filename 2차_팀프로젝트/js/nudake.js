@@ -278,3 +278,10 @@ $(".top-menu > ul > li:first-child").click(function() {
     isScrolling = false;
   });
 });
+
+
+//cb-arti의 css를 갖고있는 arti-1, arti-2, arti-3, arti-4, arti-5 각자가 클릭될 때
+// translate: 0% 0%로 바꾸기
+$(".cb-arti.arti-1").click(function() {
+  $(".cb-arti.arti-1").css("transform", "translate(0%, 0%)");
+});

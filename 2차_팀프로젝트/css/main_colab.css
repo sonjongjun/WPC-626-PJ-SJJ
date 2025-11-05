@@ -1390,8 +1390,91 @@
 /************************ 그리드 페이지 종료!! ******************/
 /****************************************************************/
 
-
-
 /****************************************************************/
 /************************ 콜라보 페이지 시작!!! ******************/
 /****************************************************************/
+.cb-box {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border-bottom: 13px solid #000;
+  border-top: 13px solid #000;
+}
+/* 속박스 ul */
+.cb-inbox {
+  position: absolute;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+/* 배경 li */
+.cb-inbox li {
+  position: relative;
+  flex: 1;
+}
+.cb-inbox li:nth-child(1) {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/티하우스13.webp)
+    center/cover no-repeat;
+}
+.cb-inbox li:nth-child(2) {
+  background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물5.webp)
+    center/cover no-repeat;
+}
+.cb-inbox li:nth-child(3) {
+  background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/제니28.webp)
+    center/cover no-repeat;
+}
+.cb-inbox li:nth-child(4) {
+  background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/생일10.webp)
+    center/cover no-repeat;
+}
+.cb-inbox li:nth-child(5) {
+  background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉5.webp)
+    center/cover no-repeat;
+}
+/* 공통 아티클  */
+.cb-arti {
+  position: absolute;
+  bottom: 0%;
+  height: auto;
+  text-align: center;
+  cursor: pointer;
+  padding: 1vh;
+}
+.cb-arti h2 {
+  font-size: 1.2vw;
+}
+.cb-arti h3 {
+  font-size: 1vw;
+}
+.cb-arti p {
+  font-size: 0.8vw;
+}
+/* 개별 아티클영역 */
+.arti-1 {
+  background-color: rgba(137, 43, 226, 0.555);
+  color: #ffffff;
+  translate: 0% 90%;
+}
+.arti-2 {
+  background-color: rgba(255, 255, 255, 0.686);
+  color: #04758c;
+  translate: 0% 86%;
+}
+.arti-3 {
+  background-color: rgba(255, 0, 0, 0.768);
+  color: #000000;
+  translate: 0% 90%;
+}
+.arti-4 {
+  background-color: rgba(0, 0, 0, 0.812);
+  color: #ffffff;
+  translate: 0% 87.3%;
+}
+.arti-5 {
+  background-color: rgba(113, 225, 131, 0.642);
+  color: #ffffff;
+  translate: 0% 88.5%;
+}
