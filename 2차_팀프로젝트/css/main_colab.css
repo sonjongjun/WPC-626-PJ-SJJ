@@ -1408,7 +1408,7 @@
   display: flex;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  overflow: visible;
 }
 /* 배경 li */
 .cb-inbox li {
@@ -1416,31 +1416,38 @@
   flex: 1;
   will-change: transform;
   transition: none;
+  width: 100vw;
+  height: 100vh;
 }
 .cb-inbox li:nth-child(1) {
   background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/티하우스13.webp)
     center/cover no-repeat;
   transform: translateY(100%);
+  z-index: 5;
 }
 .cb-inbox li:nth-child(2) {
   background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물5.webp)
     center/cover no-repeat;
   transform: translateY(200%);
+  z-index: 4;
 }
 .cb-inbox li:nth-child(3) {
   background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/제니28.webp)
     center/cover no-repeat;
   transform: translateY(300%);
+  z-index: 3;
 }
 .cb-inbox li:nth-child(4) {
   background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/생일10.webp)
     center/cover no-repeat;
   transform: translateY(400%);
+  z-index: 2;
 }
 .cb-inbox li:nth-child(5) {
   background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉5.webp)
     center/cover no-repeat;
   transform: translateY(500%);
+  z-index: 1;
 }
 /* 공통 아티클  */
 .cb-arti {
@@ -1451,6 +1458,8 @@
   cursor: pointer;
   padding: 1vh;
   transition: transform 0.5s ease;
+  z-index: 10;
+  pointer-events: auto;
 }
 .cb-arti h2 {
   font-size: 1.2vw;
@@ -1490,8 +1499,8 @@
 /****************************************************************/
 html.colab-locked,
 body.colab-locked {
-    /* overflow: hidden !important; */
+    /* overflow: hidden !important;
     height: 100vh;
     position: fixed;
-    width: 100%;
+    width: 100%; */
 }
