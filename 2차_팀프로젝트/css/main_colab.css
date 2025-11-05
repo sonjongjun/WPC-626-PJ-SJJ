@@ -1,0 +1,1387 @@
+/* 상단메뉴 css */
+.top-menu {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  box-sizing: border-box;
+  background-color: #f5f2f2;
+  z-index: 999;
+  border-bottom: 3px solid #000000;
+  opacity: 0.5;
+}
+
+.store-btn {
+  position: absolute;
+  left: 18.4%;
+  transform: translateX(-50%);
+  top: -9.5%;
+  font-size: 2vw;
+  transition: all 0.3s;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: #fff;
+  border: none;
+  font-weight: bold;
+}
+.colab-btn {
+  position: absolute;
+  left: 40.4%;
+  transform: translateX(-50%);
+  top: -9.5%;
+  font-size: 2vw;
+  transition: all 0.3s;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: #fff;
+  border: none;
+  font-weight: bold;
+}
+.pdct-btn {
+  position: absolute;
+  left: 24.4%;
+  transform: translateX(-50%);
+  top: -9.5%;
+  font-size: 2vw;
+  transition: all 0.3s;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: #fff;
+  border: none;
+  font-weight: bold;
+}
+.top-menu:hover {
+  opacity: 1;
+  transition: 0.5s ease-in-out all;
+}
+.top-menu > ul {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  height: 100%;
+  justify-content: space-between;
+  line-height: 10vh;
+  font-size: 1vw;
+  gap: 2vw;
+}
+.top-menu > ul > li {
+  cursor: pointer;
+  height: 70%;
+}
+.top-menu > ul > :first-child {
+  font-size: 1.5vw;
+  font-weight: bold;
+  margin-left: 1vw;
+  border: none;
+}
+.top-menu > ul :hover {
+  /* border-bottom: 1px solid #000000; */
+  font-weight: bold;
+}
+/**************************** 상단영역 종료 ****************************/
+/**************************** 메인 지점영역 ****************************/
+.store-box {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border-bottom: 13px solid #000;
+  border-top: 13px solid #000;
+}
+.store {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+/* 메인으로 보이는 호버화면 */
+.store-box > ul > li {
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+  z-index: 2;
+}
+.store-box > ul > li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* 앱솔루트 사방채우기 */
+  background-color: #000;
+  opacity: 0.5;
+
+  /* 트랜지션: 속시이지 */
+  transition: all 0.4s ease-out;
+}
+.store-box > ul > li:hover {
+  flex: 1.4;
+}
+.store-box > ul > li:hover::before {
+  opacity: 0;
+}
+.store-box > ul > li:first-child {
+  background: url(../01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/성수1.webp)
+    no-repeat center/cover;
+}
+.store-box > ul > li:nth-child(2) {
+  background: url(../01.자료수집/01.메인상단지점이미지/02.누데이크도산이미지/도산6.webp)
+    no-repeat center/cover;
+}
+.store-box > ul > li:nth-child(3) {
+  background: url(../01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/상하이1.webp)
+    no-repeat center/cover;
+}
+.store-box > ul > li > p {
+  font-size: 5vw;
+  color: #ffffff;
+  translate: 17% 150%;
+  opacity: 0;
+}
+.store-box > ul > li:nth-child(2) > p {
+  translate: 22% 150%;
+}
+.store-box > ul > li:nth-child(3) > p {
+  translate: 17% 150%;
+}
+
+/**************************** 성수 속박스 영역 ****************************/
+.store-box1 {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.store-box1-inbox {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1); /* 부드럽고 탄성 있는 느낌 */
+  z-index: 1;
+}
+
+.store-box1-inbox.active {
+  opacity: 1;
+  transform: translateX(0); /* 제자리로 이동 */
+  z-index: 3;
+}
+.store-box1 > ul > li {
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+.store-box1 > ul > li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* 앱솔루트 사방채우기 */
+  background-color: #000;
+  opacity: 0.3;
+
+  /* 트랜지션: 속시이지 */
+  transition: all 0.4s ease-out;
+}
+.store-box1 > ul > li:hover {
+  flex: 2.4;
+}
+.store-box1 > ul > li:hover::before {
+  opacity: 0;
+}
+.store-box1 > ul > li:first-child {
+  background: url(../01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/성수1.webp)
+    no-repeat center/cover;
+}
+.store-box1 > ul > li:nth-child(2) {
+  background: url(../01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/성수5.webp)
+    no-repeat center/cover;
+}
+.store-box1 > ul > li:nth-child(3) {
+  background: url(../01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/성수3.webp)
+    no-repeat center/cover;
+}
+.store-box1 > ul > li:nth-child(4) {
+  background: url(../01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/성수6.webp)
+    no-repeat center/cover;
+}
+.store-box1 > ul > li:nth-child(5) {
+  background: url(../01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/성수2.webp)
+    no-repeat center/cover;
+}
+
+/*********************************** 성수 속박스 영역 종료 ***********************************/
+/**************************** 도산 속박스 영역 ****************************/
+.store-box2 {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  top: -100%;
+}
+.store-box2-inbox {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1); /* 부드럽고 탄성 있는 느낌 */
+  z-index: 1;
+}
+.store-box2-inbox.active {
+  opacity: 1;
+  transform: translateX(0); /* 제자리로 이동 */
+  z-index: 3;
+}
+.store-box2 > ul > li {
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+.store-box2 > ul > li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* 앱솔루트 사방채우기 */
+  background-color: #000;
+  opacity: 0.3;
+
+  /* 트랜지션: 속시이지 */
+  transition: all 0.4s ease-out;
+}
+.store-box2 > ul > li:hover {
+  flex: 2.4;
+}
+.store-box2 > ul > li:hover::before {
+  opacity: 0;
+}
+.store-box2 > ul > li:first-child {
+  background: url(../01.자료수집/01.메인상단지점이미지/02.누데이크도산이미지/도산1.webp)
+    no-repeat center/cover;
+}
+.store-box2 > ul > li:nth-child(2) {
+  background: url(../01.자료수집/01.메인상단지점이미지/02.누데이크도산이미지/도산4.webp)
+    no-repeat center/cover;
+}
+.store-box2 > ul > li:nth-child(3) {
+  background: url(../01.자료수집/01.메인상단지점이미지/02.누데이크도산이미지/도산6.webp)
+    no-repeat center/cover;
+}
+.store-box2 > ul > li:nth-child(4) {
+  background: url(../01.자료수집/01.메인상단지점이미지/02.누데이크도산이미지/도산3.webp)
+    no-repeat center/cover;
+}
+.store-box2 > ul > li:nth-child(5) {
+  background: url(../01.자료수집/01.메인상단지점이미지/02.누데이크도산이미지/도산5.webp)
+    no-repeat center/cover;
+}
+
+/*********************************** 도산 속박스 영역 종료 ***********************************/
+
+/**************************** 상하이 속박스 영역 ****************************/
+.store-box3 {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  top: -200%;
+}
+.store-box3-inbox {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1); /* 부드럽고 탄성 있는 느낌 */
+  z-index: 1;
+}
+.store-box3-inbox.active {
+  opacity: 1;
+  transform: translateX(0); /* 제자리로 이동 */
+  z-index: 3;
+}
+.store-box3 > ul > li {
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+.store-box3 > ul > li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* 앱솔루트 사방채우기 */
+  background-color: #000;
+  opacity: 0.3;
+
+  /* 트랜지션: 속시이지 */
+  transition: all 0.4s ease-out;
+}
+.store-box3 > ul > li:hover {
+  flex: 2.4;
+}
+.store-box3 > ul > li:hover::before {
+  opacity: 0;
+}
+.store-box3 > ul > li:first-child {
+  background: url(../01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/상하이5.webp)
+    no-repeat center/cover;
+}
+.store-box3 > ul > li:nth-child(2) {
+  background: url(../01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/상하이3.webp)
+    no-repeat center/cover;
+}
+.store-box3 > ul > li:nth-child(3) {
+  background: url(../01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/상하이1.webp)
+    no-repeat center/cover;
+}
+.store-box3 > ul > li:nth-child(4) {
+  background: url(../01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/상하이7.webp)
+    no-repeat center/cover;
+}
+.store-box3 > ul > li:nth-child(5) {
+  background: url(../01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/상하이2.webp)
+    no-repeat center/cover;
+}
+
+/*********************************** 상하이 속박스 영역 종료 ***********************************/
+
+/* ********************************************************************************** */
+/********************************* 메인 지점영역 종료 *********************************/
+/* ********************************************************************************** */
+
+/********************************* 메인 콜라보영역 *********************************/
+.colab-box {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border-bottom: 13px solid #000;
+  border-top: 13px solid #000;
+}
+.colab {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.colab-box > ul > li {
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+  z-index: 2;
+}
+.colab-box > ul > li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* 앱솔루트 사방채우기 */
+  background-color: #000;
+  opacity: 0.5;
+
+  /* 트랜지션: 속시이지 */
+  transition: all 0.4s ease-out;
+}
+.colab-box > ul > li:hover {
+  flex: 1.4;
+}
+.colab-box > ul > li:hover::before {
+  opacity: 0;
+}
+.colab-box > ul > li:first-child {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/티하우스13.webp)
+    no-repeat center/cover;
+}
+.colab-box > ul > li:nth-child(2) {
+  background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물2.webp)
+    no-repeat center/cover;
+}
+.colab-box > ul > li:nth-child(3) {
+  background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/제니29.webp)
+    no-repeat center/cover;
+}
+.colab-box > ul > li:nth-child(4) {
+  background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/생일10.webp)
+    no-repeat center/cover;
+}
+.colab-box > ul > li:nth-child(5) {
+  background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉5.webp)
+    no-repeat center/cover;
+}
+.colab-box > ul > li > p {
+  font-size: 4vw;
+  color: #7b1e1e;
+  translate: 17% 150%;
+  opacity: 0;
+}
+.colab-box > ul > li:first-child > p {
+  translate: 18% 200%;
+}
+.colab-box > ul > li:nth-child(2) > p {
+  translate: 17% 120%;
+}
+.colab-box > ul > li:nth-child(3) > p {
+  translate: 20% 455%;
+}
+.colab-box > ul > li:nth-child(4) > p {
+  translate: 23% 190%;
+}
+.colab-box > ul > li:nth-child(5) > p {
+  translate: 19% 180%;
+}
+
+/* 메인 콜라보 영역 종료!! */
+/* *************************** 콜라보 속박스 영역 1 ***************************/
+.colab-box1 {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  top: 0%;
+}
+.colab-box1-inbox {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1); /* 부드럽고 탄성 있는 느낌 */
+  z-index: 1;
+}
+
+.colab-box1-inbox.active {
+  opacity: 1;
+  transform: translateX(0); /* 제자리로 이동 */
+  z-index: 3;
+}
+.colab-box1 > ul > li {
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+.colab-box1 > ul > li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* 앱솔루트 사방채우기 */
+  background-color: #000;
+  opacity: 0.3;
+
+  /* 트랜지션: 속시이지 */
+  transition: all 0.4s ease-out;
+}
+.colab-box1 > ul > li:hover {
+  flex: 2.4;
+}
+.colab-box1 > ul > li:hover::before {
+  opacity: 0;
+}
+.colab-box1 > ul > li:first-child {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/티하우스13.webp)
+    no-repeat center/cover;
+}
+.colab-box1 > ul > li:nth-child(2) {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/티하우스12.webp)
+    no-repeat center/cover;
+}
+.colab-box1 > ul > li:nth-child(3) {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/티하우스15.webp)
+    no-repeat center/cover;
+}
+.colab-box1 > ul > li:nth-child(4) {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/티하우스11.webp)
+    no-repeat center/cover;
+}
+.colab-box1 > ul > li:nth-child(5) {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/티하우스9.webp)
+    no-repeat center/cover;
+}
+
+/*********************************** 콜라보 속박스1 영역 종료 ***********************************/
+/* *************************** 콜라보 속박스 영역 2 ***************************/
+.colab-box2 {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  top: -100%;
+}
+.colab-box2-inbox {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1); /* 부드럽고 탄성 있는 느낌 */
+  z-index: 1;
+}
+.colab-box2-inbox.active {
+  opacity: 1;
+  transform: translateX(0); /* 제자리로 이동 */
+  z-index: 3;
+}
+.colab-box2 > ul > li {
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+.colab-box2 > ul > li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* 앱솔루트 사방채우기 */
+  background-color: #000;
+  opacity: 0.3;
+
+  /* 트랜지션: 속시이지 */
+  transition: all 0.4s ease-out;
+}
+.colab-box2 > ul > li:hover {
+  flex: 2.4;
+}
+.colab-box2 > ul > li:hover::before {
+  opacity: 0;
+}
+.colab-box2 > ul > li:first-child {
+  background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물3.webp)
+    no-repeat center/cover;
+}
+.colab-box2 > ul > li:nth-child(2) {
+  background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물2.webp)
+    no-repeat center/cover;
+}
+.colab-box2 > ul > li:nth-child(3) {
+  background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물4.webp)
+    no-repeat center/cover;
+}
+.colab-box2 > ul > li:nth-child(4) {
+  background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물13.webp)
+    no-repeat center/cover;
+}
+.colab-box2 > ul > li:nth-child(5) {
+  background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물11.webp)
+    no-repeat center/cover;
+}
+
+/*********************************** 콜라보 속박스 영역 종료 ***********************************/
+/* *************************** 콜라보 속박스 영역 3 ***************************/
+.colab-box3 {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  top: -200%;
+}
+.colab-box3-inbox {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1); /* 부드럽고 탄성 있는 느낌 */
+  z-index: 1;
+}
+
+.colab-box3-inbox.active {
+  opacity: 1;
+  transform: translateX(0); /* 제자리로 이동 */
+  z-index: 3;
+}
+.colab-box3 > ul > li {
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+.colab-box3 > ul > li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* 앱솔루트 사방채우기 */
+  background-color: #000;
+  opacity: 0.3;
+
+  /* 트랜지션: 속시이지 */
+  transition: all 0.4s ease-out;
+}
+.colab-box3 > ul > li:hover {
+  flex: 2.4;
+}
+.colab-box3 > ul > li:hover::before {
+  opacity: 0;
+}
+.colab-box3 > ul > li:first-child {
+  background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/제니27.webp)
+    no-repeat center/cover;
+}
+.colab-box3 > ul > li:nth-child(2) {
+  background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/제니28.webp)
+    no-repeat center/cover;
+}
+.colab-box3 > ul > li:nth-child(3) {
+  background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/제니29.webp)
+    no-repeat center/cover;
+}
+.colab-box3 > ul > li:nth-child(4) {
+  background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/제니35.webp)
+    no-repeat center/cover;
+}
+.colab-box3 > ul > li:nth-child(5) {
+  background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/제니30.webp)
+    no-repeat center/cover;
+}
+
+/*********************************** 콜라보 속박스 영역 종료 ***********************************/
+/* *************************** 콜라보 속박스 영역 4 ***************************/
+.colab-box4 {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  top: -300%;
+}
+.colab-box4-inbox {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1); /* 부드럽고 탄성 있는 느낌 */
+  z-index: 1;
+}
+.colab-box4-inbox.active {
+  opacity: 1;
+  transform: translateX(0); /* 제자리로 이동 */
+  z-index: 3;
+}
+.colab-box4 > ul > li {
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+.colab-box4 > ul > li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* 앱솔루트 사방채우기 */
+  background-color: #000;
+  opacity: 0.3;
+
+  /* 트랜지션: 속시이지 */
+  transition: all 0.4s ease-out;
+}
+.colab-box4 > ul > li:hover {
+  flex: 2.4;
+}
+.colab-box4 > ul > li:hover::before {
+  opacity: 0;
+}
+.colab-box4 > ul > li:first-child {
+  background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/생일8.webp)
+    no-repeat center/cover;
+}
+.colab-box4 > ul > li:nth-child(2) {
+  background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/생일12.webp)
+    no-repeat center/cover;
+}
+.colab-box4 > ul > li:nth-child(3) {
+  background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/생일11.webp)
+    no-repeat center/cover;
+}
+.colab-box4 > ul > li:nth-child(4) {
+  background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/생일10.webp)
+    no-repeat center/cover;
+}
+.colab-box4 > ul > li:nth-child(5) {
+  background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/생일13.webp)
+    no-repeat center/cover;
+}
+
+/*********************************** 콜라보 속박스 영역 종료 ***********************************/
+/* *************************** 콜라보 속박스 영역 5 ***************************/
+.colab-box5 {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  top: -400%;
+}
+.colab-box5-inbox {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1); /* 부드럽고 탄성 있는 느낌 */
+  z-index: 1;
+}
+.colab-box5-inbox.active {
+  opacity: 1;
+  transform: translateX(0); /* 제자리로 이동 */
+  z-index: 3;
+}
+.colab-box5 > ul > li {
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+.colab-box5 > ul > li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* 앱솔루트 사방채우기 */
+  background-color: #000;
+  opacity: 0.3;
+
+  /* 트랜지션: 속시이지 */
+  transition: all 0.4s ease-out;
+}
+.colab-box5 > ul > li:hover {
+  flex: 2.4;
+}
+.colab-box5 > ul > li:hover::before {
+  opacity: 0;
+}
+.colab-box5 > ul > li:first-child {
+  background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉3.webp)
+    no-repeat center/cover;
+}
+.colab-box5 > ul > li:nth-child(2) {
+  background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉6.webp)
+    no-repeat center/cover;
+}
+.colab-box5 > ul > li:nth-child(3) {
+  background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉9.webp)
+    no-repeat center/cover;
+}
+.colab-box5 > ul > li:nth-child(4) {
+  background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉4.webp)
+    no-repeat center/cover;
+}
+.colab-box5 > ul > li:nth-child(5) {
+  background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉5.webp)
+    no-repeat center/cover;
+}
+
+/*********************************** 콜라보 속박스 영역 종료 ***********************************/
+/******************************* 콜라보영역 종료 *******************************/
+
+/******************************* 품목영역시작! *******************************/
+.pdct-box {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border-bottom: 13px solid #000;
+  border-top: 13px solid #000;
+}
+.pdct {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.pdct-box > ul > li {
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+  z-index: 2;
+}
+.pdct-box > ul > li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* 앱솔루트 사방채우기 */
+  background-color: #000;
+  opacity: 0.5;
+
+  /* 트랜지션: 속시이지 */
+  transition: all 0.4s ease-out;
+}
+.pdct-box > ul > li:hover {
+  flex: 1.4;
+}
+.pdct-box > ul > li:hover::before {
+  opacity: 0;
+}
+.pdct-box > ul > li:first-child {
+  background: url(../01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트16.webp)
+    no-repeat center/cover;
+}
+.pdct-box > ul > li:nth-child(2) {
+  background: url(../01.자료수집/03.하단메뉴영역/02.음료메뉴/음료1.webp)
+    no-repeat center/cover;
+}
+.pdct-box > ul > li:nth-child(3) {
+  background: url(../01.자료수집/03.하단메뉴영역/03.굿즈메뉴/굿즈1.webp)
+    no-repeat center/cover;
+}
+.pdct-box > ul > li > p {
+  font-size: 5vw;
+  color: #ffd000;
+  translate: 17% 150%;
+  opacity: 0;
+}
+.pdct-box > ul > li:nth-child(1) > p {
+  translate: 11% 337%;
+}
+.pdct-box > ul > li:nth-child(2) > p {
+  translate: 9% 337%;
+}
+.pdct-box > ul > li:nth-child(3) > p {
+  translate: 26% 337%;
+}
+/********************** 품목 영역 종료 **********************/
+/* *************************** 품목영역 속박스 영역 1 ***************************/
+.pdct-box1 {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  top: 0%;
+}
+.pdct-box1-inbox {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1); /* 부드럽고 탄성 있는 느낌 */
+  z-index: 1;
+}
+.pdct-box1-inbox.active {
+  opacity: 1;
+  transform: translateX(0); /* 제자리로 이동 */
+  z-index: 3;
+}
+.pdct-box1 > ul > li {
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+.pdct-box1 > ul > li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* 앱솔루트 사방채우기 */
+  background-color: #000;
+  opacity: 0.3;
+
+  /* 트랜지션: 속시이지 */
+  transition: all 0.4s ease-out;
+}
+.pdct-box1 > ul > li:hover {
+  flex: 2.4;
+}
+.pdct-box1 > ul > li:hover::before {
+  opacity: 0;
+}
+.pdct-box1 > ul > li:first-child {
+  background: url(../01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트6.webp)
+    no-repeat center/cover;
+}
+.pdct-box1 > ul > li:nth-child(2) {
+  background: url(../01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트9.webp)
+    no-repeat center/cover;
+}
+.pdct-box1 > ul > li:nth-child(3) {
+  background: url(../01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트23.webp)
+    no-repeat center/cover;
+}
+.pdct-box1 > ul > li:nth-child(4) {
+  background: url(../01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트40.webp)
+    no-repeat center/cover;
+}
+.pdct-box1 > ul > li:nth-child(5) {
+  background: url(../01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트66.webp)
+    no-repeat center/cover;
+}
+
+/*********************************** 품목영역 속박스 영역 종료 ***********************************/
+/* *************************** 품목영역 속박스 영역 2 ***************************/
+.pdct-box2 {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  top: -100%;
+}
+.pdct-box2-inbox {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1); /* 부드럽고 탄성 있는 느낌 */
+  z-index: 1;
+}
+.pdct-box2-inbox.active {
+  opacity: 1;
+  transform: translateX(0); /* 제자리로 이동 */
+  z-index: 3;
+}
+.pdct-box2 > ul > li {
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+.pdct-box2 > ul > li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* 앱솔루트 사방채우기 */
+  background-color: #000;
+  opacity: 0.3;
+
+  /* 트랜지션: 속시이지 */
+  transition: all 0.4s ease-out;
+}
+.pdct-box2 > ul > li:hover {
+  flex: 2.4;
+}
+.pdct-box2 > ul > li:hover::before {
+  opacity: 0;
+}
+.pdct-box2 > ul > li:first-child {
+  background: url(../01.자료수집/03.하단메뉴영역/02.음료메뉴/음료9.webp)
+    no-repeat center/cover;
+}
+.pdct-box2 > ul > li:nth-child(2) {
+  background: url(../01.자료수집/03.하단메뉴영역/02.음료메뉴/음료12.webp)
+    no-repeat center/cover;
+}
+.pdct-box2 > ul > li:nth-child(3) {
+  background: url(../01.자료수집/03.하단메뉴영역/02.음료메뉴/음료1.webp)
+    no-repeat center/cover;
+}
+.pdct-box2 > ul > li:nth-child(4) {
+  background: url(../01.자료수집/03.하단메뉴영역/02.음료메뉴/음료22.webp)
+    no-repeat center/cover;
+}
+.pdct-box2 > ul > li:nth-child(5) {
+  background: url(../01.자료수집/03.하단메뉴영역/02.음료메뉴/음료19.webp)
+    no-repeat center/cover;
+}
+
+/*********************************** 품목영역 속박스 영역 종료 ***********************************/
+/* *************************** 품목영역 속박스 영역 1 ***************************/
+.pdct-box3 {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  top: -200%;
+}
+.pdct-box3-inbox {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1); /* 부드럽고 탄성 있는 느낌 */
+  z-index: 1;
+}
+.pdct-box3-inbox.active {
+  opacity: 1;
+  transform: translateX(0); /* 제자리로 이동 */
+  z-index: 3;
+}
+.pdct-box3 > ul > li {
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+.pdct-box3 > ul > li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* 앱솔루트 사방채우기 */
+  background-color: #000;
+  opacity: 0.3;
+
+  /* 트랜지션: 속시이지 */
+  transition: all 0.4s ease-out;
+}
+.pdct-box3 > ul > li:hover {
+  flex: 2.4;
+}
+.pdct-box3 > ul > li:hover::before {
+  opacity: 0;
+}
+.pdct-box3 > ul > li:first-child {
+  background: url(../01.자료수집/03.하단메뉴영역/03.굿즈메뉴/굿즈5.webp)
+    no-repeat center/cover;
+}
+.pdct-box3 > ul > li:nth-child(2) {
+  background: url(../01.자료수집/03.하단메뉴영역/03.굿즈메뉴/굿즈4.webp)
+    no-repeat center/cover;
+}
+.pdct-box3 > ul > li:nth-child(3) {
+  background: url(../01.자료수집/03.하단메뉴영역/03.굿즈메뉴/굿즈3.webp)
+    no-repeat center/cover;
+}
+.pdct-box3 > ul > li:nth-child(4) {
+  background: url(../01.자료수집/03.하단메뉴영역/03.굿즈메뉴/굿즈2.webp)
+    no-repeat center/cover;
+}
+.pdct-box3 > ul > li:nth-child(5) {
+  background: url(../01.자료수집/03.하단메뉴영역/03.굿즈메뉴/굿즈1.webp)
+    no-repeat center/cover;
+}
+
+/*********************************** 품목영역 속박스 영역 종료 ***********************************/
+
+/*********************** 하단영역 시작 ***********************/
+.bottom-area {
+  font-size: 1vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  border-top: 3px solid #000000;
+}
+.bt-1 {
+  align-items: center;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  /* background-color: #f5f2f2; */
+  z-index: 999;
+}
+
+.bt-box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-around;
+  align-items: center;
+}
+.bt-in-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  justify-content: center;
+  gap: 5%;
+}
+/****************************************************************/
+/************************ 하단영역종료!!! ************************/
+/****************************************************************/
+
+/****************************************************************/
+/************************ 디테일 페이지***************************/
+/****************************************************************/
+
+.img-area1 {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border-bottom: 4px solid #58237d8c;
+}
+.img-area1 > ul {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.img-area1 > ul > li {
+  position: relative;
+  flex: 1;
+}
+.img-area1 > ul > li {
+  background: url(../01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/성수1.webp)
+    no-repeat center/cover;
+  position: relative;
+  border-top: 13px solid #000;
+}
+
+.img-area2 {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border-bottom: 3px solid #58237d8c;
+}
+.img-area2 > ul {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.img-area2 > ul > li {
+  position: relative;
+  flex: 1;
+}
+.img-area2 > ul > li {
+  background: url(../01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/성수2.webp)
+    no-repeat center/cover;
+  position: relative;
+}
+
+.img-area3 {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border-bottom: 3px solid #58237d8c;
+}
+.img-area3 > ul {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.img-area3 > ul > li {
+  position: relative;
+  flex: 1;
+}
+.img-area3 > ul > li:nth-child(1) {
+  background: url(../01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/성수6.webp)
+    no-repeat center/cover;
+  position: relative;
+}
+.img-area3 > ul > li:nth-child(2) {
+  background: url(../01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/성수3.webp)
+    no-repeat center/cover;
+  position: relative;
+}
+
+.img-area4 {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.img-area4 > ul {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.img-area4 > ul > li {
+  position: relative;
+  flex: 1;
+}
+.img-area4 > ul > li:nth-child(1) {
+  background: url(../01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/성수5.webp)
+    no-repeat center/cover;
+  position: relative;
+}
+/* 인포박스 겉박스 */
+.info-sec {
+  display: flex;
+  font-size: 2vw;
+  width: 100%;
+  height: 15vh;
+}
+/* 속박스1 */
+.info1 {
+  display: flex;
+  font-size: 2vw;
+  width: 40%;
+  justify-content: space-around;
+  align-items: center;
+}
+/* 속박스2 */
+.info2 {
+  display: flex;
+  font-size: 1vw;
+  width: 50%;
+  align-items: center;
+}
+.map-btn {
+  position: absolute;
+  font-size: 1.5vw;
+  font-weight: bold;
+  border-radius: 8px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  right: 11%;
+}
+/****************************************************************/
+/************************ 디테일 페이지 종료!!! ******************/
+/****************************************************************/
+
+/****************************************************************/
+/************************ 지점 페이지 시작!!! ******************/
+/****************************************************************/
+.d-store-area {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* 100vh를 auto로 변경 */
+  border-bottom: 13px solid #000;
+  border-top: 13px solid #000;
+}
+.d-store-area-inbox {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.d-store-area > ul > li {
+  position: relative;
+  width: 100%;
+  height: auto; /* 100vh를 auto로 변경 */
+  flex-shrink: 0; /* flex: 1 제거하고 flex-shrink: 0 추가 */
+}
+.d-store-area > ul > li:first-child {
+  background: url(../01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/성수4.webp)
+    no-repeat center/cover;
+  aspect-ratio: 2/1;
+  border-bottom: 2vh solid #ffffff;
+}
+.d-store-area > ul > li:nth-child(2) {
+  background: url(../01.자료수집/01.메인상단지점이미지/02.누데이크도산이미지/도산4.webp)
+    no-repeat center/cover;
+  aspect-ratio: 2/1;
+  border-bottom: 2vh solid #ffffff;
+}
+.d-store-area > ul > li:nth-child(3) {
+  background: url(../01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/상하이1.webp)
+    no-repeat center/cover;
+  aspect-ratio: 2/1;
+}
+.d-store-area-inbox p {
+  position: absolute;
+  font-size: 4vw;
+  color: #ffffff91;
+  bottom: 13%;
+  translate: -50%;
+  left: 50%;
+}
+.d-store-area-inbox button {
+  position: absolute;
+  font-size: 2vw;
+  padding: 1vh 2vw;
+  border-radius: 8px;
+  background-color: #ffffff49;
+  border: none;
+  cursor: pointer;
+  bottom: 5%;
+  translate: -50%;
+  left: 50%;
+  color: #fff;
+}
+
+/****************************************************************/
+/************************ 지점 페이지 종료!! ******************/
+/****************************************************************/
+
+/****************************************************************/
+/************************ 그리드 페이지 시작!!! ******************/
+/****************************************************************/
+
+.grid-box {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid #000;
+  margin-bottom: 10vh;
+}
+.grid-box > div {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  box-sizing: border-box;
+}
+.grid-box > div:nth-child(4n) {
+  border-right: none;
+}
+.grid-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: pointer;
+}
+.grid-box h3 {
+  text-align: center;
+  position: absolute;
+  width: 50%;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 2vw;
+  color: #000000af;
+}
