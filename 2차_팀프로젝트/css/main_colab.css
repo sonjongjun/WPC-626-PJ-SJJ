@@ -1417,22 +1417,27 @@
 .cb-inbox li:nth-child(1) {
   background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/티하우스13.webp)
     center/cover no-repeat;
+  translate: 0% 100%;
 }
 .cb-inbox li:nth-child(2) {
   background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물5.webp)
     center/cover no-repeat;
+  translate: 0% 200%;
 }
 .cb-inbox li:nth-child(3) {
   background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/제니28.webp)
     center/cover no-repeat;
+  translate: 0% 300%;
 }
 .cb-inbox li:nth-child(4) {
   background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/생일10.webp)
     center/cover no-repeat;
+  translate: 0% 400%;
 }
 .cb-inbox li:nth-child(5) {
   background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉5.webp)
     center/cover no-repeat;
+  translate: 0% 500%;
 }
 /* 공통 아티클  */
 .cb-arti {
@@ -1442,6 +1447,7 @@
   text-align: center;
   cursor: pointer;
   padding: 1vh;
+  transition: translate 0.5s ease;
 }
 .cb-arti h2 {
   font-size: 1.2vw;

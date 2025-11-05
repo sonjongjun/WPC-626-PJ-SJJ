@@ -282,6 +282,26 @@ $(".top-menu > ul > li:first-child").click(function() {
 
 //cb-arti의 css를 갖고있는 arti-1, arti-2, arti-3, arti-4, arti-5 각자가 클릭될 때
 // translate: 0% 0%로 바꾸기
-$(".cb-arti.arti-1").click(function() {
-  $(".cb-arti.arti-1").css("transform", "translate(0%, 0%)");
+$(".cb-arti").each(function () {
+  // 초기 translate 값을 data 속성에 저장
+  const initialTranslate = $(this).css("translate");
+  $(this).attr("data-original-translate", initialTranslate);
 });
+
+$(".cb-arti").click(function () {
+  const isOpen = $(this).css("translate") === "0% 0%";
+
+  // 모든 arti를 원래 위치로 복귀
+  $(".cb-arti").each(function () {
+    const original = $(this).attr("data-original-translate");
+    $(this).css("translate", original);
+  });
+
+  // 클릭한 게 닫힌 상태였다면 — 열기
+  if (!isOpen) {
+    $(this).css("translate", "0% 0%");
+  }
+  console.log("arti 클릭됨");
+});
+
+
