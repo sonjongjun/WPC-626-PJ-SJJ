@@ -15,9 +15,24 @@
 .t-box {
   position: relative;
 }
+.t-box h2 {
+  display: inline-flex; /* 텍스트와 버튼을 한 줄에 배치 */
+  align-items: center; /* 세로 가운데 정렬 */
+  gap: 0.5em; /* 텍스트와 버튼 사이 간격 */
+  font-size: 3vw;
+}
+
+.t-box button {
+  position: static;
+  font-size: 1em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
 .store-btn {
   position: absolute;
-  left: 18.4%;
+  left: 40.4%;
   transform: translateX(-50%);
   top: 56%;
   font-size: 2vw;
