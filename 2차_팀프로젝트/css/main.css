@@ -12,12 +12,14 @@
   border-bottom: 3px solid #000000;
   opacity: 0.5;
 }
-
+.t-box {
+  position: relative;
+}
 .store-btn {
   position: absolute;
   left: 18.4%;
   transform: translateX(-50%);
-  top: -9.5%;
+  top: 56%;
   font-size: 2vw;
   transition: all 0.3s;
   cursor: pointer;
@@ -30,7 +32,7 @@
   position: absolute;
   left: 40.4%;
   transform: translateX(-50%);
-  top: -9.5%;
+  top: 56%;
   font-size: 2vw;
   transition: all 0.3s;
   cursor: pointer;
@@ -43,7 +45,7 @@
   position: absolute;
   left: 24.4%;
   transform: translateX(-50%);
-  top: -9.5%;
+  top: 56%;
   font-size: 2vw;
   transition: all 0.3s;
   cursor: pointer;
