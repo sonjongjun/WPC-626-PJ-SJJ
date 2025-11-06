@@ -1397,18 +1397,21 @@
   position: relative;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100vh; /* 화면 높이 전체를 차지하도록 유지 */
   border-bottom: 13px solid #000;
   border-top: 13px solid #000;
-  overflow: hidden;
+  /* li가 잘리는 것을 방지하기 위해 visible로 변경합니다. */
+  overflow: visible;
 }
+
+/* cb-inbox li의 부모인 .cb-inbox는 이미 overflow: visible; 로 설정되어 있어 별도 수정이 필요하지 않습니다. */
 /* 속박스 ul */
 .cb-inbox {
   position: absolute;
   display: flex;
   width: 100vw;
   height: 100vh;
-  overflow: visible;
+  overflow: hidden;
 }
 /* 배경 li */
 .cb-inbox li {
@@ -1476,31 +1479,46 @@
   color: #ffffff;
   transform: translateY(90%);
 }
+.arti-1:hover {
+  transform: translateY(85%);
+}
 .arti-2 {
   background-color: rgba(255, 255, 255, 0.686);
   color: #04758c;
   transform: translateY(86%);
+}
+.arti-2:hover{
+  transform: translateY(81%);
 }
 .arti-3 {
   background-color: rgba(255, 0, 0, 0.768);
   color: #000000;
   transform: translateY(90%);
 }
+.arti-3:hover{
+  transform: translateY(85%);
+}
 .arti-4 {
   background-color: rgba(0, 0, 0, 0.812);
   color: #ffffff;
   transform: translateY(87.3%);
+}
+.arti-4:hover{
+  transform: translateY(82.3%);
 }
 .arti-5 {
   background-color: rgba(113, 225, 131, 0.642);
   color: #ffffff;
   transform: translateY(88.5%);
 }
+.arti-5:hover{
+  transform: translateY(83.5%);
+}
 /****************************************************************/
 html.colab-locked,
 body.colab-locked {
-    /* overflow: hidden !important;
-    height: 100vh;
-    position: fixed;
-    width: 100%; */
+  /* overflow: hidden !important; */
+  height: 100vh;
+  position: fixed;
+  width: 100%;
 }
