@@ -1401,7 +1401,7 @@
   border-bottom: 13px solid #000;
   border-top: 13px solid #000;
   /* li가 잘리는 것을 방지하기 위해 visible로 변경합니다. */
-  overflow: visible;
+  overflow: hidden;
 }
 
 /* cb-inbox li의 부모인 .cb-inbox는 이미 overflow: visible; 로 설정되어 있어 별도 수정이 필요하지 않습니다. */
@@ -1410,8 +1410,8 @@
   position: absolute;
   display: flex;
   width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  height: 120vh;
+  overflow: visible;
 }
 /* 배경 li */
 .cb-inbox li {
