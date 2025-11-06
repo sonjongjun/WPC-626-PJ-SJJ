@@ -315,21 +315,6 @@ $(".cb-arti").click(function () {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // 아티클 클릭 이벤트 (기존 로직 유지)
 $(".cb-arti").each(function () {
     const initialTranslate = $(this).css("transform");

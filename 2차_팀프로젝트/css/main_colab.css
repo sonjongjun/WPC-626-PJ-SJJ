@@ -1394,13 +1394,13 @@
 /************************ 콜라보 페이지 시작!!! ******************/
 /****************************************************************/
 .cb-box {
-  position: relative;
+  position: sticky;
   justify-content: center;
   align-items: center;
-  height: 100vh; 
+  height: 600vh; 
   border-bottom: 13px solid #000;
   border-top: 13px solid #000;
-  overflow: hidden;
+  top: 0%;
 }
 
 /* 속박스 ul */
@@ -1412,42 +1412,45 @@
 }
 /* 배경 li */
 .cb-inbox li {
-  position: relative;
+
   flex: 1;
   will-change: transform;
   transition: none;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
   position: sticky;
+  top: 0%;
 }
 .cb-inbox li:nth-child(1) {
   background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/티하우스13.webp)
     center/cover no-repeat;
-  transform: translateY(0%);
+  transform: translateY(100%);
+  position: sticky;
   z-index: 5;
 }
 .cb-inbox li:nth-child(2) {
   background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물5.webp)
     center/cover no-repeat;
-  transform: translateY(0%);
+  transform: translateY(200%);
   z-index: 4;
 }
 .cb-inbox li:nth-child(3) {
   background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/제니28.webp)
     center/cover no-repeat;
-  transform: translateY(0%);
+  transform: translateY(300%);
   z-index: 3;
 }
 .cb-inbox li:nth-child(4) {
   background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/생일10.webp)
     center/cover no-repeat;
-  transform: translateY(0%);
+  transform: translateY(400%);
   z-index: 2;
 }
 .cb-inbox li:nth-child(5) {
   background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉5.webp)
     center/cover no-repeat;
-  transform: translateY(0%);
+  transform: translateY(500%);
   z-index: 1;
 }
 /* 공통 아티클  */
