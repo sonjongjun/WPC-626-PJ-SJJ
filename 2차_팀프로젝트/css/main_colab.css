@@ -1390,137 +1390,140 @@
 /************************ 그리드 페이지 종료!! ******************/
 /****************************************************************/
 
-/****************************************************************/
-/************************ 콜라보 페이지 시작!!! ******************/
-/****************************************************************/
-.cb-box {
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  height: 500vh;
-  border-bottom: 13px solid #000;
-  border-top: 13px solid #000;
-  top: 0%;
-}
+  /****************************************************************/
+  /************************ 콜라보 페이지 시작!!! ******************/
+  /****************************************************************/
+  .cb-box {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    border-bottom: 13px solid #000;
+    border-top: 13px solid #000;
+    top: 0%;
 
-/* 속박스 ul */
-.cb-inbox {
-  position: relative;
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-}
-/* 배경 li */
-.cb-inbox li {
-  position: sticky;
-  flex: 1;
-  transition: none;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center;
-  top: 0;
-  transition: opacity 0.3s ease;
-}
-.cb-inbox li:nth-child(1) {
-  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/티하우스13.webp)
-    center/cover no-repeat;
-  transform: translateY(100%);
-  position: sticky;
-  z-index: 5;
-}
-.cb-inbox li:nth-child(2) {
-  background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물5.webp)
-    center/cover no-repeat;
-  transform: translateY(200%);
-  z-index: 4;
-}
-.cb-inbox li:nth-child(3) {
-  background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/제니28.webp)
-    center/cover no-repeat;
-  transform: translateY(300%);
-  z-index: 3;
-}
-.cb-inbox li:nth-child(4) {
-  background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/생일10.webp)
-    center/cover no-repeat;
-  transform: translateY(400%);
-  z-index: 2;
-}
-.cb-inbox li:nth-child(5) {
-  background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉5.webp)
-    center/cover no-repeat;
-  transform: translateY(500%);
-  z-index: 1;
-}
-/* 공통 아티클  */
-.cb-arti {
-  position: absolute;
-  bottom: 0%;
-  height: auto;
-  text-align: center;
-  cursor: pointer;
-  padding: 1vh;
-  transition: transform 0.5s ease;
-  z-index: 10;
-  pointer-events: auto;
-}
-.cb-arti h2 {
-  font-size: 1.2vw;
-}
-.cb-arti h3 {
-  font-size: 1vw;
-}
-.cb-arti p {
-  font-size: 0.8vw;
-}
-/* 개별 아티클영역 */
-.arti-1 {
-  background-color: rgba(137, 43, 226, 0.555);
-  color: #ffffff;
-  transform: translateY(90%);
-}
-.arti-1:hover {
-  transform: translateY(85%);
-}
-.arti-2 {
-  background-color: rgba(255, 255, 255, 0.686);
-  color: #04758c;
-  transform: translateY(86%);
-}
-.arti-2:hover {
-  transform: translateY(81%);
-}
-.arti-3 {
-  background-color: rgba(255, 0, 0, 0.768);
-  color: #000000;
-  transform: translateY(90%);
-}
-.arti-3:hover {
-  transform: translateY(85%);
-}
-.arti-4 {
-  background-color: rgba(0, 0, 0, 0.812);
-  color: #ffffff;
-  transform: translateY(87.3%);
-}
-.arti-4:hover {
-  transform: translateY(82.3%);
-}
-.arti-5 {
-  background-color: rgba(113, 225, 131, 0.642);
-  color: #ffffff;
-  transform: translateY(88.5%);
-}
-.arti-5:hover {
-  transform: translateY(83.5%);
-}
-/****************************************************************/
-html.colab-locked,
-body.colab-locked {
-  /* overflow: hidden !important; */
-  height: 100vh;
-  position: fixed;
-  width: 100%;
-}
+  }
+
+  /* 속박스 ul */
+  .cb-inbox {
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+
+  }
+  /* 배경 li */
+  .cb-inbox li {
+    position: sticky;
+    flex: 1;
+    transition: none;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    transition: opacity 0.3s ease;
+  }
+  .cb-inbox li:nth-child(1) {
+    background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/티하우스13.webp)
+      center/cover no-repeat;
+    transform: translateY(100%);
+    z-index: 5;
+  }
+  .cb-inbox li:nth-child(2) {
+    background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물5.webp)
+      center/cover no-repeat;
+    transform: translateY(200%);
+    z-index: 4;
+  }
+  .cb-inbox li:nth-child(3) {
+    background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/제니28.webp)
+      center/cover no-repeat;
+    transform: translateY(300%);
+    z-index: 3;
+  }
+  .cb-inbox li:nth-child(4) {
+    background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/생일10.webp)
+      center/cover no-repeat;
+    transform: translateY(400%);
+    z-index: 2;
+  }
+  .cb-inbox li:nth-child(5) {
+    background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉5.webp)
+      center/cover no-repeat;
+    transform: translateY(500%);
+    z-index: 1;
+  }
+  /* 공통 아티클  */
+  .cb-arti {
+    position: absolute;
+    bottom: 0%;
+    height: auto;
+    text-align: center;
+    cursor: pointer;
+    padding: 1vh;
+    transition: transform 0.5s ease;
+    z-index: 10;
+    pointer-events: auto;
+  }
+  .cb-arti h2 {
+    font-size: 1.2vw;
+  }
+  .cb-arti h3 {
+    font-size: 1vw;
+  }
+  .cb-arti p {
+    font-size: 0.8vw;
+  }
+  /* 개별 아티클영역 */
+  .arti-1 {
+    background-color: rgba(137, 43, 226, 0.555);
+    color: #ffffff;
+    transform: translateY(90%);
+  }
+  .arti-1:hover {
+    transform: translateY(85%);
+  }
+  .arti-2 {
+    background-color: rgba(255, 255, 255, 0.686);
+    color: #04758c;
+    transform: translateY(86%);
+  }
+  .arti-2:hover {
+    transform: translateY(81%);
+  }
+  .arti-3 {
+    background-color: rgba(255, 0, 0, 0.768);
+    color: #000000;
+    transform: translateY(90%);
+  }
+  .arti-3:hover {
+    transform: translateY(85%);
+  }
+  .arti-4 {
+    background-color: rgba(0, 0, 0, 0.812);
+    color: #ffffff;
+    transform: translateY(87.3%);
+  }
+  .arti-4:hover {
+    transform: translateY(82.3%);
+  }
+  .arti-5 {
+    background-color: rgba(113, 225, 131, 0.642);
+    color: #ffffff;
+    transform: translateY(88.5%);
+  }
+  .arti-5:hover {
+    transform: translateY(83.5%);
+  }
+  /****************************************************************/
+  html.colab-locked,
+  body.colab-locked {
+    overflow: hidden !important;
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+  }
