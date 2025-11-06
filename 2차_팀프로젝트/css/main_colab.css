@@ -1397,21 +1397,18 @@
   position: relative;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* 화면 높이 전체를 차지하도록 유지 */
+  height: 100vh; 
   border-bottom: 13px solid #000;
   border-top: 13px solid #000;
-  /* li가 잘리는 것을 방지하기 위해 visible로 변경합니다. */
   overflow: hidden;
 }
 
-/* cb-inbox li의 부모인 .cb-inbox는 이미 overflow: visible; 로 설정되어 있어 별도 수정이 필요하지 않습니다. */
 /* 속박스 ul */
 .cb-inbox {
   position: absolute;
   display: flex;
   width: 100vw;
-  height: 120vh;
-  overflow: visible;
+  height: 100vh;
 }
 /* 배경 li */
 .cb-inbox li {
@@ -1421,35 +1418,36 @@
   transition: none;
   width: 100vw;
   height: 100vh;
+  position: sticky;
 }
 .cb-inbox li:nth-child(1) {
   background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/티하우스13.webp)
     center/cover no-repeat;
-  transform: translateY(100%);
+  transform: translateY(0%);
   z-index: 5;
 }
 .cb-inbox li:nth-child(2) {
   background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물5.webp)
     center/cover no-repeat;
-  transform: translateY(200%);
+  transform: translateY(0%);
   z-index: 4;
 }
 .cb-inbox li:nth-child(3) {
   background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/제니28.webp)
     center/cover no-repeat;
-  transform: translateY(300%);
+  transform: translateY(0%);
   z-index: 3;
 }
 .cb-inbox li:nth-child(4) {
   background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/생일10.webp)
     center/cover no-repeat;
-  transform: translateY(400%);
+  transform: translateY(0%);
   z-index: 2;
 }
 .cb-inbox li:nth-child(5) {
   background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉5.webp)
     center/cover no-repeat;
-  transform: translateY(500%);
+  transform: translateY(0%);
   z-index: 1;
 }
 /* 공통 아티클  */
