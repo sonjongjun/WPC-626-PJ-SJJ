@@ -313,12 +313,15 @@ $(".cb-arti").click(function () {
 ////////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////
-// 콜라보 섹션 - 초부드러운 애니메이션
+//////////////////////////////////////////////////////////////////////
+// 콜라보 섹션 - 최상단 휠 2번으로 고정 위치 변경
 let isColabLocked = false;
 let colabProgress = 0;
 let colabTargetProgress = 0;
 let colabLockPosition = 0;
 let colabCompleted = false;
+let wheelCount = 0;
+let wheelTimeout = null;
 const COLAB_ANIMATION_SPEED = 0.012;
 const SMOOTH_FACTOR = 0.15;
 
@@ -371,6 +374,8 @@ function smoothColabAnimation() {
 
 // 휠 이벤트
 $(window).on('wheel', function(e) {
+    const scrollTop = $(window).scrollTop();
+    
     if (isColabLocked && !colabCompleted) {
         e.preventDefault();
         e.stopPropagation();
@@ -383,7 +388,7 @@ $(window).on('wheel', function(e) {
     }
 });
 
-// 스크롤 이벤트
+// 스크롤 이벤트 - 콜라보 섹션 근처에서 휠 2번 감지
 $(window).on('scroll', function() {
     if (isColabLocked && !colabCompleted) {
         const currentScrollY = Math.abs(parseInt($('body').css('top') || '0'));
@@ -398,19 +403,32 @@ $(window).on('scroll', function() {
     
     if (cbBoxOffset) {
         const cbBoxTop = cbBoxOffset.top;
+        const distanceToColab = cbBoxTop - scrollTop;
         
-        if (scrollTop >= cbBoxTop - 100 && !isColabLocked && !colabCompleted) {
-            colabProgress = 0;
-            colabTargetProgress = 0;
-            lockColabScroll(scrollTop);
-            smoothColabAnimation();
-        }
-        
-        if (scrollTop < cbBoxTop - 300 && colabCompleted) {
-            colabCompleted = false;
-            colabProgress = 0;
-            colabTargetProgress = 0;
-            updateColabAnimation(0);
+        // 콜라보 섹션 200px 전부터 휠 카운트 활성화
+        if (distanceToColab < 200 && distanceToColab > -100 && !isColabLocked && !colabCompleted) {
+            // 이 영역에서 휠 감지 대기 상태
+            $(window).off('wheel.colabTrigger').on('wheel.colabTrigger', function(e) {
+                if (e.originalEvent.deltaY > 0) {
+                    wheelCount++;
+                    
+                    clearTimeout(wheelTimeout);
+                    wheelTimeout = setTimeout(() => {
+                        wheelCount = 0;
+                    }, 1000);
+                    
+                    // 2번 휠하면 현재 위치에서 고정 및 애니메이션 시작
+                    if (wheelCount >= 2) {
+                        e.preventDefault();
+                        wheelCount = 0;
+                        colabProgress = 0;
+                        colabTargetProgress = 0;
+                        lockColabScroll($(window).scrollTop());
+                        smoothColabAnimation();
+                        $(window).off('wheel.colabTrigger');
+                    }
+                }
+            });
         }
     }
 });
@@ -432,25 +450,23 @@ function updateColabAnimation(progress) {
     });
 }
 
-// 아티클 클릭 이벤트 (원본 코드 복원)
+// 아티클 클릭 이벤트
 $(".cb-arti").each(function () {
     const initialTranslate = $(this).css("transform");
     $(this).attr("data-original-translate", initialTranslate);
 });
 
 $(".cb-arti").click(function (e) {
-    e.stopPropagation(); // 이벤트 전파 방지
+    e.stopPropagation();
     
     const currentTransform = $(this).css("transform");
     const isOpen = currentTransform === "matrix(1, 0, 0, 1, 0, 0)" || currentTransform === "none";
     
-    // 모든 arti를 원래 위치로 복귀
     $(".cb-arti").each(function () {
         const original = $(this).attr("data-original-translate");
         if (original && original !== "none") {
             $(this).css("transform", original);
         } else {
-            // data-original-translate가 없으면 클래스에 따라 설정
             if ($(this).hasClass("arti-1")) {
                 $(this).css("transform", "translateY(90%)");
             } else if ($(this).hasClass("arti-2")) {
@@ -465,7 +481,6 @@ $(".cb-arti").click(function (e) {
         }
     });
     
-    // 클릭한 게 닫힌 상태였다면 — 열기
     if (!isOpen) {
         $(this).css("transform", "translateY(0%)");
     }
@@ -475,9 +490,10 @@ $(".cb-arti").click(function (e) {
 
 // 초기화
 $(document).ready(function() {
+    // overflow는 hidden 유지 (CSS 그대로)
+    
     updateColabAnimation(0);
     
-    // 아티클 초기 transform 저장
     $(".cb-arti").each(function() {
         const initialTransform = $(this).css("transform");
         $(this).attr("data-original-translate", initialTransform);
