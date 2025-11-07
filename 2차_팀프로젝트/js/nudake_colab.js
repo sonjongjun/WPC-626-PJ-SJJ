@@ -354,3 +354,72 @@ $(".cb-arti").click(function (e) {
     console.log("arti 클릭됨");
 });
 
+////////////////////////////////////////////////////////////////////////////
+//////////// 스크롤에 따른 cb-inbox li 애니메이션 /////////////////////////
+////////////////////////////////////////////////////////////////////////////
+
+$(window).scroll(function() {
+    const scrollTop = $(window).scrollTop();
+    const windowHeight = $(window).height();
+    
+    // cb-box의 위치 확인
+    const cbBoxOffset = $(".cb-box").offset();
+    
+    if (cbBoxOffset) {
+        const cbBoxTop = cbBoxOffset.top;
+        const cbBoxHeight = $(".cb-box").height();
+        const cbBoxBottom = cbBoxTop + cbBoxHeight;
+        
+        // cb-box 영역을 완전히 벗어났는지 확인
+        const isAfterCbBox = scrollTop >= cbBoxBottom;
+        
+        // cb-box 영역이 끝나면 cb-inbox 숨기기
+        if (scrollTop < cbBoxTop || isAfterCbBox) {
+            $(".cb-inbox").css("opacity", "0");
+            $(".cb-inbox").css("pointer-events", "none");
+        } else {
+            $(".cb-inbox").css("opacity", "1");
+            $(".cb-inbox").css("pointer-events", "auto");
+        }
+        
+        // cb-box 영역을 벗어나면 애니메이션 중단
+        if (scrollTop < cbBoxTop || isAfterCbBox) {
+            return;
+        }
+        
+        // cb-box 내에서의 스크롤 진행도 (0~1)
+        const progress = Math.min(Math.max((scrollTop - cbBoxTop) / (cbBoxHeight - windowHeight), 0), 1);
+        
+        // 모든 애니메이션 완료 여부 체크
+        let allAnimationsComplete = true;
+        
+        // 각 li에 대해 애니메이션 적용
+        $(".cb-inbox > li").each(function(index) {
+            // 각 li마다 다른 시작 지점을 가지도록 설정 (더 넓게 분산)
+            const startProgress = index * 0.2; // 0, 0.2, 0.4, 0.6, 0.8
+            const endProgress = startProgress + 0.2; // 애니메이션 지속 구간
+            
+            // 해당 li의 애니메이션 진행도 계산
+            let liProgress = 0;
+            if (progress >= startProgress && progress <= endProgress) {
+                liProgress = (progress - startProgress) / 0.2;
+                allAnimationsComplete = false;
+            } else if (progress > endProgress) {
+                liProgress = 1;
+            } else {
+                allAnimationsComplete = false;
+            }
+            
+            // 초기 translateY 값 100vh에서 0으로
+            const currentTranslate = 100 - (100 * liProgress);
+            
+            // transform 적용
+            $(this).css("transform", "translateY(" + currentTranslate + "vh)");
+        });
+        
+        // 모든 애니메이션이 완료되면 cb-box 높이를 100vh로 변경
+        if (allAnimationsComplete && progress >= 1) {
+            $(".cb-box").css("height", "100vh");
+        }
+    }
+});
