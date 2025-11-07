@@ -1117,8 +1117,8 @@
   padding-top: 1vh;
   padding-bottom: 1vh;
   border-top: 3px solid #000000;
-  background-color: #fff;
-  z-index: 1000;
+  background-color: #ffffff;
+  z-index: 10;
 }
 .bt-1 {
   align-items: center;
@@ -1393,143 +1393,276 @@
 /************************ 그리드 페이지 종료!! ******************/
 /****************************************************************/
 
-  /****************************************************************/
-  /************************ 콜라보 페이지 시작!!! ******************/
-  /****************************************************************/
-  .cb-box {
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    height: 500vh; /* 충분한 스크롤 공간 확보 */
-    overflow: hidden;
-    transition: height 0.5s ease;
-  }
+/****************************************************************/
+/************************ 콜라보 페이지 시작!!! ******************/
+/****************************************************************/
+.cb-box {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 500vh; /* 충분한 스크롤 공간 확보 */
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
 
-  /* 속박스 ul - 화면에 고정 */
-  .cb-inbox {
-    position: fixed;
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-    border-top: 13px solid #000;
-    border-bottom: 13px solid #000;
-    box-sizing: border-box;
-  }
-  /* 배경 li */
-  .cb-inbox li {
-    position: sticky;
-    flex: 1;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.3s ease-out;
-  }
-  .cb-inbox li:nth-child(1) {
-    background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/티하우스13.webp)
-      center/cover no-repeat;
-    transform: translateY(100vh);
-    z-index: 5;
-  }
-  .cb-inbox li:nth-child(2) {
-    background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물5.webp)
-      center/cover no-repeat;
-    transform: translateY(100vh);
-    z-index: 4;
-  }
-  .cb-inbox li:nth-child(3) {
-    background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/제니28.webp)
-      center/cover no-repeat;
-    transform: translateY(100vh);
-    z-index: 3;
-  }
-  .cb-inbox li:nth-child(4) {
-    background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/생일10.webp)
-      center/cover no-repeat;
-    transform: translateY(100vh);
-    z-index: 2;
-  }
-  .cb-inbox li:nth-child(5) {
-    background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉5.webp)
-      center/cover no-repeat;
-    transform: translateY(100vh);
-    z-index: 1;
-  }
-  /* 공통 아티클  */
-  .cb-arti {
-    position: absolute;
-    bottom: 0%;
-    height: auto;
-    text-align: center;
-    cursor: pointer;
-    padding: 1vh;
-    transition: transform 0.5s ease;
-    z-index: 10;
-    pointer-events: auto;
-  }
-  .cb-arti h2 {
-    font-size: 1.2vw;
-  }
-  .cb-arti h3 {
-    font-size: 1vw;
-  }
-  .cb-arti p {
-    font-size: 0.8vw;
-  }
-  /* 개별 아티클영역 */
-  .arti-1 {
-    background-color: rgba(137, 43, 226, 0.555);
-    color: #ffffff;
-    transform: translateY(85%);
-  }
-  .arti-1:hover {
-    transform: translateY(80%);
-  }
-  .arti-2 {
-    background-color: rgba(255, 255, 255, 0.686);
-    color: #04758c;
-    transform: translateY(80%);
-  }
-  .arti-2:hover {
-    transform: translateY(75%);
-  }
-  .arti-3 {
-    background-color: rgba(255, 0, 0, 0.768);
-    color: #000000;
-    transform: translateY(86%);
-  }
-  .arti-3:hover {
-    transform: translateY(81%);
-  }
-  .arti-4 {
-    background-color: rgba(0, 0, 0, 0.812);
-    color: #ffffff;
-    transform: translateY(81.5%);
-  }
-  .arti-4:hover {
-    transform: translateY(77.3%);
-  }
-  .arti-5 {
-    background-color: rgba(113, 225, 131, 0.642);
-    color: #ffffff;
-    transform: translateY(83.5%);
-  }
-  .arti-5:hover {
-    transform: translateY(78.5%);
-  }
-  /****************************************************************/
-  html.colab-locked,
-  body.colab-locked {
-    overflow: hidden !important;
-    height: 100vh;
-    position: fixed;
-    width: 100%;
-  }
+/* 속박스 ul - 화면에 고정 */
+.cb-inbox {
+  position: fixed;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  border-top: 13px solid #000;
+  border-bottom: 13px solid #000;
+  box-sizing: border-box;
+}
+/* 배경 li */
+.cb-inbox li {
+  position: sticky;
+  flex: 1;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease-out;
+}
+.cb-inbox li:nth-child(1) {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/티하우스13.webp)
+    center/cover no-repeat;
+  transform: translateY(100vh);
+}
+.cb-inbox li:nth-child(2) {
+  background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물5.webp)
+    center/cover no-repeat;
+  transform: translateY(100vh);
+}
+.cb-inbox li:nth-child(3) {
+  background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/제니28.webp)
+    center/cover no-repeat;
+  transform: translateY(100vh);
+}
+.cb-inbox li:nth-child(4) {
+  background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/생일10.webp)
+    center/cover no-repeat;
+  transform: translateY(100vh);
+}
+.cb-inbox li:nth-child(5) {
+  background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉5.webp)
+    center/cover no-repeat;
+  transform: translateY(100vh);
+}
+/* 공통 아티클  */
+.cb-arti {
+  position: absolute;
+  bottom: 0%;
+  height: auto;
+  text-align: center;
+  cursor: pointer;
+  padding: 1vh;
+  transition: transform 0.5s ease;
+  z-index: 10;
+  pointer-events: auto;
+}
+.cb-arti h2 {
+  font-size: 1.2vw;
+}
+.cb-arti h3 {
+  font-size: 1vw;
+}
+.cb-arti p {
+  font-size: 0.8vw;
+}
+/* 개별 아티클영역 */
+.arti-1 {
+  background-color: rgba(137, 43, 226, 0.555);
+  color: #ffffff;
+  transform: translateY(87%);
+}
+.arti-1:hover {
+  transform: translateY(80%);
+}
+.arti-2 {
+  background-color: rgba(255, 255, 255, 0.686);
+  color: #04758c;
+  transform: translateY(83%);
+}
+.arti-2:hover {
+  transform: translateY(78%);
+}
+.arti-3 {
+  background-color: rgba(255, 0, 0, 0.768);
+  color: #000000;
+  transform: translateY(86%);
+}
+.arti-3:hover {
+  transform: translateY(81%);
+}
+.arti-4 {
+  background-color: rgba(0, 0, 0, 0.812);
+  color: #ffffff;
+  transform: translateY(85.5%);
+}
+.arti-4:hover {
+  transform: translateY(80.3%);
+}
+.arti-5 {
+  background-color: rgba(113, 225, 131, 0.642);
+  color: #ffffff;
+  transform: translateY(85.5%);
+}
+.arti-5:hover {
+  transform: translateY(80.5%);
+}
+/****************************************************************/
+html.colab-locked,
+body.colab-locked {
+  overflow: hidden !important;
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+}
+
+/*********************************************************************/
+/************************ 콜라보 페이지 종료!!! ******************/
+/*********************************************************************/
+
+/*********************************************************************/
+/************************ 콜라보 상세 페이지 시작!!! ******************/
+/*********************************************************************/
+
+/* 배경 박스 */
+.bg-box {
+  width: 100vw;
+  height: 700vh;
+  background-color: #e1a7e760;
+  border-top: 3px solid #000;
+  border-bottom: 3px solid #000;
+}
+
+/* 이미지 박스1 */
+.colab-d-box {
+  width: 60vw;
+  height: 95vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 7vw;
+  translate: 30% 0%;
+  margin-top: 10vh;
+}
+
+/* 이미지 부여 */
+.colab-d-box > li:nth-child(1) {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/티하우스1.png)
+    center/cover no-repeat;
+  cursor: pointer;
+}
+.colab-d-box > li:nth-child(2) {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/티하우스5.png)
+    center/cover no-repeat;
+  cursor: pointer;
+}
+.colab-d-box > li:nth-child(3) {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/티하우스6.png)
+    center/cover no-repeat;
+  cursor: pointer;
+}
+.colab-d-box > li:nth-child(4) {
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/티하우스8.png)
+    center/cover no-repeat;
+  cursor: pointer;
+}
+
+/* 효과부여 */
+.colab-d-box > li:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
+}
+
+/* 이미지 박스2 */
+.colab-d-box2 {
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  aspect-ratio: 1/1;
+  justify-content: center;
+  align-items: center;
+  translate: 5% 0%;
+}
+.colab-d-box2 > li:nth-child(1) {
+  width: 100%;
+  height: 100%;
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/티하우스18.png)
+    center/cover no-repeat;
+}
+.colab-d-box2 > li:nth-child(2) {
+  width: 100%;
+  height: 100%;
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/티하우스19.png)
+    center/cover no-repeat;
+}
+
+/* 이미지 박스3 */
+.colab-d-box3{
+display: flex;
+width: 100vw;
+height: 70vh;
+justify-content: center;
+align-items: center;
+translate: 0% 0%;
+margin-top: 10vh;
+}
+
+.colab-d-box3 > li:nth-child(1) {
+  width: 100%;
+  height: 100%;
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/티하우스20.png)
+    center/cover no-repeat;
+}
+.colab-d-box3 > li:nth-child(2) {
+  width: 100%;
+  height: 100%;
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/티하우스21.png)
+    center/cover no-repeat;
+}
+.colab-d-box3 > li:nth-child(3) {
+  width: 100%;
+  height: 100%;
+  background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/티하우스22.png)
+    center/cover no-repeat;
+}
+
+
+
+
+
+
+
+
+
+/* 콜라보 디테일 영역 폰트 관리 */
+.bg-box h2 {
+  font-size: 4vw;
+  color: #000000;
+  text-align: center;
+  margin-top: 10vh;
+}
+.bg-box h3 {
+  font-size: 3vw;
+  color: #000000;
+  text-align: center;
+  margin-top: 10vh;
+}
+
+.bg-box p {
+  font-size: 1vw;
+  color: #000000;
+  text-align: center;
+}

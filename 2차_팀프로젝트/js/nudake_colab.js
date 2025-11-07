@@ -390,8 +390,8 @@ $(window).scroll(function() {
         // cb-box 내에서의 스크롤 진행도 (0~1)
         const progress = Math.min(Math.max((scrollTop - cbBoxTop) / (cbBoxHeight - windowHeight), 0), 1);
         
-        // 모든 애니메이션 완료 여부 체크
-        let allAnimationsComplete = true;
+        // 5번째 li의 애니메이션 완료 여부 체크
+        let fifthLiComplete = false;
         
         // 각 li에 대해 애니메이션 적용
         $(".cb-inbox > li").each(function(index) {
@@ -403,11 +403,13 @@ $(window).scroll(function() {
             let liProgress = 0;
             if (progress >= startProgress && progress <= endProgress) {
                 liProgress = (progress - startProgress) / 0.2;
-                allAnimationsComplete = false;
             } else if (progress > endProgress) {
                 liProgress = 1;
-            } else {
-                allAnimationsComplete = false;
+            }
+            
+            // 5번째 li(index 4)가 완료되었는지 체크
+            if (index === 4 && liProgress === 1) {
+                fifthLiComplete = true;
             }
             
             // 초기 translateY 값 100vh에서 0으로
@@ -417,8 +419,8 @@ $(window).scroll(function() {
             $(this).css("transform", "translateY(" + currentTranslate + "vh)");
         });
         
-        // 모든 애니메이션이 완료되면 cb-box 높이를 100vh로 변경
-        if (allAnimationsComplete && progress >= 1) {
+        // 5번째 li 애니메이션이 완료되면 cb-box 높이를 100vh로 변경
+        if (fifthLiComplete && progress > 1) {
             $(".cb-box").css("height", "100vh");
         }
     }
