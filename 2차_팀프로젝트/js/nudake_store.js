@@ -34,3 +34,16 @@ $(".top-menu > ul > li:first-child").click(function() {
     isScrolling = false;
   });
 });
+
+
+// 슬라이드 js
+ var swiper = new Swiper(".mySwiper", {
+      effect: "cards",
+      grabCursor: true,
+    });
+
+    //2번쨰 슬라이드 js
+     var swiper = new Swiper2(".mySwiper2", {
+      effect: "cards",
+      grabCursor: true,
+    }); 
