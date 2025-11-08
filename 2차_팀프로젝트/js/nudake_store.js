@@ -43,7 +43,7 @@ $(".top-menu > ul > li:first-child").click(function() {
     });
 
     //2번쨰 슬라이드 js
-     var swiper = new Swiper2(".mySwiper2", {
+     var swiper2 = new Swiper(".mySwiper2", {
       effect: "cards",
       grabCursor: true,
     }); 

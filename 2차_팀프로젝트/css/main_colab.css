@@ -1822,44 +1822,61 @@ body.colab-locked {
     center/cover no-repeat;
 }
 
-
-
 /* 스와이퍼2 */
-.swiper2 {
-  width: 25vw;
-  height: 75vh;
-  margin-top: 10vh;
+.mySwiper2 {
+    width: 25vw;
+    height: 75vh;
+    margin-top: 10vh;
 }
 
-.swiper-slide2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 18px;
+.mySwiper2 .swiper-slide {  /* swiper-slide2 → swiper-slide */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+}
+.mySwiper2 .swiper-slide:nth-child(1) {
+    background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물1.webp)
+        center/cover no-repeat;
 }
 
-.swiper-slide2:nth-child(1n) {
-  background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물10.webp)
-    center/cover no-repeat;
+.mySwiper2 .swiper-slide:nth-child(2) {
+    background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물2.webp)
+        center/cover no-repeat;
 }
 
-.swiper-slide2:nth-child(2n) {
-  background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물6.webp)
-    center/cover no-repeat;
+.mySwiper2 .swiper-slide:nth-child(3) {
+    background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물3.webp)
+        center/cover no-repeat;
 }
 
-.swiper-slide2:nth-child(3n) {
-  background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물7.webp)
-    center/cover no-repeat;
+.mySwiper2 .swiper-slide:nth-child(4) {
+    background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물4.webp)
+        center/cover no-repeat;
 }
 
-.swiper-slide2:nth-child(4n) {
-  background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물8.webp)
-    center/cover no-repeat;
+.mySwiper2 .swiper-slide:nth-child(5) {
+    background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물5.webp)
+        center/cover no-repeat;
 }
 
-.swiper-slide2:nth-child(5n) {
-  background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물9.webp)
-    center/cover no-repeat;
+.mySwiper2 .swiper-slide:nth-child(6) {
+    background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물11.webp)
+        center/cover no-repeat;
 }
 
+.mySwiper2 .swiper-slide:nth-child(7) {
+    background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물13.webp)
+        center/cover no-repeat;
+}
+.mySwiper2 .swiper-slide:nth-child(8) {
+    background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물12.webp)
+        center/cover no-repeat;
+}
+/*********************************************************************/
+/************************ 콜라보 동물의 날 페이지 종료!!! ******************/
+/*********************************************************************/
+
+/*********************************************************************/
+/************************ 콜라보 제니 페이지 시작!!! ******************/
+/*********************************************************************/
