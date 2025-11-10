@@ -1,3 +1,28 @@
+$(document).ready(function() {
+  // 현재 페이지 확인
+  let currentPage = window.location.pathname.split('/').pop();
+  
+  // 메인 페이지가 아닌 경우에만 페이지 이동 이벤트 적용
+  if (currentPage !== 'NUDAKE_COLAB.html') {
+    let pages = [
+      "./NUDAKE_COLAB.html",     // NUDAKE
+      "./NUDAKE_COLAB_T.html",   // TEA HOUSE
+      "./NUDAKE_COLAB_A.html",   // WORLD ANIMAL DAY
+      "./NUDAKE_COLAB_J.html",   // JENNIE
+      "./NUDAKE_COLAB_B.html",   // BIRTH CAKE
+      "./NUDAKE_COLAB_P.html"    // PICNIC CAKE
+    ];
+
+    $(".top-menu ul li").each(function(idx) {
+      if (idx > 0) {  // NUDAKE 제외
+        $(this).off('click').click(function() {  // 기존 이벤트 제거 후 새로 바인딩
+          location.href = pages[idx];
+        });
+      }
+    });
+  }
+});
+
 //마우스 스크롤을 밑으로 할 때 .header.top-menu가 display none로 1초걸리게 하고 바꾸기
 $(window).scroll(function () {
   if ($(window).scrollTop() > 0) {
@@ -453,17 +478,3 @@ var swiper3 = new Swiper(".mySwiper3", {
 });
 
 
-  let pages = [
-    "./NUDAKE_COLAB.html",  // NUDAKE 메인페이지 (경로는 실제 파일명에 맞게 수정하세요)
-    "./NUDAKE_COLAB_T.html",  // TEA HOUSE
-    "./NUDAKE_COLAB_A.html",  // WORLD ANIMAL DAY
-    "./NUDAKE_COLAB_J.html",  // JENNIE
-    "./NUDAKE_COLAB_B.html",  // BIRTH CAKE
-    "./NUDAKE_COLAB_P.html"   // PICNIC CAKE
-  ];
-
-  document.querySelectorAll(".top-menu ul li").forEach((el, idx) => {
-    el.addEventListener("click", function () {
-      location.href = pages[idx];
-    });
-  });
