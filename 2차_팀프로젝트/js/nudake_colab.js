@@ -451,3 +451,19 @@ var swiper3 = new Swiper(".mySwiper3", {
     clickable: true,
   },
 });
+
+
+  let pages = [
+    "./index.html",  // NUDAKE 메인페이지 (경로는 실제 파일명에 맞게 수정하세요)
+    "./NUDAKE_COLAB_T.html",  // TEA HOUSE
+    "./NUDAKE_COLAB_A.html",  // WORLD ANIMAL DAY
+    "./NUDAKE_COLAB_J.html",  // JENNIE
+    "./NUDAKE_COLAB_B.html",  // BIRTH CAKE
+    "./NUDAKE_COLAB_P.html"   // PICNIC CAKE
+  ];
+
+  document.querySelectorAll(".top-menu ul li").forEach((el, idx) => {
+    el.addEventListener("click", function () {
+      location.href = pages[idx];
+    });
+  });
