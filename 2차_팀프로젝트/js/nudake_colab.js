@@ -1,25 +1,74 @@
+// 전역 변수
+let isScrolling = false;
+
 $(document).ready(function() {
   // 현재 페이지 확인
   let currentPage = window.location.pathname.split('/').pop();
+  console.log("현재 페이지:", currentPage);
   
-  // 메인 페이지가 아닌 경우에만 페이지 이동 이벤트 적용
-  if (currentPage !== 'NUDAKE_COLAB.html') {
-    let pages = [
-      "./NUDAKE_COLAB.html",     // NUDAKE
-      "./NUDAKE_COLAB_T.html",   // TEA HOUSE
-      "./NUDAKE_COLAB_A.html",   // WORLD ANIMAL DAY
-      "./NUDAKE_COLAB_J.html",   // JENNIE
-      "./NUDAKE_COLAB_B.html",   // BIRTH CAKE
-      "./NUDAKE_COLAB_P.html"    // PICNIC CAKE
-    ];
+  // 상단 메뉴 네비게이션 (모든 페이지에서 작동)
+  let pages = [
+    "./NUDAKE_COLAB.html",     // NUDAKE (index 0)
+    "./NUDAKE_COLAB_T.html",   // TEA HOUSE (index 1)
+    "./NUDAKE_COLAB_A.html",   // WORLD ANIMAL DAY (index 2)
+    "./NUDAKE_COLAB_J.html",   // JENNIE (index 3)
+    "./NUDAKE_COLAB_B.html",   // BIRTH CAKE (index 4)
+    "./NUDAKE_COLAB_P.html"    // PICNIC CAKE (index 5)
+  ];
 
-    $(".top-menu ul li").each(function(idx) {
-      if (idx > 0) {  // NUDAKE 제외
-        $(this).off('click').click(function() {  // 기존 이벤트 제거 후 새로 바인딩
-          location.href = pages[idx];
-        });
-      }
+  // 상단 메뉴 클릭 이벤트 (NUDAKE 로고 포함)
+  $(".top-menu > ul > li").each(function(idx) {
+    $(this).off('click').on('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      console.log("상단 메뉴 클릭:", idx, pages[idx]);
+      location.href = pages[idx];
     });
+  });
+  
+  // NUDAKE_COLAB.html 메인 페이지에서만 cb-inbox li 클릭 이벤트 활성화
+  if (currentPage === 'NUDAKE_COLAB.html' || currentPage === '' || !currentPage) {
+    console.log("메인 페이지 - cb-inbox 이벤트 활성화");
+    
+    // cb-inbox li 클릭 이벤트
+    $(".cb-inbox > li").each(function(index) {
+      $(this).on('click', function(e) {
+        // article 내부 클릭은 제외
+        if ($(e.target).closest('.cb-arti').length > 0) {
+          console.log("article 클릭 - 페이지 이동 취소");
+          return;
+        }
+        
+        e.stopPropagation();
+        const targetPages = [
+          "./NUDAKE_COLAB_T.html",   // 첫 번째 li - TEA HOUSE
+          "./NUDAKE_COLAB_A.html",   // 두 번째 li - WORLD ANIMAL DAY
+          "./NUDAKE_COLAB_J.html",   // 세 번째 li - JENNIE
+          "./NUDAKE_COLAB_B.html",   // 네 번째 li - BIRTH CAKE
+          "./NUDAKE_COLAB_P.html"    // 다섯 번째 li - PICNIC CAKE
+        ];
+        
+        console.log("li 클릭:", index, targetPages[index]);
+        if (targetPages[index]) {
+          location.href = targetPages[index];
+        }
+      });
+    });
+    
+    // li에 cursor pointer 스타일 추가
+    $(".cb-inbox > li").css("cursor", "pointer");
+    
+    // 호버 효과
+    $(".cb-inbox > li").hover(
+      function() {
+        if (!$(this).find('.cb-arti:hover').length) {
+          $(this).css("filter", "brightness(1.1)");
+        }
+      },
+      function() {
+        $(this).css("filter", "brightness(1)");
+      }
+    );
   }
 });
 
@@ -252,91 +301,6 @@ $(".pdct > li:nth-child(3)").click(function () {
   });
 }); //click
 
-// 상단 메뉴 클릭 시 해당 섹션으로 스크롤 이동
-$(".top-menu > ul > li:nth-child(2)").click(function () {
-  // STORES 클릭 시
-  isScrolling = true;
-  const storesSection = $(".store-box").offset().top;
-  $("html, body").animate(
-    {
-      scrollTop: storesSection - 100,
-    },
-    800,
-    function () {
-      isScrolling = false;
-    }
-  );
-});
-
-$(".top-menu > ul > li:nth-child(3)").click(function () {
-  // PROJECTS(COLLABORATIONS) 클릭 시
-  isScrolling = true;
-  const colabSection = $(".colab-box").offset().top;
-  $("html, body").animate(
-    {
-      scrollTop: colabSection - 100,
-    },
-    800,
-    function () {
-      isScrolling = false;
-    }
-  );
-});
-
-$(".top-menu > ul > li:nth-child(4)").click(function () {
-  // MENU(PRODUCTS) 클릭 시
-  isScrolling = true;
-  const pdctSection = $(".pdct-box").offset().top;
-  $("html, body").animate(
-    {
-      scrollTop: pdctSection - 100,
-    },
-    800,
-    function () {
-      isScrolling = false;
-    }
-  );
-});
-
-$(".top-menu > ul > li:first-child").click(function () {
-  // NUDAKE 로고 클릭 시 최상단으로
-  isScrolling = true;
-  $("html, body").animate(
-    {
-      scrollTop: 0,
-    },
-    800,
-    function () {
-      isScrolling = false;
-    }
-  );
-});
-
-//cb-arti의 css를 갖고있는 arti-1, arti-2, arti-3, arti-4, arti-5 각자가 클릭될 때
-// translate: 0% 0%로 바꾸기
-$(".cb-arti").each(function () {
-  // 초기 translate 값을 data 속성에 저장
-  const initialTranslate = $(this).css("translate");
-  $(this).attr("data-original-translate", initialTranslate);
-});
-
-$(".cb-arti").click(function () {
-  const isOpen = $(this).css("translate") === "0% 0%";
-
-  // 모든 arti를 원래 위치로 복귀
-  $(".cb-arti").each(function () {
-    const original = $(this).attr("data-original-translate");
-    $(this).css("translate", original);
-  });
-
-  // 클릭한 게 닫힌 상태였다면 — 열기
-  if (!isOpen) {
-    $(this).css("translate", "0% 0%");
-  }
-  console.log("arti 클릭됨");
-}); //click//////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-
 // 아티클 클릭 이벤트 (기존 로직 유지)
 $(".cb-arti").each(function () {
   const initialTranslate = $(this).css("transform");
@@ -344,7 +308,7 @@ $(".cb-arti").each(function () {
 });
 
 $(".cb-arti").click(function (e) {
-  e.stopPropagation();
+  e.stopPropagation(); // 부모 li로의 이벤트 전파 막기
 
   const currentTransform = $(this).css("transform");
   const isOpen =
@@ -476,5 +440,3 @@ var swiper3 = new Swiper(".mySwiper3", {
     clickable: true,
   },
 });
-
-

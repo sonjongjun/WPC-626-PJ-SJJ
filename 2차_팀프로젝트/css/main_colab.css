@@ -418,22 +418,27 @@
 .colab-box > ul > li:first-child {
   background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/티하우스13.webp)
     no-repeat center/cover;
+    
 }
 .colab-box > ul > li:nth-child(2) {
   background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물2.webp)
     no-repeat center/cover;
+    
 }
 .colab-box > ul > li:nth-child(3) {
   background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/제니29.webp)
     no-repeat center/cover;
+    
 }
 .colab-box > ul > li:nth-child(4) {
   background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/생일10.webp)
     no-repeat center/cover;
+    
 }
 .colab-box > ul > li:nth-child(5) {
   background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉5.webp)
     no-repeat center/cover;
+    
 }
 .colab-box > ul > li > p {
   font-size: 4vw;
@@ -1437,26 +1442,31 @@
   background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/티하우스13.webp)
     center/cover no-repeat;
   transform: translateY(100vh);
+  
 }
 .cb-inbox li:nth-child(2) {
   background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물5.webp)
     center/cover no-repeat;
   transform: translateY(100vh);
+  
 }
 .cb-inbox li:nth-child(3) {
   background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/제니28.webp)
     center/cover no-repeat;
   transform: translateY(100vh);
+  
 }
 .cb-inbox li:nth-child(4) {
   background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/생일10.webp)
     center/cover no-repeat;
   transform: translateY(100vh);
+  
 }
 .cb-inbox li:nth-child(5) {
   background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉5.webp)
     center/cover no-repeat;
   transform: translateY(100vh);
+  
 }
 /* 공통 아티클  */
 .cb-arti {
@@ -1797,7 +1807,7 @@ body.colab-locked {
 .swiper {
   width: 25vw;
   height: 75vh;
-  margin-top: 10vh;
+  margin-top: 3vh;
 }
 
 .swiper-slide {
