@@ -1540,7 +1540,7 @@ body.colab-locked {
 /* 배경 박스 */
 .bg-box {
   width: 100vw;
-  height: 950vh;
+  height: 850vh;
   background-color: #e1a7e760;
   border-top: 3px solid #000;
   border-bottom: 3px solid #000;
@@ -1747,7 +1747,7 @@ body.colab-locked {
   margin-top: 10vh;
 }
 .bg-box,
-.bg-box2 h3 {
+.bg-box2 {
   font-size: 3vw;
   color: #000000;
   text-align: center;
@@ -1755,7 +1755,7 @@ body.colab-locked {
 }
 
 .bg-box,
-.bg-box2 p {
+.bg-box2 > p {
   font-size: 1vw;
   color: #000000;
   text-align: center;
@@ -1770,7 +1770,7 @@ body.colab-locked {
 /*********************************************************************/
 .bg-box2 {
   width: 100vw;
-  height: 400vh;
+  height: 350vh;
   background-color: #97dbe9b6;
 }
 .ani-sec1 {
@@ -1824,54 +1824,54 @@ body.colab-locked {
 
 /* 스와이퍼2 */
 .mySwiper2 {
-    width: 25vw;
-    height: 75vh;
-    margin-top: 10vh;
+  width: 25vw;
+  height: 75vh;
+  margin-top: 10vh;
 }
 
-.mySwiper2 .swiper-slide {  /* swiper-slide2 → swiper-slide */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 18px;
+.mySwiper2 .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
 }
 .mySwiper2 .swiper-slide:nth-child(1) {
-    background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물1.webp)
-        center/cover no-repeat;
+  background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물1.webp)
+    center/cover no-repeat;
 }
 
 .mySwiper2 .swiper-slide:nth-child(2) {
-    background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물2.webp)
-        center/cover no-repeat;
+  background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물2.webp)
+    center/cover no-repeat;
 }
 
 .mySwiper2 .swiper-slide:nth-child(3) {
-    background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물3.webp)
-        center/cover no-repeat;
+  background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물3.webp)
+    center/cover no-repeat;
 }
 
 .mySwiper2 .swiper-slide:nth-child(4) {
-    background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물4.webp)
-        center/cover no-repeat;
+  background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물4.webp)
+    center/cover no-repeat;
 }
 
 .mySwiper2 .swiper-slide:nth-child(5) {
-    background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물5.webp)
-        center/cover no-repeat;
+  background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물5.webp)
+    center/cover no-repeat;
 }
 
 .mySwiper2 .swiper-slide:nth-child(6) {
-    background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물11.webp)
-        center/cover no-repeat;
+  background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물11.webp)
+    center/cover no-repeat;
 }
 
 .mySwiper2 .swiper-slide:nth-child(7) {
-    background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물13.webp)
-        center/cover no-repeat;
+  background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물13.webp)
+    center/cover no-repeat;
 }
 .mySwiper2 .swiper-slide:nth-child(8) {
-    background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물12.webp)
-        center/cover no-repeat;
+  background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물12.webp)
+    center/cover no-repeat;
 }
 /*********************************************************************/
 /************************ 콜라보 동물의 날 페이지 종료!!! ******************/
@@ -1880,3 +1880,172 @@ body.colab-locked {
 /*********************************************************************/
 /************************ 콜라보 제니 페이지 시작!!! ******************/
 /*********************************************************************/
+.bg-box3 {
+  width: 100vw;
+  height: 400vh;
+  background: #9b0202;
+  border-top: 3px solid #000;
+}
+.bg-box3 h3 {
+  text-align: center;
+  font-size: 2vw;
+  color: #fff;
+  padding-top: 5vh;
+}
+.bg-box3 p {
+  text-align: center;
+  font-size: 0.8vw;
+  color: #fff;
+}
+.j-box1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1vw;
+  margin-top: 5vh;
+  height: 150vh;
+  width: 80vw;
+  translate: 10% 0%;
+}
+
+.j-box1 li:nth-child(1) {
+  background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/제니27.webp)
+    center/cover no-repeat;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px 1px #000;
+}
+.j-box1 li:nth-child(2) {
+  background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/제니28.webp)
+    center/cover no-repeat;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px 1px #000;
+}
+.j-box1 li:nth-child(3) {
+  background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/제니29.webp)
+    center/cover no-repeat;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px 1px #000;
+}
+.j-box1 li:nth-child(4) {
+  background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/제니30.webp)
+    center/cover no-repeat;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px 1px #000;
+}
+
+/* 제니 디저트 파트 */
+.j-box2 {
+  display: grid;
+  width: 80vw;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 3vw;
+  margin-top: 5vh;
+  height: 100vh;
+  translate: 10% 0%;
+}
+.j-box2 img {
+  width: 50%;
+  height: 50%;
+  cursor: pointer;
+}
+/* 호버시 효과  */
+.img1 {
+  display: inline-block;
+  transition: all 1s ease-in-out;
+}
+.img1 img:last-child {
+  display: none;
+}
+.img1:hover img:first-child {
+  display: none;
+    transition: all 1s ease-in-out;
+}
+.img1:hover img:last-child {
+  display: inline;
+    transition: all 1s ease-in-out;
+}
+.img1 img{
+  translate: 0% -8%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* 호버시 효과  */
+.img2 {
+  display: inline-block;
+  transition: all 1s ease-in-out;
+}
+.img2 img:last-child {
+  display: none;
+}
+.img2:hover img:first-child {
+  display: none;
+    transition: all 1s ease-in-out;
+}
+.img2:hover img:last-child {
+  display: inline;
+    transition: all 1s ease-in-out;
+}
+.img2 img{
+  translate: 0% -8%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* 호버시 효과  */
+.img3 {
+  display: inline-block;
+  transition: all 1s ease-in-out;
+}
+.img3 img:last-child {
+  display: none;
+}
+.img3:hover img:first-child {
+  display: none;
+    transition: all 1s ease-in-out;
+}
+.img3:hover img:last-child {
+  display: inline;
+    transition: all 1s ease-in-out;
+}
+.img3 img{
+  translate: 0% -8%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* 호버시 효과  */
+.img4 {
+  display: inline-block;
+  transition: all 1s ease-in-out;
+}
+.img4 img:last-child {
+  display: none;
+}
+.img4:hover img:first-child {
+  display: none;
+    transition: all 1s ease-in-out;
+}
+.img4:hover img:last-child {
+  display: inline;
+    transition: all 1s ease-in-out;
+}
+.img4 img{
+  translate: 0% -8%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
