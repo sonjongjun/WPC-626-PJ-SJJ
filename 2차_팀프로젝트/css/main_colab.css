@@ -2252,11 +2252,35 @@ body.colab-locked {
   width: auto;
   height: auto;
   border-radius: 10px;
-  margin-top: 10vh;
+  margin-top: 5vh;
+  background-color: #23903e;
 }
-.html5-video-player.ended-mode.html5-video-player:not(.ytp-transparent),
-.html5-video-player.unstarted-mode,
-.html5-video-player.ad-showing,
-.html5-video-player.ended-mode {
-  background-color: red;
+
+.play-box1 {
+  background-color: #23903e;
+  padding: 40px;
+  text-align: center;
+}
+
+.play-box1 iframe {
+  width: 20.13%;
+  border-radius: 10px;
+}
+.pic-sec2 {
+  display: flex;
+  width: 40vw;
+  height: 30vh;
+  gap: 3vw;
+  translate: 50% 0%;
+  margin-top: 10vh;
+  justify-content: center;
+}
+.pic-sec2 li:nth-child(1){
+  background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉1.webp)center/cover no-repeat;
+  width:50vw;
+}
+
+.pic-sec2 li:nth-child(2){
+  background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉2.webp)center/cover no-repeat;
+  width:50vw;
 }
