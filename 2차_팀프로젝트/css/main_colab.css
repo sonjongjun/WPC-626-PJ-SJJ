@@ -1882,7 +1882,7 @@ body.colab-locked {
 /*********************************************************************/
 .bg-box3 {
   width: 100vw;
-  height: auto;
+  height: 450vh;
   background: #9b0202;
   border-top: 3px solid #000;
 }
@@ -1917,6 +1917,10 @@ body.colab-locked {
   align-items: center;
   box-shadow: 0 0 15px 1px #000;
 }
+.j-box1 li:nth-child(1):hover {
+  translate: 0% -5%;
+  transition: 0.8s;
+}
 .j-box1 li:nth-child(2) {
   background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/제니28.webp)
     center/cover no-repeat;
@@ -1925,6 +1929,10 @@ body.colab-locked {
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 15px 1px #000;
+}
+.j-box1 li:nth-child(2):hover {
+  translate: 0% -5%;
+  transition: 0.8s;
 }
 .j-box1 li:nth-child(3) {
   background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/제니29.webp)
@@ -1935,6 +1943,10 @@ body.colab-locked {
   align-items: center;
   box-shadow: 0 0 15px 1px #000;
 }
+.j-box1 li:nth-child(3):hover {
+  translate: 0% -5%;
+  transition: 0.8s;
+}
 .j-box1 li:nth-child(4) {
   background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/제니30.webp)
     center/cover no-repeat;
@@ -1943,6 +1955,10 @@ body.colab-locked {
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 15px 1px #000;
+}
+.j-box1 li:nth-child(4):hover {
+  translate: 0% -5%;
+  transition: 0.8s;
 }
 
 /* 제니 디저트 파트 */
@@ -1958,14 +1974,20 @@ body.colab-locked {
 }
 
 /* 호버시 디졸브 효과 */
-.img1, .img2, .img3, .img4 {
+.img1,
+.img2,
+.img3,
+.img4 {
   position: relative;
   display: inline-block;
   width: 100%;
   height: 100%;
 }
 
-.img1 img, .img2 img, .img3 img, .img4 img {
+.img1 img,
+.img2 img,
+.img3 img,
+.img4 img {
   position: absolute;
   translate: 0% -8%;
   width: 80%;
@@ -1975,33 +1997,121 @@ body.colab-locked {
   translate: 20% 0%;
 }
 
-.img1 img:first-child, .img2 img:first-child, .img3 img:first-child, .img4 img:first-child {
+.img1 img:first-child,
+.img2 img:first-child,
+.img3 img:first-child,
+.img4 img:first-child {
   opacity: 1;
 }
 
-.img1 img:last-child, .img2 img:last-child, .img3 img:last-child, .img4 img:last-child {
+.img1 img:last-child,
+.img2 img:last-child,
+.img3 img:last-child,
+.img4 img:last-child {
   opacity: 0;
 }
 
-.img1:hover img:first-child, .img2:hover img:first-child, .img3:hover img:first-child, .img4:hover img:first-child {
+.img1:hover img:first-child,
+.img2:hover img:first-child,
+.img3:hover img:first-child,
+.img4:hover img:first-child {
   opacity: 0;
 }
 
-.img1:hover img:last-child, .img2:hover img:last-child, .img3:hover img:last-child, .img4:hover img:last-child {
+.img1:hover img:last-child,
+.img2:hover img:last-child,
+.img3:hover img:last-child,
+.img4:hover img:last-child {
   opacity: 1;
 }
 /* 슬라이드 영역 */
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      background: none;
-    }
-    .mySwiper3{
-      height: 80vh;
-      width: 70vw;
-      translate: 0% 0%;
-      margin-bottom: 10vh;
-      background: none;
-    }
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: center cover;
+  background: none;
+}
+.mySwiper3 {
+  height: 90vh;
+  width: 68vw;
+  translate: 0% 0%;
+  background: none;
+}
+/*********************************************************************/
+/************************ 콜라보 제니 페이지 종료!!! ******************/
+/*********************************************************************/
+
+/*********************************************************************/
+/************************ 콜라보 생일 페이지 시작!!! ******************/
+/*********************************************************************/
+.bg-box4 {
+  width: 100vw;
+  height: 300vh;
+  background-color: #eae1da;
+  border-top: 3px solid #000;
+}
+.bg-box4 h3 {
+  text-align: center;
+  font-size: 2vw;
+  color: #000000;
+  padding-top: 10vh;
+}
+.bg-box4 p {
+  text-align: center;
+  font-size: 0.8vw;
+  color: #000000;
+}
+.b-sec1 {
+  background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/생일1.webp)
+    center/cover no-repeat;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.b-sec2 {
+  display: flex;
+  width: 100vw;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  translate: 0% 0%;
+  margin-top: 10vh;
+  gap: 1vw;
+}
+.b-sec2 P {
+    position: absolute;
+    text-align: center;
+    font-size: 1.2vw;
+    color: #000000;
+    position: absolute;
+    bottom: 10%;
+    left: 39%;
+    font-weight: bold;
+}
+
+.b-sec2 > li:nth-child(1) {
+  width: 100%;
+  height: 100%;
+  background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/생일5.webp)
+    center/cover no-repeat;
+  border-radius: 50%;
+}
+.b-sec2 > li:nth-child(2) {
+  width: 100%;
+  height: 100%;
+  background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/생일6.webp)
+    center/cover no-repeat;
+  border-radius: 50%;
+}
+.b-sec2 > li:nth-child(3) {
+  width: 100%;
+  height: 100%;
+  background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/생일7.webp)
+    center/cover no-repeat;
+  border-radius: 50%;
+}
+.b-sec2 li{
+  position: relative;
+}
