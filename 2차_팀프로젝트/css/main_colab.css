@@ -2225,7 +2225,7 @@ body.colab-locked {
 /*********************************************************************/
 .bg-box5 {
   width: 100%;
-  height: 600vh;
+  height: 450vh;
   border-top: 3px solid #000;
   background: #23903e;
 }
@@ -2262,10 +2262,9 @@ body.colab-locked {
 }
 
 .play-box1 iframe {
-  width: 20.13%;  
+  width: 20.13%;
   border-radius: 10px;
 }
-
 
 .pic-sec2 {
   display: flex;
@@ -2277,14 +2276,16 @@ body.colab-locked {
   align-items: center;
 }
 
-.pic-sec2 li:nth-child(1){
-  background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉1.webp) center center / contain no-repeat;
+.pic-sec2 li:nth-child(1) {
+  background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉1.webp)
+    center center / contain no-repeat;
   width: 50%;
   height: 100%;
 }
 
-.pic-sec2 li:nth-child(2){
-  background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉2.webp) center center / contain no-repeat;
+.pic-sec2 li:nth-child(2) {
+  background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉2.webp)
+    center center / contain no-repeat;
   width: 50%;
   height: 100%;
 }
@@ -2321,4 +2322,89 @@ body.colab-locked {
 .play-box2 iframe {
   border-radius: 10px;
   width: 27.4vw;
+}
+
+.pic-sec3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 3vw;
+  width: 80vw;
+  height: 110vh;
+  justify-content: center;
+  align-items: center;
+  translate: 10vw 0%;
+  margin-top: 15vh;
+}
+.pic-sec3 li:nth-child(1) {
+  background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉3.webp)
+    center/cover no-repeat;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+.pic-sec3 li:nth-child(2) {
+  background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉4.webp)
+    center/cover no-repeat;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+.pic-sec3 li:nth-child(3) {
+  background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉5.webp)
+    center/cover no-repeat;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+.pic-sec3 li:nth-child(4) {
+  background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉6.webp)
+    center/cover no-repeat;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+.pic-sec3 li:nth-child(5) {
+  background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉7.webp)
+    center/cover no-repeat;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+.pic-sec3 li:nth-child(6) {
+  background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉8.webp)
+    center/cover no-repeat;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+.pic-sec3 li:nth-child(1):hover {
+  opacity: 1;
+  transition: 0.8s ease-in-out all;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+.pic-sec3 li:nth-child(2):hover {
+  opacity: 1;
+  transition: 0.8s ease-in-out all;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+.pic-sec3 li:nth-child(3):hover {
+  opacity: 1;
+  transition: 0.8s ease-in-out all;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+.pic-sec3 li:nth-child(4):hover {
+  opacity: 1;
+  transition: 0.8s ease-in-out all;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+.pic-sec3 li:nth-child(5):hover {
+  opacity: 1;
+  transition: 0.8s ease-in-out all;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+.pic-sec3 li:nth-child(6):hover {
+  opacity: 1;
+  transition: 0.8s ease-in-out all;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
