@@ -454,7 +454,7 @@ var swiper3 = new Swiper(".mySwiper3", {
 
 
   let pages = [
-    "./index.html",  // NUDAKE 메인페이지 (경로는 실제 파일명에 맞게 수정하세요)
+    "./NUDAKE_COLAB.html",  // NUDAKE 메인페이지 (경로는 실제 파일명에 맞게 수정하세요)
     "./NUDAKE_COLAB_T.html",  // TEA HOUSE
     "./NUDAKE_COLAB_A.html",  // WORLD ANIMAL DAY
     "./NUDAKE_COLAB_J.html",  // JENNIE
