@@ -451,15 +451,3 @@ var swiper3 = new Swiper(".mySwiper3", {
     clickable: true,
   },
 });
-
-// .b-sec2>li에 hover시 .b-sec2 section > p 의 display: none를 block으로 바꾸기
-// // transition 1s ease=in-out all로
-// 뒤에있는 배경을 지우면서
-$(".b-sec2 > li").hover(
-  function () {
-    $(this).find("p").css("display", "block");
-  },
-  function () {
-    $(this).find("p").css("display", "none");
-  }
-);

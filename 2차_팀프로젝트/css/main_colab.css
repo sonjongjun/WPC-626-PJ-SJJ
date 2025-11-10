@@ -2047,9 +2047,8 @@ body.colab-locked {
 /*********************************************************************/
 .bg-box4 {
   width: 100vw;
-  height: 300vh;
+  height: 600vh;
   background-color: #eae1da;
-  border-top: 3px solid #000;
 }
 .bg-box4 h3 {
   text-align: center;
@@ -2069,6 +2068,8 @@ body.colab-locked {
   height: 100vh;
   justify-content: center;
   align-items: center;
+
+  /* 섹션2 */
 }
 .b-sec2 {
   display: flex;
@@ -2086,6 +2087,30 @@ body.colab-locked {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  overflow: hidden;
+}
+/* section 스타일 추가 */
+.b-sec2 section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.497);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* 추가 */
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+  border-radius: 50%;
+  z-index: 2;
+}
+/* hover 시 section 나타나기 */
+.b-sec2 > li:hover section {
+  opacity: 1;
+  visibility: visible;
 }
 .b-sec2 > li:hover {
   translate: 0% -5%;
@@ -2123,14 +2148,115 @@ body.colab-locked {
     center/cover no-repeat;
   border-radius: 50%;
 }
+
 .b-sec2 section > p {
+  position: static; /* relative에서 static으로 변경 */
+  text-align: center;
+  font-size: 1.2vw;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 2vh;
+  line-height: 1.5;
+  margin: 0; /* 추가: 기본 margin 제거 */
+  width: 80%; /* 추가: 텍스트가 너무 넓게 퍼지지 않도록 */
+  translate: 50% 0%;
+}
+/* 하단 제품명 p 태그 */
+.b-sec2 > li > p {
   position: absolute;
   text-align: center;
   font-size: 1.2vw;
   color: #000000;
   font-weight: bold;
-  bottom: 40%;
+  bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
-  display: none;
+  z-index: 3; /* section 위에 표시 */
+}
+.b-sec3 {
+  width: 90vw;
+  height: 70vh;
+  background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/생일8.webp)
+    center/cover no-repeat;
+  margin: 0 auto;
+  margin-top: 10vh;
+}
+
+.b-sec4 {
+  width: 90vw;
+  height: 80vh;
+  background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/생일9.webp)
+    center/cover no-repeat;
+  margin: 0 auto;
+  margin-top: 10vh;
+}
+.b-sec5 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 90vw;
+  height: 150vh;
+  gap: 3vh;
+  margin: 0 auto;
+  margin-top: 10vh;
+}
+.b-sec5 li:nth-child(1) {
+  background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/생일10.webp)
+    center/cover no-repeat;
+}
+.b-sec5 li:nth-child(2) {
+  background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/생일11.webp)
+    center/cover no-repeat;
+}
+.b-sec5 li:nth-child(3) {
+  background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/생일12.webp)
+    center/cover no-repeat;
+}
+.b-sec5 li:nth-child(4) {
+  background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/생일13.webp)
+    center/cover no-repeat;
+}
+/*********************************************************************/
+/************************ 콜라보 생일 페이지 종료!!! ******************/
+/*********************************************************************/
+
+/*********************************************************************/
+/************************ 콜라보 피크닉 페이지 시작!!! ******************/
+/*********************************************************************/
+.bg-box5 {
+  width: 100%;
+  height: 600vh;
+  border-top: 3px solid #000;
+  background: #23903e;
+}
+.pic-sec1 {
+  background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉9.webp)
+    center/cover no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+.bg-box5 {
+  font-size: 3vw;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 10vh;
+}
+
+.bg-box5 > p {
+  font-size: 1vw;
+  color: #ffffff;
+  text-align: center;
+}
+.play-box1 {
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 10vh;
+}
+.html5-video-player.ended-mode.html5-video-player:not(.ytp-transparent),
+.html5-video-player.unstarted-mode,
+.html5-video-player.ad-showing,
+.html5-video-player.ended-mode {
+  background-color: red;
 }
