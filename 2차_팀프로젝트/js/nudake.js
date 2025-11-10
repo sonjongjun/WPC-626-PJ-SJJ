@@ -287,3 +287,18 @@ $(".top-menu > ul > li:first-child").click(function () {
   );
 });
 
+
+// STORES 버튼(+) 클릭 시 NUDAKE_STORES.html로 이동
+$(".store-btn").click(function() {
+  location.href = "./NUDAKE_STORES.html";
+});
+
+// COLLABORATIONS 버튼(+) 클릭 시 NUDAKE_COLAB.html로 이동
+$(".colab-btn").click(function() {
+  location.href = "./NUDAKE_COLAB.html";
+});
+
+// PRODUCTS 버튼(+) 클릭 시 NUDAKE_PRODUCTS.html로 이동
+$(".pdct-btn").click(function() {
+  location.href = "./NUDAKE_ITEMS.html";
+});
