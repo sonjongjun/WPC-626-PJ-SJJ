@@ -1882,7 +1882,7 @@ body.colab-locked {
 /*********************************************************************/
 .bg-box3 {
   width: 100vw;
-  height: 400vh;
+  height: auto;
   background: #9b0202;
   border-top: 3px solid #000;
 }
@@ -1956,96 +1956,52 @@ body.colab-locked {
   height: 100vh;
   translate: 10% 0%;
 }
-.j-box2 img {
-  width: 50%;
-  height: 50%;
-  cursor: pointer;
-}
-/* 호버시 효과  */
-.img1 {
+
+/* 호버시 디졸브 효과 */
+.img1, .img2, .img3, .img4 {
+  position: relative;
   display: inline-block;
-  transition: all 1s ease-in-out;
-}
-.img1 img:last-child {
-  display: none;
-}
-.img1:hover img:first-child {
-  display: none;
-    transition: all 1s ease-in-out;
-}
-.img1:hover img:last-child {
-  display: inline;
-    transition: all 1s ease-in-out;
-}
-.img1 img{
-  translate: 0% -8%;
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
-/* 호버시 효과  */
-.img2 {
-  display: inline-block;
-  transition: all 1s ease-in-out;
-}
-.img2 img:last-child {
-  display: none;
-}
-.img2:hover img:first-child {
-  display: none;
-    transition: all 1s ease-in-out;
-}
-.img2:hover img:last-child {
-  display: inline;
-    transition: all 1s ease-in-out;
-}
-.img2 img{
+
+.img1 img, .img2 img, .img3 img, .img4 img {
+  position: absolute;
   translate: 0% -8%;
-  width: 100%;
+  width: 80%;
   height: 100%;
   object-fit: cover;
+  transition: opacity 0.8s ease-in-out;
+  translate: 20% 0%;
 }
-/* 호버시 효과  */
-.img3 {
-  display: inline-block;
-  transition: all 1s ease-in-out;
+
+.img1 img:first-child, .img2 img:first-child, .img3 img:first-child, .img4 img:first-child {
+  opacity: 1;
 }
-.img3 img:last-child {
-  display: none;
+
+.img1 img:last-child, .img2 img:last-child, .img3 img:last-child, .img4 img:last-child {
+  opacity: 0;
 }
-.img3:hover img:first-child {
-  display: none;
-    transition: all 1s ease-in-out;
+
+.img1:hover img:first-child, .img2:hover img:first-child, .img3:hover img:first-child, .img4:hover img:first-child {
+  opacity: 0;
 }
-.img3:hover img:last-child {
-  display: inline;
-    transition: all 1s ease-in-out;
+
+.img1:hover img:last-child, .img2:hover img:last-child, .img3:hover img:last-child, .img4:hover img:last-child {
+  opacity: 1;
 }
-.img3 img{
-  translate: 0% -8%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-/* 호버시 효과  */
-.img4 {
-  display: inline-block;
-  transition: all 1s ease-in-out;
-}
-.img4 img:last-child {
-  display: none;
-}
-.img4:hover img:first-child {
-  display: none;
-    transition: all 1s ease-in-out;
-}
-.img4:hover img:last-child {
-  display: inline;
-    transition: all 1s ease-in-out;
-}
-.img4 img{
-  translate: 0% -8%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+/* 슬라이드 영역 */
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background: none;
+    }
+    .mySwiper3{
+      height: 100vh;
+      width: 80vw;
+      translate: 0% 0%;
+      margin-bottom: 10vh;
+      background: none;
+    }
