@@ -287,7 +287,6 @@ $(".top-menu > ul > li:first-child").click(function () {
   );
 });
 
-
 //cb-arti의 css를 갖고있는 arti-1, arti-2, arti-3, arti-4, arti-5 각자가 클릭될 때
 // translate: 0% 0%로 바꾸기
 $(".cb-arti").each(function () {
@@ -313,139 +312,154 @@ $(".cb-arti").click(function () {
 }); //click//////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
 
-
-
 // 아티클 클릭 이벤트 (기존 로직 유지)
 $(".cb-arti").each(function () {
-    const initialTranslate = $(this).css("transform");
-    $(this).attr("data-original-translate", initialTranslate);
+  const initialTranslate = $(this).css("transform");
+  $(this).attr("data-original-translate", initialTranslate);
 });
 
 $(".cb-arti").click(function (e) {
-    e.stopPropagation();
-    
-    const currentTransform = $(this).css("transform");
-    const isOpen = currentTransform === "matrix(1, 0, 0, 1, 0, 0)" || currentTransform === "none" || currentTransform === "translateY(0px)";
-    
-    $(".cb-arti").each(function () {
-        const original = $(this).attr("data-original-translate");
-        if (original && original !== "none") {
-            $(this).css("transform", original);
-        } else {
-             // data-original-translate이 없는 경우를 위한 fallback
-             if ($(this).hasClass("arti-1")) {
-                $(this).css("transform", "translateY(90%)");
-            } else if ($(this).hasClass("arti-2")) {
-                $(this).css("transform", "translateY(86%)");
-            } else if ($(this).hasClass("arti-3")) {
-                $(this).css("transform", "translateY(90%)");
-            } else if ($(this).hasClass("arti-4")) {
-                $(this).css("transform", "translateY(87.3%)");
-            } else if ($(this).hasClass("arti-5")) {
-                $(this).css("transform", "translateY(88.5%)");
-            }
-        }
-    });
-    
-    if (!isOpen) {
-        $(this).css("transform", "translateY(0%)");
+  e.stopPropagation();
+
+  const currentTransform = $(this).css("transform");
+  const isOpen =
+    currentTransform === "matrix(1, 0, 0, 1, 0, 0)" ||
+    currentTransform === "none" ||
+    currentTransform === "translateY(0px)";
+
+  $(".cb-arti").each(function () {
+    const original = $(this).attr("data-original-translate");
+    if (original && original !== "none") {
+      $(this).css("transform", original);
+    } else {
+      // data-original-translate이 없는 경우를 위한 fallback
+      if ($(this).hasClass("arti-1")) {
+        $(this).css("transform", "translateY(90%)");
+      } else if ($(this).hasClass("arti-2")) {
+        $(this).css("transform", "translateY(86%)");
+      } else if ($(this).hasClass("arti-3")) {
+        $(this).css("transform", "translateY(90%)");
+      } else if ($(this).hasClass("arti-4")) {
+        $(this).css("transform", "translateY(87.3%)");
+      } else if ($(this).hasClass("arti-5")) {
+        $(this).css("transform", "translateY(88.5%)");
+      }
     }
-    
-    console.log("arti 클릭됨");
+  });
+
+  if (!isOpen) {
+    $(this).css("transform", "translateY(0%)");
+  }
+
+  console.log("arti 클릭됨");
 });
 
 ////////////////////////////////////////////////////////////////////////////
 //////////// 스크롤에 따른 cb-inbox li 애니메이션 /////////////////////////
 ////////////////////////////////////////////////////////////////////////////
 
-$(window).scroll(function() {
-    const scrollTop = $(window).scrollTop();
-    const windowHeight = $(window).height();
-    
-    // cb-box의 위치 확인
-    const cbBoxOffset = $(".cb-box").offset();
-    
-    if (cbBoxOffset) {
-        const cbBoxTop = cbBoxOffset.top;
-        const cbBoxHeight = $(".cb-box").height();
-        const cbBoxBottom = cbBoxTop + cbBoxHeight;
-        
-        // cb-box 영역을 완전히 벗어났는지 확인
-        const isAfterCbBox = scrollTop >= cbBoxBottom;
-        
-        // cb-box 영역이 끝나면 cb-inbox 숨기기
-        if (scrollTop < cbBoxTop || isAfterCbBox) {
-            $(".cb-inbox").css("opacity", "0");
-            $(".cb-inbox").css("pointer-events", "none");
-        } else {
-            $(".cb-inbox").css("opacity", "1");
-            $(".cb-inbox").css("pointer-events", "auto");
-        }
-        
-        // cb-box 영역을 벗어나면 애니메이션 중단
-        if (scrollTop < cbBoxTop || isAfterCbBox) {
-            return;
-        }
-        
-        // cb-box 내에서의 스크롤 진행도 (0~1)
-        const progress = Math.min(Math.max((scrollTop - cbBoxTop) / (cbBoxHeight - windowHeight), 0), 1);
-        
-        // 5번째 li의 애니메이션 완료 여부 체크
-        let fifthLiComplete = false;
-        
-        // 각 li에 대해 애니메이션 적용
-        $(".cb-inbox > li").each(function(index) {
-            // 각 li마다 다른 시작 지점을 가지도록 설정 (더 넓게 분산)
-            const startProgress = index * 0.2; // 0, 0.2, 0.4, 0.6, 0.8
-            const endProgress = startProgress + 0.2; // 애니메이션 지속 구간
-            
-            // 해당 li의 애니메이션 진행도 계산
-            let liProgress = 0;
-            if (progress >= startProgress && progress <= endProgress) {
-                liProgress = (progress - startProgress) / 0.2;
-            } else if (progress > endProgress) {
-                liProgress = 1;
-            }
-            
-            // 5번째 li(index 4)가 완료되었는지 체크
-            if (index === 4 && liProgress === 1) {
-                fifthLiComplete = true;
-            }
-            
-            // 초기 translateY 값 100vh에서 0으로
-            const currentTranslate = 100 - (100 * liProgress);
-            
-            // transform 적용
-            $(this).css("transform", "translateY(" + currentTranslate + "vh)");
-        });
-        
-        // 5번째 li 애니메이션이 완료되면 cb-box 높이를 100vh로 변경
-        if (fifthLiComplete && progress > 1) {
-            $(".cb-box").css("height", "100vh");
-        }
+$(window).scroll(function () {
+  const scrollTop = $(window).scrollTop();
+  const windowHeight = $(window).height();
+
+  // cb-box의 위치 확인
+  const cbBoxOffset = $(".cb-box").offset();
+
+  if (cbBoxOffset) {
+    const cbBoxTop = cbBoxOffset.top;
+    const cbBoxHeight = $(".cb-box").height();
+    const cbBoxBottom = cbBoxTop + cbBoxHeight;
+
+    // cb-box 영역을 완전히 벗어났는지 확인
+    const isAfterCbBox = scrollTop >= cbBoxBottom;
+
+    // cb-box 영역이 끝나면 cb-inbox 숨기기
+    if (scrollTop < cbBoxTop || isAfterCbBox) {
+      $(".cb-inbox").css("opacity", "0");
+      $(".cb-inbox").css("pointer-events", "none");
+    } else {
+      $(".cb-inbox").css("opacity", "1");
+      $(".cb-inbox").css("pointer-events", "auto");
     }
+
+    // cb-box 영역을 벗어나면 애니메이션 중단
+    if (scrollTop < cbBoxTop || isAfterCbBox) {
+      return;
+    }
+
+    // cb-box 내에서의 스크롤 진행도 (0~1)
+    const progress = Math.min(
+      Math.max((scrollTop - cbBoxTop) / (cbBoxHeight - windowHeight), 0),
+      1
+    );
+
+    // 5번째 li의 애니메이션 완료 여부 체크
+    let fifthLiComplete = false;
+
+    // 각 li에 대해 애니메이션 적용
+    $(".cb-inbox > li").each(function (index) {
+      // 각 li마다 다른 시작 지점을 가지도록 설정 (더 넓게 분산)
+      const startProgress = index * 0.2; // 0, 0.2, 0.4, 0.6, 0.8
+      const endProgress = startProgress + 0.2; // 애니메이션 지속 구간
+
+      // 해당 li의 애니메이션 진행도 계산
+      let liProgress = 0;
+      if (progress >= startProgress && progress <= endProgress) {
+        liProgress = (progress - startProgress) / 0.2;
+      } else if (progress > endProgress) {
+        liProgress = 1;
+      }
+
+      // 5번째 li(index 4)가 완료되었는지 체크
+      if (index === 4 && liProgress === 1) {
+        fifthLiComplete = true;
+      }
+
+      // 초기 translateY 값 100vh에서 0으로
+      const currentTranslate = 100 - 100 * liProgress;
+
+      // transform 적용
+      $(this).css("transform", "translateY(" + currentTranslate + "vh)");
+    });
+
+    // 5번째 li 애니메이션이 완료되면 cb-box 높이를 100vh로 변경
+    if (fifthLiComplete && progress > 1) {
+      $(".cb-box").css("height", "100vh");
+    }
+  }
 });
 
 // 슬라이드 js
- var swiper = new Swiper(".mySwiper", {
-      effect: "cards",
-      grabCursor: true,
-    });
+var swiper = new Swiper(".mySwiper", {
+  effect: "cards",
+  grabCursor: true,
+});
 
-    //2번쨰 슬라이드 js
-     var swiper2 = new Swiper(".mySwiper2", {
-      effect: "cards",
-      grabCursor: true,
-    }); 
+//2번쨰 슬라이드 js
+var swiper2 = new Swiper(".mySwiper2", {
+  effect: "cards",
+  grabCursor: true,
+});
 
-    
-    var swiper3 = new Swiper(".mySwiper3", {
-      direction: "vertical",
-      slidesPerView: 1,
-      spaceBetween: 30,
-      mousewheel: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
+var swiper3 = new Swiper(".mySwiper3", {
+  direction: "vertical",
+  slidesPerView: 1,
+  spaceBetween: 30,
+  mousewheel: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+// .b-sec2>li에 hover시 .b-sec2 section > p 의 display: none를 block으로 바꾸기
+// // transition 1s ease=in-out all로
+// 뒤에있는 배경을 지우면서
+$(".b-sec2 > li").hover(
+  function () {
+    $(this).find("p").css("display", "block");
+  },
+  function () {
+    $(this).find("p").css("display", "none");
+  }
+);
