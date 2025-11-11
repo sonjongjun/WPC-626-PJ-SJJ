@@ -28,7 +28,7 @@ $(window).scroll(function () {
 
 
 $(document).ready(function() {
-  // NUDAKE 로고 클릭 이벤트 먼저 등록 (JSON 로드와 무관하게 작동)
+  // NUDAKE 로고 클릭 이벤트 먼저 등록
   $('.top-menu > ul > li:first-child').off('click').on('click', function(e) {
     e.preventDefault();
     e.stopPropagation();
@@ -36,70 +36,31 @@ $(document).ready(function() {
     location.href = './NUDAKE_PJ.html';
   });
   
-  // JSON 데이터 로드
-  $.getJSON('./data/menu_data.json', function(data) {
-    const categories = data.categories;
-    
-    // 기본적으로 DESSERTS 카테고리 표시
-    displayCategory('DESSERTS', categories);
-    
-    // 나머지 메뉴 클릭 이벤트 (NUDAKE 제외)
-    $('.top-menu > ul > li:not(:first-child)').off('click').on('click', function() {
-      const menuText = $(this).text().trim();
-      
-      // 카테고리 표시
-      if (categories[menuText]) {
-        displayCategory(menuText, categories);
-        
-        // 페이지 제목 업데이트
-        $('.t-box h2').text(menuText);
-      }
-    });
-  }).fail(function(jqXHR, textStatus, errorThrown) {
-    console.error('JSON 로드 실패:', textStatus, errorThrown);
-    alert('메뉴 데이터를 불러오는데 실패했습니다.');
+  // 매장 메뉴 클릭 이벤트 추가
+  // SEONG-SU (2번째 자식) 클릭
+  $('.top-menu > ul > li:nth-child(2)').off('click').on('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log('SEONG-SU 클릭 - 성수 매장 페이지로 이동');
+    location.href = './NUDAKE_STORE.html?store=SEONGSU';
+  });
+  
+  // DOSAN (3번째 자식) 클릭
+  $('.top-menu > ul > li:nth-child(3)').off('click').on('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log('DOSAN 클릭 - 도산 매장 페이지로 이동');
+    location.href = './NUDAKE_STORE.html?store=DOSAN';
+  });
+  
+  // SHANGHAI (4번째 자식) 클릭
+  $('.top-menu > ul > li:nth-child(4)').off('click').on('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log('SHANGHAI 클릭 - 상하이 매장 페이지로 이동');
+    location.href = './NUDAKE_STORE.html?store=SHANGHAI';
   });
 });
-
-// 카테고리별 아이템 표시 함수
-function displayCategory(categoryName, categories) {
-  const category = categories[categoryName];
-  const gridBox = $('.grid-box');
-  
-  // 기존 내용 제거
-  gridBox.empty();
-  
-  // 아이템 추가
-  category.items.forEach(function(item) {
-    const itemHtml = `
-      <div data-id="${item.id}">
-        <img src="${item.image}" alt="${item.id}" />
-        <h3>${item.name}</h3>
-      </div>
-    `;
-    gridBox.append(itemHtml);
-  });
-  
-
-  // 호버 효과 강화
-  $('.grid-box > div').hover(
-    function() {
-      $(this).css({
-        'transform': 'scale(1.025)',
-        'transition': 'all 0.3s ease',
-        'z-index': '10'
-      });
-      $(this).find('h3').css('color', '#000000');
-    },
-    function() {
-      $(this).css({
-        'transform': 'scale(1)',
-        'z-index': '1'
-      });
-      $(this).find('h3').css('color', '#000000af');
-    }
-  );
-}
 
 // 스크롤 시 상단 메뉴 숨김/표시
 $(window).scroll(function() {
