@@ -1401,6 +1401,44 @@
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
-  font-size: 2vw;
+  font-size: 1vw;
   color: #000000af;
+}
+/* 그리드 아이템 애니메이션 */
+.grid-box > div {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.grid-box > div:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 확대 시 배경 어둡게 */
+body.modal-open::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+
+/* 로딩 애니메이션 */
+.grid-box.loading {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.grid-box.loading::after {
+  content: 'Loading...';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: #000;
 }
