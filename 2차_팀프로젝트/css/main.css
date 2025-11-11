@@ -1279,20 +1279,22 @@
 }
 /* 속박스2 */
 .info2 {
+  position: relative;
   display: flex;
   font-size: 1vw;
   width: 50%;
   align-items: center;
 }
 .map-btn {
-  position: absolute;
-  font-size: 1.5vw;
-  font-weight: bold;
-  border-radius: 8px;
-  background-color: #fff;
-  border: none;
-  cursor: pointer;
-  right: 11%;
+ position: absolute;
+    font-size: 1.5vw;
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    right: 11%;
+    top: 35%;
 }
 /****************************************************************/
 /************************ 디테일 페이지 종료!!! ******************/

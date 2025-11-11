@@ -70,12 +70,7 @@
           <li>GIFT SHOP HOURS &nbsp; &nbsp;11:00~21:00</li>
           <li>TEA LOUNGE HOURS &nbsp; &nbsp;12:00~21:00</li>
         </ul>
-        <button class="map-btn">
-          <a
-            href="https://www.google.com/maps/place/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C+%EC%84%B1%EB%8F%99%EA%B5%AC+%EB%9A%9D%EC%84%AC%EB%A1%9C/@37.5411011,127.0296981,15z/data=!3m1!4b1!4m6!3m5!1s0x357ca37df6075ca5:0x429a917f0a88d26!8m2!3d37.541273!4d127.0413904!16s%2Fg%2F119wpjhgt?entry=tts&g_ep=EgoyMDI1MDgyNC4wIPu8ASoASAFQAw%3D%3D&skid=492d4930-a4cf-44bd-8874-8bdeaebbe13d"
-            >VIEW MAP</a
-          >
-        </button>
+        <a href="https://maps.app.goo.gl/Afb6UmGAXtZLrR1b8"><button class="map-btn">VIEW MAP</button></a>
       </div>
     </div>
     <div class="img-area img-area3">
@@ -127,6 +122,13 @@
           `./01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/성수3.webp`,
           `./01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/성수2.webp`,
         ],
+        placeName: "NUDAKE TEAHOUSE",
+        location: "KOREA",
+        address: "5F 433, Ttukseom-ro, Seongdong-gu, Seoul, Republic of Korea",
+        contact: "070-5147-0772",
+        giftHours: "11:00~21:00",
+        loungeHours: "12:00~21:00",
+        mapUrl: "https://maps.app.goo.gl/Afb6UmGAXtZLrR1b8",
       },
       DOSAN: {
         title: `STORE IN DOSAN`,
@@ -137,29 +139,29 @@
           `./01.자료수집/01.메인상단지점이미지/02.누데이크도산이미지/도산2.webp`,
           `./01.자료수집/01.메인상단지점이미지/02.누데이크도산이미지/도산3.webp`,
         ],
-
-        where: `HAUS NOWHERE DOSAN`,
-        info: [
-          `
-    KOREA
-
-    50, Apgujeong-ro 46-gil, Gangnam-gu, Seoul, Republic of Korea
-
-    CONTACT070-4128-2122
-
-    HOURS11:00~21:00
-    `,
-        ],
+        placeName: "HAUS NOWHERE DOSAN",
+        location: "KOREA",
+        address:
+          "50, Apgujeong-ro 46-gil, Gangnam-gu, Seoul, Republic of Korea",
+        contact: "070-4128-2122",
+        hours: "11:00~21:00",
+        mapUrl: "https://maps.app.goo.gl/Lj9YwLUYz9tDySti9",
       },
       SHANGHAI: {
         title: `STORE IN SHANGHAI`,
         imgSet: [
-              `./01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/상하이1.webp`,
+          `./01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/상하이1.webp`,
           `./01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/상하이5.webp`,
           `./01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/상하이2.webp`,
           `./01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/상하이3.webp`,
           `./01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/상하이6.webp`,
         ],
+        placeName: "NUDAKE SHANGHAI",
+        location: "CHINA",
+        address: "Shanghai Store Address Here",
+        contact: "XXX-XXXX-XXXX",
+        hours: "10:00~20:00",
+        mapUrl: "https://www.google.com/maps/place/your-shanghai-map-link",
       },
     };
 
@@ -175,5 +177,46 @@
     storeBox.forEach((el, idx) => {
       el.style.backgroundImage = `url(${storeData[pm].imgSet[idx]})`;
     });
+
+    const currentStore = storeData[pm];
+
+// info1 업데이트
+document.querySelector(".info1 ul li:first-child").textContent = currentStore.placeName;
+document.querySelector(".info1 ul li:last-child").innerHTML = `
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <i class="fa-solid fa-location-dot"></i>${currentStore.location}
+`;
+
+// info2 업데이트
+const info2List = document.querySelector(".info2 ul");
+info2List.innerHTML = ""; // 기존 내용 초기화
+
+// 주소
+const addressLi = document.createElement("li");
+addressLi.textContent = currentStore.address;
+info2List.appendChild(addressLi);
+
+// 연락처
+const contactLi = document.createElement("li");
+contactLi.textContent = `CONTACT     ${currentStore.contact}`;
+info2List.appendChild(contactLi);
+
+// 운영시간 (성수는 두 가지, 다른 지점은 한 가지)
+if (currentStore.giftHours && currentStore.loungeHours) {
+  const giftHoursLi = document.createElement("li");
+  giftHoursLi.textContent = `GIFT SHOP HOURS     ${currentStore.giftHours}`;
+  info2List.appendChild(giftHoursLi);
+  
+  const loungeHoursLi = document.createElement("li");
+  loungeHoursLi.textContent = `TEA LOUNGE HOURS     ${currentStore.loungeHours}`;
+  info2List.appendChild(loungeHoursLi);
+} else {
+  const hoursLi = document.createElement("li");
+  hoursLi.textContent = `HOURS     ${currentStore.hours}`;
+  info2List.appendChild(hoursLi);
+}
+
+// 지도 버튼 링크 업데이트
+document.querySelector(".map-btn a").href = currentStore.mapUrl;
   </script>
 </html>
