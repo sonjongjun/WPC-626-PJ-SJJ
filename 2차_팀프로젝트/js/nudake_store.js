@@ -26,6 +26,7 @@ $(window).scroll(function () {
     }
 });//scroll/////////////
 
+
 $(document).ready(function() {
   // NUDAKE 로고 클릭 이벤트 먼저 등록 (JSON 로드와 무관하게 작동)
   $('.top-menu > ul > li:first-child').off('click').on('click', function(e) {

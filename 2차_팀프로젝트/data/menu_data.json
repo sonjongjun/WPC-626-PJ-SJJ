@@ -478,37 +478,37 @@
           "name": "CRANBERRY CHAUD",
           "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료24.webp"
         },
-         {
+        {
           "id": "beverage23",
           "name": "PINK MOJITO",
           "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료25.webp"
         },
-         {
+        {
           "id": "beverage24",
           "name": "EGGNOG",
           "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료26.webp"
         },
-         {
+        {
           "id": "beverage25",
           "name": "LEMONADE",
           "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료27.webp"
         },
-         {
+        {
           "id": "beverage26",
           "name": "MICROI SHAVED ICE",
           "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료28.webp"
         },
-         {
+        {
           "id": "beverage27",
           "name": "COLD BLACK",
           "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료29.webp"
         },
-         {
+        {
           "id": "beverage28",
           "name": "ROOIBOS CREAM TEA",
           "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료30.webp"
         },
-         {
+        {
           "id": "beverage29",
           "name": "NU LATTE",
           "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료31.webp"
@@ -527,6 +527,71 @@
           "id": "merch2",
           "name": "CHICK MATCH",
           "image": "./01.자료수집/03.하단메뉴영역/03.굿즈메뉴/굿즈2.webp"
+        }
+      ]
+    },
+    "TEA": {
+      "title": "TEA",
+      "items": [
+        {
+          "id": "tea1",
+          "name": "KEEMOON",
+          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA1.jpg"
+        },
+        {
+          "id": "tea2",
+          "name": "NO. 88",
+          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA2.jpg"
+        },
+        {
+          "id": "tea3",
+          "name": "THE MAFIA",
+          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA3.jpg"
+        },
+        {
+          "id": "tea4",
+          "name": "LEATHER BOOTS",
+          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA4.jpg"
+        },
+        {
+          "id": "tea5",
+          "name": "ROOI",
+          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA5.jpg"
+        },
+        {
+          "id": "tea6",
+          "name": "MANTIS",
+          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA6.jpg"
+        },
+        {
+          "id": "tea7",
+          "name": "BLACK CARAMEL",
+          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA7.jpg"
+        },
+        {
+          "id": "tea8",
+          "name": "BLUE MONK",
+          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA8.jpg"
+        },
+        {
+          "id": "tea9",
+          "name": "CHATEAU NOIR",
+          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA9.jpg"
+        },
+        {
+          "id": "tea10",
+          "name": "CHAMO PILLOW",
+          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA10.jpg"
+        },
+        {
+          "id": "tea11",
+          "name": "PEACH ROSIE",
+          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA11.jpg"
+        },
+        {
+          "id": "tea12",
+          "name": "WHITE SUNSET",
+          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA12.jpg"
         }
       ]
     }
