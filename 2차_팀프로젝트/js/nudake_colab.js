@@ -19,9 +19,9 @@ $(document).ready(function() {
   let currentPage = window.location.pathname.split('/').pop();
   console.log("현재 페이지:", currentPage);
   
-  // 상단 메뉴 네비게이션 (모든 페이지에서 작동)
+  // 상단 메뉴 네비게이션 (NUDAKE 로고 제외)
   let pages = [
-    "./NUDAKE_COLAB.html",     // NUDAKE (index 0)
+    "./NUDAKE_PJ.html",        // NUDAKE (index 0) - 메인 페이지로 변경
     "./NUDAKE_COLAB_T.html",   // TEA HOUSE (index 1)
     "./NUDAKE_COLAB_A.html",   // WORLD ANIMAL DAY (index 2)
     "./NUDAKE_COLAB_J.html",   // JENNIE (index 3)
@@ -29,16 +29,16 @@ $(document).ready(function() {
     "./NUDAKE_COLAB_P.html"    // PICNIC CAKE (index 5)
   ];
 
-  // 상단 메뉴 클릭 이벤트 (NUDAKE 로고 포함)
-  $(".top-menu > ul > li").each(function(idx) {
+  // 상단 메뉴 클릭 이벤트 (NUDAKE 로고는 첫 번째 ready 함수에서 처리하므로 제외)
+  $(".top-menu > ul > li:not(:first-child)").each(function(idx) {
     $(this).off('click').on('click', function(e) {
       e.preventDefault();
       e.stopPropagation();
-      console.log("상단 메뉴 클릭:", idx, pages[idx]);
-      location.href = pages[idx];
+      // idx는 0부터 시작하지만 첫 번째를 제외했으므로 +1 해야 함
+      console.log("상단 메뉴 클릭:", idx + 1, pages[idx + 1]);
+      location.href = pages[idx + 1];
     });
   });
-  
   // NUDAKE_COLAB.html 메인 페이지에서만 cb-inbox li 클릭 이벤트 활성화
   if (currentPage === 'NUDAKE_COLAB.html' || currentPage === '' || !currentPage) {
     console.log("메인 페이지 - cb-inbox 이벤트 활성화");
