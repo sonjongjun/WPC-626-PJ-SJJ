@@ -1,3 +1,16 @@
+$(document).ready(function() {
+  // NUDAKE 로고 클릭 이벤트 먼저 등록 (JSON 로드와 무관하게 작동)
+  $('.top-menu > ul > li:first-child').off('click').on('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log('NUDAKE 로고 클릭');
+    location.href = './NUDAKE_PJ.html';
+  });
+});
+
+
+
+
 // 전역 변수
 let isScrolling = false;
 

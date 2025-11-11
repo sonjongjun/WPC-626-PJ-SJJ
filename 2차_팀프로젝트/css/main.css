@@ -1442,3 +1442,44 @@ body.modal-open::before {
   font-size: 2rem;
   color: #000;
 }
+
+/****************************************************************/
+/************************ 그리드 페이지 종료!! ******************/
+/****************************************************************/
+
+/****************************************************************/
+/************************ 그리드 상세 페이지 시작!!! ******************/
+/****************************************************************/
+
+.i-bg{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  border-top: 3px solid #000;
+}
+.i-bg1{
+width: 50%;
+height: 100vh;
+}
+.i-bg2{
+  width: 50%;
+  height: 100vh;
+  border-left: 3px solid #000;
+}
+.i-bg1 img{
+  width: 100%;
+  height: 100vh;
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: black;
+}
+.i-bg2 h3{
+  font-size: 4vw;
+  text-align: center;
+}
+.i-bg2 p{
+  font-size: 2.5vw;
+  text-align: center;
+  translate:0% 30vh;
+}

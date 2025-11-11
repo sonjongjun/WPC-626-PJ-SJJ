@@ -370,113 +370,148 @@
       "items": [
         {
           "id": "beverage1",
-          "name": "AMERICANO",
+          "name": "CROI CHOCO LATTE",
           "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료1.webp"
         },
         {
           "id": "beverage2",
-          "name": "ESPRESSO",
+          "name": "ORANGE JUICE",
           "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료2.webp"
         },
         {
           "id": "beverage3",
-          "name": "CAFE LATTE",
+          "name": "MICRO SHAKE",
           "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료3.webp"
         },
         {
           "id": "beverage4",
-          "name": "CAPPUCCINO",
+          "name": "BLOOMING BERRY",
           "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료4.webp"
         },
         {
           "id": "beverage5",
-          "name": "FLAT WHITE",
+          "name": "PSL",
           "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료5.webp"
         },
         {
           "id": "beverage6",
-          "name": "CARAMEL MACCHIATO",
+          "name": "AVOGATO",
           "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료6.webp"
         },
         {
           "id": "beverage7",
-          "name": "VANILLA LATTE",
+          "name": "NU TRUFFLE",
           "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료7.webp"
         },
         {
           "id": "beverage8",
-          "name": "MOCHA",
+          "name": "FLOWER LATTE",
           "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료8.webp"
         },
         {
           "id": "beverage9",
-          "name": "GREEN TEA LATTE",
+          "name": "HEART ADE",
           "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료9.webp"
         },
         {
           "id": "beverage10",
-          "name": "EARL GREY TEA",
+          "name": "KETO WHITE",
           "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료10.webp"
         },
         {
           "id": "beverage11",
-          "name": "CHAMOMILE TEA",
+          "name": "WHITE SANGRIA",
           "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료11.webp"
         },
         {
           "id": "beverage12",
-          "name": "PEPPERMINT TEA",
+          "name": "CREAM SODA",
           "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료12.webp"
         },
         {
           "id": "beverage13",
-          "name": "ORANGE JUICE",
+          "name": "MONGTE",
           "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료13.webp"
         },
         {
           "id": "beverage14",
-          "name": "APPLE JUICE",
+          "name": "BLACK LEMONADE",
           "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료14.webp"
         },
         {
           "id": "beverage15",
-          "name": "GRAPEFRUIT ADE",
+          "name": "SISO ADE",
           "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료15.webp"
         },
         {
           "id": "beverage16",
-          "name": "LEMON ADE",
+          "name": "NUTTY GREEN SHAKE",
           "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료16.webp"
         },
         {
           "id": "beverage17",
-          "name": "STRAWBERRY SMOOTHIE",
+          "name": "BERGAMOT TONIC",
           "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료17.webp"
         },
         {
           "id": "beverage18",
-          "name": "MANGO SMOOTHIE",
-          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료18.webp"
-        },
-        {
-          "id": "beverage19",
-          "name": "BERRY SMOOTHIE",
+          "name": "SEA GRAPES ADE",
           "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료19.webp"
         },
         {
-          "id": "beverage20",
-          "name": "ICED AMERICANO",
-          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료20.webp"
-        },
-        {
-          "id": "beverage21",
-          "name": "ICED LATTE",
+          "id": "beverage19",
+          "name": "VEGAN MOCHA",
           "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료21.webp"
         },
         {
-          "id": "beverage22",
-          "name": "COLD BREW",
+          "id": "beverage20",
+          "name": "DUTCH BLACK",
           "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료22.webp"
+        },
+        {
+          "id": "beverage21",
+          "name": "APPLE LATTE",
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료23.webp"
+        },
+        {
+          "id": "beverage22",
+          "name": "CRANBERRY CHAUD",
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료24.webp"
+        },
+         {
+          "id": "beverage23",
+          "name": "PINK MOJITO",
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료25.webp"
+        },
+         {
+          "id": "beverage24",
+          "name": "EGGNOG",
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료26.webp"
+        },
+         {
+          "id": "beverage25",
+          "name": "LEMONADE",
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료27.webp"
+        },
+         {
+          "id": "beverage26",
+          "name": "MICROI SHAVED ICE",
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료28.webp"
+        },
+         {
+          "id": "beverage27",
+          "name": "COLD BLACK",
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료29.webp"
+        },
+         {
+          "id": "beverage28",
+          "name": "ROOIBOS CREAM TEA",
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료30.webp"
+        },
+         {
+          "id": "beverage29",
+          "name": "NU LATTE",
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료31.webp"
         }
       ]
     },
@@ -485,43 +520,13 @@
       "items": [
         {
           "id": "merch1",
-          "name": "NUDAKE TOTE BAG",
+          "name": "EGGCUSE MATCH",
           "image": "./01.자료수집/03.하단메뉴영역/03.굿즈메뉴/굿즈1.webp"
         },
         {
           "id": "merch2",
-          "name": "NUDAKE MUG",
+          "name": "CHICK MATCH",
           "image": "./01.자료수집/03.하단메뉴영역/03.굿즈메뉴/굿즈2.webp"
-        },
-        {
-          "id": "merch3",
-          "name": "NUDAKE T-SHIRT",
-          "image": "./01.자료수집/03.하단메뉴영역/03.굿즈메뉴/굿즈3.webp"
-        },
-        {
-          "id": "merch4",
-          "name": "NUDAKE CAP",
-          "image": "./01.자료수집/03.하단메뉴영역/03.굿즈메뉴/굿즈4.webp"
-        },
-        {
-          "id": "merch5",
-          "name": "NUDAKE STICKER PACK",
-          "image": "./01.자료수집/03.하단메뉴영역/03.굿즈메뉴/굿즈5.webp"
-        },
-        {
-          "id": "merch6",
-          "name": "NUDAKE NOTEBOOK",
-          "image": "./01.자료수집/03.하단메뉴영역/03.굿즈메뉴/굿즈6.webp"
-        },
-        {
-          "id": "merch7",
-          "name": "NUDAKE TUMBLER",
-          "image": "./01.자료수집/03.하단메뉴영역/03.굿즈메뉴/굿즈7.webp"
-        },
-        {
-          "id": "merch8",
-          "name": "NUDAKE ECO BAG",
-          "image": "./01.자료수집/03.하단메뉴영역/03.굿즈메뉴/굿즈8.webp"
         }
       ]
     }

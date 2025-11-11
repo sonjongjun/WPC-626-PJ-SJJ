@@ -1,4 +1,12 @@
 $(document).ready(function() {
+  // NUDAKE 로고 클릭 이벤트 먼저 등록 (JSON 로드와 무관하게 작동)
+  $('.top-menu > ul > li:first-child').off('click').on('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log('NUDAKE 로고 클릭');
+    location.href = './NUDAKE_PJ.html';
+  });
+  
   // JSON 데이터 로드
   $.getJSON('./data/menu_data.json', function(data) {
     const categories = data.categories;
@@ -6,15 +14,9 @@ $(document).ready(function() {
     // 기본적으로 DESSERTS 카테고리 표시
     displayCategory('DESSERTS', categories);
     
-    // 상단 메뉴 클릭 이벤트
-    $('.top-menu > ul > li').click(function() {
+    // 나머지 메뉴 클릭 이벤트 (NUDAKE 제외)
+    $('.top-menu > ul > li:not(:first-child)').off('click').on('click', function() {
       const menuText = $(this).text().trim();
-      
-      // NUDAKE 로고 클릭 시 메인 페이지로
-      if (menuText === 'NUDAKE') {
-        location.href = './NUDAKE.html';
-        return;
-      }
       
       // 카테고리 표시
       if (categories[menuText]) {
@@ -101,7 +103,16 @@ $('.top-menu').hover(
   }
 );
 
-//top-area의 nudake 로고 클릭 시 메인 페이지로
-$('.top-menu > ul > li:first-child').click(function() {
-  location.href = './NUDAKE.html';
-});
+  var swiper = new Swiper(".mySwiper", {
+      effect: "cube",
+      grabCursor: true,
+      cubeEffect: {
+        shadow: true,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
