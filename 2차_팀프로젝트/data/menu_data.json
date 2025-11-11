@@ -61,13 +61,13 @@
           "id": "dessert10",
           "name": "CROISTICK",
           "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트10.webp",
-          "description":"Delightful stick pastry, bringing joy through its shape, accompanied by fresh berry confiture on the side *Berry confiture is served at the counter"
+          "description":"Delightful stick pastry, bringing joy through its shape, accompanied by fresh berry confiture on the side <br> *Berry confiture is served at the counter"
         },
         {
           "id": "dessert11",
           "name": "BABY HAND PIE",
           "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트11.webp",
-          "description":"Cute hand-shaped pie of different gestures with caramel dipping on the side *Choose 3 pies *Caramel dipping cream served at the counter per each order"
+          "description":"Cute hand-shaped pie of different gestures with caramel dipping on the side <br> *Choose 3 pies <br> *Caramel dipping cream served at the counter per each order"
         },
         {
           "id": "dessert12",
@@ -79,7 +79,7 @@
           "id": "dessert13",
           "name": "SAUSAGE CROIPIZZA",
           "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트13.webp",
-          "description":"aPizza pastry topped with cheese, sausage, and vegetables on layers of dougha"
+          "description":"Pizza pastry topped with cheese, sausage, and vegetables on layers of dough"
         },
         {
           "id": "dessert14",
