@@ -13,7 +13,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     />
-    <link rel="shortcut icon" href="01.자료수집/01.메인상단지점이미지/favicon-96x96.png" />
+    <link
+      rel="shortcut icon"
+      href="01.자료수집/01.메인상단지점이미지/favicon-96x96.png"
+    />
     <!-- 폰트 cdn -->
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Hahmlet:wght@500..900&display=swap");
@@ -134,11 +137,24 @@
           `./01.자료수집/01.메인상단지점이미지/02.누데이크도산이미지/도산2.webp`,
           `./01.자료수집/01.메인상단지점이미지/02.누데이크도산이미지/도산3.webp`,
         ],
+
+        where: `HAUS NOWHERE DOSAN`,
+        info: [
+          `
+    KOREA
+
+    50, Apgujeong-ro 46-gil, Gangnam-gu, Seoul, Republic of Korea
+
+    CONTACT070-4128-2122
+
+    HOURS11:00~21:00
+    `,
+        ],
       },
       SHANGHAI: {
         title: `STORE IN SHANGHAI`,
         imgSet: [
-          `./01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/상하이1.webp`,
+              `./01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/상하이1.webp`,
           `./01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/상하이5.webp`,
           `./01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/상하이2.webp`,
           `./01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/상하이3.webp`,
@@ -147,7 +163,6 @@
       },
     };
 
-
     // 타이틀 변경대상
     const titleBox = document.querySelector(".t-box > h2");
 
@@ -155,15 +170,10 @@
     titleBox.textContent = storeData[pm].title;
 
     // 이미지 변경대상
-    const storeBox = document.querySelectorAll(
-      ".img-area li"
-
-    );
-
+    const storeBox = document.querySelectorAll(".img-area li");
     // 이미지 변경하기
     storeBox.forEach((el, idx) => {
       el.style.backgroundImage = `url(${storeData[pm].imgSet[idx]})`;
     });
-
   </script>
 </html>
