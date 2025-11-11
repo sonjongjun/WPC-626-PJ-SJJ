@@ -59,16 +59,56 @@ $(document).ready(function() {
         // 아이템 이름 업데이트
         $('.i-bg2 h3').text(item.name);
         
-        // 아이템 설명 업데이트 (description 필드가 있으면)
+        // 아이템 설명 업데이트
         if (item.description) {
           $('.i-bg2 p').html(item.description);
         } else {
-          // description이 없으면 기본 메시지
           $('.i-bg2 p').html('Delicious handcrafted dessert <br> Made with premium ingredients <br> Experience NUDAKE');
         }
         
-        // 이미지 업데이트 (Swiper에 이미지 설정)
-        $('.swiper-slide img').attr('src', item.image);
+        // 이미지 배열 생성 (메인 이미지 + 추가 이미지들)
+        let imageArray = [item.image];
+        
+        // 만약 item에 images 배열이 있다면 사용, 없다면 같은 이미지 4개 반복
+        if (item.images && Array.isArray(item.images)) {
+          imageArray = item.images;
+        } else {
+          // 기본적으로 메인 이미지를 4번 반복
+          imageArray = [item.image, item.image, item.image, item.image];
+        }
+        
+        // Swiper 슬라이드 업데이트
+        const swiperWrapper = $('.swiper-wrapper');
+        swiperWrapper.empty(); // 기존 슬라이드 제거
+        
+        // 새로운 슬라이드 추가
+        imageArray.forEach(function(imgSrc) {
+          const slideHtml = `
+            <div class="swiper-slide">
+              <img src="${imgSrc}" alt="${item.name}" />
+            </div>
+          `;
+          swiperWrapper.append(slideHtml);
+        });
+        
+        // Swiper 재초기화
+        if (window.mySwiper) {
+          window.mySwiper.destroy(true, true);
+        }
+        
+        window.mySwiper = new Swiper(".mySwiper", {
+          effect: "cube",
+          grabCursor: true,
+          cubeEffect: {
+            shadow: true,
+            slideShadows: true,
+            shadowOffset: 20,
+            shadowScale: 0.94,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+          },
+        });
         
         console.log('아이템 정보 로드 완료:', item);
       } else {
@@ -98,16 +138,11 @@ $(window).scroll(function() {
   const windowHeight = $(window).height();
   const documentHeight = $(document).height();
   
-  // 최상단 (0px)
   if (scrollTop === 0) {
     $('.top-menu').css('display', 'block');
-  }
-  // 최하단 (여유값 10px 추가로 더 잘 감지)
-  else if (scrollTop + windowHeight >= documentHeight - 10) {
+  } else if (scrollTop + windowHeight >= documentHeight - 10) {
     $('.top-menu').css('display', 'block');
-  }
-  // 중간 영역
-  else {
+  } else {
     $('.top-menu').css('display', 'none');
   }
 });
@@ -123,18 +158,3 @@ $('.top-menu').hover(
     }
   }
 );
-
-// Swiper 초기화
-var swiper = new Swiper(".mySwiper", {
-  effect: "cube",
-  grabCursor: true,
-  cubeEffect: {
-    shadow: true,
-    slideShadows: true,
-    shadowOffset: 20,
-    shadowScale: 0.94,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-  },
-});
