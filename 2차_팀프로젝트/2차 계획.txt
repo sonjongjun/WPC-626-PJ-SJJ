@@ -13,17 +13,9 @@ https://www.nudake.com/kr/
 바닷가
 <iframe width="560" height="315" src="https://www.youtube.com/embed/GikeqghmzAo?si=8GJYK968vXWEZ2I-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-include로 모듈화 해볼것!!
-상단메뉴
-지점세개
-콜라보 다섯개
-품목3개 나오게 교체할것
-
 
 
 남은페이지:
-메뉴 상세페이지,콜라보 상세페이지, 소셜페이지 영상넣기 할까말까
+소셜페이지 영상넣기 할까말까
 
-남은작업:
-메뉴 상세페이지 데이터화
-콜라보 상세페이지 데이터화
+

@@ -1470,16 +1470,18 @@ height: 100vh;
   width: 100%;
   height: 100vh;
 }
-
+/* 블릿 색상변경 */
 span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     background: black;
 }
 .i-bg2 h3{
   font-size: 4vw;
   text-align: center;
+  margin-top: 1vh;
 }
 .i-bg2 p{
-  font-size: 2.5vw;
+  font-size: 1.5vw;
   text-align: center;
   translate:0% 30vh;
+  line-height: 10vh;
 }

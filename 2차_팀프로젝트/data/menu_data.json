@@ -6,512 +6,616 @@
         {
           "id": "dessert1",
           "name": "POLLOCK ROE ONIWASSANT",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트1.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트1.webp",
+          "description": "Triangle-shaped Croissant with savory pollack roe cream cheese and pollack roe mayo syrup"
         },
         {
           "id": "dessert2",
           "name": "KIMCHI ONIWASSANT",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트2.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트2.webp",
+          "description":"Triangle-shaped Croissant with a blend of bacon and zesty kimchi seasoning"
         },
         {
           "id": "dessert3",
           "name": "GREEN ONION ONIWASSANT",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트3.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트3.webp",
+          "description":"Round-shaped Croissant with onion cream cheese and scallion topping"
         },
         {
           "id": "dessert4",
           "name": "BASIL LEMON ONIWASSANT",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트4.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트4.webp",
+          "description":"Round-shaped Croissant with fragrant basil cream and refreshing lemon curd"
         },
         {
           "id": "dessert5",
           "name": "WALNUT VANILLA ONIWASSANT",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트5.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트5.webp",
+          "description":"Square-shaped Croissant with silky vanilla custard and nutty walnuts"
         },
         {
           "id": "dessert6",
           "name": "PEAK ONIWASSANT",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트6.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트6.webp",
+          "description":"Square-shaped Croissant with matcha cream from NUDAKE's signature menu, 'Peak'"
         },
         {
           "id": "dessert7",
           "name": "EGGPLANT GALETTE",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트7.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트7.webp",
+          "description":"Savory pastry with the rich flavor of Ragù sauce and fresh vegetables"
         },
         {
           "id": "dessert8",
           "name": "TOMATO GALETTE",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트8.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트8.webp",
+          "description":"Savory pastry with ricotta cheese, basil pesto, and sun-dried tomatoes"
         },
         {
           "id": "dessert9",
           "name": "ONION GALETTE",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트9.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트9.webp",
+          "description":"Savory pastry with balsamic-roasted sour onions and crunchy asparagus"
         },
         {
           "id": "dessert10",
           "name": "CROISTICK",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트10.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트10.webp",
+          "description":"Delightful stick pastry, bringing joy through its shape, accompanied by fresh berry confiture on the side *Berry confiture is served at the counter"
         },
         {
           "id": "dessert11",
           "name": "BABY HAND PIE",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트11.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트11.webp",
+          "description":"Cute hand-shaped pie of different gestures with caramel dipping on the side *Choose 3 pies *Caramel dipping cream served at the counter per each order"
         },
         {
           "id": "dessert12",
           "name": "CORN SOUR CREAM SANDWICH",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트12.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트12.webp",
+          "description":"A croissant sandwich topped with savory corn and sour cream"
         },
         {
           "id": "dessert13",
           "name": "SAUSAGE CROIPIZZA",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트13.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트13.webp",
+          "description":"aPizza pastry topped with cheese, sausage, and vegetables on layers of dougha"
         },
         {
           "id": "dessert14",
           "name": "BASIL CROIPIZZA",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트14.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트14.webp",
+          "description":"Pizza pastry topped with fresh basil pesto, savory sausage and nourishing scallions"
         },
         {
           "id": "dessert15",
           "name": "FRUIT PASTRY",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트15.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트15.webp",
+          "description":"Fruit pastry with nutty almond cream, adorned with sweetness of peach"
         },
         {
           "id": "dessert16",
           "name": "PODOISSANT",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트16.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트16.webp",
+          "description":"Green grape confiture pastry with soft vanilla cream"
         },
         {
           "id": "dessert17",
           "name": "MANGOISSANT",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트17.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트17.webp",
+          "description":"Mango confiture pastry with soft vanilla cream"
         },
         {
           "id": "dessert18",
           "name": "PAIN AU CUSTARD",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트18.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트18.webp",
+          "description":"Pastry with bitter-sweetness and a unique texture by adding dark chocolate chips to soft custard cream"
         },
         {
           "id": "dessert19",
           "name": "NU+JEANS CAKE BLUE",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트19.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트19.webp",
+          "description":"Mousse cake with rich chocolate cream between the sheets to feel its rich sweetness"
         },
         {
           "id": "dessert20",
           "name": "CRETZEL",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트20.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트20.webp",
+          "description":"A classic pretzel flavored pastry infused with a hint of salty delight"
         },
         {
           "id": "dessert21",
           "name": "NU+JEANS CAKE GREEN",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트21.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트21.webp",
+          "description":"Mousse cake with mint chocolate and vanilla cream sanded flat on moist white sheets"
         },
         {
           "id": "dessert22",
           "name": "CROITTEOK",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트22.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트22.webp",
+          "description":"Hotteok (Korean dessert pancake)-flavored Croissant with nuts, caramel drizzle, and cinnamon"
         },
         {
           "id": "dessert23",
           "name": "NU+JEANS CAKE WHITE",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트23.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트23.webp",
+          "description":"Mousse cake with crispy sablé at the bottom and white sheets layered with vanilla cream"
         },
         {
           "id": "dessert24",
           "name": "BCHOCOISSANT",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트24.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트24.webp",
+          "description":"Chocolate cream Croissant filled with orange peel with cocoa powder and dark chocolate topping"
         },
         {
           "id": "dessert25",
           "name": "NU+JEANS CAKE PINK",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트25.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트25.webp",
+          "description":"Mousse cake with crispy cereal cream added to soft white sheets for a crunchy texture"
         },
         {
           "id": "dessert26",
           "name": "MEGA ONIWASSANT",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트26.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트26.webp",
+          "description":"The World’s biggest Mega Oniwassant"
         },
         {
           "id": "dessert27",
           "name": "NU+JEANS CAKE YELLOW",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트27.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트27.webp",
+          "description":"Mousse cake with vanilla cream and lemon curd between white sheets"
         },
         {
           "id": "dessert28",
           "name": "BIRTH",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트28.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트28.webp",
+          "description":"Sweet caramel souffle cake with nutty hazelnut chocolate candles"
         },
         {
           "id": "dessert29",
           "name": "PURPOSE HIM",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트29.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트29.webp",
+          "description":"A lovely, rich chocolate cake filled with hazelnuts and cherry confit, frosted with soft cream with an exciting crunch pearl surprise"
         },
         {
           "id": "dessert30",
           "name": "HILL",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트30.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트30.webp",
+          "description":"A soft cheesecake of souffle cake sheets with ricotta and mascarpone filling layers"
         },
         {
           "id": "dessert31",
           "name": "PURPOSE HER",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트31.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트31.webp",
+          "description":"A lovely, rich chocolate cake filled with hazelnuts and cherry confit, frosted with soft cream with an exciting crunch pearl surprise"
         },
         {
           "id": "dessert32",
           "name": "APPLE MOUNTAIN",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트32.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트32.webp",
+          "description":"Moist vegan almond cake added with cinnamon apple filling finished with cashew nut cream icing"
         },
         {
           "id": "dessert33",
           "name": "LACE",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트33.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트33.webp",
+          "description":"Classic cream cake added with rich butter cream and strawberry compote"
         },
         {
           "id": "dessert34",
           "name": "BLACK BELL",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트34.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트34.webp",
+          "description":"Mousse cake with a mixture of vanilla cream and hazelnut sauce"
         },
         {
           "id": "dessert35",
           "name": "WHITE BELL",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트35.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트35.webp",
+          "description":"A minimalistic mousse dessert. Earl grey cream mouse and blueberry compote accent in white chocolate shells"
         },
         {
           "id": "dessert36",
           "name": "TROPHY",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트36.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트36.webp",
+          "description":"Gourmet dessert with pineapple, lemon bisquit and basil cream"
         },
         {
           "id": "dessert37",
           "name": "PINK FOG",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트37.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트37.webp",
+          "description":"Pink ombre cake with black olives and cheddar cheese cream layered on cake sheets"
         },
         {
           "id": "dessert38",
           "name": "PINE CONE",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트38.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트38.webp",
+          "description":"Almond sheet cake layered with cherry jam, outside covered with white chocolate shell"
         },
         {
           "id": "dessert39",
           "name": "SNOW MOUNTAIN",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트39.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트39.webp",
+          "description":"Mini cake with pistachio and dill added with cherry compote, finished with pistachio cream"
         },
         {
           "id": "dessert40",
           "name": "PAIN AU BLACK",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트40.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트40.webp",
+          "description":"A classic pain au chocolat with added black squid ink"
         },
         {
           "id": "dessert41",
           "name": "PICNIC 2",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트41.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트41.webp",
+          "description":"Flaky pastry, almond cream and cream cheese topped with fresh seasonal fruit in an edible multi-grain bread basket"
         },
         {
           "id": "dessert42",
           "name": "PICNIC 1 ",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트42.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트42.webp",
+          "description":"Flaky pastry, almond cream and cream cheese topped with fresh seasonal fruit in an edible multi-grain bread basket"
         },
         {
           "id": "dessert43",
           "name": "MINI BAGUETTE + BUTTER",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트43.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트43.webp",
+          "description":"NUDAKE’s Signature Butter Set : Truffle, Whole Grain Mustard, Wasabi. Enjoy all three NUDAKE gourmet butters. Try it with our mini baguette or your own home made dishes."
         },
         {
           "id": "dessert44",
           "name": "TRUFFLE BUTTER",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트44.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트44.webp",
+          "description":"Butter with rich truffle oil and black olives"
         },
         {
           "id": "dessert45",
           "name": "WASABI BUTTER",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트45.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트45.webp",
+          "description":"Gourmet butter with fresh sharp wasabi"
         },
         {
           "id": "dessert46",
           "name": "JAMON TERRINE",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트46.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트46.webp",
+          "description":"Rare cheese cream terrine with green beans, dried apricot, kidney beans, wrapped in Spanish jamon"
         },
         {
           "id": "dessert47",
           "name": "FIG TERRINE",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트47.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트47.webp",
+          "description":"Rosemary sablé filled with rare cheese cream, half-dried fig and grapefruit lime jelly"
         },
         {
           "id": "dessert48",
           "name": "CHOUX CAN",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트48.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트48.webp",
+          "description":"Choux pastry with sweet, rich corn cream and caramel"
         },
         {
           "id": "dessert49",
           "name": "MUSHROOM CHOUX",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트49.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트49.webp",
+          "description":"Mushroom-shaped choux pastry topped with streusel, filled with pastry cream and sweet red bean paste"
         },
         {
           "id": "dessert50",
           "name": "NU CORK",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트50.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트50.webp",
+          "description":"Sweet brown cheese and mascarpone cream filled in bottle cork-shaped brioche, topped with pecan"
         },
         {
           "id": "dessert51",
           "name": "NU CHAMPIGNON SMALL",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트51.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트51.webp",
+          "description":"Classic French hard bread with a mushroom and nut-mixed center (small)"
         },
         {
           "id": "dessert52",
           "name": "BLACK CROISSANT",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트52.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트52.webp",
+          "description":"Squid ink black pastry croissant filled with a mixture of rich black sesame cream and butter"
         },
         {
           "id": "dessert53",
           "name": "PALETTE",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트53.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트53.webp",
+          "description":"Smooth mascarpone cream and fresh seasonal fruit topped on flaky pastry"
         },
         {
           "id": "dessert54",
           "name": "SAUSAGE PALETTE",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트54.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트54.webp",
+          "description":"Savory sausage pastry with pickled tomato, caper, and beet, topped with yuzu-kosho"
         },
         {
           "id": "dessert55",
           "name": "PEAK BURGER CAKE",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트55.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트55.webp",
+          "description":"Black buns filled with green tea cream  topped with a cheese slice"
         },
         {
           "id": "dessert56",
           "name": "CORN RAMEN BURGER CAKE",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트56.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트56.webp",
+          "description":"Sweet corn burger cake topped with crunchy ramen pieces"
         },
         {
           "id": "dessert57",
           "name": "ONION PICKLE BURGER CAKE",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트57.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트57.webp",
+          "description":"Sweet onion cream, chocolate cake patty, American cheese and pickle in salty buns"
         },
         {
           "id": "dessert58",
           "name": "PLAIN SOUR DOUGH",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트58.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트58.webp",
+          "description":"Classic sourdough bread made with just flour, water and salt. Naturally fermented, NUDAKE's sourdough is gently acidic with a great balance of soft and chewy."
         },
         {
           "id": "dessert59",
           "name": "AVOCADO SOUR DOUGH",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트59.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트59.webp",
+          "description":"Sourdough bread with avocado added to the crumbs creating a soft and buttery texture."
         },
         {
           "id": "dessert60",
           "name": "DANISH LOAF",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트60.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트60.webp",
+          "description":"A special loaf loaded with cinnamon and butter between delicate pastry layers."
         },
         {
           "id": "dessert61",
           "name": "YANG PAIN",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트61.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트61.webp",
+          "description":"A sheep shaped black brioche filled with white mascaporne cream"
         },
         {
           "id": "dessert62",
           "name": "NU CHAMPIGNON SMALL",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트62.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트62.webp",
+          "description":"NUDAKE's take on a classic French bread. Champignon filled with Shiitake mushroom and rich scent of truffle."
         },
         {
           "id": "dessert63",
           "name": "FOCACCIA",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트63.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트63.webp",
+          "description":"Focaccia topped with colorful vegetables, mushrooms and herbs. Pleasant to the eyes as well as the mouth."
         },
         {
           "id": "dessert64",
           "name": "NUDAKE BUTTER SET",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트64.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트64.webp",
+          "description":"NUDAKE's Signature Butter Set: Truffle, Whole Grain Mustard, Wasabi Enjoy all three NUDAKE gourmet butters. Try it with NUDAKE bread or your own homemade dishes."
         },
         {
           "id": "dessert65",
           "name": "WHOLE GRAIN MUSTARD BUTTER",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트65.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트65.webp",
+          "description":"A unique butter flavored with whole grain mustard"
         },
         {
           "id": "dessert66",
           "name": "SALTY MILK CREAM BURGER CAKE",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트66.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트66.webp",
+          "description":"Condensed milk with a hint of salt, chocolate patty, and American cheese in a bun"
         },
         {
           "id": "dessert67",
           "name": "MICRO ONION PICKLE BURGER CAKE",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트67.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트67.webp",
+          "description":"Micro burger cake filled with sweet onion cream, chocolate cake patty, American cheese and pickle"
         },
         {
           "id": "dessert68",
           "name": "MICRO PEAK CREAM BURGER CAKE",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트68.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트68.webp",
+          "description":"Micro burger cake, black buns filled with green tea cream toppedwith a cheese slice" 
         },
         {
           "id": "dessert69",
           "name": "MICRO CORN RAMEN CREAM BURGER CAKE",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트69.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트69.webp",
+          "description":"Micro burger cake with sweet corn cream topped with crunchy ramen pieces"
         },
         {
           "id": "dessert70",
           "name": "MICRO SALTY MILK CREAM BURGER CAKE",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트70.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트70.webp",
+          "description":"Micro burger cake filled with condensed milk with a hint of salt, chocolate patty, and American cheese"
         },
         {
           "id": "dessert71",
           "name": "JENNIERUBYJANE",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트72.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트75.png",
+          "description":"A cake adorned with ruby candy embellishments, layered with sweet strawberry jelly and raspberry mousse cream, finished with a delicate touch of rose fragrance"
         },
         {
           "id": "dessert72",
           "name": "ROUGE HEEL",
-          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트74.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/01.케이크메뉴/디저트74.webp",
+          "description":"A soufflé cake with layers of tonka bean blancmange, hazelnut crunch, and smooth chocolate cream"
         }
       ]
     },
+
+
+
     "BEVERAGES": {
       "title": "BEVERAGES",
       "items": [
         {
           "id": "beverage1",
           "name": "CROI CHOCO LATTE",
-          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료1.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료1.webp",
+          "description":"Croissant-Topped Latte with Decadent Chocolate Cream"
         },
         {
           "id": "beverage2",
           "name": "ORANGE JUICE",
-          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료2.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료2.webp",
+          "description":"Pure Fresh-Squeezed Orange Juice"
         },
         {
           "id": "beverage3",
           "name": "MICRO SHAKE",
-          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료3.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료3.webp",
+          "description":"Nutty Peanut Butter Shake with Microissant Delight"
         },
         {
           "id": "beverage4",
           "name": "BLOOMING BERRY",
-          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료4.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료4.webp",
+          "description":"Sparkling fruit tea ade with strawberry, basil and lime"
         },
         {
           "id": "beverage5",
           "name": "PSL",
-          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료5.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료5.webp",
+          "description":"Pumpkin spice latte"
         },
         {
           "id": "beverage6",
           "name": "AVOGATO",
-          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료6.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료6.webp",
+          "description":"Affogato smoothie with fresh avocado, milk and Dutch coffee"
         },
         {
           "id": "beverage7",
           "name": "NU TRUFFLE",
-          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료7.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료7.webp",
+          "description":"Truffle cream mocha latte topped with a black 'Microissant'"
         },
         {
           "id": "beverage8",
           "name": "FLOWER LATTE",
-          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료8.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료8.webp",
+          "description":"A sweet latte made with floral & fruity tea blend, shot of espresso, pink cream and topped with a piece of chocolate"
         },
         {
           "id": "beverage9",
           "name": "HEART ADE",
-          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료9.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료9.webp",
+          "description":"Lychee lemonade with a heart-shaped red ice cube that slowly adds a pink blush."
         },
         {
           "id": "beverage10",
           "name": "KETO WHITE",
-          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료10.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료10.webp",
+          "description":"Keto milkshake made with peach oolong, coconut milk, MCT oil, stevia and cream"
         },
         {
           "id": "beverage11",
           "name": "WHITE SANGRIA",
-          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료11.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료11.webp",
+          "description":"Non alcoholic white sangria made with lemon, green grapes, white grapefruit, apple juice and white grape juice"
         },
         {
           "id": "beverage12",
           "name": "CREAM SODA",
-          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료12.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료12.webp",
+          "description":"Blue cream soda made with sparkling soda and cream"
         },
         {
           "id": "beverage13",
           "name": "MONGTE",
-          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료13.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료13.webp",
+          "description":"Sweet iced tea made with mate tea, fresh grapefruit, blueberry and fragrant rosemary"
         },
         {
           "id": "beverage14",
           "name": "BLACK LEMONADE",
-          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료14.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료14.webp",
+          "description":"Bright refreshing lemonade in the color of a deep galaxy"
         },
         {
           "id": "beverage15",
           "name": "SISO ADE",
-          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료15.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료15.webp",
+          "description":"Sparkling fig-ade made with housemade fig syrup and siso herb"
         },
         {
           "id": "beverage16",
           "name": "NUTTY GREEN SHAKE",
-          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료16.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료16.webp",
+          "description":"Pistachio and mugwort milkshake, featuring the perfect harmony of nutty pistachio and aromatic mugwort"
         },
         {
           "id": "beverage17",
           "name": "BERGAMOT TONIC",
-          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료17.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료17.webp",
+          "description":"Bergamot tonic mocktail, featuring the elegant blend of fragrant, citrusy bergamot and tonic water"
         },
         {
           "id": "beverage18",
           "name": "SEA GRAPES ADE",
-          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료19.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료19.webp",
+          "description":"Green grape ade, with a refreshing burst of sea grapes and the blue hues of the ocean"
         },
         {
           "id": "beverage19",
           "name": "VEGAN MOCHA",
-          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료21.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료21.webp",
+          "description":"Vegan mocha latte made with organic cocoa powder, plant-based cream and oat milk"
         },
         {
           "id": "beverage20",
           "name": "DUTCH BLACK",
-          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료22.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료22.webp",
+          "description":"Black sesame latte with Dutch coffee ice and housemade black sesame syrup"
         },
         {
           "id": "beverage21",
           "name": "APPLE LATTE",
-          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료23.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료23.webp",
+          "description":"Sweet apple latte with soft milk foam topped with a piece of real apple."
         },
         {
           "id": "beverage22",
           "name": "CRANBERRY CHAUD",
-          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료24.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료24.webp",
+          "description":"Hot fruit drink made with cranberries, orange, apple and warm spices, topped with tea foam and dill."
         },
         {
           "id": "beverage23",
           "name": "PINK MOJITO",
-          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료25.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료25.webp",
+          "description":"Refreshing non-alcoholic cocktail with zesty passion fruit, fresh mint, and lime for a crisp, invigorating taste"
         },
         {
           "id": "beverage24",
           "name": "EGGNOG",
-          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료26.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료26.webp",
+          "description":"Special Christmas latte with the rich, smooth texture of egg and the aroma of whiskey butterscotch."
         },
         {
           "id": "beverage25",
           "name": "LEMONADE",
-          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료27.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료27.webp",
+          "description":"Sparkling ade with the refreshing zest of fresh lemon and the sweetness of honey."
         },
         {
           "id": "beverage26",
           "name": "MICROI SHAVED ICE",
-          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료28.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료28.webp",
+          "description":"Milk shaved ice dessert topped with rich peanut butter cream and sweet red bean base, accompanied by microissant"
         },
         {
           "id": "beverage27",
           "name": "COLD BLACK",
-          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료29.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료29.webp",
+          "description":"Non-alcoholic cocktail made with premium cold brew topped with rich whiskey-flavored foam"
         },
         {
           "id": "beverage28",
           "name": "ROOIBOS CREAM TEA",
-          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료30.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료30.webp",
+          "description":"Decaffeinated tea made with perfectly brewed rooibos topped with creamy caramel foam"
         },
         {
           "id": "beverage29",
           "name": "NU LATTE",
-          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료31.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/02.음료메뉴/음료31.webp",
+          "description":"Signature Latte with Silky Caramel Cream"
         }
       ]
     },
@@ -521,12 +625,14 @@
         {
           "id": "merch1",
           "name": "EGGCUSE MATCH",
-          "image": "./01.자료수집/03.하단메뉴영역/03.굿즈메뉴/굿즈1.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/03.굿즈메뉴/굿즈1.webp",
+          "description":"Playful matches manifesting NUDAKE's distinctive wittiness"
         },
         {
           "id": "merch2",
           "name": "CHICK MATCH",
-          "image": "./01.자료수집/03.하단메뉴영역/03.굿즈메뉴/굿즈2.webp"
+          "image": "./01.자료수집/03.하단메뉴영역/03.굿즈메뉴/굿즈2.webp",
+          "description":"Unique matches that will make your birthday even brighter together with NUDAKE's dessert"
         }
       ]
     },
@@ -536,62 +642,74 @@
         {
           "id": "tea1",
           "name": "KEEMOON",
-          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA1.jpg"
+          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA1.jpg",
+          "description":"A keemun black tea with a delicate and beautiful fragrance, crafted from the unique terroir of the Qimen region in Anhui Province, China. Graceful and smooth like a velvet dress, leaving a beautiful aftertaste that lingers along its elegant texture."
         },
         {
           "id": "tea2",
           "name": "NO. 88",
-          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA2.jpg"
+          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA2.jpg",
+          "description":"A green-black tea, where flavors and aromas intertwine like the endless loop of an infinity curve (∞). Taste made for everyday enjoyment, as refreshing yuzu, cooling mint, and sweet honeybush blend in gentle, seamless harmony."
         },
         {
           "id": "tea3",
           "name": "THE MAFIA",
-          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA3.jpg"
+          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA3.jpg",
+          "description":"A black tea inspired by an image of a mafia man biting into caramel and exhaling a curl of smoke. Sharp edge of cinnamon cuts through the sweetness of caramel, weaving a compelling contrast between rugged intensity and smooth softness."
         },
         {
           "id": "tea4",
           "name": "LEATHER BOOTS",
-          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA4.jpg"
+          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA4.jpg",
+          "description":"A black tea layered with comforting scents of roasted peanuts and almonds, followed by quiet hints of whiskey. Aftertaste of warmth and depth, like the soft embrace of aged leather."
         },
         {
           "id": "tea5",
           "name": "ROOI",
-          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA5.jpg"
+          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA5.jpg",
+          "description":"A rooibos tea that spreads freely like a black horse running through a red desert. Harmonious finish of subtly sweet notes and a smoky oak aftertaste, offering depth and clarity.<br> Caffeine-Free"
         },
         {
           "id": "tea6",
           "name": "MANTIS",
-          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA6.jpg"
+          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA6.jpg",
+          "description":"A mint tea softly and steadily infusing like a mantis easing across damp grass. Fresh bite of peppermint and smooth essence of spearmint gradually unveil a gentle, airy sweetness.<br> Caffeine-Free"
         },
         {
           "id": "tea7",
           "name": "BLACK CARAMEL",
-          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA7.jpg"
+          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA7.jpg",
+          "description":"A black tea with the scorched sweetness and toasty nuttiness of burnt caramel. Gentle aftertaste, where the mellow richness of caramel meets bright, bitter edges of bergamot."
         },
         {
           "id": "tea8",
           "name": "BLUE MONK",
-          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA8.jpg"
+          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA8.jpg",
+          "description":"A pu'er tea reminiscent of a monk in a blue robe, evoking a serene and refined mood. Citrus notes of bergamot blend with mellow coconut and refreshing spearmint, conjuring the atmosphere of a forest at dawn."
         },
         {
           "id": "tea9",
           "name": "CHATEAU NOIR",
-          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA9.jpg"
+          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA9.jpg",
+          "description":"Deep, smoky nuance like oak, infused with scents of black currant, caramel, and vanilla. Rich body of red fruit spreads on the first sip, leaving a long aftertaste and a heavy, woody finish."
         },
         {
           "id": "tea10",
           "name": "CHAMO PILLOW",
-          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA10.jpg"
+          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA10.jpg",
+          "description":"A chamomile tea, embodying the coziness of resting your face on a soft, fluffy pillow. Warm sweetness, reminiscent of an afternoon bathed in sunlight, flowing into leisurely softness.<br> Caffeine-Free"
         },
         {
           "id": "tea11",
           "name": "PEACH ROSIE",
-          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA11.jpg"
+          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA11.jpg",
+          "description":"A white tea reminiscent of the quiet moment a girl with peach-tinted cheeks breathes in the scent of a rose. Clean, gentle finish where the soft sweetness of peach mingles with delicate hints of apricot and rose."
         },
         {
           "id": "tea12",
           "name": "WHITE SUNSET",
-          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA12.jpg"
+          "image": "./01.자료수집/03.하단메뉴영역/04.TEA메뉴/TEA12.jpg",
+          "description":"A black tea infused with bitter sweetness of vanilla and jasmine, delicately layered with the aftertaste of bergamot. Soft, refined touch, where powdery textures drift gently across each layer."
         }
       ]
     }
