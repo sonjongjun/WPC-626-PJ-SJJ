@@ -70,7 +70,9 @@
           <li>GIFT SHOP HOURS &nbsp; &nbsp;11:00~21:00</li>
           <li>TEA LOUNGE HOURS &nbsp; &nbsp;12:00~21:00</li>
         </ul>
-        <a href="https://maps.app.goo.gl/Afb6UmGAXtZLrR1b8"><button class="map-btn">VIEW MAP</button></a>
+        <a href="https://maps.app.goo.gl/Afb6UmGAXtZLrR1b8" class="map-link">
+          <button class="map-btn">VIEW MAP</button>
+        </a>
       </div>
     </div>
     <div class="img-area img-area3">
@@ -129,6 +131,7 @@
         giftHours: "11:00~21:00",
         loungeHours: "12:00~21:00",
         mapUrl: "https://maps.app.goo.gl/Afb6UmGAXtZLrR1b8",
+        backgroundColor: "#8B4789",
       },
       DOSAN: {
         title: `STORE IN DOSAN`,
@@ -146,6 +149,7 @@
         contact: "070-4128-2122",
         hours: "11:00~21:00",
         mapUrl: "https://maps.app.goo.gl/Lj9YwLUYz9tDySti9",
+        backgroundColor: "#2C5F2D",
       },
       SHANGHAI: {
         title: `STORE IN SHANGHAI`,
@@ -162,6 +166,7 @@
         contact: "XXX-XXXX-XXXX",
         hours: "10:00~20:00",
         mapUrl: "https://www.google.com/maps/place/your-shanghai-map-link",
+        backgroundColor: "#C41E3A",
       },
     };
 
@@ -180,43 +185,47 @@
 
     const currentStore = storeData[pm];
 
-// info1 업데이트
-document.querySelector(".info1 ul li:first-child").textContent = currentStore.placeName;
-document.querySelector(".info1 ul li:last-child").innerHTML = `
+    // info1 업데이트
+    document.querySelector(".info1 ul li:first-child").textContent =
+      currentStore.placeName;
+    document.querySelector(".info1 ul li:last-child").innerHTML = `
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <i class="fa-solid fa-location-dot"></i>${currentStore.location}
 `;
 
-// info2 업데이트
-const info2List = document.querySelector(".info2 ul");
-info2List.innerHTML = ""; // 기존 내용 초기화
+    // info2 업데이트
+    const info2List = document.querySelector(".info2 ul");
+    info2List.innerHTML = ""; // 기존 내용 초기화
 
-// 주소
-const addressLi = document.createElement("li");
-addressLi.textContent = currentStore.address;
-info2List.appendChild(addressLi);
+    // 주소
+    const addressLi = document.createElement("li");
+    addressLi.textContent = currentStore.address;
+    info2List.appendChild(addressLi);
 
-// 연락처
-const contactLi = document.createElement("li");
-contactLi.textContent = `CONTACT     ${currentStore.contact}`;
-info2List.appendChild(contactLi);
+    // 연락처
+    const contactLi = document.createElement("li");
+    contactLi.textContent = `CONTACT     ${currentStore.contact}`;
+    info2List.appendChild(contactLi);
 
-// 운영시간 (성수는 두 가지, 다른 지점은 한 가지)
-if (currentStore.giftHours && currentStore.loungeHours) {
-  const giftHoursLi = document.createElement("li");
-  giftHoursLi.textContent = `GIFT SHOP HOURS     ${currentStore.giftHours}`;
-  info2List.appendChild(giftHoursLi);
-  
-  const loungeHoursLi = document.createElement("li");
-  loungeHoursLi.textContent = `TEA LOUNGE HOURS     ${currentStore.loungeHours}`;
-  info2List.appendChild(loungeHoursLi);
-} else {
-  const hoursLi = document.createElement("li");
-  hoursLi.textContent = `HOURS     ${currentStore.hours}`;
-  info2List.appendChild(hoursLi);
-}
+    // 운영시간 (성수는 두 가지, 다른 지점은 한 가지)
+    if (currentStore.giftHours && currentStore.loungeHours) {
+      const giftHoursLi = document.createElement("li");
+      giftHoursLi.textContent = `GIFT SHOP HOURS     ${currentStore.giftHours}`;
+      info2List.appendChild(giftHoursLi);
 
-// 지도 버튼 링크 업데이트
-document.querySelector(".map-btn a").href = currentStore.mapUrl;
+      const loungeHoursLi = document.createElement("li");
+      loungeHoursLi.textContent = `TEA LOUNGE HOURS     ${currentStore.loungeHours}`;
+      info2List.appendChild(loungeHoursLi);
+    } else {
+      const hoursLi = document.createElement("li");
+      hoursLi.textContent = `HOURS     ${currentStore.hours}`;
+      info2List.appendChild(hoursLi);
+    }
+
+    document.querySelector(".info2 a").href = currentStore.mapUrl;
+
+    document.querySelectorAll(".img-area").forEach((area) => {
+      area.style.backgroundColor = currentStore.backgroundColor;
+    });
   </script>
 </html>

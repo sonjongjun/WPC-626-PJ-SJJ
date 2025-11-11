@@ -1286,15 +1286,15 @@
   align-items: center;
 }
 .map-btn {
- position: absolute;
-    font-size: 1.5vw;
-    font-weight: bold;
-    border-radius: 8px;
-    background-color: #fff;
-    border: none;
-    cursor: pointer;
-    right: 11%;
-    top: 35%;
+  position: absolute;
+  font-size: 1.5vw;
+  font-weight: bold;
+  border-radius: 8px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  right: 5%;
+  top: 35%;
 }
 /****************************************************************/
 /************************ 디테일 페이지 종료!!! ******************/
