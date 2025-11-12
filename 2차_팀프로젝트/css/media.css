@@ -167,6 +167,19 @@
     line-height: 1.4;
   }
 
+  /* 성수점 비율조정 */
+  .img-area1{
+    height: 54vh;
+  }
+  .img-area2{
+    height: 53vh;
+  }
+  .img-area3{
+    height: 45vh;
+  }
+  .img-area4{
+    height: 52vh;
+  }
   /* 콜라보 아티클 위치 조정 */
   .arti-1 {
     transform: translateY(88%);
@@ -226,7 +239,6 @@
 
   .map-btn {
     font-size: 1.7vw;
-    right: 8%;
   }
 
   /* 디테일 페이지 */
@@ -715,13 +727,6 @@
     height: 280px;
   }
 
-  /* 매장 상세 */
-  .img-area1,
-  .img-area2,
-  .img-area3,
-  .img-area4 {
-    height: 90vh;
-  }
 
   .info-sec {
     flex-direction: column;
@@ -1652,47 +1657,10 @@
   .img-area2,
   .img-area3,
   .img-area4 {
-    height: 70vh;
+    height: 22vh;
   }
 
-  .info-sec {
-    flex-direction: column;
-    height: auto;
-    padding: 3vh 2vw;
-    font-size: 3vw;
-  }
 
-  .info1 {
-    width: 95%;
-    font-size: 3.5vw;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .info1 ul {
-    width: 100%;
-    text-align: center;
-  }
-
-  .info1 ul li {
-    margin: 1vh 0;
-  }
-
-  .info2 {
-    width: 95%;
-    font-size: 2.5vw;
-    margin-top: 3vh;
-  }
-
-  .info2 ul {
-    width: 100%;
-    text-align: center;
-  }
-
-  .info2 ul li {
-    margin: 1.5vh 0;
-    line-height: 1.6;
-  }
 
   .map-btn {
     font-size: 3.5vw;
