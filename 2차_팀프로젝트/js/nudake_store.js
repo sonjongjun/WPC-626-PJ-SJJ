@@ -6,26 +6,38 @@ $(window).scroll(function () {
     }
 })//scroll/////////////
 
+// 스크롤 방향 감지를 위한 변수
+let lastScrollTop = 0;
+
 // 스크롤 이벤트 통합 처리
 $(window).scroll(function () {
-    const scrollTop = $(window).scrollTop();
-    const windowHeight = $(window).height();
-    const documentHeight = $(document).height();
-    
-    // 최상단 (0px)
-    if (scrollTop === 0) {
-        $(".top-menu").css("display", "block");
-    }
-    // 최하단 (여유값 10px 추가로 더 잘 감지)
-    else if (scrollTop + windowHeight >= documentHeight - 10) {
-        $(".top-menu").css("display", "block");
-    }
-    // 중간 영역
-    else {
-        $(".top-menu").css("display", "none");
-    }
-});//scroll/////////////
+  const scrollTop = $(window).scrollTop();
+  const windowHeight = $(window).height();
+  const documentHeight = $(document).height();
 
+  // 최상단 (0px) - 항상 표시
+  if (scrollTop === 0) {
+    $(".top-menu").css("display", "block");
+  }
+  // 최하단 (여유값 10px 추가로 더 잘 감지) - 항상 표시
+  else if (scrollTop + windowHeight >= documentHeight - 10) {
+    $(".top-menu").css("display", "block");
+  }
+  // 중간 영역 - 스크롤 방향에 따라 표시/숨김
+  else {
+    // 위로 스크롤 (스크롤 값이 감소)
+    if (scrollTop < lastScrollTop) {
+      $(".top-menu").css("display", "block");
+    }
+    // 아래로 스크롤 (스크롤 값이 증가)
+    else {
+      $(".top-menu").css("display", "none");
+    }
+  }
+  
+  // 현재 스크롤 위치 저장
+  lastScrollTop = scrollTop;
+}); //scroll/////////////
 
 $(document).ready(function() {
   // NUDAKE 로고 클릭 이벤트 먼저 등록
