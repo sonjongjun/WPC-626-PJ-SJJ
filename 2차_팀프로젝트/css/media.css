@@ -874,7 +874,7 @@
   }
 
   .top-menu > ul {
-    width: 82%;
+    width: 94%;
     font-size: 1.8vw;
     gap: 0.8vw;
   }
@@ -1113,8 +1113,7 @@
   }
 
   .top-menu > ul {
-    width: 88%;
-    font-size: 2.2vw;
+    font-size: 1.6vw;
     gap: 0.5vw;
   }
 
@@ -1694,7 +1693,6 @@
   /* 상단 메뉴 */
   .top-menu > ul {
     width: 92%;
-    font-size: 2.8vw;
   }
 
   .top-menu > ul > :first-child {

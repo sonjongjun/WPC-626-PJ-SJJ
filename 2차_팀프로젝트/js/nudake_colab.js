@@ -437,12 +437,14 @@ $(window).scroll(function () {
       $(this).css("transform", "translateY(" + currentTranslate + "vh)");
     });
 
-    // 5번째 li 애니메이션이 완료되면 cb-box 높이를 100vh로 변경
-    if (fifthLiComplete && progress > 1) {
+    // 5번째 li 애니메이션이 완료되고 추가 스크롤 진행도가 일정 이상일 때만 cb-box 높이 변경
+    // progress > 1.15는 5번째 li 완료 후 약 15% 정도 더 스크롤해야 하단 영역이 올라옴
+    if (fifthLiComplete && progress > 1.15) {
       $(".cb-box").css("height", "100vh");
     }
   }
 });
+
 
 // 슬라이드 js
 var swiper = new Swiper(".mySwiper", {
