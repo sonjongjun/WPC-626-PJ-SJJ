@@ -17,7 +17,20 @@
     max-height: fit-content;
   }
 }
-
+@media screen and (max-width: 1400px) {
+  .j-box2 {
+    height: 70vh;
+  }
+  .bg-box3 {
+    height: 400vh;
+  }
+  .pic-sec1 {
+    background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉9.webp)
+      center / cover no-repeat;
+    width: 100%;
+    height: 76vh;
+  }
+}
 /* ========================================
    태블릿 가로 (1024px ~ 1200px)
 ======================================== */
@@ -27,7 +40,13 @@
     width: 65%;
     font-size: 1.1vw;
   }
-  
+  .b-sec1 {
+    height: 60vh;
+  }
+  .b-sec2 {
+    height: 50vh;
+  }
+
   .top-menu > ul > :first-child {
     font-size: 1.7vw;
   }
@@ -43,7 +62,12 @@
     left: 40.5%;
     font-size: 2.2vw;
   }
-
+  .pic-sec1 {
+    background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉9.webp)
+      center / cover no-repeat;
+    width: 100%;
+    height: 59vh;
+  }
   .colab-btn {
     left: 40.5%;
     font-size: 2.2vw;
@@ -52,6 +76,11 @@
   .pdct-btn {
     left: 24.5%;
     font-size: 2.2vw;
+  }
+  .bg-box4 {
+    width: 100vw;
+    height: 500vh;
+    background-color: #eae1da;
   }
 
   /* 속박스들 */
@@ -67,6 +96,13 @@
   .pdct-box2 > ul > li,
   .pdct-box3 > ul > li {
     transition: flex 0.3s ease-out;
+  }
+  .colab-d-box > li:nth-child(1),
+  .colab-d-box > li:nth-child(2),
+  .colab-d-box > li:nth-child(3),
+  .colab-d-box > li:nth-child(4) {
+    width: 100%;
+    height: 75%;
   }
 
   /* 하단 영역 */
@@ -106,7 +142,7 @@
     width: 70%;
     font-size: 1.3vw;
   }
-  
+
   .top-menu > ul > :first-child {
     font-size: 1.9vw;
   }
@@ -136,6 +172,12 @@
     font-size: 1.3vw;
     padding-top: 2vh;
     padding-bottom: 2vh;
+  }
+  .pic-sec1 {
+    background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉9.webp)
+      center / cover no-repeat;
+    width: 100%;
+    height: 45vh;
   }
 
   /* 그리드 박스 */
@@ -168,16 +210,16 @@
   }
 
   /* 성수점 비율조정 */
-  .img-area1{
+  .img-area1 {
     height: 54vh;
   }
-  .img-area2{
+  .img-area2 {
     height: 53vh;
   }
-  .img-area3{
+  .img-area3 {
     height: 45vh;
   }
-  .img-area4{
+  .img-area4 {
     height: 52vh;
   }
   /* 콜라보 아티클 위치 조정 */
@@ -261,7 +303,9 @@
     font-size: 3.5vw;
     margin-top: 8vh;
   }
-
+  .bg-box3 {
+    height: 300vh;
+  }
   .bg-box p {
     font-size: 1.2vw;
     line-height: 1.6;
@@ -319,6 +363,7 @@
   .j-box2 {
     width: 85vw;
     translate: 7.5% 0%;
+    height: 70vh;
   }
 
   .mySwiper3 {
@@ -332,10 +377,6 @@
 
   .bg-box4 p {
     font-size: 1vw;
-  }
-
-  .b-sec2 {
-    height: 75vh;
   }
 
   .b-sec2 section > p {
@@ -431,12 +472,21 @@
     left: 41%;
     font-size: 2.8vw;
   }
-
+  .b-sec1 {
+    height: 43vh;
+  }
+  .b-sec2 {
+    height: 35vh;
+  }
   .pdct-btn {
     left: 26%;
     font-size: 2.8vw;
   }
-
+  .bg-box4 {
+    width: 100vw;
+    height: 420vh;
+    background-color: #eae1da;
+  }
   /* 지점/콜라보/품목 호버 텍스트 */
   .store-box > ul > li > p {
     font-size: 4.5vw;
@@ -638,9 +688,11 @@
   .j-box2 {
     width: 90vw;
     translate: 5% 0%;
-    height: 95vh;
+    height: 40vh;
   }
-
+  .bg-box3 {
+    height: 375vh;
+  }
   .mySwiper3 {
     width: 78vw;
     height: 85vh;
@@ -654,15 +706,6 @@
 
   .bg-box4 p {
     font-size: 1.1vw;
-  }
-
-  .b-sec1 {
-    height: 90vh;
-  }
-
-  .b-sec2 {
-    height: 65vh;
-    gap: 0.8vw;
   }
 
   .b-sec2 section > p {
@@ -697,7 +740,7 @@
   }
 
   .pic-sec1 {
-    height: 90vh;
+    height: 38vh;
   }
 
   .pic-sec2 {
@@ -726,7 +769,6 @@
     width: 35vw;
     height: 280px;
   }
-
 
   .info-sec {
     flex-direction: column;
@@ -812,6 +854,22 @@
     font-size: 3vw;
   }
 
+  .b-sec1 {
+    height: 31vh;
+  }
+  .b-sec2 {
+    height: 29vh;
+  }
+  .b-sec5 {
+    width: 93vw;
+    height: 67vh;
+    gap: 2vh;
+  }
+  .bg-box4 {
+    width: 100vw;
+    height: 340vh;
+    background-color: #eae1da;
+  }
   /* 지점/콜라보/품목 호버 텍스트 크기 */
   .store-box > ul > li > p,
   .colab-box > ul > li > p {
@@ -862,6 +920,9 @@
   .mySwiper3 {
     width: 80vw;
   }
+  .bg-box3 {
+    height: 340vh;
+  }
 }
 
 /* ========================================
@@ -904,9 +965,15 @@
     left: 28%;
     font-size: 3.5vw;
   }
-.bg-box6{
+  .bg-box6 {
     max-height: 300vh;
-}
+  }
+  .b-sec1 {
+    height: 26vh;
+  }
+  .pic-sec1 {
+    height: 25vh;
+  }
   /* 지점/콜라보/품목 */
   .store-box,
   .colab-box,
@@ -928,179 +995,179 @@
   .pdct-box3 {
     height: 50vh;
 
-  /* 호버 텍스트 */
-  .store-box > ul > li > p {
-    font-size: 4.5vw;
-    translate: 12% 170%;
-  }
+    /* 호버 텍스트 */
+    .store-box > ul > li > p {
+      font-size: 4.5vw;
+      translate: 12% 170%;
+    }
 
-  .store-box > ul > li:nth-child(2) > p {
-    translate: 18% 170%;
-  }
+    .store-box > ul > li:nth-child(2) > p {
+      translate: 18% 170%;
+    }
 
-  .colab-box > ul > li > p {
-    font-size: 4.3vw;
-  }
+    .colab-box > ul > li > p {
+      font-size: 4.3vw;
+    }
 
-  .colab-box > ul > li:first-child > p {
-    translate: 16% 230%;
-  }
+    .colab-box > ul > li:first-child > p {
+      translate: 16% 230%;
+    }
 
-  .colab-box > ul > li:nth-child(2) > p {
-    translate: 13% 110%;
-  }
+    .colab-box > ul > li:nth-child(2) > p {
+      translate: 13% 110%;
+    }
 
-  .colab-box > ul > li:nth-child(3) > p {
-    translate: 16% 520%;
-  }
+    .colab-box > ul > li:nth-child(3) > p {
+      translate: 16% 520%;
+    }
 
-  .colab-box > ul > li:nth-child(4) > p {
-    translate: 20% 210%;
-  }
+    .colab-box > ul > li:nth-child(4) > p {
+      translate: 20% 210%;
+    }
 
-  .colab-box > ul > li:nth-child(5) > p {
-    translate: 16% 200%;
-  }
+    .colab-box > ul > li:nth-child(5) > p {
+      translate: 16% 200%;
+    }
 
-  .pdct-box > ul > li:nth-child(1) > p {
-    translate: 9% 360%;
-  }
+    .pdct-box > ul > li:nth-child(1) > p {
+      translate: 9% 360%;
+    }
 
-  .pdct-box > ul > li:nth-child(2) > p {
-    translate: 6% 360%;
-  }
+    .pdct-box > ul > li:nth-child(2) > p {
+      translate: 6% 360%;
+    }
 
-  .pdct-box > ul > li:nth-child(3) > p {
-    translate: 23% 360%;
-  }
+    .pdct-box > ul > li:nth-child(3) > p {
+      translate: 23% 360%;
+    }
 
-  /* 하단 영역 */
-  .bottom-area {
-    font-size: 1.8vw;
-  }
+    /* 하단 영역 */
+    .bottom-area {
+      font-size: 1.8vw;
+    }
 
-  .bt-in-box {
-    gap: 2%;
-  }
+    .bt-in-box {
+      gap: 2%;
+    }
 
-  /* 그리드 박스 */
-  .grid-box h3 {
-    font-size: 2.6vw;
-  }
+    /* 그리드 박스 */
+    .grid-box h3 {
+      font-size: 2.6vw;
+    }
 
-  /* 콜라보 아티클 */
-  .cb-arti h2 {
-    font-size: 1.8vw;
-  }
+    /* 콜라보 아티클 */
+    .cb-arti h2 {
+      font-size: 1.8vw;
+    }
 
-  .cb-arti h3 {
-    font-size: 1.4vw;
-  }
+    .cb-arti h3 {
+      font-size: 1.4vw;
+    }
 
-  .cb-arti p {
-    font-size: 1.1vw;
-  }
+    .cb-arti p {
+      font-size: 1.1vw;
+    }
 
-  /* 디테일 페이지 */
-  .i-bg2 h3 {
-    font-size: 6vw;
-  }
+    /* 디테일 페이지 */
+    .i-bg2 h3 {
+      font-size: 6vw;
+    }
 
-  .i-bg2 p {
-    font-size: 1.9vw;
-    translate: 0% 12vh;
-  }
+    .i-bg2 p {
+      font-size: 1.9vw;
+      translate: 0% 12vh;
+    }
 
-  /* 티하우스 */
-  .bg-box h2 {
-    font-size: 5.5vw;
-  }
+    /* 티하우스 */
+    .bg-box h2 {
+      font-size: 5.5vw;
+    }
 
-  .bg-box h3 {
-    font-size: 4.5vw;
-  }
+    .bg-box h3 {
+      font-size: 4.5vw;
+    }
 
-  .bg-box p {
-    font-size: 1.5vw;
-  }
+    .bg-box p {
+      font-size: 1.5vw;
+    }
 
-  .colab-d-box {
-    width: 88vw;
-    translate: 6% 0%;
-  }
+    .colab-d-box {
+      width: 88vw;
+      translate: 6% 0%;
+    }
 
-  /* 동물의 날 */
-  .bg-box2 h3 {
-    font-size: 4.5vw;
-  }
+    /* 동물의 날 */
+    .bg-box2 h3 {
+      font-size: 4.5vw;
+    }
 
-  .bg-box2 p {
-    font-size: 1.5vw;
-  }
+    .bg-box2 p {
+      font-size: 1.5vw;
+    }
 
-  .swiper,
-  .mySwiper2 {
-    width: 40vw;
-    height: 58vh;
-  }
+    .swiper,
+    .mySwiper2 {
+      width: 40vw;
+      height: 58vh;
+    }
 
-  /* 제니 페이지 */
-  .bg-box3 h3 {
-    font-size: 3.5vw;
-  }
+    /* 제니 페이지 */
+    .bg-box3 h3 {
+      font-size: 3.5vw;
+    }
 
-  .bg-box3 p {
-    font-size: 1.3vw;
-  }
+    .bg-box3 p {
+      font-size: 1.3vw;
+    }
 
-  /* 생일 페이지 */
-  .bg-box4 h3 {
-    font-size: 3.5vw;
-  }
+    /* 생일 페이지 */
+    .bg-box4 h3 {
+      font-size: 3.5vw;
+    }
 
-  .bg-box4 p {
-    font-size: 1.2vw;
-  }
+    .bg-box4 p {
+      font-size: 1.2vw;
+    }
 
-  .b-sec2 section > p {
-    font-size: 1.6vw;
-  }
+    .b-sec2 section > p {
+      font-size: 1.6vw;
+    }
 
-  /* 피크닉 페이지 */
-  .bg-box5 h3 {
-    font-size: 4.5vw;
-  }
+    /* 피크닉 페이지 */
+    .bg-box5 h3 {
+      font-size: 4.5vw;
+    }
 
-  .bg-box5 > p {
-    font-size: 1.5vw;
-  }
+    .bg-box5 > p {
+      font-size: 1.5vw;
+    }
 
-  .pic-sec2 {
-    width: 80vw;
-    height: 32vh;
-  }
+    .pic-sec2 {
+      width: 80vw;
+      height: 32vh;
+    }
 
-  .pic-overlay p {
-    font-size: 1.5vw;
-  }
+    .pic-overlay p {
+      font-size: 1.5vw;
+    }
 
-  .play-box1 iframe {
-    width: 32vw;
-  }
+    .play-box1 iframe {
+      width: 32vw;
+    }
 
-  .play-box2 iframe {
-    width: 40vw;
-  }
+    .play-box2 iframe {
+      width: 40vw;
+    }
 
-  /* 매장 목록 */
-  .d-store-area-inbox p {
-    font-size: 5.5vw;
-  }
+    /* 매장 목록 */
+    .d-store-area-inbox p {
+      font-size: 5.5vw;
+    }
 
-  .d-store-area-inbox button {
-    font-size: 2.8vw;
+    .d-store-area-inbox button {
+      font-size: 2.8vw;
+    }
   }
-}
 }
 
 /* ========================================
@@ -1353,11 +1420,11 @@
   .colab-d-box {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
-    height: auto;
     width: 90vw;
     translate: 5% 0%;
-    gap: 3vh;
-    margin-top: 5vh;
+    /* gap: 3vh; */
+    /* margin-top: 5vh; */
+    height: 170vh;
   }
 
   .colab-d-box > li {
@@ -1378,7 +1445,7 @@
 
   .colab-d-box3 {
     flex-direction: column;
-    height: auto;
+    height: 98vh;
     width: 90vw;
     translate: 5% 0%;
     margin-top: 5vh;
@@ -1390,14 +1457,14 @@
 
   .colab-d-box4 {
     width: 90vw;
-    height: 80vh;
+    height: 30vh;
     translate: 5% 0%;
     margin-top: 5vh;
   }
 
   .colab-d-box5 {
     flex-direction: column;
-    height: auto;
+    height: 40vh;
     width: 90vw;
     translate: 5% 0%;
     margin-top: 5vh;
@@ -1409,13 +1476,7 @@
   }
 
   .colab-d-box6 {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr);
-    height: auto;
-    width: 90vw;
-    translate: 5% 0%;
-    margin-top: 5vh;
-    gap: 2vh;
+    display: none;
   }
 
   .colab-d-box6 li {
@@ -1474,7 +1535,7 @@
   .j-box1 {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
-    height: auto;
+    height: 160vh;
     width: 90vw;
     translate: 5% 0%;
     gap: 2vh;
@@ -1509,8 +1570,21 @@
 
   .mySwiper3 {
     width: 85vw;
-    height: 75vh;
+    height: 40vh;
     translate: 0% 5vh;
+  }
+
+  .img1 img,
+  .img2 img,
+  .img3 img,
+  .img4 img {
+    position: absolute;
+    translate: 0% -8%;
+    width: 80%;
+    height: 70%;
+    object-fit: cover;
+    transition: opacity 0.8s ease-in-out;
+    translate: 20% 0%;
   }
 
   /* 생일 페이지 */
@@ -1531,22 +1605,10 @@
   }
 
   .b-sec1 {
-    height: 80vh;
+    height: 22vh;
   }
-
   .b-sec2 {
-    flex-direction: column;
-    height: auto;
-    width: 90vw;
-    translate: 5% 0%;
-    gap: 3vh;
-    margin-top: 5vh;
-  }
-
-  .b-sec2 > li {
-    height: 50vh;
-    width: 50vw;
-    margin: 0 auto;
+    height: 21vh;
   }
 
   .b-sec2 section > p {
@@ -1554,11 +1616,6 @@
     width: 95%;
     translate: 48% 0%;
     padding: 1.5vh;
-  }
-
-  .b-sec2 > li > p {
-    font-size: 2.5vw;
-    bottom: -8%;
   }
 
   .b-sec3,
@@ -1573,7 +1630,6 @@
     grid-template-rows: repeat(4, 1fr);
     height: auto;
     width: 90vw;
-    translate: 5% 0%;
     gap: 2vh;
     margin-top: 5vh;
   }
@@ -1600,7 +1656,7 @@
   }
 
   .pic-sec1 {
-    height: 80vh;
+    height: 23vh;
   }
 
   .pic-sec2 {
@@ -1641,13 +1697,13 @@
   }
 
   .play-box1 iframe {
-    width: 70vw;
-    height: 40vh;
+    width: 88vw;
+    height: 32vh;
   }
 
   .play-box2 iframe {
-    width: 70vw;
-    height: 40vh;
+    width: 86vw;
+    height: 22vh;
   }
 
   /* 매장 페이지 */
@@ -1657,8 +1713,6 @@
   .img-area4 {
     height: 22vh;
   }
-
-
 
   .map-btn {
     font-size: 3.5vw;
@@ -1680,9 +1734,9 @@
   }
 
   .d-store-area-inbox button {
-  font-size: 2.5vw;
-        padding: 1.5vh 3vw;
-        bottom: 8%;
+    font-size: 2.5vw;
+    padding: 1.5vh 3vw;
+    bottom: 8%;
   }
 }
 
