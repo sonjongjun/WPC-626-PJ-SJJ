@@ -1,0 +1,893 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  overflow-x: hidden;
+  background: #000;
+  color: #fff;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 섹션들 */
+.section {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 4rem 2rem;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* 경력 섹션은 스냅 스크롤 제외 */
+#experience {
+  scroll-snap-align: none;
+  scroll-snap-stop: normal;
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+  animation: none !important;
+}
+
+/* 페이지 전환 애니메이션 */
+.section {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* 섹션 페이드인 애니메이션 */
+.section {
+  opacity: 0;
+  transform: translateY(50px) scale(0.95);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* 스크롤 시 이전 섹션 페이드아웃 효과 */
+.section.scrolling-out {
+  opacity: 0;
+  transform: translateY(-50px) scale(0.95);
+}
+
+/* 각 섹션별 콘텐츠 애니메이션 */
+.section .home-content,
+.section .about-content,
+.section .skills-content,
+.section .projects-header,
+.section .contact-content {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease 0.3s, transform 0.6s ease 0.3s;
+}
+
+/* 경력 페이지 콘텐츠는 애니메이션 제거 */
+.section .experience-content {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+  animation: none !important;
+}
+
+.section.visible .home-content,
+.section.visible .about-content,
+.section.visible .skills-content,
+.section.visible .projects-header,
+.section.visible .contact-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 추가 전환 효과들 */
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 각 섹션별 다른 애니메이션 적용 */
+#home.visible {
+  animation: zoomIn 1s ease forwards;
+}
+
+#about.visible .about-content {
+  animation: slideInFromRight 0.8s ease 0.2s forwards;
+}
+
+#skills.visible .skills-content {
+  animation: slideInFromLeft 0.8s ease 0.2s forwards;
+}
+
+#projects.visible .projects-header {
+  animation: zoomIn 0.8s ease 0.2s forwards;
+}
+
+/* 경력 페이지는 애니메이션 제외 */
+
+#contact.visible .contact-content {
+  animation: zoomIn 0.8s ease 0.2s forwards;
+}
+
+/* 홈 섹션 */
+#home {
+  background: #000;
+  height: 100vh;
+}
+
+.home-content {
+  text-align: center;
+  z-index: 2;
+}
+
+.home-content h1 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1s ease;
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: -2px;
+}
+
+.home-content p {
+  font-size: 1.5rem;
+  opacity: 0.7;
+  animation: fadeInUp 1s ease 0.2s backwards;
+  font-weight: 300;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  opacity: 0.5;
+  animation: fadeInUp 1s ease 0.4s backwards;
+  font-weight: 300;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+}
+
+.scroll-indicator span {
+  display: block;
+  width: 30px;
+  height: 50px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  position: relative;
+}
+
+.scroll-indicator span::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  border-radius: 50%;
+  animation: scroll 2s infinite;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+/* About 섹션 */
+#about {
+  background: #fff;
+  color: #000;
+}
+
+.about-content {
+  max-width: 1200px;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+}
+
+.about-content h2 {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  letter-spacing: -1px;
+}
+
+.about-content > p {
+  font-weight: 300;
+  opacity: 0.7;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.skill-card {
+  background: #000;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 0;
+  border: 1px solid #000;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.section.visible .skill-card {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.section.visible .skill-card:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+.section.visible .skill-card:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.section.visible .skill-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.skill-card:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-10px);
+  border: 1px solid #000;
+}
+
+.skill-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.skill-card p {
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+/* Skills Detail 섹션 (새로 추가) */
+#skills {
+  background: #111;
+  color: #fff;
+}
+
+.skills-content {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+
+.skills-content h2 {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  letter-spacing: -1px;
+}
+
+.skills-content > p {
+  font-weight: 300;
+  opacity: 0.7;
+  font-size: 1.2rem;
+  margin-bottom: 4rem;
+}
+
+.skill-bars {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.skill-item {
+  margin-bottom: 2.5rem;
+}
+
+.skill-name {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background: #fff;
+  border-radius: 10px;
+  transition: width 1s ease;
+  width: 0;
+}
+
+.skill-item.visible .skill-progress {
+  width: var(--progress);
+}
+
+/* Projects 섹션 */
+#projects {
+  background: #f5f5f5;
+  color: #000;
+  flex-direction: column;
+  padding: 6rem 2rem;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  z-index: 2;
+}
+
+.projects-header h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  letter-spacing: -1px;
+}
+
+.projects-header p {
+  opacity: 0.5;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+/* 흐르는 슬라이드 컨테이너 */
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 2rem 0;
+}
+
+.slider-track {
+  display: flex;
+  gap: 0;
+  animation: scroll 40s linear infinite;
+  width: fit-content;
+}
+
+.slider-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-350px * 8));
+  }
+}
+
+.project-slide {
+  min-width: 350px;
+  width: 350px;
+  height: 400px;
+  background: #fff;
+  color: #000;
+  padding: 2rem;
+  border-radius: 0;
+  border-right: 1px solid #ddd;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.project-slide:hover {
+  transform: scale(1.05) translateY(-10px);
+  background: #000;
+  color: #fff;
+  z-index: 10;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.project-slide h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.project-slide p {
+  font-size: 1rem;
+  opacity: 0.7;
+  line-height: 1.6;
+  flex-grow: 1;
+  font-weight: 300;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.project-tag {
+  background: #000;
+  color: #fff;
+  padding: 0.3rem 1rem;
+  border-radius: 0;
+  font-size: 0.8rem;
+  border: 1px solid #000;
+  font-weight: 300;
+}
+
+.project-slide:hover .project-tag {
+  background: #fff;
+  color: #000;
+  border: 1px solid #fff;
+}
+
+.project-number {
+  font-size: 3rem;
+  opacity: 0.2;
+  font-weight: 300;
+}
+
+.slider-track-reverse {
+  animation: scrollReverse 45s linear infinite;
+}
+
+@keyframes scrollReverse {
+  0% {
+    transform: translateX(calc(-350px * 8));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Experience/Timeline 섹션 (새로 추가) */
+#experience {
+  background: #fff;
+  color: #000;
+  padding: 6rem 2rem 8rem 2rem;
+  /* 스냅 스크롤 제거 - 자유로운 스크롤 가능 */
+}
+
+#experience .experience-content {
+  scroll-snap-align: none;
+}
+
+.experience-content {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.experience-content h2 {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+.experience-content > p {
+  font-weight: 300;
+  opacity: 0.7;
+  font-size: 1.2rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: #ddd;
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.timeline-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* 경력 페이지 타임라인 아이템 애니메이션 제거 */
+#experience .timeline-item {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+.timeline-content {
+  width: 45%;
+  padding: 2rem;
+  background: #f5f5f5;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  text-align: right;
+}
+
+.timeline-content:hover {
+  background: #000;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-date {
+  font-size: 0.9rem;
+  font-weight: 300;
+  opacity: 0.6;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-company {
+  font-size: 1.1rem;
+  font-weight: 300;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
+.timeline-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 300;
+  opacity: 0.7;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background: #000;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  z-index: 10;
+  box-shadow: 0 0 0 4px #ddd;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+  transform: translateX(-50%) scale(1.5);
+  background: #fff;
+  border-color: #000;
+}
+
+/* Contact 섹션 */
+#contact {
+  background: #000;
+  color: #fff;
+  height: 100vh;
+}
+
+.contact-content {
+  text-align: center;
+  max-width: 600px;
+}
+
+.contact-content h2 {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  letter-spacing: -1px;
+}
+
+.contact-content > p {
+  font-weight: 300;
+  opacity: 0.7;
+  font-size: 1.2rem;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.contact-link {
+  font-size: 3rem;
+  color: #fff;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.contact-link:hover {
+  transform: scale(1.2);
+  background: #fff;
+  color: #000;
+}
+
+/* 네비게이션 */
+.nav {
+  position: fixed;
+  right: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.nav-dot {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin: 1.5rem 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-dot:hover {
+  transform: scale(1.3);
+}
+
+.nav-dot.active {
+  background: #fff;
+  transform: scale(1.5);
+}
+
+.nav.black .nav-dot {
+  border-color: #000;
+}
+
+.nav.black .nav-dot.active {
+  background: #000;
+}
+
+.nav.black .nav-dot::before {
+  color: #000;
+}
+
+.nav-dot::before {
+  content: attr(data-label);
+  position: absolute;
+  right: 2rem;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.nav-dot:hover::before {
+  opacity: 1;
+}
+
+/* 배경 애니메이션 */
+.bg-lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.line {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.05);
+  animation: lineFloat 15s infinite ease-in-out;
+}
+
+.line:nth-child(1) {
+  width: 2px;
+  height: 200px;
+  left: 20%;
+  top: -200px;
+  animation-delay: 0s;
+}
+
+.line:nth-child(2) {
+  width: 2px;
+  height: 300px;
+  left: 50%;
+  top: -300px;
+  animation-delay: 3s;
+}
+
+.line:nth-child(3) {
+  width: 2px;
+  height: 250px;
+  left: 80%;
+  top: -250px;
+  animation-delay: 6s;
+}
+
+@keyframes lineFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+#about .line,
+#experience .line {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .home-content h1 {
+    font-size: 3rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline::before {
+    left: 30px;
+  }
+
+  .timeline-item,
+  .timeline-item:nth-child(even) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 60px;
+  }
+
+  .timeline-content,
+  .timeline-item:nth-child(odd) .timeline-content {
+    width: 100%;
+    text-align: left;
+  }
+
+  .timeline-dot {
+    left: 30px;
+  }
+
+  .nav {
+    right: 1rem;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .project-slide {
+    min-width: 280px;
+    width: 280px;
+    height: 350px;
+  }
+
+  .section {
+    padding: 3rem 1rem;
+  }
+
+  .about-content h2,
+  .skills-content h2,
+  .projects-header h2,
+  .experience-content h2,
+  .contact-content h2 {
+    font-size: 2.5rem;
+  }
+}
