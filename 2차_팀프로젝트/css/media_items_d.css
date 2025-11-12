@@ -557,36 +557,6 @@
     width: 70%;
   }
 
-  /* 디테일 페이지 */
-  .i-bg {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .i-bg1 {
-    width: 100%;
-    height: 55vh;
-    border-left: none;
-    border-bottom: 3px solid #000;
-  }
-
-  .i-bg2 {
-    width: 100%;
-    height: 45vh;
-    border-left: none;
-  }
-
-  .i-bg2 h3 {
-    font-size: 5vw;
-    margin-top: 3vh;
-  }
-
-  .i-bg2 p {
-    font-size: 1.6vw;
-    translate: 0% 12vh;
-    line-height: 6vh;
-  }
-
   /* 콜라보 아티클 */
   .cb-arti h2 {
     font-size: 1.6vw;
@@ -817,7 +787,16 @@
   .top-menu {
     height: 8vh;
   }
-
+.i-bg1 img {
+    width: 100%;
+    height: 60vh;
+}.i-bg {
+    display: flex
+;
+    width: 100vw;
+    height: 60vh;
+    border-top: 3px solid #000;
+}
   .top-menu > ul {
     width: 78%;
     font-size: 1.5vw;
@@ -889,11 +868,11 @@
   /* 디테일 페이지 */
   .i-bg1,
   .i-bg2 {
-    height: 50vh;
+    height: 60vh;
   }
 
   .i-bg2 h3 {
-    font-size: 5.5vw;
+    font-size: 4.5vw;
   }
 
   .i-bg2 p {
@@ -1291,22 +1270,31 @@
 
   /* 디테일 페이지 */
   .i-bg1 {
-    height: 55vh;
+    height: 45vh;
   }
 
   .i-bg2 {
     height: 45vh;
   }
-
+.i-bg1 img {
+    width: 100%;
+    height: 45vh;
+}.i-bg {
+    display: flex
+;
+    width: 100vw;
+    height: 45vh;
+    border-top: 3px solid #000;
+}
   .i-bg2 h3 {
-    font-size: 7vw;
+    font-size: 4vw;
     margin-top: 2vh;
   }
 
   .i-bg2 p {
     font-size: 2.5vw;
-    translate: 0% 8vh;
-    line-height: 6vh;
+    translate: 0% 0vh;
+    line-height: 4vh;
   }
 
   /* 콜라보 아티클 */
