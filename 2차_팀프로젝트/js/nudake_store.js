@@ -1,15 +1,7 @@
-//마우스 스크롤을 밑으로 할 때 .header.top-menu가 display none로 1초걸리게 하고 바꾸기
-$(window).scroll(function () {
-    if ($(window).scrollTop() > 0) {
-        $(".top-menu").css("display", "none");
-        
-    }
-})//scroll/////////////
-
 // 스크롤 방향 감지를 위한 변수
 let lastScrollTop = 0;
 
-// 스크롤 이벤트 통합 처리
+// 스크롤 이벤트 통합 처리 (단일 이벤트로 통합)
 $(window).scroll(function () {
   const scrollTop = $(window).scrollTop();
   const windowHeight = $(window).height();
@@ -74,21 +66,6 @@ $(document).ready(function() {
   });
 });
 
-// 스크롤 시 상단 메뉴 숨김/표시
-$(window).scroll(function() {
-  const scrollTop = $(window).scrollTop();
-  const windowHeight = $(window).height();
-  const documentHeight = $(document).height();
-  
-  if (scrollTop === 0) {
-    $('.top-menu').css('display', 'block');
-  } else if (scrollTop + windowHeight >= documentHeight - 10) {
-    $('.top-menu').css('display', 'block');
-  } else {
-    $('.top-menu').css('display', 'none');
-  }
-});
-
 // 상단 메뉴 호버 효과
 $('.top-menu').hover(
   function() {
@@ -101,100 +78,111 @@ $('.top-menu').hover(
   }
 );
 
- let code = ["SEONGSU", "DOSAN", "SHANGHAI"];
+let code = ["SEONGSU", "DOSAN", "SHANGHAI"];
 
-    document.querySelectorAll("button").forEach((el, idx) => {
-      el.addEventListener("click", function () {
-        location.href = "./NUDAKE_STORE.html?store=" + code[idx];
-      });
-    });
+document.querySelectorAll("button").forEach((el, idx) => {
+  el.addEventListener("click", function () {
+    location.href = "./NUDAKE_STORE.html?store=" + code[idx];
+  });
+});
 
+let pm = location.href;
+pm = pm.includes("=") ? pm.split("=")[1] : 0;
+console.log("현재 스토어 번호:", pm);
 
-      let pm = location.href;
-    pm = pm.includes("=") ? pm.split("=")[1] : 0;
-    console.log("현재 스토어 번호:", pm);
+const storeData = {
+  SEONGSU: {
+    title: `STORE IN SEONG-SU`,
+    imgSet: [
+      `./01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/성수4.webp`,
+      `./01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/성수1.webp`,
+      `./01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/성수6.webp`,
+      `./01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/성수3.webp`,
+      `./01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/성수2.webp`,
+    ],
+    placeName: "NUDAKE TEAHOUSE",
+    location: "KOREA",
+    address: "5F 433, Ttukseom-ro, Seongdong-gu, Seoul, Republic of Korea",
+    contact: "070-5147-0772",
+    giftHours: "11:00~21:00",
+    loungeHours: "12:00~21:00",
+    mapUrl: "https://maps.app.goo.gl/Afb6UmGAXtZLrR1b8",
+    backgroundColor: "#8B4789",
+  },
+  DOSAN: {
+    title: `STORE IN DOSAN`,
+    imgSet: [
+      `./01.자료수집/01.메인상단지점이미지/02.누데이크도산이미지/도산4.webp`,
+      `./01.자료수집/01.메인상단지점이미지/02.누데이크도산이미지/도산1.webp`,
+      `./01.자료수집/01.메인상단지점이미지/02.누데이크도산이미지/도산5.webp`,
+      `./01.자료수집/01.메인상단지점이미지/02.누데이크도산이미지/도산2.webp`,
+      `./01.자료수집/01.메인상단지점이미지/02.누데이크도산이미지/도산3.webp`,
+    ],
+    placeName: "HAUS NOWHERE DOSAN",
+    location: "KOREA",
+    address:
+      "50, Apgujeong-ro 46-gil, Gangnam-gu, Seoul, Republic of Korea",
+    contact: "070-4128-2122",
+    hours: "11:00~21:00",
+    mapUrl: "https://maps.app.goo.gl/Lj9YwLUYz9tDySti9",
+    backgroundColor: "#2C5F2D",
+  },
+  SHANGHAI: {
+    title: `STORE IN SHANGHAI`,
+    imgSet: [
+      `./01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/상하이1.webp`,
+      `./01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/상하이5.webp`,
+      `./01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/상하이2.webp`,
+      `./01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/상하이3.webp`,
+      `./01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/상하이6.webp`,
+    ],
+    placeName: "NUDAKE SHANGHAI",
+    location: "CHINA",
+    address: "F 798-812 Middle Huaihai Rd, Huangpu District, Shanghai, China",
+    contact: "+86-21-6426-1570",
+    hours: "10:00~22:00",
+    mapUrl: "https://maps.app.goo.gl/jk3zhJYipG7wHnmv9",
+    backgroundColor: "#C41E3A",
+  },
+};
 
-    const storeData = {
-      SEONGSU: {
-        title: `STORE IN SEONG-SU`,
-        imgSet: [
-          `./01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/성수4.webp`,
-          `./01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/성수1.webp`,
-          `./01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/성수6.webp`,
-          `./01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/성수3.webp`,
-          `./01.자료수집/01.메인상단지점이미지/01.누데이크성수이미지/성수2.webp`,
-        ],
-        placeName: "NUDAKE TEAHOUSE",
-        location: "KOREA",
-        address: "5F 433, Ttukseom-ro, Seongdong-gu, Seoul, Republic of Korea",
-        contact: "070-5147-0772",
-        giftHours: "11:00~21:00",
-        loungeHours: "12:00~21:00",
-        mapUrl: "https://maps.app.goo.gl/Afb6UmGAXtZLrR1b8",
-        backgroundColor: "#8B4789",
-      },
-      DOSAN: {
-        title: `STORE IN DOSAN`,
-        imgSet: [
-          `./01.자료수집/01.메인상단지점이미지/02.누데이크도산이미지/도산4.webp`,
-          `./01.자료수집/01.메인상단지점이미지/02.누데이크도산이미지/도산1.webp`,
-          `./01.자료수집/01.메인상단지점이미지/02.누데이크도산이미지/도산5.webp`,
-          `./01.자료수집/01.메인상단지점이미지/02.누데이크도산이미지/도산2.webp`,
-          `./01.자료수집/01.메인상단지점이미지/02.누데이크도산이미지/도산3.webp`,
-        ],
-        placeName: "HAUS NOWHERE DOSAN",
-        location: "KOREA",
-        address:
-          "50, Apgujeong-ro 46-gil, Gangnam-gu, Seoul, Republic of Korea",
-        contact: "070-4128-2122",
-        hours: "11:00~21:00",
-        mapUrl: "https://maps.app.goo.gl/Lj9YwLUYz9tDySti9",
-        backgroundColor: "#2C5F2D",
-      },
-      SHANGHAI: {
-        title: `STORE IN SHANGHAI`,
-        imgSet: [
-          `./01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/상하이1.webp`,
-          `./01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/상하이5.webp`,
-          `./01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/상하이2.webp`,
-          `./01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/상하이3.webp`,
-          `./01.자료수집/01.메인상단지점이미지/03.누데이크상하이이미지/상하이6.webp`,
-        ],
-        placeName: "NUDAKE SHANGHAI",
-        location: "CHINA",
-        address: "F 798-812 Middle Huaihai Rd, Huangpu District, Shanghai, China",
-        contact: "+86-21-6426-1570",
-        hours: "10:00~22:00",
-        mapUrl: "https://maps.app.goo.gl/jk3zhJYipG7wHnmv9",
-        backgroundColor: "#C41E3A",
-      },
-    };
+// 타이틀 변경대상
+const titleBox = document.querySelector(".t-box > h2");
 
-    // 타이틀 변경대상
-    const titleBox = document.querySelector(".t-box > h2");
+// pm이 0이 아닐 때만 storeData 접근
+if (pm && storeData[pm]) {
+  // 타이틀 변경하기
+  titleBox.textContent = storeData[pm].title;
 
-    // 타이틀 변경하기
-    titleBox.textContent = storeData[pm].title;
-
-    // 이미지 변경대상
-    const storeBox = document.querySelectorAll(".img-area li");
-    // 이미지 변경하기
-    storeBox.forEach((el, idx) => {
+  // 이미지 변경대상
+  const storeBox = document.querySelectorAll(".img-area li");
+  // 이미지 변경하기
+  storeBox.forEach((el, idx) => {
+    if (storeData[pm].imgSet[idx]) {
       el.style.backgroundImage = `url(${storeData[pm].imgSet[idx]})`;
-    });
+    }
+  });
 
-    const currentStore = storeData[pm];
+  const currentStore = storeData[pm];
 
-    // info1 업데이트
-    document.querySelector(".info1 ul li:first-child").textContent =
-      currentStore.placeName;
-    document.querySelector(".info1 ul li:last-child").innerHTML = `
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <i class="fa-solid fa-location-dot"></i>${currentStore.location}
-`;
+  // info1 업데이트
+  const info1FirstChild = document.querySelector(".info1 ul li:first-child");
+  const info1LastChild = document.querySelector(".info1 ul li:last-child");
+  
+  if (info1FirstChild) {
+    info1FirstChild.textContent = currentStore.placeName;
+  }
+  
+  if (info1LastChild) {
+    info1LastChild.innerHTML = `
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <i class="fa-solid fa-location-dot"></i>${currentStore.location}
+    `;
+  }
 
-    // info2 업데이트
-    const info2List = document.querySelector(".info2 ul");
+  // info2 업데이트
+  const info2List = document.querySelector(".info2 ul");
+  if (info2List) {
     info2List.innerHTML = ""; // 기존 내용 초기화
 
     // 주소
@@ -221,9 +209,16 @@ $('.top-menu').hover(
       hoursLi.textContent = `HOURS     ${currentStore.hours}`;
       info2List.appendChild(hoursLi);
     }
+  }
 
-    document.querySelector(".info2 a").href = currentStore.mapUrl;
+  // 맵 링크 업데이트
+  const mapLink = document.querySelector(".info2 a");
+  if (mapLink) {
+    mapLink.href = currentStore.mapUrl;
+  }
 
-    document.querySelectorAll(".img-area").forEach((area) => {
-      area.style.backgroundColor = currentStore.backgroundColor;
-    });
+  // 배경색 업데이트
+  document.querySelectorAll(".img-area").forEach((area) => {
+    area.style.backgroundColor = currentStore.backgroundColor;
+  });
+}
