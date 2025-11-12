@@ -1,0 +1,2002 @@
+@charset "utf-8";
+/* ========================================
+   NUDAKE 프로젝트 - 완전한 반응형 미디어쿼리
+   모든 페이지 디테일 적용
+======================================== */
+
+/* ========================================
+   대형 데스크탑 (1440px 이상)
+======================================== */
+@media screen and (min-width: 1440px) {
+  /* 최대 너비 제한으로 초대형 화면에서도 레이아웃 유지 */
+  .store-box,
+  .colab-box,
+  .pdct-box {
+    /* max-width: 1920px; */
+    margin: 0 auto;
+    max-height: fit-content;
+  }
+}
+
+/* ========================================
+   태블릿 가로 (1024px ~ 1200px)
+======================================== */
+@media screen and (max-width: 1200px) {
+  /* 상단 메뉴 */
+  .top-menu > ul {
+    width: 65%;
+    font-size: 1.1vw;
+  }
+  
+  .top-menu > ul > :first-child {
+    font-size: 1.7vw;
+  }
+
+  /* 타이틀 박스 */
+  .t-box h2 {
+    font-size: 3.8vw;
+    padding-top: 10vh;
+  }
+
+  /* 버튼들 */
+  .store-btn {
+    left: 40.5%;
+    font-size: 2.2vw;
+  }
+
+  .colab-btn {
+    left: 40.5%;
+    font-size: 2.2vw;
+  }
+
+  .pdct-btn {
+    left: 24.5%;
+    font-size: 2.2vw;
+  }
+
+  /* 속박스들 */
+  .store-box1 > ul > li,
+  .store-box2 > ul > li,
+  .store-box3 > ul > li,
+  .colab-box1 > ul > li,
+  .colab-box2 > ul > li,
+  .colab-box3 > ul > li,
+  .colab-box4 > ul > li,
+  .colab-box5 > ul > li,
+  .pdct-box1 > ul > li,
+  .pdct-box2 > ul > li,
+  .pdct-box3 > ul > li {
+    transition: flex 0.3s ease-out;
+  }
+
+  /* 하단 영역 */
+  .bottom-area {
+    font-size: 1.1vw;
+  }
+
+  /* 그리드 박스 */
+  .grid-box {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-box h3 {
+    font-size: 1.3vw;
+  }
+
+  /* 매장 상세 정보 */
+  .info1 {
+    font-size: 2.2vw;
+  }
+
+  .info2 {
+    font-size: 1.1vw;
+  }
+
+  .map-btn {
+    font-size: 1.6vw;
+  }
+}
+
+/* ========================================
+   태블릿 (1024px 이하)
+======================================== */
+@media screen and (max-width: 1024px) {
+  /* 상단 메뉴 */
+  .top-menu > ul {
+    width: 70%;
+    font-size: 1.3vw;
+  }
+  
+  .top-menu > ul > :first-child {
+    font-size: 1.9vw;
+  }
+
+  /* 타이틀 박스 */
+  .t-box h2 {
+    font-size: 4vw;
+    padding-top: 11vh;
+  }
+
+  /* 버튼들 */
+  .store-btn,
+  .colab-btn,
+  .pdct-btn {
+    font-size: 2.5vw;
+  }
+
+  /* 지점/콜라보/품목 텍스트 */
+  .store-box > ul > li > p,
+  .colab-box > ul > li > p,
+  .pdct-box > ul > li > p {
+    font-size: 5vw;
+  }
+
+  /* 하단 영역 */
+  .bottom-area {
+    font-size: 1.3vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+  }
+
+  /* 그리드 박스 */
+  .grid-box {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5vh;
+  }
+
+  .grid-box h3 {
+    font-size: 1.6vw;
+    width: 60%;
+  }
+
+  /* 콜라보 아티클 */
+  .cb-arti {
+    padding: 0.5vh;
+  }
+
+  .cb-arti h2 {
+    font-size: 1.4vw;
+  }
+
+  .cb-arti h3 {
+    font-size: 1.1vw;
+  }
+
+  .cb-arti p {
+    font-size: 0.9vw;
+    line-height: 1.4;
+  }
+
+  /* 콜라보 아티클 위치 조정 */
+  .arti-1 {
+    transform: translateY(88%);
+  }
+
+  .arti-1:hover {
+    transform: translateY(82%);
+  }
+
+  .arti-2 {
+    transform: translateY(84%);
+  }
+
+  .arti-2:hover {
+    transform: translateY(79%);
+  }
+
+  .arti-3 {
+    transform: translateY(87%);
+  }
+
+  .arti-3:hover {
+    transform: translateY(82%);
+  }
+
+  .arti-4 {
+    transform: translateY(86%);
+  }
+
+  .arti-4:hover {
+    transform: translateY(81%);
+  }
+
+  .arti-5 {
+    transform: translateY(86%);
+  }
+
+  .arti-5:hover {
+    transform: translateY(81%);
+  }
+
+  /* 매장 상세 정보 */
+  .info-sec {
+    font-size: 2.3vw;
+    height: 20vh;
+  }
+
+  .info1 {
+    font-size: 2.3vw;
+    width: 45%;
+  }
+
+  .info2 {
+    font-size: 1.3vw;
+    width: 55%;
+  }
+
+  .map-btn {
+    font-size: 1.7vw;
+    right: 8%;
+  }
+
+  /* 디테일 페이지 */
+  .i-bg2 h3 {
+    font-size: 4.5vw;
+  }
+
+  .i-bg2 p {
+    font-size: 1.4vw;
+    line-height: 8vh;
+  }
+
+  /* 티하우스 상세 페이지 */
+  .bg-box h2 {
+    font-size: 4.5vw;
+    margin-top: 5vh;
+  }
+
+  .bg-box h3 {
+    font-size: 3.5vw;
+    margin-top: 8vh;
+  }
+
+  .bg-box p {
+    font-size: 1.2vw;
+    line-height: 1.6;
+  }
+
+  .colab-d-box {
+    width: 70vw;
+    translate: 15% 0%;
+    gap: 5vw;
+  }
+
+  .colab-d-box2,
+  .colab-d-box4 {
+    width: 92vw;
+    translate: 4% 0%;
+  }
+
+  .colab-d-box5 {
+    width: 92vw;
+    translate: 4% 0%;
+    height: 55vh;
+  }
+
+  /* 동물의 날 페이지 */
+  .bg-box2 h3 {
+    font-size: 3.5vw;
+  }
+
+  .bg-box2 p {
+    font-size: 1.2vw;
+  }
+
+  .swiper {
+    width: 30vw;
+    height: 70vh;
+  }
+
+  .mySwiper2 {
+    width: 30vw;
+    height: 70vh;
+  }
+
+  /* 제니 페이지 */
+  .bg-box3 h3 {
+    font-size: 2.5vw;
+    padding-top: 8vh;
+  }
+
+  .bg-box3 p {
+    font-size: 1vw;
+    line-height: 1.8;
+  }
+
+  .j-box1,
+  .j-box2 {
+    width: 85vw;
+    translate: 7.5% 0%;
+  }
+
+  .mySwiper3 {
+    width: 75vw;
+  }
+
+  /* 생일 페이지 */
+  .bg-box4 h3 {
+    font-size: 2.5vw;
+  }
+
+  .bg-box4 p {
+    font-size: 1vw;
+  }
+
+  .b-sec2 {
+    height: 75vh;
+  }
+
+  .b-sec2 section > p {
+    font-size: 1.3vw;
+  }
+
+  .b-sec2 > li > p {
+    font-size: 1.3vw;
+  }
+
+  .b-sec3,
+  .b-sec4 {
+    width: 92vw;
+  }
+
+  .b-sec5 {
+    width: 92vw;
+    height: 140vh;
+  }
+
+  /* 피크닉 페이지 */
+  .bg-box5 h3 {
+    font-size: 3.5vw;
+  }
+
+  .bg-box5 > p {
+    font-size: 1.2vw;
+  }
+
+  .pic-sec2 {
+    width: 70vw;
+    height: 38vh;
+  }
+
+  .pic-overlay p {
+    font-size: 1.2vw;
+  }
+
+  .pic-sec3 {
+    width: 85vw;
+    translate: 7.5vw 0%;
+  }
+
+  .play-box1 iframe {
+    width: 25vw;
+  }
+
+  .play-box2 iframe {
+    width: 32vw;
+  }
+
+  /* 매장 목록 페이지 */
+  .d-store-area-inbox p {
+    font-size: 4vw;
+  }
+
+  .d-store-area-inbox button {
+    font-size: 2.2vw;
+  }
+}
+
+/* ========================================
+   모바일 가로 / 소형 태블릿 (768px ~ 900px)
+======================================== */
+@media screen and (max-width: 900px) {
+  /* 상단 메뉴 */
+  .top-menu {
+    height: 9vh;
+  }
+
+  .top-menu > ul {
+    width: 75%;
+    font-size: 1.4vw;
+  }
+
+  .top-menu > ul > :first-child {
+    font-size: 2vw;
+  }
+
+  /* 타이틀 박스 */
+  .t-box h2 {
+    font-size: 4.5vw;
+    padding-top: 12vh;
+  }
+
+  /* 버튼들 */
+  .store-btn {
+    left: 41%;
+    font-size: 2.8vw;
+  }
+
+  .colab-btn {
+    left: 41%;
+    font-size: 2.8vw;
+  }
+
+  .pdct-btn {
+    left: 26%;
+    font-size: 2.8vw;
+  }
+
+  /* 지점/콜라보/품목 호버 텍스트 */
+  .store-box > ul > li > p {
+    font-size: 4.5vw;
+    translate: 15% 160%;
+  }
+
+  .store-box > ul > li:nth-child(2) > p {
+    translate: 20% 160%;
+  }
+
+  .store-box > ul > li:nth-child(3) > p {
+    translate: 15% 160%;
+  }
+
+  .colab-box > ul > li > p {
+    font-size: 4vw;
+  }
+
+  .colab-box > ul > li:first-child > p {
+    translate: 16% 210%;
+  }
+
+  .colab-box > ul > li:nth-child(2) > p {
+    translate: 15% 130%;
+  }
+
+  .colab-box > ul > li:nth-child(3) > p {
+    translate: 18% 480%;
+  }
+
+  .colab-box > ul > li:nth-child(4) > p {
+    translate: 21% 200%;
+  }
+
+  .colab-box > ul > li:nth-child(5) > p {
+    translate: 17% 190%;
+  }
+
+  .pdct-box > ul > li > p {
+    font-size: 5vw;
+  }
+
+  .pdct-box > ul > li:nth-child(1) > p {
+    translate: 10% 350%;
+  }
+
+  .pdct-box > ul > li:nth-child(2) > p {
+    translate: 7% 350%;
+  }
+
+  .pdct-box > ul > li:nth-child(3) > p {
+    translate: 24% 350%;
+  }
+
+  /* 하단 영역 */
+  .bottom-area {
+    font-size: 1.4vw;
+  }
+
+  .bt-in-box {
+    gap: 2.5%;
+  }
+
+  /* 그리드 박스 - 2열로 변경 */
+  .grid-box {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1vh;
+  }
+
+  .grid-box h3 {
+    font-size: 2.2vw;
+    bottom: 8%;
+    width: 70%;
+  }
+
+  /* 디테일 페이지 */
+  .i-bg {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .i-bg1 {
+    width: 100%;
+    height: 55vh;
+    border-left: none;
+    border-bottom: 3px solid #000;
+  }
+
+  .i-bg2 {
+    width: 100%;
+    height: 45vh;
+    border-left: none;
+  }
+
+  .i-bg2 h3 {
+    font-size: 5vw;
+    margin-top: 3vh;
+  }
+
+  .i-bg2 p {
+    font-size: 1.6vw;
+    translate: 0% 12vh;
+    line-height: 6vh;
+  }
+
+  /* 콜라보 아티클 */
+  .cb-arti h2 {
+    font-size: 1.6vw;
+  }
+
+  .cb-arti h3 {
+    font-size: 1.3vw;
+  }
+
+  .cb-arti p {
+    font-size: 1vw;
+  }
+
+  /* 티하우스 상세 페이지 */
+  .bg-box h2 {
+    font-size: 5vw;
+  }
+
+  .bg-box h3 {
+    font-size: 4vw;
+  }
+
+  .bg-box p {
+    font-size: 1.4vw;
+  }
+
+  .colab-d-box {
+    width: 85vw;
+    translate: 7.5% 0%;
+    gap: 4vw;
+  }
+
+  .colab-d-box2,
+  .colab-d-box4 {
+    width: 95vw;
+    translate: 2.5% 0%;
+  }
+
+  .colab-d-box3 {
+    height: 45vh;
+  }
+
+  .colab-d-box5 {
+    width: 95vw;
+    translate: 2.5% 0%;
+    height: 50vh;
+  }
+
+  .colab-d-box6 {
+    height: 280vh;
+  }
+
+  /* 동물의 날 페이지 */
+  .bg-box2 h3 {
+    font-size: 4vw;
+  }
+
+  .bg-box2 p {
+    font-size: 1.4vw;
+  }
+
+  .ani-sec1 {
+    height: 110vh;
+  }
+
+  .swiper {
+    width: 35vw;
+    height: 65vh;
+    margin-top: 5vh;
+  }
+
+  .mySwiper2 {
+    width: 35vw;
+    height: 65vh;
+    margin-top: 8vh;
+  }
+
+  /* 제니 페이지 */
+  .bg-box3 h3 {
+    font-size: 3vw;
+    padding-top: 6vh;
+  }
+
+  .bg-box3 p {
+    font-size: 1.2vw;
+  }
+
+  .j-box1 {
+    width: 90vw;
+    translate: 5% 0%;
+    height: 140vh;
+  }
+
+  .j-box2 {
+    width: 90vw;
+    translate: 5% 0%;
+    height: 95vh;
+  }
+
+  .mySwiper3 {
+    width: 78vw;
+    height: 85vh;
+  }
+
+  /* 생일 페이지 */
+  .bg-box4 h3 {
+    font-size: 3vw;
+    padding-top: 8vh;
+  }
+
+  .bg-box4 p {
+    font-size: 1.1vw;
+  }
+
+  .b-sec1 {
+    height: 90vh;
+  }
+
+  .b-sec2 {
+    height: 65vh;
+    gap: 0.8vw;
+  }
+
+  .b-sec2 section > p {
+    font-size: 1.4vw;
+    width: 90%;
+    translate: 45% 0%;
+  }
+
+  .b-sec2 > li > p {
+    font-size: 1.4vw;
+  }
+
+  .b-sec3,
+  .b-sec4 {
+    width: 93vw;
+    height: 65vh;
+  }
+
+  .b-sec5 {
+    width: 93vw;
+    height: 130vh;
+    gap: 2vh;
+  }
+
+  /* 피크닉 페이지 */
+  .bg-box5 h3 {
+    font-size: 4vw;
+  }
+
+  .bg-box5 > p {
+    font-size: 1.4vw;
+  }
+
+  .pic-sec1 {
+    height: 90vh;
+  }
+
+  .pic-sec2 {
+    width: 75vw;
+    height: 35vh;
+    gap: 2vw;
+  }
+
+  .pic-overlay p {
+    font-size: 1.4vw;
+    padding: 1.5vw;
+  }
+
+  .pic-sec3 {
+    width: 88vw;
+    translate: 6vw 0%;
+    height: 100vh;
+  }
+
+  .play-box1 iframe {
+    width: 28vw;
+    height: 280px;
+  }
+
+  .play-box2 iframe {
+    width: 35vw;
+    height: 280px;
+  }
+
+  /* 매장 상세 */
+  .img-area1,
+  .img-area2,
+  .img-area3,
+  .img-area4 {
+    height: 90vh;
+  }
+
+  .info-sec {
+    flex-direction: column;
+    height: auto;
+    padding: 3vh 0;
+  }
+
+  .info1,
+  .info2 {
+    width: 90%;
+    font-size: 2.8vw;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .info2 {
+    margin-top: 2vh;
+    font-size: 1.6vw;
+  }
+
+  .info2 ul {
+    text-align: center;
+  }
+
+  .map-btn {
+    font-size: 2.2vw;
+    position: relative;
+    right: 0;
+    top: 0;
+    margin: 2vh auto 0;
+    display: block;
+  }
+
+  /* 매장 목록 페이지 */
+  .d-store-area-inbox p {
+    font-size: 4vw;
+    bottom: 15%;
+  }
+
+  .d-store-area-inbox button {
+    font-size: 2.5vw;
+    padding: 1.5vh 3vw;
+  }
+}
+
+/* ========================================
+   모바일 가로 / 소형 태블릿 (768px 이하)
+======================================== */
+@media screen and (max-width: 768px) {
+  /* 상단 메뉴 */
+  .top-menu {
+    height: 8vh;
+  }
+
+  .top-menu > ul {
+    width: 78%;
+    font-size: 1.5vw;
+    gap: 1vw;
+  }
+
+  .top-menu > ul > :first-child {
+    font-size: 2.1vw;
+  }
+
+  /* 타이틀 박스 */
+  .t-box h2 {
+    font-size: 5vw;
+  }
+
+  /* 버튼들 */
+  .store-btn {
+    left: 41.5%;
+    font-size: 3vw;
+  }
+
+  .colab-btn {
+    left: 41.5%;
+    font-size: 3vw;
+  }
+
+  .pdct-btn {
+    left: 26.5%;
+    font-size: 3vw;
+  }
+
+  /* 지점/콜라보/품목 호버 텍스트 크기 */
+  .store-box > ul > li > p,
+  .colab-box > ul > li > p {
+    font-size: 4.2vw;
+  }
+
+  .pdct-box > ul > li > p {
+    font-size: 5.2vw;
+  }
+
+  /* 하단 영역 */
+  .bottom-area {
+    font-size: 1.6vw;
+  }
+
+  /* 그리드 박스 */
+  .grid-box h3 {
+    font-size: 2.4vw;
+    width: 75%;
+  }
+
+  /* 디테일 페이지 */
+  .i-bg1,
+  .i-bg2 {
+    height: 50vh;
+  }
+
+  .i-bg2 h3 {
+    font-size: 5.5vw;
+  }
+
+  .i-bg2 p {
+    font-size: 1.7vw;
+    translate: 0% 14vh;
+  }
+
+  /* Swiper 크기 조정 */
+  .swiper {
+    width: 38vw;
+    height: 62vh;
+  }
+
+  .mySwiper2 {
+    width: 38vw;
+    height: 62vh;
+  }
+
+  .mySwiper3 {
+    width: 80vw;
+  }
+}
+
+/* ========================================
+   모바일 세로 (640px 이하)
+======================================== */
+@media screen and (max-width: 640px) {
+  /* 상단 메뉴 */
+  .top-menu {
+    height: 7.5vh;
+  }
+
+  .top-menu > ul {
+    width: 82%;
+    font-size: 1.8vw;
+    gap: 0.8vw;
+  }
+
+  .top-menu > ul > :first-child {
+    font-size: 2.4vw;
+  }
+
+  /* 타이틀 박스 */
+  .t-box h2 {
+    font-size: 5.5vw;
+    padding-top: 7vh;
+  }
+
+  /* 버튼들 */
+  .store-btn {
+    left: 42.5%;
+    font-size: 3.5vw;
+  }
+
+  .colab-btn {
+    left: 42.5%;
+    font-size: 3.5vw;
+  }
+
+  .pdct-btn {
+    left: 28%;
+    font-size: 3.5vw;
+  }
+.bg-box6{
+    max-height: 300vh;
+}
+  /* 지점/콜라보/품목 */
+  .store-box,
+  .colab-box,
+  .pdct-box {
+    border-bottom: 10px solid #000;
+    border-top: 10px solid #000;
+    height: 50vh;
+  }
+  .store-box1,
+  .store-box2,
+  .store-box3,
+  .colab-box1,
+  .colab-box2,
+  .colab-box3,
+  .colab-box4,
+  .colab-box5,
+  .pdct-box1,
+  .pdct-box2,
+  .pdct-box3 {
+    height: 50vh;
+
+  /* 호버 텍스트 */
+  .store-box > ul > li > p {
+    font-size: 4.5vw;
+    translate: 12% 170%;
+  }
+
+  .store-box > ul > li:nth-child(2) > p {
+    translate: 18% 170%;
+  }
+
+  .colab-box > ul > li > p {
+    font-size: 4.3vw;
+  }
+
+  .colab-box > ul > li:first-child > p {
+    translate: 16% 230%;
+  }
+
+  .colab-box > ul > li:nth-child(2) > p {
+    translate: 13% 110%;
+  }
+
+  .colab-box > ul > li:nth-child(3) > p {
+    translate: 16% 520%;
+  }
+
+  .colab-box > ul > li:nth-child(4) > p {
+    translate: 20% 210%;
+  }
+
+  .colab-box > ul > li:nth-child(5) > p {
+    translate: 16% 200%;
+  }
+
+  .pdct-box > ul > li:nth-child(1) > p {
+    translate: 9% 360%;
+  }
+
+  .pdct-box > ul > li:nth-child(2) > p {
+    translate: 6% 360%;
+  }
+
+  .pdct-box > ul > li:nth-child(3) > p {
+    translate: 23% 360%;
+  }
+
+  /* 하단 영역 */
+  .bottom-area {
+    font-size: 1.8vw;
+  }
+
+  .bt-in-box {
+    gap: 2%;
+  }
+
+  /* 그리드 박스 */
+  .grid-box h3 {
+    font-size: 2.6vw;
+  }
+
+  /* 콜라보 아티클 */
+  .cb-arti h2 {
+    font-size: 1.8vw;
+  }
+
+  .cb-arti h3 {
+    font-size: 1.4vw;
+  }
+
+  .cb-arti p {
+    font-size: 1.1vw;
+  }
+
+  /* 디테일 페이지 */
+  .i-bg2 h3 {
+    font-size: 6vw;
+  }
+
+  .i-bg2 p {
+    font-size: 1.9vw;
+    translate: 0% 12vh;
+  }
+
+  /* 티하우스 */
+  .bg-box h2 {
+    font-size: 5.5vw;
+  }
+
+  .bg-box h3 {
+    font-size: 4.5vw;
+  }
+
+  .bg-box p {
+    font-size: 1.5vw;
+  }
+
+  .colab-d-box {
+    width: 88vw;
+    translate: 6% 0%;
+  }
+
+  /* 동물의 날 */
+  .bg-box2 h3 {
+    font-size: 4.5vw;
+  }
+
+  .bg-box2 p {
+    font-size: 1.5vw;
+  }
+
+  .swiper,
+  .mySwiper2 {
+    width: 40vw;
+    height: 58vh;
+  }
+
+  /* 제니 페이지 */
+  .bg-box3 h3 {
+    font-size: 3.5vw;
+  }
+
+  .bg-box3 p {
+    font-size: 1.3vw;
+  }
+
+  /* 생일 페이지 */
+  .bg-box4 h3 {
+    font-size: 3.5vw;
+  }
+
+  .bg-box4 p {
+    font-size: 1.2vw;
+  }
+
+  .b-sec2 section > p {
+    font-size: 1.6vw;
+  }
+
+  /* 피크닉 페이지 */
+  .bg-box5 h3 {
+    font-size: 4.5vw;
+  }
+
+  .bg-box5 > p {
+    font-size: 1.5vw;
+  }
+
+  .pic-sec2 {
+    width: 80vw;
+    height: 32vh;
+  }
+
+  .pic-overlay p {
+    font-size: 1.5vw;
+  }
+
+  .play-box1 iframe {
+    width: 32vw;
+  }
+
+  .play-box2 iframe {
+    width: 40vw;
+  }
+
+  /* 매장 목록 */
+  .d-store-area-inbox p {
+    font-size: 5.5vw;
+  }
+
+  .d-store-area-inbox button {
+    font-size: 2.8vw;
+  }
+}
+}
+
+/* ========================================
+   모바일 세로 (480px 이하)
+======================================== */
+@media screen and (max-width: 480px) {
+  /* 상단 메뉴 */
+  .top-menu {
+    height: 7vh;
+  }
+
+  .top-menu > ul {
+    width: 88%;
+    font-size: 2.2vw;
+    gap: 0.5vw;
+  }
+
+  .top-menu > ul > :first-child {
+    font-size: 2.8vw;
+    margin-left: 0.5vw;
+  }
+
+  /* 타이틀 박스 */
+  .t-box h2 {
+    font-size: 6.5vw;
+    padding-top: 7vh;
+    margin-left: 2vw;
+  }
+
+  /* 버튼들 */
+  .store-btn {
+    left: 44%;
+    font-size: 4vw;
+    top: 54%;
+  }
+
+  .colab-btn {
+    left: 44%;
+    font-size: 4vw;
+    top: 54%;
+  }
+
+  .pdct-btn {
+    left: 30%;
+    font-size: 4vw;
+    top: 54%;
+  }
+
+  /* 지점/콜라보/품목 */
+  .store-box,
+  .colab-box,
+  .pdct-box {
+    border-bottom: 8px solid #000;
+    border-top: 8px solid #000;
+  }
+
+  .store-box > ul > li > p {
+    font-size: 5vw;
+    translate: 10% 180%;
+  }
+
+  .store-box > ul > li:nth-child(2) > p {
+    translate: 16% 180%;
+  }
+
+  .store-box > ul > li:nth-child(3) > p {
+    translate: 10% 180%;
+  }
+
+  /* 콜라보 텍스트 위치 조정 */
+  .colab-box > ul > li > p {
+    font-size: 4.5vw;
+  }
+
+  .colab-box > ul > li:first-child > p {
+    translate: 15% 250%;
+  }
+
+  .colab-box > ul > li:nth-child(2) > p {
+    translate: 10% 100%;
+  }
+
+  .colab-box > ul > li:nth-child(3) > p {
+    translate: 13% 550%;
+  }
+
+  .colab-box > ul > li:nth-child(4) > p {
+    translate: 18% 220%;
+  }
+
+  .colab-box > ul > li:nth-child(5) > p {
+    translate: 13% 210%;
+  }
+
+  /* 품목 텍스트 위치 조정 */
+  .pdct-box > ul > li > p {
+    font-size: 5.5vw;
+  }
+
+  .pdct-box > ul > li:nth-child(1) > p {
+    translate: 7% 380%;
+  }
+
+  .pdct-box > ul > li:nth-child(2) > p {
+    translate: 4% 380%;
+  }
+
+  .pdct-box > ul > li:nth-child(3) > p {
+    translate: 21% 380%;
+  }
+
+  /* 하단 영역 */
+  .bottom-area {
+    font-size: 2.2vw;
+    padding: 2vh 0;
+  }
+
+  .bt-in-box {
+    flex-direction: column;
+    gap: 1.5vh;
+    text-align: center;
+  }
+
+  .bt-in-box p {
+    margin: 0.5vh 0;
+  }
+
+  /* 그리드 박스 - 1열로 변경 */
+  .grid-box {
+    grid-template-columns: 1fr;
+    gap: 2vh;
+    margin-bottom: 5vh;
+  }
+
+  .grid-box h3 {
+    font-size: 3.5vw;
+    bottom: 5%;
+    width: 85%;
+  }
+
+  .grid-box > div {
+    border-right: 1px solid #000;
+  }
+
+  /* 디테일 페이지 */
+  .i-bg1 {
+    height: 55vh;
+  }
+
+  .i-bg2 {
+    height: 45vh;
+  }
+
+  .i-bg2 h3 {
+    font-size: 7vw;
+    margin-top: 2vh;
+  }
+
+  .i-bg2 p {
+    font-size: 2.5vw;
+    translate: 0% 8vh;
+    line-height: 6vh;
+  }
+
+  /* 콜라보 아티클 */
+  .cb-arti {
+    padding: 1.5vh 1vw;
+  }
+
+  .cb-arti h2 {
+    font-size: 2.5vw;
+    margin-bottom: 0.5vh;
+  }
+
+  .cb-arti h3 {
+    font-size: 2vw;
+    margin: 1vh 0 0.5vh 0;
+  }
+
+  .cb-arti p {
+    font-size: 1.6vw;
+    line-height: 1.5;
+  }
+
+  /* 콜라보 아티클 위치 재조정 */
+  .arti-1 {
+    transform: translateY(89%);
+  }
+
+  .arti-1:hover {
+    transform: translateY(83%);
+  }
+
+  .arti-2 {
+    transform: translateY(85%);
+  }
+
+  .arti-2:hover {
+    transform: translateY(80%);
+  }
+
+  .arti-3 {
+    transform: translateY(88%);
+  }
+
+  .arti-3:hover {
+    transform: translateY(83%);
+  }
+
+  .arti-4 {
+    transform: translateY(87%);
+  }
+
+  .arti-4:hover {
+    transform: translateY(82%);
+  }
+
+  .arti-5 {
+    transform: translateY(87%);
+  }
+
+  .arti-5:hover {
+    transform: translateY(82%);
+  }
+
+  /* 티하우스 */
+  .bg-box {
+    height: auto;
+    padding-bottom: 10vh;
+  }
+
+  .bg-box h2 {
+    font-size: 6.5vw;
+    margin-top: 3vh;
+  }
+
+  .bg-box h3 {
+    font-size: 5vw;
+    margin-top: 6vh;
+  }
+
+  .bg-box p {
+    font-size: 2vw;
+    padding: 0 5vw;
+    line-height: 1.7;
+  }
+
+  .bg-box article {
+    padding: 0 3vw;
+  }
+
+  .colab-d-box {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    height: auto;
+    width: 90vw;
+    translate: 5% 0%;
+    gap: 3vh;
+    margin-top: 5vh;
+  }
+
+  .colab-d-box > li {
+    height: 50vh;
+  }
+
+  .colab-d-box2 {
+    flex-direction: column;
+    height: auto;
+    width: 90vw;
+    translate: 5% 0%;
+    margin-top: 5vh;
+  }
+
+  .colab-d-box2 > li {
+    height: 60vh;
+  }
+
+  .colab-d-box3 {
+    flex-direction: column;
+    height: auto;
+    width: 90vw;
+    translate: 5% 0%;
+    margin-top: 5vh;
+  }
+
+  .colab-d-box3 > li {
+    height: 50vh;
+  }
+
+  .colab-d-box4 {
+    width: 90vw;
+    height: 80vh;
+    translate: 5% 0%;
+    margin-top: 5vh;
+  }
+
+  .colab-d-box5 {
+    flex-direction: column;
+    height: auto;
+    width: 90vw;
+    translate: 5% 0%;
+    margin-top: 5vh;
+    gap: 2vh;
+  }
+
+  .colab-d-box5 li {
+    height: 45vh;
+  }
+
+  .colab-d-box6 {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    height: auto;
+    width: 90vw;
+    translate: 5% 0%;
+    margin-top: 5vh;
+    gap: 2vh;
+  }
+
+  .colab-d-box6 li {
+    height: 60vh;
+  }
+
+  /* 동물의 날 */
+  .bg-box2 {
+    height: auto;
+    padding-bottom: 10vh;
+  }
+
+  .bg-box2 h3 {
+    font-size: 5vw;
+    padding-top: 3vh;
+  }
+
+  .bg-box2 p {
+    font-size: 2vw;
+    padding: 0 5vw;
+  }
+
+  .ani-sec1 {
+    height: 100vh;
+  }
+
+  .swiper {
+    width: 60vw;
+    height: 55vh;
+    margin-top: 3vh;
+  }
+
+  .mySwiper2 {
+    width: 60vw;
+    height: 55vh;
+    margin-top: 5vh;
+  }
+
+  /* 제니 페이지 */
+  .bg-box3 {
+    height: auto;
+    padding-bottom: 10vh;
+  }
+
+  .bg-box3 h3 {
+    font-size: 4.5vw;
+    padding-top: 4vh;
+  }
+
+  .bg-box3 p {
+    font-size: 1.8vw;
+    padding: 0 5vw;
+    line-height: 1.8;
+  }
+
+  .j-box1 {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    height: auto;
+    width: 90vw;
+    translate: 5% 0%;
+    gap: 2vh;
+    margin-top: 5vh;
+  }
+
+  .j-box1 li {
+    height: 60vh;
+  }
+
+  .j-box2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    height: auto;
+    width: 90vw;
+    translate: 5% 0%;
+    gap: 2vh;
+    margin-top: 5vh;
+  }
+
+  .j-box2 li {
+    height: 55vh;
+  }
+
+  .j-box2 .img1 img,
+  .j-box2 .img2 img,
+  .j-box2 .img3 img,
+  .j-box2 .img4 img {
+    translate: 10% 0%;
+    width: 90%;
+  }
+
+  .mySwiper3 {
+    width: 85vw;
+    height: 75vh;
+    translate: 0% 5vh;
+  }
+
+  /* 생일 페이지 */
+  .bg-box4 {
+    height: auto;
+    padding-bottom: 10vh;
+  }
+
+  .bg-box4 h3 {
+    font-size: 4.5vw;
+    padding-top: 5vh;
+  }
+
+  .bg-box4 p {
+    font-size: 1.8vw;
+    padding: 0 5vw;
+    line-height: 1.8;
+  }
+
+  .b-sec1 {
+    height: 80vh;
+  }
+
+  .b-sec2 {
+    flex-direction: column;
+    height: auto;
+    width: 90vw;
+    translate: 5% 0%;
+    gap: 3vh;
+    margin-top: 5vh;
+  }
+
+  .b-sec2 > li {
+    height: 50vh;
+    width: 50vw;
+    margin: 0 auto;
+  }
+
+  .b-sec2 section > p {
+    font-size: 2.5vw;
+    width: 95%;
+    translate: 48% 0%;
+    padding: 1.5vh;
+  }
+
+  .b-sec2 > li > p {
+    font-size: 2.5vw;
+    bottom: -8%;
+  }
+
+  .b-sec3,
+  .b-sec4 {
+    width: 90vw;
+    height: 50vh;
+    margin-top: 5vh;
+  }
+
+  .b-sec5 {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    height: auto;
+    width: 90vw;
+    translate: 5% 0%;
+    gap: 2vh;
+    margin-top: 5vh;
+  }
+
+  .b-sec5 li {
+    height: 50vh;
+  }
+
+  /* 피크닉 페이지 */
+  .bg-box5 {
+    height: auto;
+    padding-bottom: 10vh;
+  }
+
+  .bg-box5 h3 {
+    font-size: 5vw;
+    padding-top: 3vh;
+  }
+
+  .bg-box5 > p {
+    font-size: 2vw;
+    padding: 0 5vw;
+    line-height: 1.8;
+  }
+
+  .pic-sec1 {
+    height: 80vh;
+  }
+
+  .pic-sec2 {
+    flex-direction: column;
+    width: 90vw;
+    height: auto;
+    gap: 3vh;
+    margin-top: 5vh;
+  }
+
+  .pic-sec2 li {
+    height: 45vh;
+  }
+
+  .pic-overlay p {
+    font-size: 2.2vw;
+    padding: 2vw;
+  }
+
+  .pic-sec3 {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    height: auto;
+    width: 90vw;
+    translate: 5vw 0%;
+    gap: 2vh;
+    margin-top: 8vh;
+  }
+
+  .pic-sec3 li {
+    height: 45vh;
+  }
+
+  .play-box1,
+  .play-box2 {
+    padding: 20px;
+    margin-top: 3vh;
+  }
+
+  .play-box1 iframe {
+    width: 70vw;
+    height: 40vh;
+  }
+
+  .play-box2 iframe {
+    width: 70vw;
+    height: 40vh;
+  }
+
+  /* 매장 페이지 */
+  .img-area1,
+  .img-area2,
+  .img-area3,
+  .img-area4 {
+    height: 70vh;
+  }
+
+  .info-sec {
+    flex-direction: column;
+    height: auto;
+    padding: 3vh 2vw;
+    font-size: 3vw;
+  }
+
+  .info1 {
+    width: 95%;
+    font-size: 3.5vw;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info1 ul {
+    width: 100%;
+    text-align: center;
+  }
+
+  .info1 ul li {
+    margin: 1vh 0;
+  }
+
+  .info2 {
+    width: 95%;
+    font-size: 2.5vw;
+    margin-top: 3vh;
+  }
+
+  .info2 ul {
+    width: 100%;
+    text-align: center;
+  }
+
+  .info2 ul li {
+    margin: 1.5vh 0;
+    line-height: 1.6;
+  }
+
+  .map-btn {
+    font-size: 3.5vw;
+    position: relative;
+    right: 0;
+    top: 0;
+    margin: 3vh auto 0;
+    display: block;
+    padding: 1.5vh 5vw;
+  }
+
+  /* 매장 목록 페이지 */
+  .d-store-area > ul > li {
+    aspect-ratio: 1.5/1;
+  }
+
+  .d-store-area-inbox p {
+    font-size: 4vw;
+    bottom: 18%;
+  }
+
+  .d-store-area-inbox button {
+  font-size: 2.5vw;
+        padding: 1.5vh 3vw;
+        bottom: 8%;
+  }
+}
+
+/* ========================================
+   초소형 모바일 (360px 이하)
+======================================== */
+@media screen and (max-width: 360px) {
+  /* 상단 메뉴 */
+  .top-menu > ul {
+    width: 92%;
+    font-size: 2.8vw;
+  }
+
+  .top-menu > ul > :first-child {
+    font-size: 3.5vw;
+  }
+
+  /* 타이틀 박스 */
+  .t-box h2 {
+    font-size: 7.5vw;
+  }
+
+  /* 버튼들 */
+  .store-btn,
+  .colab-btn {
+    left: 45%;
+    font-size: 4.5vw;
+  }
+
+  .pdct-btn {
+    left: 32%;
+    font-size: 4.5vw;
+  }
+
+  /* 호버 텍스트 */
+  .store-box > ul > li > p,
+  .colab-box > ul > li > p,
+  .pdct-box > ul > li > p {
+    font-size: 5.5vw;
+  }
+
+  /* 하단 영역 */
+  .bottom-area {
+    font-size: 2vw;
+  }
+
+  /* 그리드 박스 */
+  .grid-box h3 {
+    font-size: 4.5vw;
+    width: 90%;
+  }
+
+  /* 디테일 페이지 */
+  .i-bg2 h3 {
+    font-size: 8vw;
+  }
+
+  .i-bg2 p {
+    font-size: 3vw;
+    translate: 0% 6vh;
+    line-height: 5vh;
+  }
+
+  /* 콜라보 아티클 */
+  .cb-arti h2 {
+    font-size: 3vw;
+  }
+
+  .cb-arti h3 {
+    font-size: 2.5vw;
+  }
+
+  .cb-arti p {
+    font-size: 2vw;
+  }
+
+  /* 티하우스 */
+  .bg-box h2 {
+    font-size: 7.5vw;
+  }
+
+  .bg-box h3 {
+    font-size: 6vw;
+  }
+
+  .bg-box p {
+    font-size: 2.5vw;
+  }
+
+  /* 동물의 날 */
+  .bg-box2 h3 {
+    font-size: 6vw;
+  }
+
+  .bg-box2 p {
+    font-size: 2.5vw;
+  }
+
+  .swiper,
+  .mySwiper2 {
+    width: 70vw;
+    height: 50vh;
+  }
+
+  /* 제니 페이지 */
+  .bg-box3 h3 {
+    font-size: 5.5vw;
+  }
+
+  .bg-box3 p {
+    font-size: 2.3vw;
+  }
+
+  /* 생일 페이지 */
+  .bg-box4 h3 {
+    font-size: 5.5vw;
+  }
+
+  .bg-box4 p {
+    font-size: 2.3vw;
+  }
+
+  .b-sec2 section > p {
+    font-size: 3vw;
+  }
+
+  .b-sec2 > li > p {
+    font-size: 3vw;
+  }
+
+  /* 피크닉 페이지 */
+  .bg-box5 h3 {
+    font-size: 6vw;
+  }
+
+  .bg-box5 > p {
+    font-size: 2.5vw;
+  }
+
+  .pic-overlay p {
+    font-size: 2.8vw;
+  }
+
+  .play-box1 iframe,
+  .play-box2 iframe {
+    width: 80vw;
+    height: 35vh;
+  }
+
+  /* 매장 상세 */
+  .info1 {
+    font-size: 4vw;
+  }
+
+  .info2 {
+    font-size: 3vw;
+  }
+
+  .map-btn {
+    font-size: 4vw;
+    padding: 2vh 6vw;
+  }
+
+  /* 매장 목록 */
+  .d-store-area-inbox p {
+    font-size: 7vw;
+  }
+
+  .d-store-area-inbox button {
+    font-size: 4vw;
+  }
+}
+
+/* ========================================
+   가로 모드 최적화 (높이 기준)
+======================================== */
+@media screen and (max-height: 700px) and (orientation: landscape) {
+  .store-box,
+  .colab-box,
+  .pdct-box {
+    height: 130vh;
+  }
+
+  .img-area1,
+  .img-area2,
+  .img-area3,
+  .img-area4 {
+    height: 130vh;
+  }
+
+  .info-sec {
+    height: auto;
+    min-height: 25vh;
+  }
+
+  .i-bg1,
+  .i-bg2 {
+    height: 80vh;
+  }
+
+  .swiper,
+  .mySwiper2 {
+    height: 75vh;
+  }
+
+  .mySwiper3 {
+    height: 90vh;
+  }
+}
+
+@media screen and (max-height: 600px) and (orientation: landscape) {
+  .store-box,
+  .colab-box,
+  .pdct-box {
+    height: 150vh;
+  }
+
+  .img-area1,
+  .img-area2,
+  .img-area3,
+  .img-area4 {
+    height: 150vh;
+  }
+
+  .t-box h2 {
+    padding-top: 15vh;
+  }
+}
+
+/* ========================================
+   프린트 최적화
+======================================== */
+@media print {
+  /* 불필요한 요소 숨기기 */
+  .top-menu,
+  .bottom-area,
+  .store-btn,
+  .colab-btn,
+  .pdct-btn,
+  .map-btn {
+    display: none !important;
+  }
+
+  /* 배경 제거 */
+  body,
+  .store-box,
+  .colab-box,
+  .pdct-box,
+  .bg-box,
+  .bg-box2,
+  .bg-box3,
+  .bg-box4,
+  .bg-box5 {
+    background: white !important;
+    color: black !important;
+  }
+
+  /* 그리드 최적화 */
+  .grid-box {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1cm !important;
+  }
+
+  /* 페이지 브레이크 */
+  .t-box,
+  .info-sec,
+  .grid-box > div {
+    page-break-inside: avoid;
+  }
+
+  /* 이미지 크기 조정 */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 링크 URL 표시 */
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+  }
+}
