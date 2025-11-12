@@ -1409,7 +1409,12 @@
   overflow: hidden;
   transition: height 0.5s ease;
 }
-
+.scroll{
+  font-size: 10vw;
+  text-align: center;
+  margin-top: 30vh;
+  opacity: .5;
+}
 /* 속박스 ul - 화면에 고정 */
 .cb-inbox {
   position: fixed;
