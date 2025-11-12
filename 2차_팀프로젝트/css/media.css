@@ -743,7 +743,7 @@
   }
 
   .info2 {
-    margin-top: 2vh;
+    margin-top: 1vh;
     font-size: 1.6vw;
   }
 
@@ -1219,7 +1219,6 @@
   }
 
   .bt-in-box {
-    flex-direction: column;
     gap: 1.5vh;
     text-align: center;
   }
@@ -1667,9 +1666,8 @@
     position: relative;
     right: 0;
     top: 0;
-    margin: 3vh auto 0;
     display: block;
-    padding: 1.5vh 5vw;
+    padding: 0.5vh 5vw;
   }
 
   /* 매장 목록 페이지 */
