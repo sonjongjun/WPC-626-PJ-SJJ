@@ -139,7 +139,8 @@ html {
   animation: slideInFromLeft 0.8s ease 0.2s forwards;
 }
 
-#projects.visible .projects-header {
+#projects-pizza.visible .projects-header,
+#projects-nudake.visible .projects-header {
   animation: zoomIn 0.8s ease 0.2s forwards;
 }
 
@@ -385,18 +386,22 @@ html {
 }
 
 /* Projects 섹션 */
-#projects {
+#projects-pizza,
+#projects-nudake {
   background: #f5f5f5;
   color: #000;
   flex-direction: column;
   padding: 6rem 2rem;
 }
-#projects h2 {
+
+#projects-pizza h2,
+#projects-nudake h2 {
   font-size: 2rem;
   font-weight: 300;
   letter-spacing: -1px;
-  color: #ff0000;
+  color: #000;
 }
+
 .projects-header {
   text-align: center;
   margin-bottom: 4rem;
@@ -461,17 +466,20 @@ html {
   flex-shrink: 0;
 }
 
+/* 기본 상태에서 모든 텍스트 숨김 */
+.project-slide h3,
+.project-slide p,
+.project-slide .project-tags,
+.project-slide .project-number {
+  display: none;
+}
+
 .slider-track-reverse > .project-slide:nth-child(9) {
   background: url(../01.자료수집/누데이크1.png);
-  background-image: url("../01.자료수집/누데이크1.png"); /* 배경 이미지 경로 */
-  background-size: 90% 100%; /* 종횡비 유지하며 꽉 채우기 */
-  background-position: center; /* 가운데 정렬 */
-  background-repeat: no-repeat; /* 반복 금지 */
-}
-.slider-track-reverse > .project-slide:nth-child(9) h3,
-.slider-track-reverse > .project-slide:nth-child(9) p,
-.slider-track-reverse > .project-slide:nth-child(9) .project-number {
-  display: none;
+  background-image: url("../01.자료수집/누데이크1.png");
+  background-size: 90% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .slider-track-reverse > .project-slide:nth-child(9):hover {
@@ -490,6 +498,18 @@ html {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
+/* hover 시 텍스트 표시 */
+.project-slide:hover h3,
+.project-slide:hover p,
+.project-slide:hover .project-number {
+  display: block;
+}
+
+/* hover 시 tags는 flex로 표시 */
+.project-slide:hover .project-tags {
+  display: flex;
+}
+
 .project-slide h3 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
@@ -505,7 +525,6 @@ html {
 }
 
 .project-tags {
-  display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-top: 1rem;
@@ -551,7 +570,6 @@ html {
   background: #fff;
   color: #000;
   padding: 6rem 2rem 8rem 2rem;
-  /* 스냅 스크롤 제거 - 자유로운 스크롤 가능 */
 }
 
 #experience .experience-content {

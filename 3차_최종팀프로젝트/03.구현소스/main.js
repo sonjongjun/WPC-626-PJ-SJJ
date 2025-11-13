@@ -1,4 +1,4 @@
-        const nav = document.querySelector('.nav');
+const nav = document.querySelector('.nav');
         const navDots = document.querySelectorAll('.nav-dot');
         const sections = document.querySelectorAll('.section');
         const experienceSection = document.getElementById('experience');
@@ -10,10 +10,10 @@
         // 섹션 전환 애니메이션 함수
         function transitionToSection(targetIndex) {
             // 경력 페이지로 이동하거나 경력 페이지에서 이동할 때는 애니메이션 스킵
-            if (targetIndex === 4 || currentVisibleSection === 4) {
-                sections[targetIndex].scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+            if (targetIndex === 5 || currentVisibleSection === 5) {
+                window.scrollTo({
+                    top: sections[targetIndex].offsetTop,
+                    behavior: 'smooth'
                 });
                 currentVisibleSection = targetIndex;
                 return;
@@ -24,9 +24,9 @@
             
             // 타겟 섹션으로 이동
             setTimeout(() => {
-                sections[targetIndex].scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                window.scrollTo({
+                    top: sections[targetIndex].offsetTop,
+                    behavior: 'smooth'
                 });
                 
                 // 나가는 애니메이션 클래스 제거
@@ -39,7 +39,7 @@
 
         // Intersection Observer로 현재 섹션 감지 및 애니메이션
         const observerOptions = {
-            threshold: 0.3,
+            threshold: 0.5,
             rootMargin: '0px'
         };
 
@@ -68,7 +68,7 @@
                     });
 
                     // 네비게이션 색상 변경
-                    if (sectionId === 'about' || sectionId === 'experience') {
+                    if (sectionId === 'about' || sectionId === 'projects-pizza' || sectionId === 'projects-nudake' || sectionId === 'experience') {
                         nav.classList.add('black');
                     } else {
                         nav.classList.remove('black');
@@ -127,14 +127,14 @@
         }
 
         // 키보드 네비게이션
-        const sectionIds = ['home', 'about', 'skills', 'projects', 'experience', 'contact'];
+        const sectionIds = ['home', 'about', 'skills', 'projects-pizza', 'projects-nudake', 'experience', 'contact'];
         
         document.addEventListener('keydown', (e) => {
             const currentIndex = getCurrentSection();
 
             if (e.key === 'ArrowDown') {
                 // Experience 섹션에서 아직 스크롤할 공간이 있으면 기본 스크롤 허용
-                if (currentIndex === 4 && canScrollExperience('down')) {
+                if (currentIndex === 5 && canScrollExperience('down')) {
                     return; // 기본 스크롤 동작 허용
                 }
                 
@@ -144,7 +144,7 @@
                 }
             } else if (e.key === 'ArrowUp') {
                 // Experience 섹션에서 아직 스크롤할 공간이 있으면 기본 스크롤 허용
-                if (currentIndex === 4 && canScrollExperience('up')) {
+                if (currentIndex === 5 && canScrollExperience('up')) {
                     return; // 기본 스크롤 동작 허용
                 }
                 
@@ -169,7 +169,7 @@
             const currentIndex = getCurrentSection();
             
             // Experience 섹션에서 내부 스크롤이 가능하면 기본 동작 허용
-            if (currentIndex === 4) {
+            if (currentIndex === 5) {
                 if ((e.deltaY > 0 && canScrollExperience('down')) || 
                     (e.deltaY < 0 && canScrollExperience('up'))) {
                     return; // 기본 스크롤 허용
@@ -181,18 +181,17 @@
             
             clearTimeout(wheelTimeout);
             
-            if (Math.abs(e.deltaY) > 30) {
+            if (Math.abs(e.deltaY) > 50) {
+                e.preventDefault();
                 isWheelScrolling = true;
                 
                 wheelTimeout = setTimeout(() => {
                     isWheelScrolling = false;
-                }, 1000);
+                }, 800);
                 
                 if (e.deltaY > 0 && currentIndex < sectionIds.length - 1) {
-                    e.preventDefault();
                     transitionToSection(currentIndex + 1);
                 } else if (e.deltaY < 0 && currentIndex > 0) {
-                    e.preventDefault();
                     transitionToSection(currentIndex - 1);
                 }
             }
