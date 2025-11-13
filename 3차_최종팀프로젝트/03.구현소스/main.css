@@ -9,19 +9,22 @@ body {
   overflow-x: hidden;
   background: #000;
   color: #fff;
-  overflow-y: auto;
+  overflow-y: scroll;
   scroll-snap-type: y mandatory;
   height: 100vh;
+  scroll-behavior: smooth;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
 /* 섹션들 */
 .section {
   width: 100vw;
   min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -432,7 +435,7 @@ html {
 .slider-track {
   display: flex;
   gap: 0;
-  animation: scroll 40s linear infinite;
+  animation: scroll 80s linear infinite;
   width: fit-content;
 }
 
@@ -445,7 +448,7 @@ html {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-350px * 8));
+    transform: translateX(calc(-350px * 16));
   }
 }
 
@@ -474,20 +477,140 @@ html {
   display: none;
 }
 
+.slider-track-reverse > .project-slide:nth-child(1) {
+  background-image: url("../01.자료수집/누데이크8.png");
+  background-size: 90% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slider-track-reverse > .project-slide:nth-child(2) {
+  background-image: url("../01.자료수집/누데이크10.png");
+  background-size: 90% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slider-track-reverse > .project-slide:nth-child(3) {
+  background-image: url("../01.자료수집/누데이크15.png");
+  background-size: 90% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slider-track-reverse > .project-slide:nth-child(4) {
+  background-image: url("../01.자료수집/누데이크7.png");
+  background-size: 90% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slider-track-reverse > .project-slide:nth-child(5) {
+  background-image: url("../01.자료수집/누데이크6.png");
+  background-size: 90% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slider-track-reverse > .project-slide:nth-child(6) {
+  background-image: url("../01.자료수집/누데이크9.png");
+  background-size: 70% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slider-track-reverse > .project-slide:nth-child(7) {
+  background-image: url("../01.자료수집/누데이크4.png");
+  background-size: 90% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slider-track-reverse > .project-slide:nth-child(8) {
+  background-image: url("../01.자료수집/누데이크2.png");
+  background-size: 85% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .slider-track-reverse > .project-slide:nth-child(9) {
-  background: url(../01.자료수집/누데이크1.png);
+  background-image: url("../01.자료수집/누데이크3.png");
+  background-size: 90% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slider-track-reverse > .project-slide:nth-child(10) {
   background-image: url("../01.자료수집/누데이크1.png");
   background-size: 90% 100%;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.slider-track-reverse > .project-slide:nth-child(9):hover {
+.slider-track-reverse > .project-slide:nth-child(11) {
+  background-image: url("../01.자료수집/누데이크5.png");
+  background-size: 70% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slider-track-reverse > .project-slide:nth-child(12) {
+  background-image: url("../01.자료수집/누데이크13.png");
+  background-size: 90% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slider-track-reverse > .project-slide:nth-child(13) {
+  background-image: url("../01.자료수집/누데이크11.png");
+  background-size: 80% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slider-track-reverse > .project-slide:nth-child(14) {
+  background-image: url("../01.자료수집/누데이크12.png");
+  background-size: 80% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slider-track-reverse > .project-slide:nth-child(15) {
+  background-image: url("../01.자료수집/누데이크14.png");
+  background-size: 90% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slider-track-reverse > .project-slide:nth-child(16) {
+  background-image: url("../01.자료수집/누데이크16.png");
+  background-size: 85% 95%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* 오버시 효과 */
+.slider-track-reverse > .project-slide:nth-child(1):hover ,
+.slider-track-reverse > .project-slide:nth-child(2):hover ,
+.slider-track-reverse > .project-slide:nth-child(3):hover ,
+.slider-track-reverse > .project-slide:nth-child(4):hover ,
+.slider-track-reverse > .project-slide:nth-child(5):hover ,
+.slider-track-reverse > .project-slide:nth-child(6):hover ,
+.slider-track-reverse > .project-slide:nth-child(7):hover ,
+.slider-track-reverse > .project-slide:nth-child(8):hover ,
+.slider-track-reverse > .project-slide:nth-child(9):hover ,
+.slider-track-reverse > .project-slide:nth-child(10):hover ,
+.slider-track-reverse > .project-slide:nth-child(11):hover ,
+.slider-track-reverse > .project-slide:nth-child(12):hover ,
+.slider-track-reverse > .project-slide:nth-child(13):hover ,
+.slider-track-reverse > .project-slide:nth-child(14):hover ,
+.slider-track-reverse > .project-slide:nth-child(15):hover ,
+.slider-track-reverse > .project-slide:nth-child(16):hover {
   transform: scale(1.05) translateY(-10px);
   background: #000;
   color: #fff;
   z-index: 10;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  
 }
 
 .project-slide:hover {
@@ -553,12 +676,12 @@ html {
 }
 
 .slider-track-reverse {
-  animation: scrollReverse 45s linear infinite;
+  animation: scrollReverse 90s linear infinite;
 }
 
 @keyframes scrollReverse {
   0% {
-    transform: translateX(calc(-350px * 8));
+    transform: translateX(calc(-350px * 16));
   }
   100% {
     transform: translateX(0);

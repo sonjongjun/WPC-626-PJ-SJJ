@@ -201,15 +201,18 @@ const nav = document.querySelector('.nav');
         const skillObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.querySelectorAll('.skill-item').forEach((item, index) => {
-                        setTimeout(() => {
-                            item.classList.add('visible');
-                        }, index * 100);
-                    });
+                    // 약간의 지연 후 애니메이션 시작
+                    setTimeout(() => {
+                        entry.target.querySelectorAll('.skill-item').forEach((item, index) => {
+                            setTimeout(() => {
+                                item.classList.add('visible');
+                            }, index * 150);
+                        });
+                    }, 300);
                     skillObserver.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.3 });
+        }, { threshold: 0.5 });
 
         const skillsSection = document.getElementById('skills');
         if (skillsSection) {
@@ -219,8 +222,11 @@ const nav = document.querySelector('.nav');
         // 프로젝트 슬라이드 클릭
         document.querySelectorAll('.project-slide').forEach(slide => {
             slide.addEventListener('click', () => {
-                const projectName = slide.querySelector('h3').textContent;
-                alert(`${projectName} 프로젝트를 선택하셨습니다!`);
+                const projectTitle = slide.querySelector('h3');
+                if (projectTitle) {
+                    const projectName = projectTitle.textContent;
+                    alert(`${projectName} 프로젝트를 선택하셨습니다!`);
+                }
             });
         });
 
