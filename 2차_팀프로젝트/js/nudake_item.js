@@ -44,13 +44,20 @@ $(document).ready(function() {
 // 카테고리별 아이템 표시 함수
 function displayCategory(categoryName, categories) {
   const category = categories[categoryName];
+
+
+  
+    // 처음에 표시할 아이템 30개만 먼저 slice 해서 저장
+    const cate1 = category.items.slice(0, 30);
+    console.log('처음 로드된 DESSERTS 아이템 수:', cate1);
+
   const gridBox = $('.grid-box');
   
   // 기존 내용 제거
   gridBox.empty();
   
   // 아이템 추가
-  category.items.forEach(function(item) {
+  cate1.forEach(function(item) {
     const itemHtml = `
       <div data-id="${item.id}" data-category="${categoryName}">
         <img src="${item.image}" alt="${item.id}" />
@@ -59,7 +66,26 @@ function displayCategory(categoryName, categories) {
     `;
     gridBox.append(itemHtml);
   });
-  
+
+  $('.load-more').on('click', function() {
+    const cate1 = category.items.slice(30, 72);
+    console.log('마지막까지 로드된 DESSERTS 아이템 수:', cate1);
+
+    // 다음 아이템 추가 ///////////////////
+    cate1.forEach(function(item) {
+      const itemHtml = `
+        <div data-id="${item.id}" data-category="${categoryName}">
+          <img src="${item.image}" alt="${item.id}" />
+          <h3>${item.name}</h3>
+        </div>
+      `;
+      gridBox.append(itemHtml);
+    }); //// forEach 끝 ////
+
+    // 로드버튼 사라짐
+    $(this).hide();
+  }); // load-more 클릭 이벤트 끝 //
+
   // 호버 효과 강화
   $('.grid-box > div').hover(
     function() {

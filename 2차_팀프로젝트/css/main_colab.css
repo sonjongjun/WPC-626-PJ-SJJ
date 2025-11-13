@@ -418,27 +418,22 @@
 .colab-box > ul > li:first-child {
   background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/티하우스13.webp)
     no-repeat center/cover;
-    
 }
 .colab-box > ul > li:nth-child(2) {
   background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물2.webp)
     no-repeat center/cover;
-    
 }
 .colab-box > ul > li:nth-child(3) {
   background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/제니29.webp)
     no-repeat center/cover;
-    
 }
 .colab-box > ul > li:nth-child(4) {
   background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/생일10.webp)
     no-repeat center/cover;
-    
 }
 .colab-box > ul > li:nth-child(5) {
   background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉5.webp)
     no-repeat center/cover;
-    
 }
 .colab-box > ul > li > p {
   font-size: 4vw;
@@ -1409,11 +1404,11 @@
   overflow: hidden;
   transition: height 0.5s ease;
 }
-.scroll{
+.scroll {
   font-size: 10vw;
   text-align: center;
   margin-top: 30vh;
-  opacity: .5;
+  opacity: 0.5;
   color: #bd2626;
 }
 /* 속박스 ul - 화면에 고정 */
@@ -1448,31 +1443,26 @@
   background: url(../01.자료수집/02.중단콜라보소개/01.TEA_HOUSE/티하우스13.webp)
     center/cover no-repeat;
   transform: translateY(100vh);
-  
 }
 .cb-inbox li:nth-child(2) {
   background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물5.webp)
     center/cover no-repeat;
   transform: translateY(100vh);
-  
 }
 .cb-inbox li:nth-child(3) {
   background: url(../01.자료수집/02.중단콜라보소개/03.JENNIE/제니28.webp)
     center/cover no-repeat;
   transform: translateY(100vh);
-  
 }
 .cb-inbox li:nth-child(4) {
   background: url(../01.자료수집/02.중단콜라보소개/04.BIRTH/생일10.webp)
     center/cover no-repeat;
   transform: translateY(100vh);
-  
 }
 .cb-inbox li:nth-child(5) {
   background: url(../01.자료수집/02.중단콜라보소개/05.PICNIC/피크닉5.webp)
     center/cover no-repeat;
   transform: translateY(100vh);
-  
 }
 /* 공통 아티클  */
 .cb-arti {
@@ -1806,7 +1796,7 @@ body.colab-locked {
   background-color: #97dbe9b6;
 }
 .ani-sec1 {
-  width: 100vw; 
+  width: 100vw;
   height: 120vh;
   background: url(../01.자료수집/02.중단콜라보소개/02.WORLD_ANIMAL_DAY/동물5.webp)
     center/cover no-repeat;
@@ -2288,10 +2278,15 @@ body.colab-locked {
   background-color: #23903e;
   padding: 40px;
   text-align: center;
+
+  width: 30vw;
+  margin: 0 auto;
+  aspect-ratio: 11.2 / 9;
 }
 
 .play-box1 iframe {
-  width: 20.13%;
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
 }
 

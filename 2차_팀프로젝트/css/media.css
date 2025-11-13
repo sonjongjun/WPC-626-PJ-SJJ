@@ -429,7 +429,7 @@
     translate: 7.5vw 0%;
   }
 
-  .play-box1 iframe {
+  .play-box1 {
     width: 25vw;
   }
 
@@ -769,9 +769,8 @@
         background: #23903e;
     }
 
-  .play-box1 iframe {
+  .play-box1 {
     width: 28vw;
-    height: 280px;
   }
 
   .play-box2 iframe {
@@ -1165,7 +1164,7 @@
       font-size: 1.5vw;
     }
 
-    .play-box1 iframe {
+    .play-box1 {
       width: 32vw;
     }
 
@@ -1695,9 +1694,8 @@
     margin-top: 3vh;
   }
 
-  .play-box1 iframe {
+  .play-box1 {
     width: 88vw;
-    height: 32vh;
   }
 
   .play-box2 iframe {
@@ -1872,10 +1870,9 @@
     font-size: 2.8vw;
   }
 
-  .play-box1 iframe,
-  .play-box2 iframe {
+  .play-box1,
+  .play-box2 {
     width: 80vw;
-    height: 35vh;
   }
 
   /* 매장 상세 */
