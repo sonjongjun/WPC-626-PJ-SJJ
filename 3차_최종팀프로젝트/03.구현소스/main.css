@@ -391,7 +391,12 @@ html {
   flex-direction: column;
   padding: 6rem 2rem;
 }
-
+#projects h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: -1px;
+  color: #ff0000;
+}
 .projects-header {
   text-align: center;
   margin-bottom: 4rem;
@@ -454,6 +459,27 @@ html {
   flex-direction: column;
   justify-content: space-between;
   flex-shrink: 0;
+}
+
+.slider-track-reverse > .project-slide:nth-child(9) {
+  background: url(../01.자료수집/누데이크1.png);
+  background-image: url("../01.자료수집/누데이크1.png"); /* 배경 이미지 경로 */
+  background-size: 90% 100%; /* 종횡비 유지하며 꽉 채우기 */
+  background-position: center; /* 가운데 정렬 */
+  background-repeat: no-repeat; /* 반복 금지 */
+}
+.slider-track-reverse > .project-slide:nth-child(9) h3,
+.slider-track-reverse > .project-slide:nth-child(9) p,
+.slider-track-reverse > .project-slide:nth-child(9) .project-number {
+  display: none;
+}
+
+.slider-track-reverse > .project-slide:nth-child(9):hover {
+  transform: scale(1.05) translateY(-10px);
+  background: #000;
+  color: #fff;
+  z-index: 10;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .project-slide:hover {
