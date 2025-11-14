@@ -472,3 +472,53 @@
   init();
 
 })();
+
+  // ========== 3D CAROUSEL CONTROLLER ==========
+  class Carousel3D {
+    constructor() {
+      this.carousels = document.querySelectorAll('.carousel-3d');
+      this.buttons = document.querySelectorAll('.carousel-btn');
+      this.currentRotation = { nudake: 0, pizza: 0 };
+      
+      if (this.carousels.length === 0) return;
+      
+      this.init();
+    }
+
+    init() {
+      this.buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const carouselId = btn.getAttribute('data-carousel');
+          const direction = btn.getAttribute('data-dir');
+          this.rotate(carouselId, direction);
+        });
+      });
+    }
+
+    rotate(carouselId, direction) {
+      const carousel = document.getElementById(`carousel-${carouselId}`);
+      if (!carousel) return;
+      
+      const angle = 60; // 360 / 6 items
+      
+      if (direction === 'next') {
+        this.currentRotation[carouselId] -= angle;
+      } else {
+        this.currentRotation[carouselId] += angle;
+      }
+      
+      carousel.style.animation = 'none';
+      carousel.style.transform = `rotateY(${this.currentRotation[carouselId]}deg)`;
+      
+      setTimeout(() => {
+        carousel.style.animation = '';
+      }, 50);
+    }
+  }
+
+  // Add to initialization
+  const originalInit = initializeAll;
+  initializeAll = function() {
+    originalInit();
+    new Carousel3D();
+  };
