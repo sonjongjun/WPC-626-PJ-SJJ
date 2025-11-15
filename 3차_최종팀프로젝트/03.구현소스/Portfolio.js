@@ -81,19 +81,37 @@
     }
 
     addHoverEffects() {
-      const hoverElements = document.querySelectorAll(
-        'a, button, .project-item, .skill-card, .contact-box, .nav-item, .tab-button, .ba-card, .carousel-item'
+      // 클릭 가능한 요소
+      const clickableElements = document.querySelectorAll(
+        'a, button, .project-item, .skill-card, .contact-box, .nav-item, .tab-button, .ba-card, .carousel-item, .why-card, .mobile-project-card'
       );
 
-      hoverElements.forEach(el => {
+      clickableElements.forEach(el => {
         el.addEventListener('mouseenter', () => {
           if (this.dot) this.dot.classList.add('hover');
-          if (this.outline) this.outline.classList.add('hover');
+          if (this.outline) {
+            this.outline.classList.add('hover', 'clickable');
+          }
         });
 
         el.addEventListener('mouseleave', () => {
           if (this.dot) this.dot.classList.remove('hover');
-          if (this.outline) this.outline.classList.remove('hover');
+          if (this.outline) {
+            this.outline.classList.remove('hover', 'clickable');
+          }
+        });
+      });
+
+      // 텍스트 요소
+      const textElements = document.querySelectorAll('h1, h2, h3, h4, p, span');
+      
+      textElements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          if (this.outline) this.outline.classList.add('text');
+        });
+
+        el.addEventListener('mouseleave', () => {
+          if (this.outline) this.outline.classList.remove('text');
         });
       });
     }
