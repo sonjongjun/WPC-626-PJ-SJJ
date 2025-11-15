@@ -280,6 +280,14 @@
       if (this.tabButtons.length === 0) return;
       
       this.init();
+      
+      // 즉시 모바일 뷰 생성
+      this.checkAndCreateMobileView();
+      
+      // 윈도우 리사이즈 시에도 체크
+      window.addEventListener('resize', debounce(() => {
+        this.checkAndCreateMobileView();
+      }, 250));
     }
 
     init() {
@@ -300,6 +308,88 @@
         });
       });
     }
+
+    checkAndCreateMobileView() {
+      const isMobile = window.innerWidth <= 768;
+      
+      if (isMobile) {
+        this.createMobileView();
+      }
+    }
+
+    createMobileView() {
+      console.log('createMobileView called, window width:', window.innerWidth);
+      
+      const projectData = {
+        nudake: [
+          { num: '01', title: 'NUDAKE MAIN', desc: '메인페이지 갤러리 구현', tags: ['HTML', 'CSS'], img: '../01.자료수집/누데이크8.png' },
+          { num: '02', title: 'Product Page', desc: '제품 상세 페이지', tags: ['JavaScript'], img: '../01.자료수집/누데이크10.png' },
+          { num: '03', title: 'Shopping Cart', desc: '장바구니 시스템', tags: ['React'], img: '../01.자료수집/누데이크15.png' },
+          { num: '04', title: 'User Dashboard', desc: '사용자 대시보드', tags: ['Vue'], img: '../01.자료수집/누데이크7.png' },
+          { num: '05', title: 'Payment Gateway', desc: '결제 시스템 통합', tags: ['Node.js'], img: '../01.자료수집/누데이크6.png' },
+          { num: '06', title: 'Review System', desc: '리뷰 및 평점 기능', tags: ['MongoDB'], img: '../01.자료수집/누데이크9.png' }
+        ],
+        pizza: [
+          { num: '01', title: 'E-Commerce Platform', desc: '모던한 온라인 쇼핑몰', tags: ['React', 'Node.js'], gradient: 'gradient-1' },
+          { num: '02', title: 'AI Chat Application', desc: '실시간 AI 채팅', tags: ['Python', 'OpenAI'], gradient: 'gradient-2' },
+          { num: '03', title: 'Portfolio CMS', desc: '포트폴리오 관리 시스템', tags: ['Vue.js', 'Firebase'], gradient: 'gradient-3' },
+          { num: '04', title: 'Fitness Tracker', desc: '운동 기록 및 분석', tags: ['React Native'], gradient: 'gradient-4' },
+          { num: '05', title: 'Music Streaming', desc: '음악 스트리밍 서비스', tags: ['Angular', 'AWS'], gradient: 'gradient-5' },
+          { num: '06', title: 'Task Manager Pro', desc: '프로젝트 관리 도구', tags: ['TypeScript'], gradient: 'gradient-6' }
+        ]
+      };
+
+      Object.keys(projectData).forEach(key => {
+        const contentDiv = document.getElementById(key);
+        console.log(`Looking for #${key}:`, contentDiv);
+        
+        if (!contentDiv) return;
+
+        // 이미 모바일 그리드가 있으면 건너뛰기
+        const existingGrid = contentDiv.querySelector('.mobile-project-grid');
+        if (existingGrid) {
+          console.log(`Mobile grid already exists for ${key}`);
+          return;
+        }
+
+        // 모바일 그리드 생성
+        const mobileGrid = document.createElement('div');
+        mobileGrid.className = 'mobile-project-grid';
+        console.log(`Creating mobile grid for ${key}`);
+
+        projectData[key].forEach(project => {
+          const card = document.createElement('div');
+          card.className = 'mobile-project-card';
+          
+          const imageDiv = document.createElement('div');
+          imageDiv.className = 'mobile-project-image';
+          if (project.img) {
+            imageDiv.style.backgroundImage = `url('${project.img}')`;
+          } else if (project.gradient) {
+            imageDiv.classList.add(project.gradient);
+          }
+
+          const contentWrapper = document.createElement('div');
+          contentWrapper.className = 'mobile-project-content';
+          
+          contentWrapper.innerHTML = `
+            <div class="mobile-project-number">${project.num}</div>
+            <h3>${project.title}</h3>
+            <p>${project.desc}</p>
+            <div class="mobile-project-tags">
+              ${project.tags.map(tag => `<span>${tag}</span>`).join('')}
+            </div>
+          `;
+
+          card.appendChild(imageDiv);
+          card.appendChild(contentWrapper);
+          mobileGrid.appendChild(card);
+        });
+
+        contentDiv.appendChild(mobileGrid);
+        console.log(`Mobile grid appended to ${key}, cards count:`, mobileGrid.children.length);
+      });
+    }
   }
 
   // ========== INITIALIZATION ==========
@@ -313,6 +403,14 @@
   }
 
   function initializeAll() {
+    // 모든 섹션 즉시 표시
+    const allSections = document.querySelectorAll('.snap-section, .regular-section');
+    allSections.forEach(section => {
+      section.classList.add('visible');
+      section.style.opacity = '1';
+      section.style.transform = 'translateY(0)';
+    });
+    
     // Initialize all components
     new DynamicCursor();
     const navigation = new Navigation();
@@ -325,15 +423,13 @@
     new ScrollProgress();
     new SmoothScroll();
 
-    // Show first section
-    const firstSection = document.querySelector('.snap-section');
-    if (firstSection) {
-      firstSection.classList.add('visible');
-    }
-
     // Console message
     console.log('%c🚀 Portfolio 2025', 'font-size: 20px; font-weight: bold; background: linear-gradient(90deg, #0a0a0a, #ff3366); color: white; padding: 10px 20px;');
     console.log('%cTrends: Dynamic Cursors • Scroll Snap • Bold Colors • 3D Carousel • Before/After', 'color: #666; font-size: 12px; padding: 5px;');
+    
+    // 디버깅: 모바일 그리드 확인
+    console.log('Mobile grids found:', document.querySelectorAll('.mobile-project-grid').length);
+    console.log('All sections visible:', allSections.length);
   }
 
   // Start initialization
