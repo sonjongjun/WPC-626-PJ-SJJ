@@ -36,8 +36,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
+  /* scroll-snap-type 제거 - 자연스러운 스크롤 */
 }
 
 body {
@@ -132,7 +131,7 @@ body {
   }
 }
 
-/* ========== SIDE NAVIGATION (Minimalist) ========== */
+/* ========== SIDE NAVIGATION (AWWWARDS Smart Color Inversion) ========== */
 .side-nav {
   position: fixed;
   right: 50px;
@@ -142,6 +141,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 35px;
+  /* AWWWARDS 트렌드: mix-blend-mode로 자동 색상 인버전 */
+  mix-blend-mode: difference;
 }
 
 .nav-item {
@@ -150,12 +151,14 @@ body {
   gap: 20px;
   cursor: pointer;
   transition: all 0.4s var(--ease);
+  position: relative;
 }
 
 .nav-line {
   width: 35px;
   height: 1.5px;
-  background: rgba(255, 255, 255, 0.2);
+  /* 흰색 기본 - difference 모드로 배경에 따라 자동 반전 */
+  background: rgba(255, 255, 255, 0.4);
   transition: all 0.4s var(--ease);
   position: relative;
   border-radius: 2px;
@@ -168,10 +171,20 @@ body {
   top: 0;
   width: 0;
   height: 100%;
-  background: linear-gradient(90deg, var(--red), var(--accent-purple));
-  transition: width 0.4s var(--ease);
+  /* 활성화 시 강렬한 레드 그라데이션 - AWWWARDS 스타일 */
+  background: linear-gradient(90deg, #ff3366, #ff0055, #ff3366);
+  background-size: 200% 100%;
+  transition: width 0.4s var(--ease), background-position 0.8s ease;
   border-radius: 2px;
-  box-shadow: 0 0 10px rgba(255, 51, 102, 0.5);
+  box-shadow: 
+    0 0 15px rgba(255, 51, 102, 0.6),
+    0 0 30px rgba(255, 51, 102, 0.3);
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
 .nav-item.active .nav-line::after {
@@ -180,33 +193,75 @@ body {
 
 .nav-item:hover .nav-line {
   width: 50px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.6);
+  /* 호버 시 그라데이션 글로우 추가 */
+  box-shadow: 
+    0 0 10px rgba(255, 51, 102, 0.3),
+    0 0 20px rgba(147, 51, 234, 0.2);
 }
 
 .nav-text {
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
   opacity: 0;
   transform: translateX(-10px);
   transition: all 0.4s var(--ease);
   white-space: nowrap;
-  color: var(--white);
-  letter-spacing: 0.05em;
+  /* 흰색 기본 - difference 모드로 자동 반전 */
+  color: #ffffff;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+  /* AWWWARDS 트렌드: 텍스트 선명도 향상 */
+  text-shadow: 
+    0 0 1px rgba(0, 0, 0, 0.1),
+    0 0 20px rgba(255, 255, 255, 0.1);
+  font-family: var(--font-display);
 }
 
 .nav-item:hover .nav-text,
 .nav-item.active .nav-text {
-  opacity: 0.9;
+  opacity: 1;
   transform: translateX(0);
+  text-shadow: 
+    0 0 20px rgba(255, 51, 102, 0.4),
+    0 0 40px rgba(255, 51, 102, 0.2);
+}
+
+/* 추가 상태: 포커스/액티브 시 그라데이션 펄스 효과 - AWWWARDS 마이크로인터랙션 */
+.nav-item.active .nav-line {
+  animation: navPulseGradient 2.5s ease-in-out infinite;
+}
+
+@keyframes navPulseGradient {
+  0%, 100% {
+    box-shadow: 
+      0 0 0 0 rgba(255, 51, 102, 0.6),
+      0 0 0 0 rgba(147, 51, 234, 0);
+  }
+  50% {
+    box-shadow: 
+      0 0 0 8px rgba(255, 51, 102, 0),
+      0 0 0 12px rgba(147, 51, 234, 0);
+  }
+}
+
+/* 호버 시 텍스트 그라데이션 글로우 강화 */
+.nav-item:hover .nav-text,
+.nav-item.active .nav-text {
+  opacity: 1;
+  transform: translateX(0);
+  /* 그라데이션 컬러 글로우 */
+  text-shadow: 
+    0 0 20px rgba(255, 51, 102, 0.6),
+    0 0 40px rgba(147, 51, 234, 0.4),
+    0 0 60px rgba(6, 182, 212, 0.2);
 }
 
 /* ========== SCROLL SNAP SECTIONS ========== */
 .snap-section {
   min-height: 100vh;
   width: 100%;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+  /* scroll-snap 속성 모두 제거 */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -234,12 +289,17 @@ body {
 
 .regular-section {
   width: 100%;
+  min-height: 100vh;
   padding: 100px 60px;
   position: relative;
   background: var(--white);
   color: var(--black);
   opacity: 1;
   transform: translateY(0);
+  /* scroll-snap 속성 모두 제거 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
@@ -1093,11 +1153,19 @@ body {
 #before-after {
   padding: 100px 60px;
   background: var(--white);
+  min-height: 100vh;
+  /* 스크롤 스냅 제거 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
 }
 
 .before-after-section {
   padding: 0;
   max-width: 100%;
+  width: 100%;
 }
 
 .ba-item {

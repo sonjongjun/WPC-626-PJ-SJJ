@@ -122,11 +122,11 @@
     }
   }
 
-  // ========== NAVIGATION ==========
+  // ========== NAVIGATION (개선됨) ==========
   class Navigation {
     constructor() {
       this.navItems = document.querySelectorAll('.nav-item');
-      this.sections = document.querySelectorAll('.snap-section');
+      this.sections = document.querySelectorAll('.snap-section, .regular-section');
       
       if (this.navItems.length === 0 || this.sections.length === 0) return;
       
@@ -135,15 +135,35 @@
 
     init() {
       this.navItems.forEach(item => {
-        item.addEventListener('click', () => {
+        item.addEventListener('click', (e) => {
+          e.preventDefault();
+          
           const targetId = item.getAttribute('data-target');
           const targetSection = document.getElementById(targetId);
           
           if (targetSection) {
-            targetSection.scrollIntoView({ 
-              behavior: 'smooth',
-              block: 'start'
+            // 모든 active 제거
+            this.navItems.forEach(navItem => navItem.classList.remove('active'));
+            
+            // 클릭한 아이템 active 추가
+            item.classList.add('active');
+            
+            // 정확한 스크롤 위치 계산 (상단 여백 고려)
+            const headerOffset = 0; // 필요시 조정
+            const elementPosition = targetSection.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            
+            console.log(`🎯 Navigating to: ${targetId}`);
+            console.log(`📍 Target position: ${offsetPosition}px`);
+            
+            // 부드러운 스크롤
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
             });
+            
+          } else {
+            console.error(`❌ Section "${targetId}" not found`);
           }
         });
       });
@@ -160,7 +180,7 @@
     }
   }
 
-  // ========== SECTION OBSERVER ==========
+  // ========== SECTION OBSERVER (개선됨) ==========
   class SectionObserver {
     constructor(navigation) {
       this.navigation = navigation;
@@ -175,40 +195,95 @@
     }
 
     init() {
+      // Intersection Observer 설정
       const options = {
-        threshold: CONFIG.scrollThreshold,
-        rootMargin: '0px'
+        threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5],
+        rootMargin: '-10% 0px -50% 0px'
       };
 
       const observer = new IntersectionObserver((entries) => {
+        let mostVisibleEntry = null;
+        let maxRatio = 0;
+
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const section = entry.target;
-            section.classList.add('visible');
-            
-            const sectionId = section.id;
-            this.navigation.updateActive(sectionId);
-
-            // Trigger animations
-            if (sectionId === 'skills' && !this.skillsAnimated) {
-              this.animateSkills();
-              this.skillsAnimated = true;
-            }
-
-            if (sectionId === 'experience' && !this.timelineAnimated) {
-              this.animateTimeline();
-              this.timelineAnimated = true;
-            }
-
-            if (sectionId === 'before-after' && !this.beforeAfterAnimated) {
-              this.animateBeforeAfter();
-              this.beforeAfterAnimated = true;
-            }
+          if (entry.isIntersecting && entry.intersectionRatio > maxRatio) {
+            maxRatio = entry.intersectionRatio;
+            mostVisibleEntry = entry;
           }
         });
+
+        if (mostVisibleEntry) {
+          const section = mostVisibleEntry.target;
+          section.classList.add('visible');
+          
+          const sectionId = section.id;
+          
+          if (sectionId) {
+            this.navigation.updateActive(sectionId);
+            console.log(`✅ Active (Observer): ${sectionId} (${(maxRatio * 100).toFixed(0)}%)`);
+          }
+
+          // Trigger animations
+          if (sectionId === 'skills' && !this.skillsAnimated) {
+            this.animateSkills();
+            this.skillsAnimated = true;
+          }
+
+          if (sectionId === 'experience' && !this.timelineAnimated) {
+            this.animateTimeline();
+            this.timelineAnimated = true;
+          }
+
+          if (sectionId === 'before-after' && !this.beforeAfterAnimated) {
+            this.animateBeforeAfter();
+            this.beforeAfterAnimated = true;
+          }
+        }
       }, options);
 
-      this.sections.forEach(section => observer.observe(section));
+      this.sections.forEach(section => {
+        observer.observe(section);
+        if (section.id) {
+          console.log(`👀 Observing: #${section.id}`);
+        }
+      });
+
+      // 추가: 스크롤 이벤트로 현재 섹션 찾기 (백업 방법)
+      let scrollTimeout;
+      window.addEventListener('scroll', () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          this.findCurrentSection();
+        }, 100); // 스크롤 멈춘 후 100ms 뒤 실행
+      });
+
+      // 초기 섹션 설정
+      this.findCurrentSection();
+    }
+
+    // 현재 화면 중앙에 가장 가까운 섹션 찾기
+    findCurrentSection() {
+      const scrollPosition = window.pageYOffset + window.innerHeight / 2; // 화면 중앙
+      let currentSection = null;
+      let minDistance = Infinity;
+
+      this.sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionCenter = sectionTop + sectionHeight / 2;
+        
+        const distance = Math.abs(scrollPosition - sectionCenter);
+        
+        if (distance < minDistance) {
+          minDistance = distance;
+          currentSection = section;
+        }
+      });
+
+      if (currentSection && currentSection.id) {
+        this.navigation.updateActive(currentSection.id);
+        console.log(`✅ Active (Scroll): ${currentSection.id}`);
+      }
     }
 
     animateSkills() {
@@ -434,20 +509,20 @@
     const navigation = new Navigation();
     new SectionObserver(navigation);
     new ProjectTabs();
-    new KeyboardNav();
-    new HeroAnimation();
-    new SkillCardsInteraction();
-    new BeforeAfterInteraction();
-    new ScrollProgress();
-    new SmoothScroll();
 
     // Console message
-    console.log('%c🚀 Portfolio 2025', 'font-size: 20px; font-weight: bold; background: linear-gradient(90deg, #0a0a0a, #ff3366); color: white; padding: 10px 20px;');
-    console.log('%cTrends: Dynamic Cursors • Scroll Snap • Bold Colors • 3D Carousel • Before/After', 'color: #666; font-size: 12px; padding: 5px;');
+    console.log('%c🚀 Portfolio 2025 - NATURAL SCROLL', 'font-size: 20px; font-weight: bold; background: linear-gradient(90deg, #0a0a0a, #ff3366); color: white; padding: 10px 20px;');
+    console.log('%c✅ Scroll Snap: DISABLED (자연스러운 스크롤)', 'color: #00ff00; font-size: 12px;');
+    console.log('%c✅ Navigation: Click to scroll', 'color: #00ff00; font-size: 12px;');
+    console.log('%c✨ Gradient Pulse: Red → Purple → Cyan', 'color: #ff3366; font-size: 12px;');
     
-    // 디버깅: 모바일 그리드 확인
-    console.log('Mobile grids found:', document.querySelectorAll('.mobile-project-grid').length);
-    console.log('All sections visible:', allSections.length);
+    // 섹션 정보
+    console.log(`\n📋 Total sections: ${allSections.length}`);
+    allSections.forEach((section, i) => {
+      if (section.id) {
+        console.log(`${i + 1}. #${section.id} - Top: ${section.offsetTop}px`);
+      }
+    });
   }
 
   // Start initialization
