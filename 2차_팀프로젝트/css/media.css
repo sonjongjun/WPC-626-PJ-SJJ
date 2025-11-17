@@ -1333,8 +1333,11 @@
   }
 
   /* 콜라보 아티클 */
+  .cb-inbox{
+        flex-direction: column;
+  }
   .cb-arti {
-    padding: 1.5vh 1vw;
+    padding: 1.7vh 1vw;
   }
 
   .cb-arti h2 {
