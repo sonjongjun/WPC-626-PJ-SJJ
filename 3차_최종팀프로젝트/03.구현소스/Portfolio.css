@@ -424,7 +424,7 @@ body {
 .title-line:nth-child(3) { 
   color: transparent;
   -webkit-text-stroke: 2.5px rgba(255, 255, 255, 0.3);
-  text-stroke: 2.5px rgba(255, 255, 255, 0.3);
+  /* text-stroke: 2.5px rgba(255, 255, 255, 0.3); */
   position: relative;
   letter-spacing: -0.06em;
 }
