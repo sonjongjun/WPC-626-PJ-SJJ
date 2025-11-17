@@ -1447,6 +1447,81 @@ body.modal-open::before {
   font-size: 2rem;
   color: #000;
 }
+/* LOAD MORE 버튼 스타일 */
+.load-more {
+  display: block;
+  margin: 5vh auto 8vh;
+  padding: 1.5vh 4vw;
+  font-size: 1.2vw;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  background: transparent;
+  color: #000;
+  border: 2px solid #000;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  font-family: "Hahmlet", serif;
+}
+
+.load-more .btn-text {
+  position: relative;
+  z-index: 2;
+  transition: color 0.4s ease;
+}
+
+.load-more .btn-icon {
+  position: relative;
+  z-index: 2;
+  margin-left: 1vw;
+  font-size: 1.5vw;
+  font-weight: 300;
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  display: inline-block;
+}
+
+/* 호버 시 배경 슬라이드 효과 */
+.load-more::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #000;
+  transition: width 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 1;
+}
+
+.load-more:hover::before {
+  width: 100%;
+}
+
+.load-more:hover .btn-text {
+  color: #fff;
+}
+
+.load-more:hover .btn-icon {
+  /* transform: rotate(90deg); */
+  color: #fff;
+}
+
+/* 클릭 효과 */
+.load-more:active {
+  transform: scale(0.97);
+}
+
+/* 로딩 상태 (선택사항) */
+.load-more.loading {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.load-more.loading .btn-icon {
+  animation: rotate 1s linear infinite;
+}
+
 
 /****************************************************************/
 /************************ 그리드 페이지 종료!! ******************/

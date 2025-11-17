@@ -174,3 +174,27 @@ var swiper = new Swiper(".mySwiper", {
     el: ".swiper-pagination",
   },
 });
+
+$('.load-more').on('click', function() {
+  // 로딩 상태 추가
+  $(this).addClass('loading');
+  $(this).find('.btn-text').text('LOADING');
+  
+  const cate1 = category.items.slice(30, 72);
+  
+  // 약간의 딜레이로 자연스러운 로딩 효과
+  setTimeout(() => {
+    cate1.forEach(function(item) {
+      const itemHtml = `
+        <div data-id="${item.id}" data-category="${categoryName}">
+          <img src="${item.image}" alt="${item.id}" />
+          <h3>${item.name}</h3>
+        </div>
+      `;
+      gridBox.append(itemHtml);
+    });
+    
+    // 로드 완료 후 버튼 숨김
+    $(this).fadeOut(400);
+  }, 600);
+});
