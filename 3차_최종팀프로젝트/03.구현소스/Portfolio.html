@@ -1,626 +1,736 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Creative Web Publisher 2025</title>
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Portfolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Outfit:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Portfolio.css" />
     <script src="Portfolio.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Dynamic Cursor -->
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
 
     <!-- Side Navigation -->
     <nav class="side-nav">
-        <div class="nav-item active" data-target="hero">
-            <div class="nav-line"></div>
-            <span class="nav-text">Home</span>
-        </div>
-        <div class="nav-item" data-target="about">
-            <div class="nav-line"></div>
-            <span class="nav-text">About</span>
-        </div>
-        <div class="nav-item" data-target="why-me">
-            <div class="nav-line"></div>
-            <span class="nav-text">Why Me</span>
-        </div>
-        <div class="nav-item" data-target="skills">
-            <div class="nav-line"></div>
-            <span class="nav-text">Skills</span>
-        </div>
-        <div class="nav-item" data-target="before-after">
-            <div class="nav-line"></div>
-            <span class="nav-text">Portfolio Evolution</span>
-        </div>
-        <div class="nav-item" data-target="projects">
-            <div class="nav-line"></div>
-            <span class="nav-text">Projects</span>
-        </div>
-        <div class="nav-item" data-target="experience">
-            <div class="nav-line"></div>
-            <span class="nav-text">Experience</span>
-        </div>
-        <div class="nav-item" data-target="contact">
-            <div class="nav-line"></div>
-            <span class="nav-text">Contact</span>
-        </div>
+      <div class="nav-item active" data-target="hero">
+        <div class="nav-line"></div>
+        <span class="nav-text">Home</span>
+      </div>
+      <div class="nav-item" data-target="about">
+        <div class="nav-line"></div>
+        <span class="nav-text">About</span>
+      </div>
+      <div class="nav-item" data-target="why-me">
+        <div class="nav-line"></div>
+        <span class="nav-text">Why Me</span>
+      </div>
+      <div class="nav-item" data-target="skills">
+        <div class="nav-line"></div>
+        <span class="nav-text">Skills</span>
+      </div>
+      <div class="nav-item" data-target="before-after">
+        <div class="nav-line"></div>
+        <span class="nav-text">Portfolio Evolution</span>
+      </div>
+      <div class="nav-item" data-target="projects">
+        <div class="nav-line"></div>
+        <span class="nav-text">Projects</span>
+      </div>
+      <div class="nav-item" data-target="experience">
+        <div class="nav-line"></div>
+        <span class="nav-text">Experience</span>
+      </div>
+      <div class="nav-item" data-target="contact">
+        <div class="nav-line"></div>
+        <span class="nav-text">Contact</span>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="hero" class="snap-section">
-        <div class="hero-content-center">
-            <h1 class="hero-title">
-                <span class="title-line">CREATIVE</span>
-                <span class="title-line">WEB</span>
-                <span class="title-line">PUBLISHER</span>
-            </h1>
-            <p class="hero-subtitle">8년 제조업 경험 × 웹 퍼블리싱 열정 = 완벽한 디테일</p>
-        </div>
+      <div class="hero-content-center">
+        <h1 class="hero-title">
+          <span class="title-line">CREATIVE</span>
+          <span class="title-line">WEB</span>
+          <span class="title-line">PUBLISHER</span>
+        </h1>
+        <p class="hero-subtitle">
+          8년 제조업 경험 × 웹 퍼블리싱 열정 = 완벽한 디테일
+        </p>
+      </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="snap-section">
-        <div class="container">
-            <h2 class="section-title">ABOUT ME</h2>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p class="big-text">8년6개월간의 <br>제조업 경험을 바탕으로,<br>꼼꼼함과 책임감을 코드에 담는<br>웹 퍼블리셔입니다.</p>
-                    <p>방위산업 X-RAY 제조업체에서 팀장으로 근무하며 다져온 정밀함과 소통 능력을 웹 개발에 적용합니다. 사용자 경험을 최우선으로 생각하며, 디테일한 구현과 팀워크를 통해 완성도 높은 웹을 만듭니다.</p>
-                </div>
-                <div class="skills-cards">
-                    <div class="skill-card">
-                        <div class="card-number">01</div>
-                        <h3>Frontend Development</h3>
-                        <p>HTML, CSS, JavaScript, jQuery로 정밀한 마크업 구현</p>
-                    </div>
-                    <div class="skill-card">
-                        <div class="card-number">02</div>
-                        <h3>Design Tools</h3>
-                        <p>Figma, Photoshop, Illustrator - 디자인 의도를 완벽하게 구현</p>
-                    </div>
-                    <div class="skill-card">
-                        <div class="card-number">03</div>
-                        <h3>Core Strengths</h3>
-                        <p>꼼꼼함, 책임감, 팀워크 - 8년 현장 경험이 만든 차별화된 강점</p>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">ABOUT ME</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p class="big-text">
+              8년6개월간의 <br />제조업 경험을 바탕으로,<br />꼼꼼함과 책임감을
+              코드에 담는<br />웹 퍼블리셔입니다.
+            </p>
+            <p>
+              방위산업 X-RAY 제조업체에서 팀장으로 근무하며 다져온 정밀함과 소통
+              능력을 웹 개발에 적용합니다. 사용자 경험을 최우선으로 생각하며,
+              디테일한 구현과 팀워크를 통해 완성도 높은 웹을 만듭니다.
+            </p>
+          </div>
+          <div class="skills-cards">
+            <div class="skill-card">
+              <div class="card-number">01</div>
+              <h3>Frontend Development</h3>
+              <p>HTML, CSS, JavaScript, jQuery로 정밀한 마크업 구현</p>
             </div>
+            <div class="skill-card">
+              <div class="card-number">02</div>
+              <h3>Design Tools</h3>
+              <p>Figma, Photoshop, Illustrator - 디자인 의도를 완벽하게 구현</p>
+            </div>
+            <div class="skill-card">
+              <div class="card-number">03</div>
+              <h3>Core Strengths</h3>
+              <p>꼼꼼함, 책임감, 팀워크 - 8년 현장 경험이 만든 차별화된 강점</p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Why Me Section -->
     <section id="why-me" class="snap-section dark-section">
-        <div class="container">
-            <h2 class="section-title">WHY ME?</h2>
-            <p class="section-subtitle">다른 지원자와 차별화되는 3가지 이유</p>
-            
-            <div class="why-grid">
-                <div class="why-card">
-                    <div class="why-icon">🎯</div>
-                    <h3>완벽한 디테일</h3>
-                    <p>방위산업 현장에서 부품 하나의 오차가 전체에 영향을 주는 환경에서 일했습니다. 한 번 수출하면 사후관리가 어려운 제품 특성상, 작은 실수도 용납되지 않았습니다. 이러한 환경이 만든 꼼꼼함은 정확한 코드 작성과 픽셀 퍼펙트한 구현으로 이어집니다.</p>
-                </div>
-                
-                <div class="why-card">
-                    <div class="why-icon">🤝</div>
-                    <h3>검증된 소통 능력</h3>
-                    <p>팀장으로서 고등학생 실습생부터 40-50대 베테랑까지, 다양한 연령대와 협업했습니다. 타 부서와의 잦은 소통 속에서 중심을 잡고 조율하는 역할을 담당했으며, 이는 디자이너-개발자 간 원활한 협업으로 자연스럽게 전환됩니다.</p>
-                </div>
-                
-                <div class="why-card">
-                    <div class="why-icon">💪</div>
-                    <h3>멈추지 않는 성장</h3>
-                    <p>안정적인 제조업 경력을 뒤로하고 완전히 새로운 분야에 도전했습니다. 그린컴퓨터아카데미에서 HTML, CSS, JavaScript부터 다시 시작해 포트폴리오를 완성했고, 지금도 매일 성장하고 있습니다. 이 열정과 학습 능력이 실무에서도 빠른 적응을 가능하게 합니다.</p>
-                </div>
-            </div>
+      <div class="container">
+        <h2 class="section-title">WHY ME?</h2>
+        <p class="section-subtitle">다른 지원자와 차별화되는 3가지 이유</p>
+
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon">🎯</div>
+            <h3>완벽한 디테일</h3>
+            <p>
+              방위산업 현장에서 부품 하나의 오차가 전체에 영향을 주는 환경에서
+              일했습니다. 한 번 수출하면 사후관리가 어려운 제품 특성상, 작은
+              실수도 용납되지 않았습니다. 이러한 환경이 만든 꼼꼼함은 정확한
+              코드 작성과 픽셀 퍼펙트한 구현으로 이어집니다.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon">🤝</div>
+            <h3>검증된 소통 능력</h3>
+            <p>
+              팀장으로서 고등학생 실습생부터 40-50대 베테랑까지, 다양한 연령대와
+              협업했습니다. 타 부서와의 잦은 소통 속에서 중심을 잡고 조율하는
+              역할을 담당했으며, 이는 디자이너-개발자 간 원활한 협업으로
+              자연스럽게 전환됩니다.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon">💪</div>
+            <h3>멈추지 않는 성장</h3>
+            <p>
+              안정적인 제조업 경력을 뒤로하고 완전히 새로운 분야에 도전했습니다.
+              그린컴퓨터아카데미에서 HTML, CSS, JavaScript부터 다시 시작해
+              포트폴리오를 완성했고, 지금도 매일 성장하고 있습니다. 이 열정과
+              학습 능력이 실무에서도 빠른 적응을 가능하게 합니다.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills" class="snap-section dark-section">
-        <div class="container">
-            <h2 class="section-title">TECHNICAL SKILLS</h2>
-            <p class="section-subtitle">제조업에서 다진 정밀함을 코드로 구현합니다</p>
-            
-            <div class="skills-list">
-                <div class="skill-row" data-progress="95">
-                    <div class="skill-info">
-                        <span class="skill-name">HTML / CSS</span>
-                        <span class="skill-value">95%</span>
-                    </div>
-                    <div class="skill-track">
-                        <div class="skill-progress"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-row" data-progress="90">
-                    <div class="skill-info">
-                        <span class="skill-name">UI/UX Design</span>
-                        <span class="skill-value">90%</span>
-                    </div>
-                    <div class="skill-track">
-                        <div class="skill-progress"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-row" data-progress="85">
-                    <div class="skill-info">
-                        <span class="skill-name">JavaScript</span>
-                        <span class="skill-value">85%</span>
-                    </div>
-                    <div class="skill-track">
-                        <div class="skill-progress"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-row" data-progress="80">
-                    <div class="skill-info">
-                        <span class="skill-name">Photoshop / Illustrator</span>
-                        <span class="skill-value">80%</span>
-                    </div>
-                    <div class="skill-track">
-                        <div class="skill-progress"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-row" data-progress="85">
-                    <div class="skill-info">
-                        <span class="skill-name">Figma</span>
-                        <span class="skill-value">85%</span>
-                    </div>
-                    <div class="skill-track">
-                        <div class="skill-progress"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-row" data-progress="75">
-                    <div class="skill-info">
-                        <span class="skill-name">jQuery</span>
-                        <span class="skill-value">75%</span>
-                    </div>
-                    <div class="skill-track">
-                        <div class="skill-progress"></div>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">TECHNICAL SKILLS</h2>
+        <p class="section-subtitle">
+          제조업에서 다진 정밀함을 코드로 구현합니다
+        </p>
+
+        <div class="skills-list">
+          <div class="skill-row" data-progress="95">
+            <div class="skill-info">
+              <span class="skill-name">HTML / CSS</span>
+              <span class="skill-value">95%</span>
             </div>
+            <div class="skill-track">
+              <div class="skill-progress"></div>
+            </div>
+          </div>
+
+          <div class="skill-row" data-progress="90">
+            <div class="skill-info">
+              <span class="skill-name">UI/UX Design</span>
+              <span class="skill-value">90%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-progress"></div>
+            </div>
+          </div>
+
+          <div class="skill-row" data-progress="85">
+            <div class="skill-info">
+              <span class="skill-name">JavaScript</span>
+              <span class="skill-value">85%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-progress"></div>
+            </div>
+          </div>
+
+          <div class="skill-row" data-progress="80">
+            <div class="skill-info">
+              <span class="skill-name">Photoshop / Illustrator</span>
+              <span class="skill-value">80%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-progress"></div>
+            </div>
+          </div>
+
+          <div class="skill-row" data-progress="85">
+            <div class="skill-info">
+              <span class="skill-name">Figma</span>
+              <span class="skill-value">85%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-progress"></div>
+            </div>
+          </div>
+
+          <div class="skill-row" data-progress="75">
+            <div class="skill-info">
+              <span class="skill-name">jQuery</span>
+              <span class="skill-value">75%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-progress"></div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- BEFORE/AFTER Section (2025 트렌드 반영) -->
     <section id="before-after" class="regular-section">
-        <div class="container-full before-after-section">
-            <h2 class="section-title center">BEFORE/AFTER</h2>
-            <p class="section-subtitle center">두개의 브랜드를 리브랜딩</p>
-            
-            <!-- 첫 번째 사례: 포트폴리오 리디자인 -->
-            <div class="ba-item">
-                <h3 class="ba-case-title">CASE 01 : PizzaHut Redesign</h3>
-                <div class="before-after-wrapper">
-                    <!-- BEFORE CARD -->
-                    <div class="ba-card before">
-                        <div class="ba-label">BEFORE</div>
-                        <div class="ba-content">
-                            <div>
-                                <h3 class="ba-title">전통적인<br>웹 포트폴리오</h3>
-                                <p class="ba-description">
-                                    정적이고 평면적인 디자인에 머물러 있던 과거의 포트폴리오. 
-                                    기본적인 기능만 구현되어 있고, 사용자 경험에 대한 고려가 부족했습니다.
-                                </p>
-                                
-                                <div class="ba-screenshot">
-                                    <!-- 기존 포트폴리오 스크린샷 -->
-                                    <img src="../01.자료수집/피자7.png" alt="Before Portfolio">
-                                </div>
-                                
-                                <ul class="ba-features">
-                                    <li>정적인 레이아웃</li>
-                                    <li>기본 애니메이션만 존재</li>
-                                    <li>단순한 색상 구성</li>
-                                    <li>제한적인 인터랙션</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="ba-metrics">
-                                <div class="metric">
-                                    <span class="metric-value">2.5s</span>
-                                    <span class="metric-label">Load Time</span>
-                                </div>
-                                <div class="metric">
-                                    <span class="metric-value">45%</span>
-                                    <span class="metric-label">Engagement</span>
-                                </div>
-                                <div class="metric">
-                                    <span class="metric-value">Basic</span>
-                                    <span class="metric-label">Tech</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <div class="container-full before-after-section">
+        <h2 class="section-title center">BEFORE/AFTER</h2>
+        <p class="section-subtitle center">두개의 브랜드를 리브랜딩</p>
 
-                    <!-- AFTER CARD -->
-                    <div class="ba-card after">
-                        <div class="ba-label">AFTER</div>
-                        <div class="ba-content">
-                            <div>
-                                <h3 class="ba-title">2025 웹 디자인<br>트렌드 반영</h3>
-                                <p class="ba-description">
-                                    3D 캐러셀, 대담한 타이포그래피,여러 애니메이션 효과 등 
-                                    최신 2025 웹 디자인 트렌드를 모두 담은 현대적인 포트폴리오.
-                                </p>
-                                
-                                <div class="ba-screenshot">
-                                    <!-- 새 포트폴리오 스크린샷 -->
-                                    <img src="../01.자료수집/피자after.png" alt="After Portfolio">
-                                </div>
-                                
-                                <ul class="ba-features">
-                                    <li>3D Rotating Carousel</li>
-                                    <li>Bold Typography & Colors</li>
-                                    <li>Micro-interactions</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="ba-metrics">
-                                <div class="metric">
-                                    <span class="metric-value">1.2s</span>
-                                    <span class="metric-label">Load Time</span>
-                                </div>
-                                <div class="metric">
-                                    <span class="metric-value">89%</span>
-                                    <span class="metric-label">Engagement</span>
-                                </div>
-                                <div class="metric">
-                                    <span class="metric-value">Modern</span>
-                                    <span class="metric-label">Tech</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <!-- 첫 번째 사례: 포트폴리오 리디자인 -->
+        <div class="ba-item">
+          <h3 class="ba-case-title">CASE 01 : PizzaHut Redesign</h3>
+          <div class="before-after-wrapper">
+            <!-- BEFORE CARD -->
+            <div class="ba-card before">
+              <div class="ba-label">BEFORE</div>
+              <div class="ba-content">
+                <div>
+                  <h3 class="ba-title">전통적인<br />웹 포트폴리오</h3>
+                  <p class="ba-description">
+                    정적이고 평면적인 디자인에 머물러 있던 과거의 포트폴리오.
+                    기본적인 기능만 구현되어 있고, 사용자 경험에 대한 고려가
+                    부족했습니다.
+                  </p>
+
+                  <div class="ba-screenshot">
+                    <!-- 기존 포트폴리오 스크린샷 -->
+                    <img
+                      src="../01.자료수집/피자7.png"
+                      alt="Before Portfolio"
+                    />
+                  </div>
+
+                  <ul class="ba-features">
+                    <li>정적인 레이아웃</li>
+                    <li>기본 애니메이션만 존재</li>
+                    <li>단순한 색상 구성</li>
+                    <li>제한적인 인터랙션</li>
+                  </ul>
                 </div>
+
+                <div class="ba-metrics">
+                  <div class="metric">
+                    <span class="metric-value">느림</span>
+                    <span class="metric-label">Animation</span>
+                  </div>
+                  <div class="metric">
+                    <span class="metric-value">40%</span>
+                    <span class="metric-label">Impact</span>
+                  </div>
+                  <div class="metric">
+                    <span class="metric-value">정적</span>
+                    <span class="metric-label">Design</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <!-- 두 번째 사례: E-Commerce 웹사이트 리디자인 -->
-            <div class="ba-item">
-                <h3 class="ba-case-title">CASE 02 : Nudake Redesign</h3>
-                <div class="before-after-wrapper">
-                    <!-- BEFORE CARD -->
-                    <div class="ba-card before">
-                        <div class="ba-label">BEFORE</div>
-                        <div class="ba-content">
-                            <div>
-                                <h3 class="ba-title">깔끔하지만<br>정적인 사이트</h3>
-                                <p class="ba-description">
-                                   이미지는 정말 예쁘고 깔끔하지만 동영상이 없다면 애니메이션 효과가 따로 없는게 아쉬워서 리브랜딩해본 케이스 <br>
-                                   기존의 스크롤을 변경
-                                </p>
-                                
-                                <div class="ba-screenshot">
-                                    <!-- 기존 이커머스 스크린샷 -->
-                                    <img src="../01.자료수집/누데이크BEFORE.png" alt="Before E-commerce">
-                                </div>
-                                
-                                <ul class="ba-features">
-                                    <li>동영상으로 애니메이션 효과를 대체, 동영상이 없는 제품은 밋밋하다</li>
-                                    <li>작아서 깔끔하지만 강조를 위해 폰트를 키우고싶음</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="ba-metrics">
-                                <div class="metric">
-                                    <span class="metric-value">4.8s</span>
-                                    <span class="metric-label">Load Time</span>
-                                </div>
-                                <div class="metric">
-                                    <span class="metric-value">2.1%</span>
-                                    <span class="metric-label">Conversion</span>
-                                </div>
-                                <div class="metric">
-                                    <span class="metric-value">35%</span>
-                                    <span class="metric-label">Mobile</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <!-- AFTER CARD -->
+            <div class="ba-card after">
+              <div class="ba-label">AFTER</div>
+              <div class="ba-content">
+                <div>
+                  <h3 class="ba-title">2025 웹 디자인<br />트렌드 반영</h3>
+                  <p class="ba-description">
+                    3D 캐러셀, 대담한 타이포그래피,여러 애니메이션 효과 등 최신
+                    2025 웹 디자인 트렌드를 모두 담은 현대적인 포트폴리오.
+                  </p>
 
-                    <!-- AFTER CARD -->
-                    <div class="ba-card after">
-                        <div class="ba-label">AFTER</div>
-                        <div class="ba-content">
-                            <div>
-                                <h3 class="ba-title">깔끔하고 역동적인<br>사이트 경험</h3>
-                                <p class="ba-description">
-                                   이미지 중심이지만 사용자가 조금 더 다양한 경험을 할 수 있는 사이트를 구현해보았다 <br>
-                                   슬라이드 형식을 큐브 슬라이드 형식으로 변경
-                                </p>
-                                
-                                <div class="ba-screenshot">
-                                    <!-- 새 이커머스 스크린샷 -->
-                                    <img src="../01.자료수집/누데이크AFTER.png" alt="After E-commerce">
-                                </div>
-                                
-                                <ul class="ba-features">
-                                    <li>동영상이 없이 역동적 애니메이션 효과를 구현</li>
-                                    <li>기존의 폰트보다 크게하여 조금 더 단순하고 확실 구성</li>
-                                    <li>완벽한 반응형 디자인</li>
-                                    <li>최적화된 이미지 로딩</li>
-                                    <li>명확한 구매 유도 디자인</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="ba-metrics">
-                                <div class="metric">
-                                    <span class="metric-value">1.1s</span>
-                                    <span class="metric-label">Load Time</span>
-                                </div>
-                                <div class="metric">
-                                    <span class="metric-value">7.3%</span>
-                                    <span class="metric-label">Conversion</span>
-                                </div>
-                                <div class="metric">
-                                    <span class="metric-value">82%</span>
-                                    <span class="metric-label">Mobile</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                  <div class="ba-screenshot">
+                    <!-- 새 포트폴리오 스크린샷 -->
+                    <img
+                      src="../01.자료수집/피자after.png"
+                      alt="After Portfolio"
+                    />
+                  </div>
+
+                  <ul class="ba-features">
+                    <li>3D Rotating Carousel</li>
+                    <li>Bold Typography & Colors</li>
+                    <li>Micro-interactions</li>
+                  </ul>
                 </div>
+
+                <div class="ba-metrics">
+                  <div class="metric">
+                    <span class="metric-value">빠름</span>
+                    <span class="metric-label">Animation</span>
+                  </div>
+                  <div class="metric">
+                    <span class="metric-value">85%</span>
+                    <span class="metric-label">Impact</span>
+                  </div>
+                  <div class="metric">
+                    <span class="metric-value">역동적</span>
+                    <span class="metric-label">Design</span>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+
+        <!-- 두 번째 사례: E-Commerce 웹사이트 리디자인 -->
+        <div class="ba-item">
+          <h3 class="ba-case-title">CASE 02 : Nudake Redesign</h3>
+          <div class="before-after-wrapper">
+            <!-- BEFORE CARD -->
+            <div class="ba-card before">
+              <div class="ba-label">BEFORE</div>
+              <div class="ba-content">
+                <div>
+                  <h3 class="ba-title">깔끔하지만<br />정적인 사이트</h3>
+                  <p class="ba-description">
+                    이미지는 정말 예쁘고 깔끔하지만 동영상이 없다면 애니메이션
+                    효과가 따로 없는게 아쉬워서 리브랜딩해본 케이스 <br />
+                    기존의 스크롤을 변경
+                  </p>
+
+                  <div class="ba-screenshot">
+                    <!-- 기존 이커머스 스크린샷 -->
+                    <img
+                      src="../01.자료수집/누데이크BEFORE.png"
+                      alt="Before E-commerce"
+                    />
+                  </div>
+
+                  <ul class="ba-features">
+                    <li>
+                      동영상으로 애니메이션 효과를 대체, 동영상이 없는 제품은
+                      밋밋하다
+                    </li>
+                    <li>작아서 깔끔하지만 강조를 위해 폰트를 키우고싶음</li>
+                  </ul>
+                </div>
+
+                <div class="ba-metrics">
+                  <div class="metric">
+                    <span class="metric-value">동영상</span>
+                    <span class="metric-label">Media Type</span>
+                  </div>
+                  <div class="metric">
+                    <span class="metric-value">Small</span>
+                    <span class="metric-label">Font Size</span>
+                  </div>
+                  <div class="metric">
+                    <span class="metric-value">기본</span>
+                    <span class="metric-label">Slide</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- AFTER CARD -->
+            <div class="ba-card after">
+              <div class="ba-label">AFTER</div>
+              <div class="ba-content">
+                <div>
+                  <h3 class="ba-title">깔끔하고 역동적인<br />사이트 경험</h3>
+                  <p class="ba-description">
+                    이미지 중심이지만 사용자가 조금 더 다양한 경험을 할 수 있는
+                    사이트를 구현해보았다 <br />
+                    슬라이드 형식을 큐브 슬라이드 형식으로 변경
+                  </p>
+
+                  <div class="ba-screenshot">
+                    <!-- 새 이커머스 스크린샷 -->
+                    <img
+                      src="../01.자료수집/누데이크AFTER.png"
+                      alt="After E-commerce"
+                    />
+                  </div>
+
+                  <ul class="ba-features">
+                    <li>동영상이 없이 역동적 애니메이션 효과를 구현</li>
+                    <li>기존의 폰트보다 크게하여 조금 더 단순하고 확실 구성</li>
+                    <li>완벽한 반응형 디자인</li>
+                    <li>최적화된 이미지 로딩</li>
+                    <li>명확한 구매 유도 디자인</li>
+                  </ul>
+                </div>
+
+                <div class="ba-metrics">
+                  <div class="metric">
+                    <span class="metric-value">이미지</span>
+                    <span class="metric-label">Media Type</span>
+                  </div>
+                  <div class="metric">
+                    <span class="metric-value">Large</span>
+                    <span class="metric-label">Font Size</span>
+                  </div>
+                  <div class="metric">
+                    <span class="metric-value">3D Cube</span>
+                    <span class="metric-label">Slide</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="snap-section">
-        <div class="container-full">
-            <h2 class="section-title center">FEATURED PROJECTS</h2>
-            
-            <div class="project-tabs">
-                <button class="tab-button active" data-tab="nudake"><span>NUDAKE</span></button>
-                <button class="tab-button" data-tab="pizza"><span>PIZZA</span></button>
-            </div>
-            
-            <!-- NUDAKE 3D Carousel -->
-            <div class="project-content active" id="nudake">
-                <div class="carousel-3d-container">
-                    <div class="carousel-3d" id="carousel-nudake">
-                        <div class="carousel-item">
-                            <div class="carousel-image" style="background-image: url('../01.자료수집/누데이크16.png')"></div>
-                            <div class="carousel-overlay">
-                                <span class="carousel-number">01</span>
-                                <h3>NUDAKE MAIN</h3>
-                                <p>메인페이지 갤러리 구현</p>
-                                <div class="carousel-tags">
-                                    <span>HTML</span><span>CSS</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="carousel-item">
-                            <div class="carousel-image" style="background-image: url('../01.자료수집/누데이크15.png')"></div>
-                            <div class="carousel-overlay">
-                                <span class="carousel-number">02</span>
-                                <h3>Product Page</h3>
-                                <p>제품 상세 페이지</p>
-                                <div class="carousel-tags">
-                                    <span>JavaScript</span><span>HTML</span><span>CSS</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="carousel-item">
-                            <div class="carousel-image" style="background-image: url('../01.자료수집/누데이크9.png')"></div>
-                            <div class="carousel-overlay">
-                                <span class="carousel-number">03</span>
-                                <h3>Product Page All</h3>
-                                <p>제품 전체 페이지</p>
-                                <div class="carousel-tags">
-                                     <span>JavaScript</span><span>HTML</span><span>CSS</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="carousel-item">
-                            <div class="carousel-image" style="background-image: url('../01.자료수집/누데이크1.png')"></div>
-                            <div class="carousel-overlay">
-                                <span class="carousel-number">04</span>
-                                <h3>Collaboration Detail Page</h3>
-                                <p>콜라보레이션 상세 페이지</p>
-                                <div class="carousel-tags">
-                                     <span>JavaScript</span><span>HTML</span><span>CSS</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="carousel-item">
-                            <div class="carousel-image" style="background-image: url('../01.자료수집/누데이크13.png')"></div>
-                            <div class="carousel-overlay">
-                                <span class="carousel-number">05</span>
-                                <h3>Collaboration Page</h3>
-                                <p>콜라보레이션 전체 페이지</p>
-                                <div class="carousel-tags">
-                                   <span>JavaScript</span><span>HTML</span><span>CSS</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="carousel-item">
-                            <div class="carousel-image" style="background-image: url('../01.자료수집/누데이크10.png')"></div>
-                            <div class="carousel-overlay">
-                                <span class="carousel-number">06</span>
-                                <h3>Tea Menu Page</h3>
-                                <p>Tea 메뉴 페이지</p>
-                                <div class="carousel-tags">
-                                    <span>JavaScript</span><span>HTML</span><span>CSS</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- PIZZA 3D Carousel -->
-            <div class="project-content" id="pizza">
-                <div class="carousel-3d-container">
-                    <div class="carousel-3d" id="carousel-pizza">
-                        <div class="carousel-item">
-                            <div class="carousel-image" style="background-image: url('../01.자료수집/피자2.png')"></div>
-                            <div class="carousel-overlay">
-                                <span class="carousel-number">01</span>
-                                <h3>Pizza Main Page</h3>
-                                <p>피자 메인페이지 호버 애니메이션 구현</p>
-                                <div class="carousel-tags">
-                                   <span>JavaScript</span><span>HTML</span><span>CSS</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="carousel-item">
-                            <div class="carousel-image" style="background-image: url('../01.자료수집/피자1.png')"></div>
-                            <div class="carousel-overlay">
-                                <span class="carousel-number">02</span>
-                                <h3>Popular Menu Page</h3>
-                                <p>인기 피자메뉴 페이지 호버 애니메이션 구현</p>
-                                <div class="carousel-tags">
-                                     <span>JavaScript</span><span>HTML</span><span>CSS</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="carousel-item">
-                            <div class="carousel-image" style="background-image: url('../01.자료수집/피자3.png')"></div>
-                            <div class="carousel-overlay">
-                                <span class="carousel-number">03</span>
-                                <h3>Pizza Menu All</h3>
-                                <p>피자 메뉴 전체페이지 호버 애니메이션 구현</p>
-                                <div class="carousel-tags">
-                                    <span>JavaScript</span><span>HTML</span><span>CSS</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="carousel-item">
-                            <div class="carousel-image" style="background-image: url('../01.자료수집/피자4.png')"></div>
-                            <div class="carousel-overlay">
-                                <span class="carousel-number">04</span>
-                                <h3>Pizza Order</h3>
-                                <p>피자 주문 상세페이지</p>
-                                <div class="carousel-tags">
-                                   <span>JavaScript</span><span>HTML</span><span>CSS</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="carousel-item">
-                            <div class="carousel-image" style="background-image: url('../01.자료수집/피자5.png')"></div>
-                            <div class="carousel-overlay">
-                                <span class="carousel-number">05</span>
-                                <h3>Cart Page</h3>
-                                <p>장바구니 상세페이지</p>
-                                <div class="carousel-tags">
-                                   <span>JavaScript</span><span>HTML</span><span>CSS</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="carousel-item">
-                            <div class="carousel-image" style="background-image: url('../01.자료수집/피자6.png')"></div>
-                            <div class="carousel-overlay">
-                                <span class="carousel-number">06</span>
-                                <h3>Event Page</h3>
-                                <p>이벤트 상세페이지</p>
-                                <div class="carousel-tags">
-                                     <span>JavaScript</span><span>HTML</span><span>CSS</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container-full">
+        <h2 class="section-title center">FEATURED PROJECTS</h2>
+
+        <div class="project-tabs">
+          <button class="tab-button active" data-tab="nudake">
+            <span>NUDAKE</span>
+          </button>
+          <button class="tab-button" data-tab="pizza">
+            <span>PIZZA</span>
+          </button>
         </div>
+
+        <!-- NUDAKE 3D Carousel -->
+        <div class="project-content active" id="nudake">
+          <div class="carousel-3d-container">
+            <div class="carousel-3d" id="carousel-nudake">
+              <div class="carousel-item">
+                <div
+                  class="carousel-image"
+                  style="background-image: url('../01.자료수집/누데이크16.png')"
+                ></div>
+                <div class="carousel-overlay">
+                  <span class="carousel-number">01</span>
+                  <h3>NUDAKE MAIN</h3>
+                  <p>메인페이지 갤러리 구현</p>
+                  <div class="carousel-tags">
+                    <span>HTML</span><span>CSS</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div
+                  class="carousel-image"
+                  style="background-image: url('../01.자료수집/누데이크15.png')"
+                ></div>
+                <div class="carousel-overlay">
+                  <span class="carousel-number">02</span>
+                  <h3>Product Page</h3>
+                  <p>제품 상세 페이지</p>
+                  <div class="carousel-tags">
+                    <span>JavaScript</span><span>HTML</span><span>CSS</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div
+                  class="carousel-image"
+                  style="background-image: url('../01.자료수집/누데이크9.png')"
+                ></div>
+                <div class="carousel-overlay">
+                  <span class="carousel-number">03</span>
+                  <h3>Product Page All</h3>
+                  <p>제품 전체 페이지</p>
+                  <div class="carousel-tags">
+                    <span>JavaScript</span><span>HTML</span><span>CSS</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div
+                  class="carousel-image"
+                  style="background-image: url('../01.자료수집/누데이크1.png')"
+                ></div>
+                <div class="carousel-overlay">
+                  <span class="carousel-number">04</span>
+                  <h3>Collaboration Detail Page</h3>
+                  <p>콜라보레이션 상세 페이지</p>
+                  <div class="carousel-tags">
+                    <span>JavaScript</span><span>HTML</span><span>CSS</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div
+                  class="carousel-image"
+                  style="background-image: url('../01.자료수집/누데이크13.png')"
+                ></div>
+                <div class="carousel-overlay">
+                  <span class="carousel-number">05</span>
+                  <h3>Collaboration Page</h3>
+                  <p>콜라보레이션 전체 페이지</p>
+                  <div class="carousel-tags">
+                    <span>JavaScript</span><span>HTML</span><span>CSS</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div
+                  class="carousel-image"
+                  style="background-image: url('../01.자료수집/누데이크10.png')"
+                ></div>
+                <div class="carousel-overlay">
+                  <span class="carousel-number">06</span>
+                  <h3>Tea Menu Page</h3>
+                  <p>Tea 메뉴 페이지</p>
+                  <div class="carousel-tags">
+                    <span>JavaScript</span><span>HTML</span><span>CSS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PIZZA 3D Carousel -->
+        <div class="project-content" id="pizza">
+          <div class="carousel-3d-container">
+            <div class="carousel-3d" id="carousel-pizza">
+              <div class="carousel-item">
+                <div
+                  class="carousel-image"
+                  style="background-image: url('../01.자료수집/피자2.png')"
+                ></div>
+                <div class="carousel-overlay">
+                  <span class="carousel-number">01</span>
+                  <h3>Pizza Main Page</h3>
+                  <p>피자 메인페이지 호버 애니메이션 구현</p>
+                  <div class="carousel-tags">
+                    <span>JavaScript</span><span>HTML</span><span>CSS</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div
+                  class="carousel-image"
+                  style="background-image: url('../01.자료수집/피자1.png')"
+                ></div>
+                <div class="carousel-overlay">
+                  <span class="carousel-number">02</span>
+                  <h3>Popular Menu Page</h3>
+                  <p>인기 피자메뉴 페이지 호버 애니메이션 구현</p>
+                  <div class="carousel-tags">
+                    <span>JavaScript</span><span>HTML</span><span>CSS</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div
+                  class="carousel-image"
+                  style="background-image: url('../01.자료수집/피자3.png')"
+                ></div>
+                <div class="carousel-overlay">
+                  <span class="carousel-number">03</span>
+                  <h3>Pizza Menu All</h3>
+                  <p>피자 메뉴 전체페이지 호버 애니메이션 구현</p>
+                  <div class="carousel-tags">
+                    <span>JavaScript</span><span>HTML</span><span>CSS</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div
+                  class="carousel-image"
+                  style="background-image: url('../01.자료수집/피자4.png')"
+                ></div>
+                <div class="carousel-overlay">
+                  <span class="carousel-number">04</span>
+                  <h3>Pizza Order</h3>
+                  <p>피자 주문 상세페이지</p>
+                  <div class="carousel-tags">
+                    <span>JavaScript</span><span>HTML</span><span>CSS</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div
+                  class="carousel-image"
+                  style="background-image: url('../01.자료수집/피자5.png')"
+                ></div>
+                <div class="carousel-overlay">
+                  <span class="carousel-number">05</span>
+                  <h3>Cart Page</h3>
+                  <p>장바구니 상세페이지</p>
+                  <div class="carousel-tags">
+                    <span>JavaScript</span><span>HTML</span><span>CSS</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div
+                  class="carousel-image"
+                  style="background-image: url('../01.자료수집/피자6.png')"
+                ></div>
+                <div class="carousel-overlay">
+                  <span class="carousel-number">06</span>
+                  <h3>Event Page</h3>
+                  <p>이벤트 상세페이지</p>
+                  <div class="carousel-tags">
+                    <span>JavaScript</span><span>HTML</span><span>CSS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Experience Section -->
     <section id="experience" class="snap-section dark-section">
-        <div class="container">
-            <h2 class="section-title">EXPERIENCE</h2>
-            <p class="section-subtitle">제조업 팀장에서 웹 퍼블리셔로의 전환</p>
-            
-            <div class="timeline">
-                <div class="timeline-line"></div>
-                
-                <div class="timeline-block">
-                    <div class="timeline-year">2025</div>
-                    <div class="timeline-card">
-                        <span class="timeline-date">2025.06 - Present</span>
-                        <h3>UX/UI WEB PUBLISHER</h3>
-                        <h4>강남 그린컴퓨터아카데미</h4>
-                        <p>직종변경을 위해 강남 그린컴퓨터 아카데미에서 UX/UI 웹퍼블리셔 과정을 수료.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-block">
-                    <div class="timeline-year">2024</div>
-                    <div class="timeline-card">
-                        <span class="timeline-date">2024.01 - 2025.04</span>
-                        <h3>대한센서</h3>
-                        <h4>생산관리 및 생산 사원</h4>
-                        <p>생산 관리 및 조립, 생산업무, 품질개선, 전자회로읽고 수리</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-block">
-                    <div class="timeline-year">2022</div>
-                    <div class="timeline-card">
-                        <span class="timeline-date">2022.03 - 2022.08</span>
-                        <h3>경희사이버대학교</h3>
-                        <h4>경영학과</h4>
-                        <p>경희사이버대학교 경영학과 휴학.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-block">
-                    <div class="timeline-year">2015</div>
-                    <div class="timeline-card">
-                        <span class="timeline-date">2015.08 - 2022.09</span>
-                        <h3>(주) 신영포엠</h3>
-                        <h4>생산관리 및 생산 계장</h4>
-                        <p>경기기계공업고등학교 졸업 후 X-RAY생산업체인 (주) 신영포엠에 입사후 7년2개월 재직, 생산관리 및 조립, 품질개선 업무를 맡음</p>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">EXPERIENCE</h2>
+        <p class="section-subtitle">제조업 팀장에서 웹 퍼블리셔로의 전환</p>
+
+        <div class="timeline">
+          <div class="timeline-line"></div>
+
+          <div class="timeline-block">
+            <div class="timeline-year">2025</div>
+            <div class="timeline-card">
+              <span class="timeline-date">2025.06 - Present</span>
+              <h3>UX/UI WEB PUBLISHER</h3>
+              <h4>강남 그린컴퓨터아카데미</h4>
+              <p>
+                직종변경을 위해 강남 그린컴퓨터 아카데미에서 UX/UI 웹퍼블리셔
+                과정을 수료.
+              </p>
             </div>
+          </div>
+
+          <div class="timeline-block">
+            <div class="timeline-year">2024</div>
+            <div class="timeline-card">
+              <span class="timeline-date">2024.01 - 2025.04</span>
+              <h3>대한센서</h3>
+              <h4>생산관리 및 생산 사원</h4>
+              <p>생산 관리 및 조립, 생산업무, 품질개선, 전자회로읽고 수리</p>
+            </div>
+          </div>
+
+          <div class="timeline-block">
+            <div class="timeline-year">2022</div>
+            <div class="timeline-card">
+              <span class="timeline-date">2022.03 - 2022.08</span>
+              <h3>경희사이버대학교</h3>
+              <h4>경영학과</h4>
+              <p>경희사이버대학교 경영학과 휴학.</p>
+            </div>
+          </div>
+
+          <div class="timeline-block">
+            <div class="timeline-year">2015</div>
+            <div class="timeline-card">
+              <span class="timeline-date">2015.08 - 2022.09</span>
+              <h3>(주) 신영포엠</h3>
+              <h4>생산관리 및 생산 계장</h4>
+              <p>
+                경기기계공업고등학교 졸업 후 X-RAY생산업체인 (주) 신영포엠에
+                입사후 7년2개월 재직, 생산관리 및 조립, 품질개선 업무를 맡음
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="snap-section">
-        <div class="container">
-            <h2 class="section-title center">LET'S WORK TOGETHER</h2>
-            <p class="section-subtitle center">끝까지 해내는 꼼꼼함으로 함께 성장하겠습니다</p>
-            
-            <div class="contact-grid">
-                <a href="/cdn-cgi/l/email-protection#c6bfa9b3b4a8a7aba386a3aba7afaae8a5a9ab" class="contact-box">
-                    <div class="contact-icon">✉️</div>
-                    <h3>Email</h3>
-                    <p><span class="__cf_email__" data-cfemail="40392f35322e212d2500252d21292c6e232f2d">[email&#160;protected]</span></p>
-                </a>
-                
-                <a href="#" class="contact-box">
-                    <div class="contact-icon">💻</div>
-                    <h3>GitHub</h3>
-                    <p>github.com/yourname</p>
-                </a>
-                
-                <a href="#" class="contact-box">
-                    <div class="contact-icon">👔</div>
-                    <h3>LinkedIn</h3>
-                    <p>linkedin.com/in/yourname</p>
-                </a>
-                
-                <a href="#" class="contact-box">
-                    <div class="contact-icon">📷</div>
-                    <h3>Instag
+      <div class="container">
+        <h2 class="section-title center">LET'S WORK TOGETHER</h2>
+        <p class="section-subtitle center">
+          끝까지 해내는 꼼꼼함으로 함께 성장하겠습니다
+        </p>
+
+        <div class="contact-grid">
+          <a
+            href="/cdn-cgi/l/email-protection#c6bfa9b3b4a8a7aba386a3aba7afaae8a5a9ab"
+            class="contact-box"
+          >
+            <div class="contact-icon">✉️</div>
+            <h3>Email</h3>
+            <p>
+              <span
+                class="__cf_email__"
+                data-cfemail="40392f35322e212d2500252d21292c6e232f2d"
+                >[qkskskaktz@gmail.com]</span
+              >
+            </p>
+          </a>
+
+          <a href="#" class="contact-box">
+            <div class="contact-icon">💻</div>
+            <h3>GitHub</h3>
+            <p>github.com/yourname</p>
+          </a>
+
+          <a href="#" class="contact-box">
+            <div class="contact-icon">👔</div>
+            <h3>LinkedIn</h3>
+            <p>linkedin.com/in/yourname</p>
+          </a>
+
+          <a href="#" class="contact-box">
+            <div class="contact-icon">📷</div>
+            <h3>Instag</h3></a
+          >
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
