@@ -449,7 +449,7 @@ const store = urlParams.get('store');
 
 - **Frontend Developer**: 종준
 - **UI/UX Designer**: 종준
-- **Project Management**: 팀 프로젝트
+- **Project Management**: 개인 프로젝트
 
 ## 📜 라이선스
 
