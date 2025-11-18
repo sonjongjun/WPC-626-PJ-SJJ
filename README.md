@@ -683,15 +683,6 @@ npx serve .  # Node.js
 
 ---
 
-## 🙏 감사의 말
-
-- **강남 그린컴퓨터아카데미**: 체계적인 커리큘럼 제공
-- **AWWWARDS**: 디자인 영감 제공
-- **MDN Web Docs**: 기술 문서 참고
-- **Stack Overflow Community**: 문제 해결 도움
-
----
-
 ## 💬 피드백
 
 프로젝트에 대한 의견이나 개선 제안이 있으시면 **Issue** 또는 **Pull Request**를 남겨주세요!
