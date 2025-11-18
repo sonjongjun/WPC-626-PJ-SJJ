@@ -317,21 +317,3 @@ $(".colab-btn").click(function() {
 $(".pdct-btn").click(function() {
   location.href = "./NUDAKE_ITEMS.html";
 });
-
-// 480px 이하에서 스크롤 애니메이션 비활성화
-if (window.innerWidth <= 480) {
-  $(window).off('scroll'); // 스크롤 이벤트 전체 비활성화
-  
-  // cb-inbox를 기본 상태로 고정
-  $('.cb-inbox').css({
-    'position': 'static',
-    'opacity': '1',
-    'pointer-events': 'auto'
-  });
-  
-  // 모든 li를 기본 위치로
-  $('.cb-inbox li').css({
-    'transform': 'translateY(0)',
-    'position': 'relative'
-  });
-}
