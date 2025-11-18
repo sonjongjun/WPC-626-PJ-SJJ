@@ -1,10 +1,10 @@
 # 🍕 Pizza Mall - Interactive E-commerce Platform
 
 > 제조업 8년 경력 → 웹 퍼블리셔 전환 포트폴리오  
-> **정밀함으로 만들어낸 8년, 그 다음은 코드로 만들어갑니다**
-> 1.피자몰 PJ
-> 2.누데이크 리디자인PJ
-> 3.개인 포트폴리오PJ
+> **정밀함으로 만들어낸 8년, 그 다음은 코드로 만들어갑니다**<br><br>
+> 1.피자몰 PJ<br><br>
+> 2.누데이크 리디자인PJ<br><br>
+> 3.개인 포트폴리오PJ<br><br>
 
 [![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Pizza_Mall-red?style=for-the-badge)](https://sonjongjun.github.io/WPC-626-PJ-SJJ/1%EC%B0%A8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%EA%B0%9C%EC%9D%B8%EA%B3%BC%EC%A0%9C%EB%AA%A8%EC%9D%8C/01.pizza.html)
 [![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Nudake_Redesign-black?style=for-the-badge)](https://sonjongjun.github.io/WPC-626-PJ-SJJ/2%EC%B0%A8_%ED%8C%80%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/NUDAKE_PJ.html)
