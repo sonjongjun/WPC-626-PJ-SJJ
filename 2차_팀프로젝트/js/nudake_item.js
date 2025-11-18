@@ -41,53 +41,10 @@ $(document).ready(function() {
   });
 });
 
-// 카테고리별 아이템 표시 함수
-function displayCategory(categoryName, categories) {
-  const category = categories[categoryName];
-
-
-  
-    // 처음에 표시할 아이템 30개만 먼저 slice 해서 저장
-    const cate1 = category.items.slice(0, 30);
-    console.log('처음 로드된 DESSERTS 아이템 수:', cate1);
-
-  const gridBox = $('.grid-box');
-  
-  // 기존 내용 제거
-  gridBox.empty();
-  
-  // 아이템 추가
-  cate1.forEach(function(item) {
-    const itemHtml = `
-      <div data-id="${item.id}" data-category="${categoryName}">
-        <img src="${item.image}" alt="${item.id}" />
-        <h3>${item.name}</h3>
-      </div>
-    `;
-    gridBox.append(itemHtml);
-  });
-
-  $('.load-more').on('click', function() {
-    const cate1 = category.items.slice(30, 72);
-    console.log('마지막까지 로드된 DESSERTS 아이템 수:', cate1);
-
-    // 다음 아이템 추가 ///////////////////
-    cate1.forEach(function(item) {
-      const itemHtml = `
-        <div data-id="${item.id}" data-category="${categoryName}">
-          <img src="${item.image}" alt="${item.id}" />
-          <h3>${item.name}</h3>
-        </div>
-      `;
-      gridBox.append(itemHtml);
-    }); //// forEach 끝 ////
-
-    // 로드버튼 사라짐
-    $(this).hide();
-  }); // load-more 클릭 이벤트 끝 //
-
+// 아이템 이벤트 바인딩 함수 (호버, 클릭)
+function bindItemEvents() {
   // 호버 효과 강화
-  $('.grid-box > div').hover(
+  $('.grid-box > div').off('mouseenter mouseleave').hover(
     function() {
       $(this).css({
         'transform': 'scale(1.025)',
@@ -106,13 +63,78 @@ function displayCategory(categoryName, categories) {
   );
   
   // 클릭 이벤트 - 상세 페이지로 이동
-  $('.grid-box > div').on('click', function() {
+  $('.grid-box > div').off('click').on('click', function() {
     const itemId = $(this).data('id');
     const itemCategory = $(this).data('category');
     
     // URL 파라미터로 아이템 정보 전달
     location.href = `./NUDAKE_ITEMS_D.html?id=${itemId}&category=${itemCategory}`;
     console.log('아이템 클릭:', itemId, itemCategory);
+  });
+}
+
+// 카테고리별 아이템 표시 함수
+function displayCategory(categoryName, categories) {
+  const category = categories[categoryName];
+  
+  // 처음에 표시할 아이템 30개만 먼저 slice 해서 저장
+  const cate1 = category.items.slice(0, 30);
+  console.log('처음 로드된 아이템 수:', cate1.length);
+
+  const gridBox = $('.grid-box');
+  
+  // 기존 내용 제거
+  gridBox.empty();
+  
+  // 아이템 추가
+  cate1.forEach(function(item) {
+    const itemHtml = `
+      <div data-id="${item.id}" data-category="${categoryName}">
+        <img src="${item.image}" alt="${item.id}" />
+        <h3>${item.name}</h3>
+      </div>
+    `;
+    gridBox.append(itemHtml);
+  });
+
+  // 초기 아이템에 이벤트 바인딩
+  bindItemEvents();
+
+  // VIEW MORE 버튼 표시 (30개 초과할 때만)
+  if (category.items.length > 30) {
+    $('.load-more').show();
+  } else {
+    $('.load-more').hide();
+  }
+
+  // VIEW MORE 버튼 이벤트
+  $('.load-more').off('click').on('click', function() {
+    const cate2 = category.items.slice(30, 72);
+    console.log('추가 로드된 아이템 수:', cate2.length);
+
+    // 로딩 상태 추가
+    $(this).addClass('loading');
+    $(this).find('.btn-text').text('LOADING');
+
+    // 약간의 딜레이로 자연스러운 로딩 효과
+    setTimeout(() => {
+      // 다음 아이템 추가
+      cate2.forEach(function(item) {
+        const itemHtml = `
+          <div data-id="${item.id}" data-category="${categoryName}">
+            <img src="${item.image}" alt="${item.id}" />
+            <h3>${item.name}</h3>
+          </div>
+        `;
+        gridBox.append(itemHtml);
+      });
+      
+      // 새로 추가된 아이템에도 이벤트 바인딩
+      bindItemEvents();
+      
+      // 로드 완료 후 버튼 숨김
+      $(this).fadeOut(400);
+    }, 600);
   });
 }
 
@@ -173,28 +195,4 @@ var swiper = new Swiper(".mySwiper", {
   pagination: {
     el: ".swiper-pagination",
   },
-});
-
-$('.load-more').on('click', function() {
-  // 로딩 상태 추가
-  $(this).addClass('loading');
-  $(this).find('.btn-text').text('LOADING');
-  
-  const cate1 = category.items.slice(30, 72);
-  
-  // 약간의 딜레이로 자연스러운 로딩 효과
-  setTimeout(() => {
-    cate1.forEach(function(item) {
-      const itemHtml = `
-        <div data-id="${item.id}" data-category="${categoryName}">
-          <img src="${item.image}" alt="${item.id}" />
-          <h3>${item.name}</h3>
-        </div>
-      `;
-      gridBox.append(itemHtml);
-    });
-    
-    // 로드 완료 후 버튼 숨김
-    $(this).fadeOut(400);
-  }, 600);
 });
