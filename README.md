@@ -670,9 +670,9 @@ npx serve .  # Node.js
   - 포트폴리오 프로젝트 진행 중
 
 **연락처**
-- 📧 Email: [your-email@example.com]
+- 📧 Email: [qkskskaktz@gmail.com]
 - 💼 GitHub: [@sonjongjun](https://github.com/sonjongjun)
-- 🌐 Portfolio: [https://sonjongjun.github.io/](https://sonjongjun.github.io/)
+- 🌐 Portfolio: [[https://sonjongjun.github.io/](https://sonjongjun.github.io/](https://sonjongjun.github.io/WPC-626-PJ-SJJ/3%EC%B0%A8_%EC%B5%9C%EC%A2%85%ED%8C%80%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/03.%EA%B5%AC%ED%98%84%EC%86%8C%EC%8A%A4/Portfolio.html))
 
 ---
 
